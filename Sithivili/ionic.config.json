@@ -1,0 +1,7 @@
+{
+  "name": "Sithivili",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
