@@ -31,7 +31,6 @@ var config = {
     ContactPage,
     HomePage,
     ChatPage,
-    AngularFireDatabaseModule,
     TabsPage
   ],
   imports: [

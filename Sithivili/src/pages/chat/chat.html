@@ -13,8 +13,11 @@
 <ion-content padding>
     <div id="chatMessages"></div>
 </ion-content>
-<ion-footer>
+<ion-content padding>
+  <ion-footer>
     <ion-toolbar>
-      <ion-input type="text" [(ngModel)]="message">Footer</ion-input>
+      <ion-input type="text" [(ngModel)]="message"></ion-input>
+      <button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button>
     </ion-toolbar>
   </ion-footer>
+</ion-content>
