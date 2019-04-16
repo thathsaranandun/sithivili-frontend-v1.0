@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AngularFireDatabase} from 'angularfire2/database';
+
+
+
+
 /**
  * Generated class for the ChatPage page.
  *
@@ -17,9 +21,17 @@ export class ChatPage {
 
   username:string='';
   message:string='';
+  s;
+  messages: object[]=[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public db:AngularFireDatabase) {
     this.username=this.navParams.get('username');
+    this.s=this.db.list('/chat').valueChanges().subscribe(data => {
+      console.log(data);
+      this.messages=data;
+
+
+    });
 
   }
 
@@ -28,7 +40,15 @@ export class ChatPage {
       username:this.username,
       message:this.message
 
+    }).then(()=>{
+      //Show on chatbox
+
+
+    }).catch(()=>{
+      //If error
+
     });
+    this.message='';
   }
   ionViewDidLoad() {
     
