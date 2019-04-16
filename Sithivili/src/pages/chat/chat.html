@@ -11,7 +11,15 @@
 </ion-header>
 
 <ion-content padding>
-    <div id="chatMessages"></div>
+    <div id="chatMessages">
+      <div class="message" *ngFor="let message of messages">
+        <div class="username">{{message.username}}</div>
+        <div class="message">{{message.message}}</div>
+      </div>
+
+
+
+    </div>
 </ion-content>
 <ion-content padding>
   <ion-footer>

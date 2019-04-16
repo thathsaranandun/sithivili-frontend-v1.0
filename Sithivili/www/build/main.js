@@ -29,17 +29,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var ChatPage = /** @class */ (function () {
     function ChatPage(navCtrl, navParams, db) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.db = db;
         this.username = '';
         this.message = '';
+        this.messages = [];
         this.username = this.navParams.get('username');
+        this.s = this.db.object('/chat').valueChanges().subscribe(function (data) {
+            console.log(data);
+            data.map(function (elem) {
+                _this.messages.push(elem);
+            });
+        });
     }
     ChatPage.prototype.sendMessage = function () {
         this.db.list('/chat').push({
             username: this.username,
             message: this.message
+        }).then(function () {
+            //Show on chatbox
+        }).catch(function () {
+            //If error
         });
     };
     ChatPage.prototype.ionViewDidLoad = function () {
@@ -47,7 +59,7 @@ var ChatPage = /** @class */ (function () {
     };
     ChatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Nandun\Documents\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/'<!--\n  Generated template for the ChatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>Chat Room</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <div id="chatMessages"></div>\n</ion-content>\n<ion-content padding>\n  <ion-footer>\n    <ion-toolbar>\n      <ion-input type="text" [(ngModel)]="message"></ion-input>\n      <button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button>\n    </ion-toolbar>\n  </ion-footer>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Nandun\Documents\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/,
+            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Nandun\Documents\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/'<!--\n  Generated template for the ChatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>Chat Room</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <div id="chatMessages">\n      <div class="message" *ngFor="let message of messages">\n        <div class="username">{{message.username}}</div>\n        <div class="message">{{message.message}}</div>\n      </div>\n\n\n\n    </div>\n</ion-content>\n<ion-content padding>\n  <ion-footer>\n    <ion-toolbar>\n      <ion-input type="text" [(ngModel)]="message"></ion-input>\n      <button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button>\n    </ion-toolbar>\n  </ion-footer>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Nandun\Documents\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"]) === "function" && _c || Object])
     ], ChatPage);
