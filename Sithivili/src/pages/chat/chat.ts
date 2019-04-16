@@ -26,13 +26,10 @@ export class ChatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public db:AngularFireDatabase) {
     this.username=this.navParams.get('username');
-    this.s=this.db.object('/chat').valueChanges().subscribe(data => {
+    this.s=this.db.list('/chat').valueChanges().subscribe(data => {
       console.log(data);
+      this.messages=data;
 
-      data.map(elem => {
-        this.messages.push(elem);
-
-      })
 
     });
 
@@ -51,6 +48,7 @@ export class ChatPage {
       //If error
 
     });
+    this.message='';
   }
   ionViewDidLoad() {
     

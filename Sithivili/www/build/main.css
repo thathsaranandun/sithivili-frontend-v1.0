@@ -25691,3 +25691,45 @@ ion-navbar.toolbar {
   padding-bottom: 4px;
   min-height: 46px;
 }
+
+page-chat .innerMessage {
+  display: inline block;
+  padding: 5px 10px;
+  background: #488aff;
+  margin: 5px;
+  color: white;
+  border-radius: 3px;
+}
+
+page-chat .username {
+  font-weight: bold;
+  font-size: 80%;
+}
+
+page-chat .message {
+  font-size: 120%;
+}
+
+page-chat .elem button {
+  border-radius: 0;
+  margin: 0;
+}
+
+page-chat div#footer div.elem:first-child {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+page-chat div#footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
