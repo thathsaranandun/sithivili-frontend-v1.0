@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AlertController, NavController } from 'ionic-angular';
 import { ChatPage } from '../chat/chat';
+import { DataService } from '../../app/services/data.services';
 
 
 @Component({
@@ -10,8 +11,9 @@ import { ChatPage } from '../chat/chat';
 export class HomePage {
 
   username:string='';
+  dbuser:string='';
 
-  constructor(public navCtrl: NavController,public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {
     
 
   }
@@ -37,6 +39,12 @@ export class HomePage {
       this.alert('Error','Invalid Username');
     }
     
+  }
+
+  testServer(){
+    this.dataService.getUser(this.username).subscribe((data:any) =>{
+      this.dbuser=data.dbuser;
+    });
   }
   
 

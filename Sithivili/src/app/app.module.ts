@@ -13,6 +13,7 @@ import {ChatPage} from '../pages/chat/chat';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './services/data.services';
 
 
 var config = {
@@ -52,6 +53,7 @@ var config = {
   ],
   providers: [
     StatusBar,
+    DataService,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

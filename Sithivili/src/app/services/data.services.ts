@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs/Observable'
-import { HttpClient } from '@angular/common/http'
+import {Observable} from 'rxjs/observable';
+import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
+/* 
 interface User {
   name: string
-}
+} */
 
 @Injectable()
-class dataService {
+export class DataService {
   constructor(private http: HttpClient) {}
-
+/* 
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>('http://localhost:3000/api/users')
   }
@@ -31,5 +33,16 @@ class dataService {
 
   deleteUser(name: string) {
     return this.http.delete('http://localhost:3000/api/users/' + name)
+  } */
+
+
+  /* getUser(username:string):Observable<any>{
+    return this.http.post('http://localhost:3000/api/users/',{'username':username}).pipe(
+      map(res => res)
+        );
+  } */
+
+  getUser(name:string){
+    return this.http.get('http://localhost:3000/api/users/'+name)
   }
 }
