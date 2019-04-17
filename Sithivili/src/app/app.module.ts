@@ -12,6 +12,7 @@ import {ChatPage} from '../pages/chat/chat';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpClientModule } from '@angular/common/http';
 
 
 var config = {
@@ -37,6 +38,7 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
+    HttpClientModule,
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
