@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import {AngularFireDatabase} from 'angularfire2/database';
 
 
@@ -12,7 +12,7 @@ import {AngularFireDatabase} from 'angularfire2/database';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-chat',
   templateUrl: 'chat.html',
