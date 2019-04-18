@@ -52,9 +52,11 @@ app.use(function(req, res, next) {
         if(json[0].password==password){
           console.log('correct password');
           dbdata=true;
+          response.send(dbdata);
         }else{
           console.log('Incorrect password');
           dbdata=false;
+          response.send(dbdata);
         }
       
       }
@@ -63,7 +65,7 @@ app.use(function(req, res, next) {
 
     });
     
-    response.send(dbdata);    
+        
     });
 
   //POST Sign up request

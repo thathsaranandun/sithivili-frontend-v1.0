@@ -16,6 +16,7 @@ export class HomePage {
 
   dbuser:string='';
 
+  enteredDataStatus:boolean=false;
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {
     
 
@@ -34,12 +35,23 @@ export class HomePage {
   loginUser(){
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
       //Validate
-      this.dataService.postLogIn(this.username,this.password).subscribe((data:any) => {
+      this.dataService.postLogIn(this.username,this.password).subscribe((data:boolean) => {
+        console.log(data);
+        this.enteredDataStatus=data;
+        console.log('enteredDataStatus:'+this.enteredDataStatus)
+        if(this.enteredDataStatus==true){
+          this.navCtrl.push(ChatPage,{
+            username:this.username
+          });
+  
+        }else{
+          console.log('cant load chat page');
+        }
+
       })
-/* 
-      this.navCtrl.push(ChatPage,{
-        username:this.username
-      }); */
+
+      
+       
 
     }else{
       this.alert('Error','Invalid Username');
