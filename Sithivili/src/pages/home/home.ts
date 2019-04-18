@@ -68,10 +68,10 @@ export class HomePage {
 
   testServer(){
     /* this.dataService.getUser(this.username).subscribe((data:any) =>{
-      this.dbuser=data.dbuser;
+      console.log(data);
     }); */
     this.dataService.postUser(this.username).subscribe((data:any) => {
-      this.dbuser=data.dbuser;
+      console.log(data);
     })
   }
   
