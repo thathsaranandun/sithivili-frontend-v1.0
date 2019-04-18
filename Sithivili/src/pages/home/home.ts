@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, NavController } from 'ionic-angular';
 import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
+import {SignupPage} from '../signup/signup';
 
 
 @Component({
@@ -39,6 +40,10 @@ export class HomePage {
       this.alert('Error','Invalid Username');
     }
     
+  }
+
+  loadSignUp(){
+    this.navCtrl.push(SignupPage);
   }
 
   testServer(){

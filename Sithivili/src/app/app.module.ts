@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.services';
+import { SignupPage } from '../pages/signup/signup';
 
 
 var config = {
@@ -33,6 +34,7 @@ var config = {
     ContactPage,
     HomePage,
     ChatPage,
+    SignupPage,
     TabsPage
   ],
   imports: [
@@ -47,6 +49,7 @@ var config = {
     MyApp,
     AboutPage,
     ContactPage,
+    SignupPage,
     HomePage,
     ChatPage,
     TabsPage
