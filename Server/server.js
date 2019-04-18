@@ -6,12 +6,6 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-/* 
-  app.route('/api/users').get((req, res) => {
-    res.send({
-      users: [{ name: 'nandun' }, { name: 'guest' }],
-    })
-  }) */
 
   //GET request
   app.route('/api/users/:name').get((req, res) => {
@@ -22,7 +16,7 @@ app.use(function(req, res, next) {
   
   app.use(express.json());
 
-  //POST request
+  //POST Test request
   app.post('/api/user', function(request, response){
   const requestedUser = request.body
   console.log(requestedUser.name);    
@@ -30,7 +24,49 @@ app.use(function(req, res, next) {
   response.send(request.body);    
   });
 
-  //POST request
+  app.post('/api/userlogin', function(request, response){
+    const requestedUser = request.body
+    console.log(requestedUser.name);  
+    console.log(requestedUser.password);
+    username=requestedUser.name;
+    password=requestedUser.password;
+
+    var dbdata = false;
+    let mysql = require('mysql');
+    let config = require('./config.js');
+    
+    let connection = mysql.createConnection(config);
+    
+    let sql = "SELECT username,password FROM users WHERE username='"+username+"'";
+    connection.query(sql, (error, results, fields) => {
+      if (error) {
+        return console.error(error.message);
+      }else{
+        console.log('>> results: ', results );
+        var string=JSON.stringify(results);
+        console.log('>> string: ', string );
+        var json =  JSON.parse(string);
+        console.log('>> json: ', json);
+        console.log('>> user.name: ', json[0].username);
+        console.log('>> user.password: ', json[0].password);
+        if(json[0].password==password){
+          console.log('correct password');
+          dbdata=true;
+        }else{
+          console.log('Incorrect password');
+          dbdata=false;
+        }
+      
+      }
+    connection.end();
+
+
+    });
+    
+    response.send(dbdata);    
+    });
+
+  //POST Sign up request
   app.post('/api/newuser', function(request, response){
     const requestedUser = request.body
     console.log(requestedUser.fname);
@@ -44,11 +80,12 @@ app.use(function(req, res, next) {
 
 
 
+
     let mysql = require('mysql');
     let config = require('./config.js');
     let connection = mysql.createConnection(config);
  
-    let stmt = "INSERT INTO users(fname,email,username,password) VALUES ('"+fname+"','"+username+"','"+email+"','"+password+"')";
+    let stmt = "INSERT INTO users(fname,email,username,password) VALUES ('"+fname+"','"+email+"','"+username+"','"+password+"')";
             
     let todo = ['Insert a new row with placeholders', false];
  

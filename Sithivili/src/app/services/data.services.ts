@@ -29,4 +29,11 @@ export class DataService {
       'password':password
     })
   }
+
+  postLogIn(name:string,password:string){
+    return this.http.post('http://localhost:3000/api/userlogin',{
+      'name':name,
+      'password':password
+    })
+  }
 }

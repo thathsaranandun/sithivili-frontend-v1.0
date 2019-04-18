@@ -12,6 +12,8 @@ import {SignupPage} from '../signup/signup';
 export class HomePage {
 
   username:string='';
+  password:string='';
+
   dbuser:string='';
 
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {
@@ -31,10 +33,13 @@ export class HomePage {
   
   loginUser(){
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
-      //Valid
+      //Validate
+      this.dataService.postLogIn(this.username,this.password).subscribe((data:any) => {
+      })
+/* 
       this.navCtrl.push(ChatPage,{
         username:this.username
-      });
+      }); */
 
     }else{
       this.alert('Error','Invalid Username');
