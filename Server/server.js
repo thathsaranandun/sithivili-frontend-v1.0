@@ -37,14 +37,37 @@ app.use(function(req, res, next) {
     console.log(requestedUser.username);
     console.log(requestedUser.email);
     console.log(requestedUser.password);
+    const fname = requestedUser.fname;
+    const username = requestedUser.username;
+    const email = requestedUser.email;
+    const password = requestedUser.password;
 
 
 
+    let mysql = require('mysql');
+    let config = require('./config.js');
+    let connection = mysql.createConnection(config);
+ 
+    let stmt = "INSERT INTO users(fname,email,username,password) VALUES ('"+fname+"','"+username+"','"+email+"','"+password+"')";
+            
+    let todo = ['Insert a new row with placeholders', false];
+ 
+    // execute the insert statment
+    connection.query(stmt, todo, (err, results, fields) => {
+      if (err) {
+        return console.error(err.message);
+      }
 
-    
-    response.send(request.body);    
     });
+
+
+    connection.end();
+    response.send(request.body);    
+  });
   
   app.listen(3000, () => {
     console.log('Server started!')
   })
+
+
+ 
