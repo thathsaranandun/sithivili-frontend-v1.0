@@ -42,9 +42,12 @@ export class HomePage {
   }
 
   testServer(){
-    this.dataService.getUser(this.username).subscribe((data:any) =>{
+    /* this.dataService.getUser(this.username).subscribe((data:any) =>{
       this.dbuser=data.dbuser;
-    });
+    }); */
+    this.dataService.postUser(this.username).subscribe((data:any) => {
+      this.dbuser=data.dbuser;
+    })
   }
   
 

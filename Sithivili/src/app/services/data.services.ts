@@ -45,4 +45,8 @@ export class DataService {
   getUser(name:string){
     return this.http.get('http://localhost:3000/api/users/'+name)
   }
+
+  postUser(name:string){
+    return this.http.post('http://localhost:3000/api/user',{'name':name})
+  }
 }

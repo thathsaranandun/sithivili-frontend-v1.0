@@ -267,7 +267,10 @@ var HomePage = /** @class */ (function () {
     };
     HomePage.prototype.testServer = function () {
         var _this = this;
-        this.dataService.getUser(this.username).subscribe(function (data) {
+        /* this.dataService.getUser(this.username).subscribe((data:any) =>{
+          this.dbuser=data.dbuser;
+        }); */
+        this.dataService.postUser(this.username).subscribe(function (data) {
             _this.dbuser = data.dbuser;
         });
     };
@@ -341,6 +344,9 @@ var DataService = /** @class */ (function () {
     } */
     DataService.prototype.getUser = function (name) {
         return this.http.get('http://localhost:3000/api/users/' + name);
+    };
+    DataService.prototype.postUser = function (name) {
+        return this.http.post('http://localhost:3000/api/user', { 'name': name });
     };
     DataService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
