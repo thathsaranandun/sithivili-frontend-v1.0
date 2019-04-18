@@ -45,6 +45,9 @@ export class HomePage {
           });
   
         }else{
+          this.alert('Error','Invalid Login details. Please enter again.');
+          this.username='';
+          this.password='';
           console.log('cant load chat page');
         }
 

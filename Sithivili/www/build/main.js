@@ -336,6 +336,9 @@ var HomePage = /** @class */ (function () {
                     });
                 }
                 else {
+                    _this.alert('Error', 'Invalid Login details. Please enter again.');
+                    _this.username = '';
+                    _this.password = '';
                     console.log('cant load chat page');
                 }
             });
