@@ -327,45 +327,26 @@ var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
     }
-    /*
-      getAllUsers(): Observable<User[]> {
-        return this.http.get<User[]>('http://localhost:3000/api/users')
-      }
-    
-      getCat(name: string): Observable<User> {
-        return this.http.get<User>('http://localhost:3000/api/users/' + name)
-      }
-    
-      insertCat(user: User): Observable<User> {
-        return this.http.post<User>('http://localhost:3000/api/users/', user)
-      }
-    
-      updateCat(user: User): Observable<void> {
-        return this.http.put<void>(
-          'http://localhost:3000/api/users/' + user.name,
-          user
-        )
-      }
-    
-      deleteUser(name: string) {
-        return this.http.delete('http://localhost:3000/api/users/' + name)
-      } */
-    /* getUser(username:string):Observable<any>{
-      return this.http.post('http://localhost:3000/api/users/',{'username':username}).pipe(
-        map(res => res)
-          );
-    } */
     DataService.prototype.getUser = function (name) {
         return this.http.get('http://localhost:3000/api/users/' + name);
     };
     DataService.prototype.postUser = function (name) {
         return this.http.post('http://localhost:3000/api/user', { 'name': name });
     };
+    DataService.prototype.postSignUp = function (fname, username, email, password) {
+        return this.http.post('http://localhost:3000/api/newuser', {
+            'fname': fname,
+            'username': username,
+            'email': email,
+            'password': password
+        });
+    };
     DataService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], DataService);
     return DataService;
+    var _a;
 }());
 
 //# sourceMappingURL=data.services.js.map
@@ -379,6 +360,7 @@ var DataService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(340);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -390,6 +372,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the SignupPage page.
  *
@@ -397,20 +380,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var SignupPage = /** @class */ (function () {
-    function SignupPage(navCtrl, navParams) {
+    function SignupPage(navCtrl, navParams, dataService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.dataService = dataService;
+        this.userFname = '';
+        this.userLname = '';
+        this.userEmail = '';
+        this.userName = '';
+        this.userPassword = '';
     }
     SignupPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad SignupPage');
     };
+    SignupPage.prototype.signup = function () {
+        /* this.dataService.getUser(this.username).subscribe((data:any) =>{
+          this.dbuser=data.dbuser;
+        }); */
+        this.dataService.postSignUp(this.userFname, this.userName, this.userEmail, this.userPassword).subscribe(function (data) {
+        });
+        this.userFname = '';
+        this.userLname = '';
+        this.userEmail = '';
+        this.userName = '';
+        this.userPassword = '';
+        alert("User Registered Successfully.");
+    };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item-divider>Personal Details</ion-item-divider>\n\n\n\n    <ion-item>\n\n      <ion-label>First Name</ion-label>\n\n        <ion-input type="text" name="name" [(ngModel)]="userFName"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>Last Name</ion-label>\n\n      <ion-input type="text"  ></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Email</ion-label>\n\n      <ion-input type="email" [(ngModel)]="userEmail"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Username</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n    </ion-item>\n\n    <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item-divider>Personal Details</ion-item-divider>\n\n\n\n    <ion-item>\n\n      <ion-label>First Name</ion-label>\n\n        <ion-input type="text" name="name" [(ngModel)]="userFname"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label >Last Name</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userLname" ></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Email</ion-label>\n\n      <ion-input type="email" [(ngModel)]="userEmail"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Username</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n    </ion-item>\n\n    <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object])
     ], SignupPage);
     return SignupPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=signup.js.map

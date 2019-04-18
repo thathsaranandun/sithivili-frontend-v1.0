@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { DataService } from '../../app/services/data.services';
 
 /**
  * Generated class for the SignupPage page.
@@ -15,11 +16,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SignupPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  userFname:string='';
+  userLname:string='';
+  userEmail:string='';
+  userName:string='';
+  userPassword:string='';
+
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
+  }
+
+  signup(){
+    /* this.dataService.getUser(this.username).subscribe((data:any) =>{
+      this.dbuser=data.dbuser;
+    }); */
+    this.dataService.postSignUp(this.userFname,this.userName,this.userEmail,this.userPassword).subscribe((data:any) => {
+    })
+    this.userFname='';
+    this.userLname='';
+    this.userEmail='';
+    this.userName='';
+    this.userPassword='';
+    alert("User Registered Successfully.")
+    
   }
 
 }

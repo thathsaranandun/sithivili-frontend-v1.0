@@ -25,10 +25,25 @@ app.use(function(req, res, next) {
   //POST request
   app.post('/api/user', function(request, response){
   const requestedUser = request.body
-  console.log(requestedUser.name);      // your JSON
+  console.log(requestedUser.name);    
   
-  response.send(request.body);    // echo the result back
-});
+  response.send(request.body);    
+  });
+
+  //POST request
+  app.post('/api/newuser', function(request, response){
+    const requestedUser = request.body
+    console.log(requestedUser.fname);
+    console.log(requestedUser.username);
+    console.log(requestedUser.email);
+    console.log(requestedUser.password);
+
+
+
+
+    
+    response.send(request.body);    
+    });
   
   app.listen(3000, () => {
     console.log('Server started!')
