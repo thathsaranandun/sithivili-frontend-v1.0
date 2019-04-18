@@ -47,6 +47,11 @@ app.use(function(req, res, next) {
         console.log('>> string: ', string );
         var json =  JSON.parse(string);
         console.log('>> json: ', json);
+        if(json[0]==null){
+          console.log('Invalid Username');
+          response.send(dbdata);
+        }else{
+
         console.log('>> user.name: ', json[0].username);
         console.log('>> user.password: ', json[0].password);
         if(json[0].password==password){
@@ -60,13 +65,13 @@ app.use(function(req, res, next) {
         }
       
       }
+    }
     connection.end();
-
-
+    
     });
     
         
-    });
+  });
 
   //POST Sign up request
   app.post('/api/newuser', function(request, response){
@@ -107,6 +112,3 @@ app.use(function(req, res, next) {
   app.listen(3000, () => {
     console.log('Server started!')
   })
-
-
- 
