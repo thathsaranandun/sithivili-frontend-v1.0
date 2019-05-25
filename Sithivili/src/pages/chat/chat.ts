@@ -22,33 +22,30 @@ export class ChatPage {
   username:string='';
   message:string='';
   s;
+  volID:number=0;
+  userID:number=0;
   messages: object[]=[];
   chargerid:number=1;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public db:AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase) {
     this.username=this.navParams.get('username');
-    this.s=this.db.list('/chat').valueChanges().subscribe(data => {
-      console.log(data);
+    this.userID=this.navParams.get('userID');
+    this.volID=this.navParams.get('volID');
+    console.log('Volunteer ID: '+ this.volID)
+    console.log('User ID: '+ this.userID)
+    //this.s=this.firebase.list('/chat').valueChanges().subscribe(data => {
+      //console.log(data);
       //this.messages=data;
-
-
-    });
+    //});
 
   }
 
   sendMessage(){
-    this.db.list('/chat').push({
+    this.firebase.object('/'+this.volID).set({
+      userID:this.userID,
       username:this.username,
-      message:this.message
-
-    }).then(()=>{
-      //Show on chatbox
-
-
-    }).catch(()=>{
-      //If error
-
-    });
+      messages:this.messages
+  })
 
     this.messages.push(
       {

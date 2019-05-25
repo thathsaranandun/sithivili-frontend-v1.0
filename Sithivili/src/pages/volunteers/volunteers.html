@@ -17,7 +17,8 @@
         <div class="username">{{volunteer.username}}</div>
         <div class="message">Rating: {{volunteer.rating}} /10</div>
         <div class="message">Gender: {{volunteer.gender}}</div>
-        <div class="elem"><button ion-button icon-only (click)="chat()">Chat<ion-icon name="send"></ion-icon></button></div>
+        
+        <div class="elem"><button ion-button icon-only (click)="chat(volunteer.volunteerID)">Chat<ion-icon name="send"></ion-icon></button></div>
 
     </div>
     

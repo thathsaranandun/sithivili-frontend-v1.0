@@ -16,7 +16,7 @@ export class HomePage {
   username:string='';
   password:string='';
   userID:number;
-  volID:number;
+  volunID:number;
 
   dbuser:string='';
 
@@ -82,10 +82,10 @@ export class HomePage {
         console.log('enteredDataStatus:'+this.enteredDataStatus)
         console.log('Volunteer ID:'+ data.volID)
         if(this.enteredDataStatus){
-          this.volID=data.volunteerID;
+          this.volunID=data.volunteerID;
           this.navCtrl.push(ClientsPage,{
             username:this.username,
-            volID:this.volID
+            volID:this.volunID
           });
   
         }else{

@@ -297,11 +297,10 @@ var VolunteersPage = /** @class */ (function () {
         this.dataService = dataService;
         this.volunteers = [];
         this.username = this.navParams.get('username');
-        this.userId = this.navParams.get('userId');
+        this.userId = this.navParams.get('userID');
         this.dataService.getVolunteers().subscribe(function (data) {
             console.log(data);
             _this.volunteers = data;
-            console.log(_this.volunteers);
             //for (let i = 0; i < this.volunteers.length; i++) {
             //  this.volunteers.push(this.volunteers[i])
             //}
@@ -310,19 +309,22 @@ var VolunteersPage = /** @class */ (function () {
     VolunteersPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad VolunteersPage');
     };
-    VolunteersPage.prototype.chat = function () {
+    VolunteersPage.prototype.chat = function (voluID) {
+        console.log('voluID:' + voluID);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__chat_chat__["a" /* ChatPage */], {
             username: this.username,
-            userID: this.userId
+            userID: this.userId,
+            voluID: voluID
         });
     };
     VolunteersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-volunteers',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Select a Volunteer</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer" *ngFor="let volunteer of volunteers">\n\n        <div class="username">{{volunteer.username}}</div>\n\n        <div class="message">Rating: {{volunteer.rating}} /10</div>\n\n        <div class="message">Gender: {{volunteer.gender}}</div>\n\n        <div class="elem"><button ion-button icon-only (click)="chat()">Chat<ion-icon name="send"></ion-icon></button></div>\n\n\n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\volunteers\volunteers.html"*/,
+            selector: 'page-volunteers',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Select a Volunteer</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer" *ngFor="let volunteer of volunteers">\n\n        <div class="username">{{volunteer.username}}</div>\n\n        <div class="message">Rating: {{volunteer.rating}} /10</div>\n\n        <div class="message">Gender: {{volunteer.gender}}</div>\n\n        \n\n        <div class="elem"><button ion-button icon-only (click)="chat(volunteer.volunteerID)">Chat<ion-icon name="send"></ion-icon></button></div>\n\n\n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\volunteers\volunteers.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object])
     ], VolunteersPage);
     return VolunteersPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=volunteers.js.map
@@ -575,7 +577,7 @@ var HomePage = /** @class */ (function () {
                 console.log(data);
                 _this.enteredDataStatus = data.dbdata;
                 console.log('enteredDataStatus:' + _this.enteredDataStatus);
-                console.log('Volunteer ID:' + data.volID);
+                console.log('Volunteer ID:' + data.volunteerID);
                 if (_this.enteredDataStatus) {
                     _this.volID = data.volunteerID;
                     _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__clients_clients__["a" /* ClientsPage */], {
@@ -599,10 +601,9 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h2>Welcome to Sithivili!</h2>\n\n  <h4>\n\n    Feeling lonely? Chat with someone.\n\n  </h4>\n\n\n\n  <ion-item>\n\n    <ion-label position="fixed">Username</ion-label>\n\n    <ion-input type="text" [(ngModel)]="username"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label position="fixed">Password</ion-label>\n\n    <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n  </ion-item>\n\n  <!-- <ion-item>\n\n    <ion-label position="fixed">Password</ion-label>\n\n    <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n  </ion-item> -->\n\n  <button ion-button (click)="loginUser()">Start Chatting</button>\n\n  <button ion-button (click)="logVolunteer()">Volunteer</button>\n\n\n\n  <h5>Dont have an account?</h5>\n\n  <button ion-button (click)="loadSignUp()">Sign Up</button>\n\n\n\n\n\n</ion-content>  \n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map

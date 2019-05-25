@@ -20,13 +20,13 @@ export class VolunteersPage {
   username:string;
   userId:number;
   volunteers:object[]=[];
+  volID:number;
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService) {
     this.username=this.navParams.get('username');
-    this.userId=this.navParams.get('userId');
+    this.userId=this.navParams.get('userID');
     this.dataService.getVolunteers().subscribe((data: any) => {
       console.log(data);
       this.volunteers=data
-      console.log(this.volunteers)
       //for (let i = 0; i < this.volunteers.length; i++) {
       //  this.volunteers.push(this.volunteers[i])
       //}
@@ -37,10 +37,12 @@ export class VolunteersPage {
     console.log('ionViewDidLoad VolunteersPage');
   }
 
-  chat(){
+  chat(voluID:number){
+    console.log('voluID:'+voluID)
     this.navCtrl.push(ChatPage,{
       username:this.username,
-      userID:this.userId
+      userID:this.userId,
+      voluID:voluID
     });  }
 
 }
