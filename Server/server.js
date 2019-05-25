@@ -108,6 +108,61 @@ app.use(function(req, res, next) {
         
   });
 
+
+  app.post('/api/vollogin', function(request, response){
+    const requestedUser = request.body
+    console.log(requestedUser.name);  
+    console.log(requestedUser.password);
+    username=requestedUser.name;
+    password=requestedUser.password;
+
+    var dbdata = false;
+    let mysql = require('mysql');
+    let config = require('./config.js');
+    
+    let connection = mysql.createConnection(config);
+    
+    let sql = "SELECT volunteerID,username,password FROM volunteers WHERE username='"+username+"'";
+    connection.query(sql, (error, results, fields) => {
+      if (error) {
+        return console.error(error.message);
+      }else{
+        console.log('>> results: ', results );
+        var string=JSON.stringify(results);
+        console.log('>> string: ', string );
+        var json =  JSON.parse(string);
+        console.log('>> json: ', json);
+        if(json[0]==null){
+          console.log('Invalid Username');
+          response.send(dbdata);
+        }else{
+
+        console.log('>> user.name: ', json[0].username);
+        console.log('>> user.password: ', json[0].password);
+        if(json[0].password==password){
+          console.log('correct password');
+          dbdata=true;
+          var userObj = {
+            "dbdata":dbdata,
+            "userId":json[0].volunteerID
+          }
+          console.log(userObj)
+          response.send(userObj);
+        }else{
+          console.log('Incorrect password');
+          dbdata=false;
+          response.send(dbdata);
+        }
+      
+      }
+    }
+    connection.end();
+    
+    });
+    
+        
+  });
+
   //POST Sign up request
   app.post('/api/newuser', function(request, response){
     const requestedUser = request.body
