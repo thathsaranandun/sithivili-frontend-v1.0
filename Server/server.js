@@ -13,6 +13,37 @@ app.use(function(req, res, next) {
     res.send({ name: requestedUserName })
     console.log(requestedUserName)
   })
+
+  //GET volunteers
+  app.route('/api/volunteers/').get((req, res) => {
+    let mysql = require('mysql');
+    let config = require('./config.js');
+    
+    let connection = mysql.createConnection(config);
+    
+    let sql = "SELECT * FROM volunteers";
+    connection.query(sql, (error, results, fields) => {
+      if (error) {
+        return console.error(error.message);
+      }else{
+        console.log('>> results: ', results );
+        var string=JSON.stringify(results);
+        console.log('>> string: ', string );
+        var json =  JSON.parse(string);
+        console.log('>> json: ', json);
+        
+        console.log('>> first volunteer.name: ', json[0].username);
+        console.log(json)
+        response.send(json);
+      
+      
+    }
+    connection.end();
+    
+    });
+    
+    console.log(requestedUserName)
+  })
   
   app.use(express.json());
 

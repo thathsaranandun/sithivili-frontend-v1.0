@@ -21,6 +21,10 @@ export class DataService {
     return this.http.post('http://localhost:3000/api/user',{'name':name})
   }
 
+  getVolunteers(){
+    return this.http.get('http://localhost:3000/api/volunteers/')
+  }
+
   postSignUp(fname:string,username:string,email:string,password:string){
     return this.http.post('http://localhost:3000/api/newuser',{
       'fname':fname,

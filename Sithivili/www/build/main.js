@@ -104,6 +104,9 @@ var DataService = /** @class */ (function () {
     DataService.prototype.postUser = function (name) {
         return this.http.post('http://localhost:3000/api/user', { 'name': name });
     };
+    DataService.prototype.getVolunteers = function () {
+        return this.http.get('http://localhost:3000/api/volunteers/');
+    };
     DataService.prototype.postSignUp = function (fname, username, email, password) {
         return this.http.post('http://localhost:3000/api/newuser', {
             'fname': fname,
@@ -120,9 +123,10 @@ var DataService = /** @class */ (function () {
     };
     DataService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], DataService);
     return DataService;
+    var _a;
 }());
 
 //# sourceMappingURL=data.services.js.map
@@ -136,6 +140,7 @@ var DataService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VolunteersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(159);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -147,6 +152,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the VolunteersPage page.
  *
@@ -154,17 +160,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var VolunteersPage = /** @class */ (function () {
-    function VolunteersPage(navCtrl, navParams) {
+    function VolunteersPage(navCtrl, navParams, dataService) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.dataService = dataService;
+        this.volunteers = [];
         this.username = this.navParams.get('username');
         this.userId = this.navParams.get('userId');
+        this.dataService.getVolunteers().subscribe(function (data) {
+            console.log(data);
+            for (var i = 0; i < data.volunteers.length; i++) {
+                _this.volunteers.push(data.volunteer[i]);
+            }
+        });
     }
     VolunteersPage_1 = VolunteersPage;
     VolunteersPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad VolunteersPage');
     };
-    VolunteersPage.prototype.chat = function () {
+    VolunteersPage.prototype.chat = function (volunteer) {
         this.navCtrl.push(VolunteersPage_1, {
             username: this.username,
             userID: this.userId
@@ -174,10 +189,10 @@ var VolunteersPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-volunteers',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Select a Volunteer</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer">\n\n        <div class="username">Rusiru</div>\n\n        <div class="message">Rating: 4/10</div>\n\n        <div class="message">Gender: Male</div>\n\n        <div class="elem"><button ion-button icon-only (click)="chat()">Chat<ion-icon name="send"></ion-icon></button></div>\n\n\n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object])
     ], VolunteersPage);
     return VolunteersPage;
-    var VolunteersPage_1, _a, _b;
+    var VolunteersPage_1, _a, _b, _c;
 }());
 
 //# sourceMappingURL=volunteers.js.map
