@@ -37,8 +37,8 @@ export class VolunteersPage {
     console.log('ionViewDidLoad VolunteersPage');
   }
 
-  chat(volunteer){
-    this.navCtrl.push(VolunteersPage,{
+  chat(){
+    this.navCtrl.push(ChatPage,{
       username:this.username,
       userID:this.userId
     });  }

@@ -29,7 +29,7 @@ export class ChatPage {
     this.username=this.navParams.get('username');
     this.s=this.db.list('/chat').valueChanges().subscribe(data => {
       console.log(data);
-      this.messages=data;
+      //this.messages=data;
 
 
     });
@@ -49,7 +49,18 @@ export class ChatPage {
       //If error
 
     });
+
+    this.messages.push(
+      {
+        username:this.username,
+        message:this.message
+      }
+    )
+
     this.message='';
+
+
+
   }
   ionViewDidLoad() {
     
