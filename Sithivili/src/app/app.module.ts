@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.services';
 import { SignupPage } from '../pages/signup/signup';
+import { VolunteersPage } from '../pages/volunteers/volunteers';
 
 
 var config = {
@@ -35,6 +36,7 @@ var config = {
     HomePage,
     ChatPage,
     SignupPage,
+    VolunteersPage,
     TabsPage
   ],
   imports: [
@@ -51,6 +53,7 @@ var config = {
     ContactPage,
     SignupPage,
     HomePage,
+    VolunteersPage,
     ChatPage,
     TabsPage
   ],

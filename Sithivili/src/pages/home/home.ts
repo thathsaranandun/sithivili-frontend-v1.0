@@ -3,6 +3,7 @@ import {AlertController, NavController } from 'ionic-angular';
 import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
 import {SignupPage} from '../signup/signup';
+import { VolunteersPage } from '../volunteers/volunteers';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class HomePage {
 
   username:string='';
   password:string='';
+  userID:number;
 
   dbuser:string='';
 
@@ -35,13 +37,16 @@ export class HomePage {
   loginUser(){
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
       //Validate
-      this.dataService.postLogIn(this.username,this.password).subscribe((data:boolean) => {
+      this.dataService.postLogIn(this.username,this.password).subscribe((data:any) => {
         console.log(data);
-        this.enteredDataStatus=data;
+        this.enteredDataStatus=data.dbdata;
         console.log('enteredDataStatus:'+this.enteredDataStatus)
-        if(this.enteredDataStatus==true){
-          this.navCtrl.push(ChatPage,{
-            username:this.username
+        console.log('User ID:'+ data.userId)
+        if(this.enteredDataStatus){
+          this.userID=data.userId;
+          this.navCtrl.push(VolunteersPage,{
+            username:this.username,
+            userID:this.userID
           });
   
         }else{

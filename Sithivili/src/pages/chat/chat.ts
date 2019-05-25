@@ -23,6 +23,7 @@ export class ChatPage {
   message:string='';
   s;
   messages: object[]=[];
+  chargerid:number=1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public db:AngularFireDatabase) {
     this.username=this.navParams.get('username');

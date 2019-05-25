@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
     
     let connection = mysql.createConnection(config);
     
-    let sql = "SELECT username,password FROM users WHERE username='"+username+"'";
+    let sql = "SELECT userId,username,password FROM users WHERE username='"+username+"'";
     connection.query(sql, (error, results, fields) => {
       if (error) {
         return console.error(error.message);
@@ -57,7 +57,12 @@ app.use(function(req, res, next) {
         if(json[0].password==password){
           console.log('correct password');
           dbdata=true;
-          response.send(dbdata);
+          var userObj = {
+            "dbdata":dbdata,
+            "userId":json[0].userId
+          }
+          console.log(userObj)
+          response.send(userObj);
         }else{
           console.log('Incorrect password');
           dbdata=false;
