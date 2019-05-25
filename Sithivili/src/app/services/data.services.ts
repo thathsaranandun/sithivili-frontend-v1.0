@@ -40,4 +40,11 @@ export class DataService {
       'password':password
     })
   }
+
+  postLogVol(name:string,password:string){
+    return this.http.post('http://localhost:3000/api/vollogin',{
+      'name':name,
+      'password':password
+    })
+  }
 }

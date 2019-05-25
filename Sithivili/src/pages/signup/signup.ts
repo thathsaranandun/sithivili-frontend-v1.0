@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { DataService } from '../../app/services/data.services';
 
 /**
@@ -24,7 +24,7 @@ export class SignupPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController) {
   }
 
   ionViewDidLoad() {
@@ -42,8 +42,17 @@ export class SignupPage {
     this.userEmail='';
     this.userName='';
     this.userPassword='';
-    alert("User Registered Successfully.")
+    this.alert('Registration Successfull','User registered successfully!');
     
+  }
+
+  alert(title:string,message:string){
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: message,
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 }

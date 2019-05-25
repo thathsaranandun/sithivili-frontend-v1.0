@@ -4,6 +4,7 @@ import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
 import {SignupPage} from '../signup/signup';
 import { VolunteersPage } from '../volunteers/volunteers';
+import { ClientsPage } from '../clients/clients';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class HomePage {
   username:string='';
   password:string='';
   userID:number;
+  volID:number;
 
   dbuser:string='';
 
@@ -71,13 +73,37 @@ export class HomePage {
     this.navCtrl.push(SignupPage);
   }
 
-  testServer(){
-    /* this.dataService.getUser(this.username).subscribe((data:any) =>{
-      console.log(data);
-    }); */
-    this.dataService.postUser(this.username).subscribe((data:any) => {
-      console.log(data);
-    })
+  logVolunteer(){
+    if(/^[a-zA-Z0-9]+$/.test(this.username)){
+      //Validate
+      this.dataService.postLogVol(this.username,this.password).subscribe((data:any) => {
+        console.log(data);
+        this.enteredDataStatus=data.dbdata;
+        console.log('enteredDataStatus:'+this.enteredDataStatus)
+        console.log('Volunteer ID:'+ data.volunteerID)
+        if(this.enteredDataStatus){
+          this.volID=data.volunteerID;
+          this.navCtrl.push(ClientsPage,{
+            username:this.username,
+            volID:this.volID
+          });
+  
+        }else{
+          this.alert('Error','Invalid Login details. Please enter again.');
+          this.username='';
+          this.password='';
+          console.log('cant load chat page');
+        }
+
+      })
+
+      
+       
+
+    }else{
+      this.alert('Error','Invalid Username');
+    }
+    
   }
   
 

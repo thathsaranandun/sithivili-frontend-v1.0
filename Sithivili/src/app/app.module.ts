@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.services';
 import { SignupPage } from '../pages/signup/signup';
 import { VolunteersPage } from '../pages/volunteers/volunteers';
+import { ClientsPage } from '../pages/clients/clients';
 
 
 var config = {
@@ -37,6 +38,7 @@ var config = {
     ChatPage,
     SignupPage,
     VolunteersPage,
+    ClientsPage,
     TabsPage
   ],
   imports: [
@@ -55,6 +57,7 @@ var config = {
     HomePage,
     VolunteersPage,
     ChatPage,
+    ClientsPage,
     TabsPage
   ],
   providers: [
