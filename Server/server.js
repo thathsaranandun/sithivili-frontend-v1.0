@@ -34,15 +34,14 @@ app.use(function(req, res, next) {
         
         console.log('>> first volunteer.name: ', json[0].username);
         console.log(json)
-        response.send(json);
+        console.log(results)
+        res.send(results);
       
       
     }
     connection.end();
     
     });
-    
-    console.log(requestedUserName)
   })
   
   app.use(express.json());

@@ -13,10 +13,10 @@
 <ion-content padding>
 
   <div class="volunteerList">
-    <div class="volunteer">
-        <div class="username">Rusiru</div>
-        <div class="message">Rating: 4/10</div>
-        <div class="message">Gender: Male</div>
+    <div class="volunteer" *ngFor="let volunteer of volunteers">
+        <div class="username">{{volunteer.username}}</div>
+        <div class="message">Rating: {{volunteer.rating}} /10</div>
+        <div class="message">Gender: {{volunteer.gender}}</div>
         <div class="elem"><button ion-button icon-only (click)="chat()">Chat<ion-icon name="send"></ion-icon></button></div>
 
     </div>

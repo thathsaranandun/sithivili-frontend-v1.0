@@ -170,9 +170,11 @@ var VolunteersPage = /** @class */ (function () {
         this.userId = this.navParams.get('userId');
         this.dataService.getVolunteers().subscribe(function (data) {
             console.log(data);
-            for (var i = 0; i < data.volunteers.length; i++) {
-                _this.volunteers.push(data.volunteer[i]);
-            }
+            _this.volunteers = data;
+            console.log(_this.volunteers);
+            //for (let i = 0; i < this.volunteers.length; i++) {
+            //  this.volunteers.push(this.volunteers[i])
+            //}
         });
     }
     VolunteersPage_1 = VolunteersPage;
@@ -187,7 +189,7 @@ var VolunteersPage = /** @class */ (function () {
     };
     VolunteersPage = VolunteersPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-volunteers',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Select a Volunteer</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer">\n\n        <div class="username">Rusiru</div>\n\n        <div class="message">Rating: 4/10</div>\n\n        <div class="message">Gender: Male</div>\n\n        <div class="elem"><button ion-button icon-only (click)="chat()">Chat<ion-icon name="send"></ion-icon></button></div>\n\n\n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/,
+            selector: 'page-volunteers',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Select a Volunteer</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer" *ngFor="let volunteer of volunteers">\n\n        <div class="username">{{volunteer.username}}</div>\n\n        <div class="message">Rating: {{volunteer.rating}} /10</div>\n\n        <div class="message">Gender: {{volunteer.gender}}</div>\n\n        <div class="elem"><button ion-button icon-only (click)="chat()">Chat<ion-icon name="send"></ion-icon></button></div>\n\n\n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object])
     ], VolunteersPage);

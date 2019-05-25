@@ -25,9 +25,11 @@ export class VolunteersPage {
     this.userId=this.navParams.get('userId');
     this.dataService.getVolunteers().subscribe((data: any) => {
       console.log(data);
-      for (let i = 0; i < data.volunteers.length; i++) {
-        this.volunteers.push(data.volunteer[i])
-      }
+      this.volunteers=data
+      console.log(this.volunteers)
+      //for (let i = 0; i < this.volunteers.length; i++) {
+      //  this.volunteers.push(this.volunteers[i])
+      //}
     });
   }
 
