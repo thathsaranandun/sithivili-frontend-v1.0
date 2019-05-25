@@ -80,7 +80,7 @@ export class HomePage {
         console.log(data);
         this.enteredDataStatus=data.dbdata;
         console.log('enteredDataStatus:'+this.enteredDataStatus)
-        console.log('Volunteer ID:'+ data.volunteerID)
+        console.log('Volunteer ID:'+ data.volID)
         if(this.enteredDataStatus){
           this.volID=data.volunteerID;
           this.navCtrl.push(ClientsPage,{

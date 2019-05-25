@@ -144,7 +144,7 @@ app.use(function(req, res, next) {
           dbdata=true;
           var userObj = {
             "dbdata":dbdata,
-            "userId":json[0].volunteerID
+            "volID":json[0].volunteerID
           }
           console.log(userObj)
           response.send(userObj);
