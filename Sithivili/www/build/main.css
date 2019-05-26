@@ -25836,3 +25836,16 @@ page-volunteers div#footer {
   -ms-flex-direction: row;
   flex-direction: row;
 }
+
+page-volunteers .left {
+  grid-column: 1;
+}
+
+page-volunteers .right {
+  grid-column: 2;
+}
+
+page-volunteers .volunteer {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}

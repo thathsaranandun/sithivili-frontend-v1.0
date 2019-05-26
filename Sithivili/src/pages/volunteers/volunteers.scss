@@ -35,4 +35,18 @@ page-volunteers {
         flex-direction: row;
     }
 
+    .left{
+        grid-column: 1;
+    }
+
+    .right{
+        grid-column: 2;
+
+    }
+
+    .volunteer {
+        display: grid;
+        grid-template-columns: 75% 25%;
+      }
+
 }
