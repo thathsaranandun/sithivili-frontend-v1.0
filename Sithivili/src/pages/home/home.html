@@ -6,9 +6,6 @@
 
 <ion-content padding>
   <h2>Welcome to Sithivili!</h2>
-  <h4>
-    Feeling lonely? Chat with someone.
-  </h4>
 
   <ion-item>
     <ion-label position="fixed">Username</ion-label>
@@ -22,11 +19,19 @@
     <ion-label position="fixed">Password</ion-label>
     <ion-input type="password" [(ngModel)]="password"></ion-input>
   </ion-item> -->
-  <button ion-button (click)="loginUser()">Start Chatting</button>
-  <button ion-button (click)="logVolunteer()">Volunteer</button>
+  <div class="button_div">
+    <div class="left_btn_div">
+      <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>
+    </div>
+    <div class="right_btn_div">
+      <button ion-button color="primary" round full (click)="logVolunteer()">Volunteer</button>
+    </div>
+  </div>
 
   <h5>Dont have an account?</h5>
-  <button ion-button (click)="loadSignUp()">Sign Up</button>
+  <div class="signup">
+    <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>
+  </div>
 
 
 </ion-content>  

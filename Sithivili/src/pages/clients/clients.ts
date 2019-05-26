@@ -28,9 +28,8 @@ export class ClientsPage {
     this.username=this.navParams.get('username');
 
     console.log(this.volID);
-    this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe(data => {
+    this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe((data:any) => {
       console.log(data);
-      //this.clients=data;
       for(let i=0;i<data.length;i++){
         console.log(data[i].clientID)//Ignore the error shown
         this.clientIDs.push(data[i].clientID);//Ignore the error shown
