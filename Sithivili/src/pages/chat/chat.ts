@@ -30,29 +30,27 @@ export class ChatPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase) {
     this.username=this.navParams.get('username');
     this.userID=this.navParams.get('userID');
-    this.volID=this.navParams.get('volID');
+    this.volID=this.navParams.get('voluID');
     console.log('Volunteer ID: '+ this.volID)
     console.log('User ID: '+ this.userID)
-    //this.s=this.firebase.list('/chat').valueChanges().subscribe(data => {
-      //console.log(data);
-      //this.messages=data;
-    //});
+    this.s=this.firebase.list('/'+this.volID+'w'+this.userID).valueChanges().subscribe(data => {
+      console.log(data);
+      this.messages=data;
+    });
 
   }
 
   sendMessage(){
-    this.firebase.object('/'+this.volID).set({
-      userID:this.userID,
+    // this.messages.push({
+    //   username:this.username,
+    //   message:this.message
+    // })
+    this.firebase.list('/'+this.volID+'w'+this.userID).push({
       username:this.username,
-      messages:this.messages
-  })
+      message:this.message
+    })
 
-    this.messages.push(
-      {
-        username:this.username,
-        message:this.message
-      }
-    )
+    
 
     this.message='';
 

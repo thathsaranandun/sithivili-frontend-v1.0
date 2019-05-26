@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the VolunteersPage page.
@@ -21,7 +22,7 @@ export class VolunteersPage {
   userId:number;
   volunteers:object[]=[];
   volID:number;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase) {
     this.username=this.navParams.get('username');
     this.userId=this.navParams.get('userID');
     this.dataService.getVolunteers().subscribe((data: any) => {
@@ -39,10 +40,16 @@ export class VolunteersPage {
 
   chat(voluID:number){
     console.log('voluID:'+voluID)
+    this.firebase.object('/'+this.volID+'w'+this.userId).set({
+      username:this.username,
+    })
     this.navCtrl.push(ChatPage,{
       username:this.username,
       userID:this.userId,
       voluID:voluID
-    });  }
+    });  
+
+
+  }
 
 }
