@@ -13,8 +13,8 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
 
-  getUser(name:string){
-    return this.http.get('http://localhost:3000/api/users/'+name)
+  getUser(id:number){
+    return this.http.get('http://localhost:3000/api/users/'+id)
   }
 
   postUser(name:string){
@@ -24,6 +24,7 @@ export class DataService {
   getVolunteers(){
     return this.http.get('http://localhost:3000/api/volunteers/')
   }
+  
 
   postSignUp(fname:string,username:string,email:string,password:string){
     return this.http.post('http://localhost:3000/api/newuser',{

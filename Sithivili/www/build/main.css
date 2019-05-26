@@ -25734,6 +25734,48 @@ page-chat div#footer {
   flex-direction: row;
 }
 
+page-clients .client {
+  display: inline block;
+  padding: 5px 10px;
+  background: #488aff;
+  margin: 5px;
+  color: white;
+  border-radius: 3px;
+}
+
+page-clients .username {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+page-clients .message {
+  font-size: 80%;
+}
+
+page-clients .elem button {
+  border-radius: 0;
+  margin: 0;
+}
+
+page-clients div#footer div.elem:first-child {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+page-clients div#footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 page-volunteers .volunteer {
   display: inline block;
   padding: 5px 10px;

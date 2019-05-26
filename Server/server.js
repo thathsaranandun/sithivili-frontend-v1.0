@@ -7,11 +7,39 @@ app.use(function(req, res, next) {
   next();
 });
 
-  //GET request
-  app.route('/api/users/:name').get((req, res) => {
-    const requestedUserName = req.params['name']
-    res.send({ name: requestedUserName })
-    console.log(requestedUserName)
+  //GET user request
+  app.route('/api/users/:id').get((req, res) => {
+    const requestedID = req.params['id']
+    let mysql = require('mysql');
+    let config = require('./config.js');
+    
+    let connection = mysql.createConnection(config);
+    
+    let sql = "SELECT * FROM users WHERE userId="+requestedID;
+    connection.query(sql, (error, results, fields) => {
+      if (error) {
+        return console.error(error.message);
+      }else{
+        console.log('>> results: ', results );
+        var string=JSON.stringify(results);
+        console.log('>> string: ', string );
+        var json =  JSON.parse(string);
+        console.log('>> json: ', json);
+        
+        console.log('>> user.name: ', json[0].username);
+        console.log(json)
+        var userObj = {
+          "username":json[0].username,
+          "userId":json[0].userId
+        }
+        console.log(userObj)
+        res.send(userObj);
+      
+      
+    }
+    connection.end();
+    
+    });
   })
 
   //GET volunteers

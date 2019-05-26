@@ -22,15 +22,13 @@ export class VolunteersPage {
   userId:number;
   volunteers:object[]=[];
   volID:number;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase) {
     this.username=this.navParams.get('username');
     this.userId=this.navParams.get('userID');
     this.dataService.getVolunteers().subscribe((data: any) => {
       console.log(data);
       this.volunteers=data
-      //for (let i = 0; i < this.volunteers.length; i++) {
-      //  this.volunteers.push(this.volunteers[i])
-      //}
     });
   }
 
@@ -40,8 +38,11 @@ export class VolunteersPage {
 
   chat(voluID:number){
     console.log('voluID:'+voluID)
+    this.firebase.list('/clients/vol'+voluID).push({
+      clientID:this.userId,
+    })
     this.firebase.object('/'+this.volID+'w'+this.userId).set({
-      username:this.username,
+      clientID:this.userId,
     })
     this.navCtrl.push(ChatPage,{
       username:this.username,

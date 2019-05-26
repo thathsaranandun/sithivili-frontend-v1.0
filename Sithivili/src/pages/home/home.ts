@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {AlertController, NavController } from 'ionic-angular';
-import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
 import {SignupPage} from '../signup/signup';
 import { VolunteersPage } from '../volunteers/volunteers';
@@ -82,7 +81,7 @@ export class HomePage {
         console.log('enteredDataStatus:'+this.enteredDataStatus)
         console.log('Volunteer ID:'+ data.volID)
         if(this.enteredDataStatus){
-          this.volunID=data.volunteerID;
+          this.volunID=data.volID;
           this.navCtrl.push(ClientsPage,{
             username:this.username,
             volID:this.volunID
