@@ -25735,12 +25735,13 @@ page-chat div#footer {
 }
 
 page-clients .client {
-  display: inline block;
-  padding: 5px 10px;
+  display: block;
+  padding: 5px 8px;
   background: #488aff;
   margin: 5px;
   color: white;
-  border-radius: 3px;
+  border-radius: 5px;
+  height: 50px;
 }
 
 page-clients .username {
@@ -25774,6 +25775,19 @@ page-clients div#footer {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+page-clients .left {
+  grid-column: 1;
+}
+
+page-clients .right {
+  grid-column: 2;
+}
+
+page-clients .client {
+  display: grid;
+  grid-template-columns: 75% 25%;
 }
 
 page-home .button_div {

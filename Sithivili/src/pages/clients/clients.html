@@ -13,8 +13,13 @@
 <ion-content padding>
     <div class="clientList">
         <div class="client" *ngFor="let clientDetails of clientsDetails">
-            <div class="username">{{clientDetails.username}}</div>
-            <div class="elem"><button ion-button icon-only (click)="chat(clientDetails.clientID)">Chat<ion-icon name="send"></ion-icon></button></div>
+            <div class="left">
+              <div class="username">{{clientDetails.username}}</div>
+              <div class="message">messaged you.</div>
+            </div>  
+            <div class="right">
+              <div class="elem"><button ion-button icon-only (click)="chat(clientDetails.clientID)">Chat<ion-icon name="send"></ion-icon></button></div>
+              </div>
     
         </div>
     </div>
