@@ -24,7 +24,7 @@ export class ChatPage {
   s;
   volID:number=0;
   userID:number=0;
-  messages: object[]=[];
+  messages=[];
   chargerid:number=1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase) {

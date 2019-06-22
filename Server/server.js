@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
     
     let connection = mysql.createConnection(config);
     
-    let sql = "SELECT * FROM users WHERE userId="+requestedID;
+    let sql = "SELECT * FROM users WHERE userid="+requestedID;
     connection.query(sql, (error, results, fields) => {
       if (error) {
         return console.error(error.message);
@@ -30,7 +30,8 @@ app.use(function(req, res, next) {
         console.log(json)
         var userObj = {
           "username":json[0].username,
-          "userId":json[0].userId
+          "userId":json[0].userid,
+          "userType":json[0].usertype
         }
         console.log(userObj)
         res.send(userObj);
@@ -95,7 +96,7 @@ app.use(function(req, res, next) {
     
     let connection = mysql.createConnection(config);
     
-    let sql = "SELECT userId,username,password FROM users WHERE username='"+username+"'";
+    let sql = "SELECT userid,username,password,usertype FROM users WHERE username='"+username+"'";
     connection.query(sql, (error, results, fields) => {
       if (error) {
         return console.error(error.message);
@@ -117,7 +118,8 @@ app.use(function(req, res, next) {
           dbdata=true;
           var userObj = {
             "dbdata":dbdata,
-            "userId":json[0].userId
+            "userId":json[0].userid,
+            "userType":json[0].usertype
           }
           console.log(userObj)
           response.send(userObj);

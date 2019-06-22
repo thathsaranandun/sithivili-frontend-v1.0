@@ -16,6 +16,7 @@ export class HomePage {
   password:string='';
   userID:number;
   volunID:number;
+  userType:string;
 
   dbuser:string='';
 
@@ -43,12 +44,27 @@ export class HomePage {
         this.enteredDataStatus=data.dbdata;
         console.log('enteredDataStatus:'+this.enteredDataStatus)
         console.log('User ID:'+ data.userId)
+        this.userType=data.userType;
+        console.log('UserType: '+ data.userType)
         if(this.enteredDataStatus){
-          this.userID=data.userId;
-          this.navCtrl.push(VolunteersPage,{
-            username:this.username,
-            userID:this.userID
-          });
+          if(this.userType=='Client'){
+            this.userID=data.userId;
+            this.navCtrl.push(VolunteersPage,{
+              username:this.username,
+              userID:this.userID
+            });
+          }else if(this.userType=='Volunteer'){
+            this.userID=data.userId;
+            this.navCtrl.push(ClientsPage,{
+              username:this.username,
+              userID:this.userID
+            });
+
+          }else{
+            console.log('Invalid User Type.')
+          }
+    
+          
   
         }else{
           this.alert('Error','Invalid Login details. Please enter again.');
@@ -72,7 +88,7 @@ export class HomePage {
     this.navCtrl.push(SignupPage);
   }
 
-  logVolunteer(){
+  /* logVolunteer(){
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
       //Validate
       this.dataService.postLogVol(this.username,this.password).subscribe((data:any) => {
@@ -103,7 +119,7 @@ export class HomePage {
       this.alert('Error','Invalid Username');
     }
     
-  }
+  } */
   
 
 }

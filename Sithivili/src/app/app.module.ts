@@ -17,6 +17,8 @@ import { DataService } from './services/data.services';
 import { SignupPage } from '../pages/signup/signup';
 import { VolunteersPage } from '../pages/volunteers/volunteers';
 import { ClientsPage } from '../pages/clients/clients';
+import { WelcomePage } from '../pages/welcome/welcome';
+import { MenuPage } from '../pages/menu/menu';
 
 
 var config = {
@@ -39,6 +41,8 @@ var config = {
     SignupPage,
     VolunteersPage,
     ClientsPage,
+    WelcomePage,
+    MenuPage,
     TabsPage
   ],
   imports: [
@@ -58,6 +62,8 @@ var config = {
     VolunteersPage,
     ChatPage,
     ClientsPage,
+    WelcomePage,
+    MenuPage,
     TabsPage
   ],
   providers: [
