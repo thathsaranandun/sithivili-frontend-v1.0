@@ -140,12 +140,12 @@ var ClientChatsPage = /** @class */ (function () {
             }
         });
     }
-    ClientChatsPage.prototype.chat = function (userID) {
-        console.log('userID:' + userID);
+    ClientChatsPage.prototype.chat = function (volID) {
+        console.log('userID:' + this.userID);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__chat_chat__["a" /* ChatPage */], {
             username: this.username,
-            userID: userID,
-            voluID: this.volID
+            userID: this.userID,
+            voluID: volID
         });
     };
     ClientChatsPage.prototype.ionViewDidLoad = function () {

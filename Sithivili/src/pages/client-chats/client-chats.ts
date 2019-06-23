@@ -52,13 +52,13 @@ export class ClientChatsPage {
 
   }
 
-  chat(userID:number){
-    console.log('userID:'+userID)
+  chat(volID:number){
+    console.log('userID:'+this.userID)
 
     this.navCtrl.push(ChatPage,{
       username:this.username,
-      userID:userID,
-      voluID:this.volID
+      userID:this.userID,
+      voluID:volID
     });  
 
 
