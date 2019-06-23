@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { DataService } from '../../app/services/data.services';
+import { ChatPage } from '../chat/chat';
 
 /**
  * Generated class for the ClientChatsPage page.
@@ -16,6 +17,7 @@ import { DataService } from '../../app/services/data.services';
   templateUrl: 'client-chats.html',
 })
 export class ClientChatsPage {
+  username:string;
   userID:number;
   volID:number;
   vols:number[]=[];
@@ -24,6 +26,7 @@ export class ClientChatsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
     this.userID=Number(localStorage.getItem('userid'));
+    this.username=localStorage.getItem('username');
     this.firebase.list('/volunteers/client'+this.userID).valueChanges().subscribe((data:any) => {
       console.log(data);
       for(let i=0;i<data.length;i++){
@@ -46,6 +49,18 @@ export class ClientChatsPage {
       }
           
     });
+
+  }
+
+  chat(userID:number){
+    console.log('userID:'+userID)
+
+    this.navCtrl.push(ChatPage,{
+      username:this.username,
+      userID:userID,
+      voluID:this.volID
+    });  
+
 
   }
 

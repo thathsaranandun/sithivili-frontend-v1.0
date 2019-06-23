@@ -87,6 +87,7 @@ var ChatPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__chat_chat__ = __webpack_require__(173);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -96,6 +97,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -117,6 +119,7 @@ var ClientChatsPage = /** @class */ (function () {
         this.volIDs = [];
         this.volsDetails = [];
         this.userID = Number(localStorage.getItem('userid'));
+        this.username = localStorage.getItem('username');
         this.firebase.list('/volunteers/client' + this.userID).valueChanges().subscribe(function (data) {
             console.log(data);
             for (var i = 0; i < data.length; i++) {
@@ -137,6 +140,14 @@ var ClientChatsPage = /** @class */ (function () {
             }
         });
     }
+    ClientChatsPage.prototype.chat = function (userID) {
+        console.log('userID:' + userID);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__chat_chat__["a" /* ChatPage */], {
+            username: this.username,
+            userID: userID,
+            voluID: this.volID
+        });
+    };
     ClientChatsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ClientChatsPage');
     };
