@@ -25,7 +25,9 @@ export class VolunteersPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase) {
     this.username=this.navParams.get('username');
-    this.userId=this.navParams.get('userID');
+    console.log('from local storage: '+ localStorage.getItem('userid'))
+    this.userId=Number(localStorage.getItem('userid'));
+    console.log('Volunteer Page User ID: '+ this.userId);
     this.dataService.getVolunteers().subscribe((data: any) => {
       console.log('Volunteer Data: ' + data);
       this.volunteers=data
