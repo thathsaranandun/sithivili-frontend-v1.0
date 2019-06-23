@@ -27,7 +27,7 @@ export class VolunteersPage {
     this.username=this.navParams.get('username');
     this.userId=this.navParams.get('userID');
     this.dataService.getVolunteers().subscribe((data: any) => {
-      console.log(data);
+      console.log('Volunteer Data: ' + data);
       this.volunteers=data
     });
   }
