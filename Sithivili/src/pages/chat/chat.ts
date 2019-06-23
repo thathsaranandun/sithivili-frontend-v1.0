@@ -29,10 +29,10 @@ export class ChatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase) {
     this.username=this.navParams.get('username');
-    this.userID=this.navParams.get('userID');
+    this.userID=Number(localStorage.getItem('userid'));
     this.volID=this.navParams.get('voluID');
-    console.log('Volunteer ID: '+ this.volID)
-    console.log('User ID: '+ this.userID)
+    console.log('Volunteer ID(Chat): '+ this.volID)
+    console.log('User ID(Chat): '+ this.userID)
     this.s=this.firebase.list('/'+this.volID+'w'+this.userID).valueChanges().subscribe(data => {
       console.log(data);
       this.messages=data;

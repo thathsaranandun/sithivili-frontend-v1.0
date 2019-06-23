@@ -1,0 +1,53 @@
+page-client-chats {
+    .vol{
+        display: block;
+        padding: 5px 8px;
+        background: color($colors,'primary');
+        margin:5px;
+        color: white;
+        border-radius: 5px;
+        height: 50px;
+
+    }
+
+    .username{
+        font-weight: bold;
+        font-size: 120%;
+
+    }
+
+    .message{
+        font-size: 80%;
+    }
+
+    .elem button{
+        border-radius: 0;
+        margin: 0;
+    
+    }
+
+    div#footer div.elem:first-child{
+        flex-grow: 1;
+
+    }
+
+    div#footer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left{
+        grid-column: 1;
+    }
+
+    .right{
+        grid-column: 2;
+
+    }
+
+    .vol {
+        display: grid;
+        grid-template-columns: 75% 25%;
+      }
+
+}

@@ -24,7 +24,8 @@ export class VolunteersPage {
   volID:number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase) {
-    this.username=this.navParams.get('username');
+    this.username=localStorage.getItem('username');
+    console.log('Username: ' + this.username);
     console.log('from local storage: '+ localStorage.getItem('userid'))
     this.userId=Number(localStorage.getItem('userid'));
     console.log('Volunteer Page User ID: '+ this.userId);
@@ -43,6 +44,11 @@ export class VolunteersPage {
     this.firebase.list('/clients/vol'+voluID).push({
       clientID:this.userId,
     })
+
+    this.firebase.list('/volunteers/client'+this.userId).push({
+      volID:voluID,
+    })
+
     this.firebase.object('/'+this.volID+'w'+this.userId).set({
       clientID:this.userId,
     })

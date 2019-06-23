@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, NavController } from 'ionic-angular';
 import { DataService } from '../../app/services/data.services';
 import {SignupPage} from '../signup/signup';
-import { VolunteersPage } from '../volunteers/volunteers';
+//import { VolunteersPage } from '../volunteers/volunteers';
 import { ClientsPage } from '../clients/clients';
 import { TabsPage } from '../tabs/tabs';
 
@@ -47,6 +47,8 @@ export class HomePage {
         console.log('User ID:'+ data.userId)
         this.userType=data.userType;
         localStorage.setItem('userid', data.userId);
+        localStorage.setItem('username', this.username);
+        
         console.log('UserType: '+ data.userType)
         if(this.enteredDataStatus){
           if(this.userType=='Client'){
