@@ -12,7 +12,6 @@ app.use(function(req, res, next) {
     const requestedID = req.params['id']
     let mysql = require('mysql');
     let config = require('./config.js');
-    
     let connection = mysql.createConnection(config);
     
     let sql = "SELECT * FROM users WHERE userid="+requestedID;
@@ -47,10 +46,10 @@ app.use(function(req, res, next) {
   app.route('/api/volunteers/').get((req, res) => {
     let mysql = require('mysql');
     let config = require('./config.js');
-    
+    let usertype = 'volunteer'
     let connection = mysql.createConnection(config);
     
-    let sql = "SELECT * FROM volunteers";
+    let sql = "SELECT * FROM users WHERE usertype='"+usertype+"'";
     connection.query(sql, (error, results, fields) => {
       if (error) {
         return console.error(error.message);
@@ -139,7 +138,7 @@ app.use(function(req, res, next) {
   });
 
 
-  app.post('/api/vollogin', function(request, response){
+  /* app.post('/api/vollogin', function(request, response){
     const requestedUser = request.body
     console.log(requestedUser.name);  
     console.log(requestedUser.password);
@@ -191,7 +190,7 @@ app.use(function(req, res, next) {
     });
     
         
-  });
+  }); */
 
   //POST Sign up request
   app.post('/api/newuser', function(request, response){
