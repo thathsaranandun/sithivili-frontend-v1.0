@@ -333,9 +333,7 @@ var SignupPage = /** @class */ (function () {
         this.navParams = navParams;
         this.dataService = dataService;
         this.alertCtrl = alertCtrl;
-        this.userFname = '';
-        this.userLname = '';
-        this.userEmail = '';
+        this.userMobile = '';
         this.userName = '';
         this.userPassword = '';
     }
@@ -346,11 +344,9 @@ var SignupPage = /** @class */ (function () {
         /* this.dataService.getUser(this.username).subscribe((data:any) =>{
           this.dbuser=data.dbuser;
         }); */
-        this.dataService.postSignUp(this.userFname, this.userName, this.userEmail, this.userPassword).subscribe(function (data) {
+        this.dataService.postSignUp(this.userMobile, this.userName, this.userPassword).subscribe(function (data) {
         });
-        this.userFname = '';
-        this.userLname = '';
-        this.userEmail = '';
+        this.userMobile = '';
         this.userName = '';
         this.userPassword = '';
         this.alert('Registration Successfull', 'User registered successfully!');
@@ -365,7 +361,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item-divider>Personal Details</ion-item-divider>\n\n\n\n    <ion-item>\n\n      <ion-label>First Name</ion-label>\n\n        <ion-input type="text" name="name" [(ngModel)]="userFname"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label >Last Name</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userLname" ></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Email</ion-label>\n\n      <ion-input type="email" [(ngModel)]="userEmail"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Username</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n    </ion-item>\n\n    <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item-divider>Personal Details</ion-item-divider>\n\n\n\n    <ion-item>\n\n      <ion-label>Mobile No</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userMobile"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Username</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n    </ion-item>\n\n    <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], SignupPage);
@@ -550,11 +546,11 @@ var map = {
 		0
 	],
 	"../pages/volunteers/volunteers.module": [
-		619,
+		618,
 		2
 	],
 	"../pages/welcome/welcome.module": [
-		618,
+		619,
 		1
 	]
 };
@@ -825,8 +821,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/volunteer-chat/volunteer-chat.module#VolunteerChatPageModule', name: 'VolunteerChatPage', segment: 'volunteer-chat', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/volunteers/volunteers.module#VolunteersPageModule', name: 'VolunteersPage', segment: 'volunteers', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/volunteers/volunteers.module#VolunteersPageModule', name: 'VolunteersPage', segment: 'volunteers', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_4_angularfire2__["AngularFireModule"].initializeApp(config),
@@ -1016,11 +1012,10 @@ var DataService = /** @class */ (function () {
     DataService.prototype.getVolunteers = function () {
         return this.http.get('http://localhost:3000/api/volunteers/');
     };
-    DataService.prototype.postSignUp = function (fname, username, email, password) {
+    DataService.prototype.postSignUp = function (mobile, username, password) {
         return this.http.post('http://localhost:3000/api/newuser', {
-            'fname': fname,
+            'mobile': mobile,
             'username': username,
-            'email': email,
             'password': password
         });
     };

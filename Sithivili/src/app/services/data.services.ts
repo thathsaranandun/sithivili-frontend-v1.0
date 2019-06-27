@@ -26,10 +26,10 @@ export class DataService {
   }
   
 
-  postSignUp(mobile:string,email:string,password:string){
+  postSignUp(mobile:string,username:string,password:string){
     return this.http.post('http://localhost:3000/api/newuser',{
       'mobile':mobile,
-      'email':email,
+      'username':username,
       'password':password
     })
   }
