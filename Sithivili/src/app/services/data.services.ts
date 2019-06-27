@@ -26,10 +26,9 @@ export class DataService {
   }
   
 
-  postSignUp(fname:string,username:string,email:string,password:string){
+  postSignUp(mobile:string,email:string,password:string){
     return this.http.post('http://localhost:3000/api/newuser',{
-      'fname':fname,
-      'username':username,
+      'mobile':mobile,
       'email':email,
       'password':password
     })

@@ -196,13 +196,11 @@ app.use(function(req, res, next) {
   //POST Sign up request
   app.post('/api/newuser', function(request, response){
     const requestedUser = request.body
-    console.log(requestedUser.fname);
     console.log(requestedUser.username);
-    console.log(requestedUser.email);
+    console.log(requestedUser.mobile);
     console.log(requestedUser.password);
-    const fname = requestedUser.fname;
     const username = requestedUser.username;
-    const email = requestedUser.email;
+    const mobile = requestedUser.mobile;
     const password = requestedUser.password;
 
 
@@ -212,7 +210,7 @@ app.use(function(req, res, next) {
     let config = require('./config.js');
     let connection = mysql.createConnection(config);
  
-    let stmt = "INSERT INTO users(fname,email,username,password) VALUES ('"+fname+"','"+email+"','"+username+"','"+password+"')";
+    let stmt = "INSERT INTO users(mobileno,username,password) VALUES ('"+mobile+"','"+username+"','"+password+"')";
             
     let todo = ['Insert a new row with placeholders', false];
  

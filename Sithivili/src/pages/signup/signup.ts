@@ -16,9 +16,8 @@ import { DataService } from '../../app/services/data.services';
 })
 export class SignupPage {
 
-  userFname:string='';
-  userLname:string='';
-  userEmail:string='';
+
+  userMobile:string='';
   userName:string='';
   userPassword:string='';
 
@@ -35,11 +34,9 @@ export class SignupPage {
     /* this.dataService.getUser(this.username).subscribe((data:any) =>{
       this.dbuser=data.dbuser;
     }); */
-    this.dataService.postSignUp(this.userFname,this.userName,this.userEmail,this.userPassword).subscribe((data:any) => {
+    this.dataService.postSignUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
     })
-    this.userFname='';
-    this.userLname='';
-    this.userEmail='';
+    this.userMobile='';
     this.userName='';
     this.userPassword='';
     this.alert('Registration Successfull','User registered successfully!');
