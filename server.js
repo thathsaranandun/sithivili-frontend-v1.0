@@ -7,6 +7,12 @@ app.use(function(req, res, next) {
   next();
 });
 
+
+  app.route('/api/').get((req,res) => {
+    res.send("Hello!!!");
+
+  })
+
   //GET user request
   app.route('/api/users/:id').get((req, res) => {
     const requestedID = req.params['id']
