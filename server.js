@@ -8,7 +8,7 @@ app.use(function(req, res, next) {
 });
 
 
-  app.route('/api/').get((req,res) => {
+  app.route('/').get((req,res) => {
     res.send("Hello!!!");
 
   })
