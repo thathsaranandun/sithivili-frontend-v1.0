@@ -31,8 +31,8 @@ export class ClientsPage {
     this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe((data:any) => {
       console.log(data);
       for(let i=0;i<data.length;i++){
-        console.log(data[i].clientID)//Ignore the error shown
-        this.clientIDs.push(data[i].clientID);//Ignore the error shown
+        console.log(data[i].clientID);
+        this.clientIDs.push(data[i].clientID);
       }
       this.clients=Array.from(new Set(this.clientIDs))
       console.log('Client: '+this.clients);
@@ -43,7 +43,7 @@ export class ClientsPage {
             username:data.username,
             clientID:data.userId
           });
-          console.log(this.clientsDetails)
+          console.log('client details: '+this.clientsDetails)
   
         })
 
@@ -59,7 +59,9 @@ export class ClientsPage {
       username:this.username,
       userID:userID,
       voluID:this.volID
-    });  
+    }); 
+    console.log('vol id pushed: '+ this.volID); 
+    console.log('user id pushed: '+userID);
 
 
   }

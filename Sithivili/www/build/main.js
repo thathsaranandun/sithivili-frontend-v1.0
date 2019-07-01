@@ -40,12 +40,13 @@ var ChatPage = /** @class */ (function () {
         this.messages = [];
         this.chargerid = 1;
         this.username = this.navParams.get('username');
-        this.userID = Number(localStorage.getItem('userid'));
+        //this.userID=Number(localStorage.getItem('userid'));
+        this.userID = navParams.get('userID');
         this.volID = this.navParams.get('voluID');
         console.log('Volunteer ID(Chat): ' + this.volID);
         console.log('User ID(Chat): ' + this.userID);
         this.s = this.firebase.list('/' + this.volID + 'w' + this.userID).valueChanges().subscribe(function (data) {
-            console.log(data);
+            console.log('from fb: ' + data);
             _this.messages = data;
         });
     }
@@ -67,9 +68,10 @@ var ChatPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/'<!--\n\n  Generated template for the ChatPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Chat Room</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div id="chatMessages">\n\n      <div class="message" *ngFor="let message of messages">\n\n        <div class="innerMessage">\n\n            <div class="username">{{message.username}}</div>\n\n            <div class="message">{{message.message}}</div>\n\n\n\n        </div>\n\n        \n\n      </div>\n\n\n\n\n\n\n\n    </div>\n\n</ion-content>\n\n<ion-content class="bgimg" padding>\n\n  <ion-footer>\n\n    <ion-toolbar>\n\n      <div id="footer">\n\n          <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>\n\n          <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>\n\n      </div>\n\n      \n\n    </ion-toolbar>\n\n  </ion-footer>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"]) === "function" && _c || Object])
     ], ChatPage);
     return ChatPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=chat.js.map
@@ -210,8 +212,8 @@ var ClientsPage = /** @class */ (function () {
         this.firebase.list('/clients/vol' + this.volID).valueChanges().subscribe(function (data) {
             console.log(data);
             for (var i = 0; i < data.length; i++) {
-                console.log(data[i].clientID); //Ignore the error shown
-                _this.clientIDs.push(data[i].clientID); //Ignore the error shown
+                console.log(data[i].clientID);
+                _this.clientIDs.push(data[i].clientID);
             }
             _this.clients = Array.from(new Set(_this.clientIDs));
             console.log('Client: ' + _this.clients);
@@ -222,7 +224,7 @@ var ClientsPage = /** @class */ (function () {
                         username: data.username,
                         clientID: data.userId
                     });
-                    console.log(_this.clientsDetails);
+                    console.log('client details: ' + _this.clientsDetails);
                 });
             }
         });
@@ -234,6 +236,8 @@ var ClientsPage = /** @class */ (function () {
             userID: userID,
             voluID: this.volID
         });
+        console.log('vol id pushed: ' + this.volID);
+        console.log('user id pushed: ' + userID);
     };
     ClientsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ClientsPage');
@@ -242,9 +246,10 @@ var ClientsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-clients',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\clients\clients.html"*/'<!--\n\n  Generated template for the ClientsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Clients</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div class="clientList">\n\n        <div class="client" *ngFor="let clientDetails of clientsDetails">\n\n            <div class="left">\n\n              <div class="username">{{clientDetails.username}}</div>\n\n              <div class="message">messaged you.</div>\n\n            </div>  \n\n            <div class="right">\n\n              <div class="elem"><button ion-button icon-only (click)="chat(clientDetails.clientID)">Chat<ion-icon name="send"></ion-icon></button></div>\n\n              </div>\n\n    \n\n        </div>\n\n    </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\clients\clients.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */]) === "function" && _d || Object])
     ], ClientsPage);
     return ClientsPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=clients.js.map
@@ -440,14 +445,17 @@ var VolunteersPage = /** @class */ (function () {
             userID: this.userId,
             voluID: voluID
         });
+        console.log('userID pushed: ' + this.userId);
+        console.log('vol id pushed: ' + voluID);
     };
     VolunteersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-volunteers',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Select a Volunteer</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer" *ngFor="let volunteer of volunteers">\n\n      <div class="left">\n\n        <div class="username">{{volunteer.username}}</div>\n\n        <!-- <div class="message">Rating: {{volunteer.rating}} /10</div> -->\n\n        <div class="message">Gender: {{volunteer.gender}}</div>\n\n      </div>  \n\n      <div class="right">\n\n        <div class="elem"><button ion-button icon-only (click)="chat(volunteer.userid)">Chat<ion-icon name="send"></ion-icon></button></div>\n\n      </div>\n\n      \n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__["AngularFireDatabase"]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__["AngularFireDatabase"]) === "function" && _d || Object])
     ], VolunteersPage);
     return VolunteersPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=volunteers.js.map
@@ -538,11 +546,11 @@ var map = {
 		4
 	],
 	"../pages/signup/signup.module": [
-		616,
+		617,
 		3
 	],
 	"../pages/volunteer-chat/volunteer-chat.module": [
-		617,
+		616,
 		0
 	],
 	"../pages/volunteers/volunteers.module": [
@@ -819,8 +827,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/client-chats/client-chats.module#ClientChatsPageModule', name: 'ClientChatsPage', segment: 'client-chats', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/clients/clients.module#ClientsPageModule', name: 'ClientsPage', segment: 'clients', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/volunteer-chat/volunteer-chat.module#VolunteerChatPageModule', name: 'VolunteerChatPage', segment: 'volunteer-chat', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/volunteers/volunteers.module#VolunteersPageModule', name: 'VolunteersPage', segment: 'volunteers', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
@@ -1004,29 +1012,29 @@ var DataService = /** @class */ (function () {
         this.http = http;
     }
     DataService.prototype.getUser = function (id) {
-        return this.http.get('http://localhost:3000/api/users/' + id);
+        return this.http.get('https://sithivili-server.herokuapp.com/api/users/' + id);
     };
     DataService.prototype.postUser = function (name) {
-        return this.http.post('http://localhost:3000/api/user', { 'name': name });
+        return this.http.post('https://sithivili-server.herokuapp.com/api/user', { 'name': name });
     };
     DataService.prototype.getVolunteers = function () {
-        return this.http.get('http://localhost:3000/api/volunteers/');
+        return this.http.get('https://sithivili-server.herokuapp.com/api/volunteers/');
     };
     DataService.prototype.postSignUp = function (mobile, username, password) {
-        return this.http.post('http://localhost:3000/api/newuser', {
+        return this.http.post('https://sithivili-server.herokuapp.com/api/newuser', {
             'mobile': mobile,
             'username': username,
             'password': password
         });
     };
     DataService.prototype.postLogIn = function (name, password) {
-        return this.http.post('http://localhost:3000/api/userlogin', {
+        return this.http.post('https://sithivili-server.herokuapp.com/api/userlogin', {
             'name': name,
             'password': password
         });
     };
     DataService.prototype.postLogVol = function (name, password) {
-        return this.http.post('http://localhost:3000/api/vollogin', {
+        return this.http.post('https://sithivili-server.herokuapp.com/api/vollogin', {
             'name': name,
             'password': password
         });

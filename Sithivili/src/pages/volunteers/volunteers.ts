@@ -56,7 +56,9 @@ export class VolunteersPage {
       username:this.username,
       userID:this.userId,
       voluID:voluID
-    });  
+    });
+    console.log('userID pushed: ' + this.userId);
+    console.log('vol id pushed: '+ voluID);  
 
 
   }
