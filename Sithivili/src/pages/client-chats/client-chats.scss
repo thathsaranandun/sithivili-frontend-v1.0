@@ -50,20 +50,4 @@ page-client-chats {
         grid-template-columns: 75% 25%;
       }
 
-      .elem button{
-        border-radius: 0;
-        margin: 0;
-    
-    }
-
-    div#header div.elem:first-child{
-        flex-grow: 1;
-
-    }
-
-    div#header{
-        display: flex;
-        flex-direction: row;
-    }
-
 }
