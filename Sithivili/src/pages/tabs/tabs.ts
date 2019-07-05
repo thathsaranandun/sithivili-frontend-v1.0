@@ -16,8 +16,12 @@ export class TabsPage {
   tab2Root = ClientChatsPage;
 
 
-  constructor() {
+  constructor() {  
+
+
+
 
   }
+
 
 }
