@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
 
 
   app.route('/').get((req,res) => {
-    res.send("Hello!!!");
+    res.send("Get Lost!You have nothing to do here.");
 
   })
 
