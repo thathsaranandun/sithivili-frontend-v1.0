@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the MenuPage page.
@@ -17,11 +16,7 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class MenuPage {
 
-  tabBarElement: any;
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-
   }
 
   ionViewDidLoad() {

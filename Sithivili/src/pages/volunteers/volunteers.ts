@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { MenuPage } from '../menu/menu';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the VolunteersPage page.
@@ -23,7 +23,7 @@ export class VolunteersPage {
   userId:number;
   volunteers:object[]=[];
   volID:number;
-  Menupage=MenuPage;
+  Homepage=HomePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase) {
     this.username=localStorage.getItem('username');

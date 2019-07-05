@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { DataService } from '../../app/services/data.services';
 import { ChatPage } from '../chat/chat';
-import { MenuPage } from '../menu/menu';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ClientChatsPage page.
@@ -24,7 +24,7 @@ export class ClientChatsPage {
   vols:number[]=[];
   volIDs:number[]=[];
   volsDetails:object[]=[];
-  Menupage= MenuPage;
+  Homepage= HomePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
     this.userID=Number(localStorage.getItem('userid'));
