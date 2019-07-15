@@ -20,6 +20,7 @@ import { ClientsPage } from '../pages/clients/clients';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { MenuPage } from '../pages/menu/menu';
 import { ClientChatsPage } from '../pages/client-chats/client-chats';
+import { from } from 'rxjs';
 
 
 var config = {
