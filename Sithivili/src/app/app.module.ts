@@ -21,6 +21,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { MenuPage } from '../pages/menu/menu';
 import { ClientChatsPage } from '../pages/client-chats/client-chats';
 import { from } from 'rxjs';
+import { EmergencyPage } from '../pages/emergency/emergency';
 
 
 var config = {
@@ -44,6 +45,7 @@ var config = {
     VolunteersPage,
     ClientsPage,
     WelcomePage,
+    EmergencyPage,
     ClientChatsPage,
     MenuPage,
     TabsPage
@@ -66,6 +68,7 @@ var config = {
     ChatPage,
     ClientsPage,
     WelcomePage,
+    EmergencyPage,
     ClientChatsPage,
     MenuPage,
     TabsPage
