@@ -1,7 +1,7 @@
 let config = {
     host    : 'sql12.freemysqlhosting.net',
     user    : 'sql12295341',
-    password: 'Asv3F9562X',
+    password: '8szm57z1Nh',
     database: 'sql12295341'
   };
    
