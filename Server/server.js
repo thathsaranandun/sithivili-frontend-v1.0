@@ -7,14 +7,14 @@ app.use(function(req, res, next) {
   next();
 });
 
-Header set Access-Control-Allow-Origin: *
 
   //GET user request
   app.route('/api/users/:id').get((req, res) => {
     const requestedID = req.params['id']
     let mysql = require('mysql');
     let config = require('./config.js');
-    
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
     let connection = mysql.createConnection(config);
     
     let sql = "SELECT * FROM users WHERE userid="+requestedID;
