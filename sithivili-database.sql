@@ -23,19 +23,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(45) DEFAULT NULL,
   `usertype` varchar(45) DEFAULT NULL,
   `gender` varchar(45) DEFAULT NULL,
+  `mobile` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Dumping data for table sithivili.users: ~0 rows (approximately)
+-- Dumping data for table sithivili.users: ~7 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`userid`, `username`, `password`, `usertype`, `gender`) VALUES
-	(1, 'abc', 'abc123', 'Client', NULL),
-	(2, 'user', '123', 'Client', NULL),
-	(3, 'vol1', '123', 'Volunteer', 'Male'),
-	(4, 'vol2', '123', 'Volunteer', 'Female'),
-	(5, 'vol3', '123', 'Volunteer', 'Male'),
-	(6, 'client', '123', 'Client', NULL),
-	(7, 'client2', '123', 'Client', NULL);
+INSERT INTO `users` (`userid`, `username`, `password`, `usertype`, `gender`, `mobile`) VALUES
+	(1, 'abc', 'abc123', 'Client', NULL, '0112729729'),
+	(2, 'user', '123', 'Client', NULL, NULL),
+	(3, 'vol1', '123', 'Volunteer', 'Male', '0112300303'),
+	(4, 'vol2', '123', 'Volunteer', 'Female', NULL),
+	(5, 'vol3', '123', 'Volunteer', 'Male', NULL),
+	(6, 'client', '123', 'Client', NULL, '0713003000'),
+	(7, 'client2', '123', 'Client', NULL, NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
