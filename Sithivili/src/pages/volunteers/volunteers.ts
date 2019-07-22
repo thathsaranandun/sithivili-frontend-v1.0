@@ -49,9 +49,6 @@ export class VolunteersPage {
       volID:voluID,
     })
 
-    this.firebase.object('/'+this.volID+'w'+this.userId).set({
-      clientID:this.userId,
-    })
     this.navCtrl.push(ChatPage,{
       username:this.username,
       userID:this.userId,
