@@ -16,6 +16,7 @@ import { HomePage } from '../home/home';
   templateUrl: 'menu.html',
 })
 export class MenuPage {
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
