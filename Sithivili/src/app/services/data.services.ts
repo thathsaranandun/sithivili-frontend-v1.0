@@ -14,20 +14,20 @@ export class DataService {
 
 
   getUser(id:number){
-    return this.http.get('http://localhost:3000/api/users/'+id)
+    return this.http.get('https://sithivili-server.herokuapp.com/api/users/'+id)
   }
 
   postUser(name:string){
-    return this.http.post('http://localhost:3000/api/user',{'name':name})
+    return this.http.post('https://sithivili-server.herokuapp.com/api/user',{'name':name})
   }
 
   getVolunteers(){
-    return this.http.get('http://localhost:3000/api/volunteers/')
+    return this.http.get('https://sithivili-server.herokuapp.com/api/volunteers/')
   }
   
 
   postSignUp(mobile:string,username:string,password:string){
-    return this.http.post('http://localhost:3000/api/newuser',{
+    return this.http.post('https://sithivili-server.herokuapp.com/api/newuser',{
       'mobile':mobile,
       'username':username,
       'password':password
@@ -35,14 +35,14 @@ export class DataService {
   }
 
   postLogIn(name:string,password:string){
-    return this.http.post('http://localhost:3000/api/userlogin',{
+    return this.http.post('https://sithivili-server.herokuapp.com/api/userlogin',{
       'name':name,
       'password':password
     })
   }
 
   postLogVol(name:string,password:string){
-    return this.http.post('http://locahost:3000/api/vollogin',{
+    return this.http.post('https://sithivili-server.herokuapp.com/api/vollogin',{
       'name':name,
       'password':password
     })

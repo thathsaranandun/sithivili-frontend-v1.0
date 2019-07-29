@@ -1,8 +1,8 @@
 let config = {
-    host    : 'localhost',
-    user    : 'root',
-    password: 'root',
-    database: 'sithivili'
+    host    : 'remotemysql.com',
+    user    : 'U7PwMajrKP',
+    password: 'wQrXcENWSn',
+    database: 'U7PwMajrKP'
   };
    
   module.exports = config;
