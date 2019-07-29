@@ -1,8 +1,8 @@
 let config = {
-    host    : 'sql12.freemysqlhosting.net',
-    user    : 'sql12295341',
-    password: '8szm57z1Nh',
-    database: 'sql12295341'
+    host    : 'remotemysql.com',
+    user    : 'U7PwMajrKP',
+    password: 'wQrXcENWSn',
+    database: 'U7PwMajrKP'
   };
    
   module.exports = config;
