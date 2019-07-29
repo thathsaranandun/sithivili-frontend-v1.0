@@ -26,15 +26,20 @@ export class ClientChatsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
     this.userID=Number(localStorage.getItem('userid'));
+    console.log('Client ID(Chat history): '+this.userID);
     this.username=localStorage.getItem('username');
     this.firebase.list('/volunteers/client'+this.userID).valueChanges().subscribe((data:any) => {
       console.log(data);
       for(let i=0;i<data.length;i++){
-        console.log(data[i].volID)//Ignore the error shown
-        this.volIDs.push(data[i].volID);//Ignore the error shown
+        console.log('fb data array length: '+ data.length);
+        console.log(i+') Volunteer ID(Chat History)'+data[i].volID);
+        this.volIDs.push(data[i].volID);
       }
+
       this.vols=Array.from(new Set(this.volIDs))
-      console.log('Volunteer: '+this.vols);
+      console.log('Volunteers array: ' + this.vols);
+      console.log('vols array length' + this.vols.length)
+      this.volsDetails=[];
       for(let j=0;j<this.vols.length;j++){
         this.dataService.getUser(this.vols[j]).subscribe((data:any) => {
           console.log(data);
@@ -42,7 +47,7 @@ export class ClientChatsPage {
             username:data.username,
             volID:data.userId,
           });
-          console.log(this.volsDetails)
+          console.log('volunteer details from mysql db' + this.volsDetails[j])
   
         })
 

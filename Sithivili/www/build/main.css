@@ -25856,6 +25856,12 @@ page-clients .client {
   grid-template-columns: 75% 25%;
 }
 
+page-emergency #emergency {
+  background-color: #d8d8d8;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 page-home .button_div {
   display: -webkit-box;
   display: -webkit-flex;

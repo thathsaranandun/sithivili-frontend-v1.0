@@ -91,6 +91,7 @@ app.use(function(req, res, next) {
     console.log(requestedUser.password);
     username=requestedUser.name;
     password=requestedUser.password;
+    response.setHeader('Access-Control-Allow-Origin', '*');
 
     var dbdata = false;
     let mysql = require('mysql');

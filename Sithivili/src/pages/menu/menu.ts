@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
 import { HomePage } from '../home/home';
+import { EmergencyPage } from '../emergency/emergency';
 
 /**
  * Generated class for the MenuPage page.
@@ -16,6 +16,8 @@ import { HomePage } from '../home/home';
   templateUrl: 'menu.html',
 })
 export class MenuPage {
+  emergencypg = EmergencyPage;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

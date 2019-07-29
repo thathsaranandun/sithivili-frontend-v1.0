@@ -20,6 +20,7 @@ import { ClientsPage } from '../pages/clients/clients';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { MenuPage } from '../pages/menu/menu';
 import { ClientChatsPage } from '../pages/client-chats/client-chats';
+import { EmergencyPage } from '../pages/emergency/emergency';
 
 
 var config = {
@@ -42,6 +43,7 @@ var config = {
     SignupPage,
     VolunteersPage,
     ClientsPage,
+    EmergencyPage,
     WelcomePage,
     ClientChatsPage,
     MenuPage,
@@ -64,6 +66,7 @@ var config = {
     VolunteersPage,
     ChatPage,
     ClientsPage,
+    EmergencyPage,
     WelcomePage,
     ClientChatsPage,
     MenuPage,
