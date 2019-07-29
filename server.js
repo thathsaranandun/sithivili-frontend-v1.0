@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
 
 
   app.route('/').get((req,res) => {
-    res.send("Get Lost!You have nothing to do here.");
+    res.send("Sithivili server is running...");
 
   })
 
