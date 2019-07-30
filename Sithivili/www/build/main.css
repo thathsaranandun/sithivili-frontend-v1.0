@@ -25744,6 +25744,11 @@ page-chat div#footer {
   flex-direction: row;
 }
 
+page-chat ion-scroll {
+  white-space: nowrap;
+  height: 500px;
+}
+
 page-client-chats .vol {
   display: block;
   padding: 5px 8px;
