@@ -10,20 +10,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="bgimg" padding>
-    <div id="chatMessages">
+<ion-content class="bgimg" padding style="overflow-y: hidden;">
+    
+    <div id="chatMessages"  class="container">
       <div class="message" *ngFor="let message of messages">
         <div class="innerMessage">
             <div class="username">{{message.username}}</div>
             <div class="message">{{message.message}}</div>
-
         </div>
-        
       </div>
-
-
-
     </div>
+  
 </ion-content>
 <ion-content class="bgimg" padding>
   <ion-footer>
