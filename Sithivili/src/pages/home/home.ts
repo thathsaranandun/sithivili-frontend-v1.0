@@ -18,7 +18,7 @@ export class HomePage {
   userID:number;
   volunID:number;
   userType:string;
-
+  user:any;
   dbuser:string='';
 
   enteredDataStatus:boolean=false;
@@ -40,25 +40,28 @@ export class HomePage {
   loginUser(){
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
       //Validate
-      this.dataService.postLogIn(this.username,this.password).subscribe((data:any) => {
-        console.log(data);
+      console.log("Validating...")
+      this.dataService.login(this.username,this.password).subscribe((data:any) => {
+        console.log("Data: "+data.dbdata);
         this.enteredDataStatus=data.dbdata;
+        this.user=data.user;
+
         console.log('enteredDataStatus:'+this.enteredDataStatus)
-        console.log('User ID:'+ data.userId)
+        console.log('User ID:'+ this.user.userid)
         this.userType=data.userType;
-        localStorage.setItem('userid', data.userId);
-        localStorage.setItem('username', this.username);
+        localStorage.setItem('userid', this.user.userid);
+        localStorage.setItem('username', this.user.username);
         
-        console.log('UserType: '+ data.userType)
+        console.log('UserType: '+ this.user.usertype)
         if(this.enteredDataStatus){
-          if(this.userType=='Client'){
-            this.userID=data.userId;
+          if(this.user.usertype=='Client'){
+            this.userID=this.user.userid;
             this.navCtrl.push(TabsPage,{
               username:this.username,
               userID:this.userID
             });
-          }else if(this.userType=='Volunteer'){
-            this.userID=data.userId;
+          }else if(this.user.usertype=='Volunteer'){
+            this.userID=this.user.userid;
             this.navCtrl.push(ClientsPage,{
               username:this.username,
               volID:this.userID

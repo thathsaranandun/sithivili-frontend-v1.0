@@ -13,7 +13,7 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   //HEROKU NODE.JS SERVER REQUESTS
-  /* 
+   
   getUser(id:number){
     return this.http.get('https://sithivili-server.herokuapp.com/api/users/'+id)
   }
@@ -48,7 +48,7 @@ export class DataService {
       'password':password
     })
   } 
-  */
+  
 
   //SPRING BOOT SERVER REQUESTS
   deleteUser(id:number){
@@ -63,9 +63,16 @@ export class DataService {
     })
   }
 
-  postSignUp(mobile:string,username:string,password:string){
+  signUp(mobile:string,username:string,password:string){
     return this.http.post('https://locallhost:8080/api/users/user/new',{
       'mobile':mobile,
+      'username':username,
+      'password':password
+    })
+  }
+
+  login(username:string,password:string){
+    return this.http.post('http://localhost:8080/api/users/user/login',{
       'username':username,
       'password':password
     })
