@@ -34,12 +34,13 @@ export class SignupPage {
     /* this.dataService.getUser(this.username).subscribe((data:any) =>{
       this.dbuser=data.dbuser;
     }); */
-    this.dataService.postSignUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+    this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+      this.alert('User Registration',data.msg);
     })
     this.userMobile='';
     this.userName='';
     this.userPassword='';
-    this.alert('Registration Successfull','User registered successfully!');
+    
     
   }
 
