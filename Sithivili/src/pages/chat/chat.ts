@@ -26,17 +26,24 @@ export class ChatPage {
   userID:number=0;
   messages=[];
   chargerid:number=1;
+  stackmsgs=[];
 
+  //<volunteer_id>w<client_id>
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase) {
     this.username=this.navParams.get('username');
     //this.userID=Number(localStorage.getItem('userid'));
     this.userID=navParams.get('userID');
     this.volID=this.navParams.get('voluID');
     console.log('Volunteer ID(Chat): '+ this.volID)
-    console.log('User ID(Chat): '+ this.userID)
+    console.log('Client ID(Chat): '+ this.userID)
     this.s=this.firebase.list('/'+this.volID+'w'+this.userID).valueChanges().subscribe(data => {
       console.log('from fb: '+data);
       this.messages=data;
+      var i:number;
+      this.stackmsgs=[];
+      for(i = this.messages.length-1;i>=0;i--){
+        this.stackmsgs.push(this.messages[i]);
+      }
     });
 
   }

@@ -24,6 +24,7 @@ page-chat {
         font-size: 120%;
     }
 
+
     .elem button{
         border-radius: 0;
         margin: 0;
@@ -43,6 +44,12 @@ page-chat {
     ion-scroll {
         white-space: nowrap;
         height: 500px;
+    }
+
+    .container{
+        display:block;
+        height: 200px;
+        max-height: 200px;
     }
 
 }

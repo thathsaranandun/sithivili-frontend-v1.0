@@ -25749,6 +25749,12 @@ page-chat ion-scroll {
   height: 500px;
 }
 
+page-chat .container {
+  display: block;
+  height: 200px;
+  max-height: 200px;
+}
+
 page-client-chats .vol {
   display: block;
   padding: 5px 8px;
