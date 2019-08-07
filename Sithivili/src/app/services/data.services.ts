@@ -82,4 +82,8 @@ export class DataService {
   loadVolunteers(){
     return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/volunteers/all');
   }
+
+  getUserById(id:number){
+    return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/user/'+id)
+  }
 }

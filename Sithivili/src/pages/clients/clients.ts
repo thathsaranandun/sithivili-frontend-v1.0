@@ -37,11 +37,11 @@ export class ClientsPage {
       this.clients=Array.from(new Set(this.clientIDs))
       console.log('Client: '+this.clients);
       for(let j=0;j<this.clients.length;j++){
-        this.dataService.getUser(this.clients[j]).subscribe((data:any) => {
+        this.dataService.getUserById(this.clients[j]).subscribe((data:any) => {
           console.log(data);
           this.clientsDetails.push({
             username:data.username,
-            clientID:data.userId
+            clientID:data.userid
           });
           console.log('client details: '+this.clientsDetails)
   

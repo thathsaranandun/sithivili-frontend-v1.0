@@ -133,11 +133,11 @@ var ClientChatsPage = /** @class */ (function () {
             console.log('vols array length' + _this.vols.length);
             _this.volsDetails = [];
             var _loop_1 = function (j) {
-                _this.dataService.getUser(_this.vols[j]).subscribe(function (data) {
+                _this.dataService.getUserById(_this.vols[j]).subscribe(function (data) {
                     console.log(data);
                     _this.volsDetails.push({
                         username: data.username,
-                        volID: data.userId,
+                        volID: data.userid,
                     });
                     console.log('volunteer details from mysql db' + _this.volsDetails[j]);
                 });
@@ -162,9 +162,10 @@ var ClientChatsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-client-chats',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\client-chats\client-chats.html"*/'<!--\n\n  Generated template for the ClientChatsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Chat History</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div class="volList">\n\n        <div class="vol" *ngFor="let volDetails of volsDetails">\n\n            <div class="left">\n\n              <div class="message">You started a conversation with,</div>\n\n              <div class="username">{{volDetails.username}}</div>\n\n              \n\n            </div>  \n\n            <div class="right">\n\n              <div class="elem"><button ion-button icon-only (click)="chat(volDetails.volID)">Chat<ion-icon name="send"></ion-icon></button></div>\n\n              </div>\n\n    \n\n        </div>\n\n    </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\client-chats\client-chats.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */]) === "function" && _d || Object])
     ], ClientChatsPage);
     return ClientChatsPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=client-chats.js.map
@@ -224,11 +225,11 @@ var ClientsPage = /** @class */ (function () {
             _this.clients = Array.from(new Set(_this.clientIDs));
             console.log('Client: ' + _this.clients);
             for (var j = 0; j < _this.clients.length; j++) {
-                _this.dataService.getUser(_this.clients[j]).subscribe(function (data) {
+                _this.dataService.getUserById(_this.clients[j]).subscribe(function (data) {
                     console.log(data);
                     _this.clientsDetails.push({
                         username: data.username,
-                        clientID: data.userId
+                        clientID: data.userid
                     });
                     console.log('client details: ' + _this.clientsDetails);
                 });
@@ -252,9 +253,10 @@ var ClientsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-clients',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\clients\clients.html"*/'<!--\n\n  Generated template for the ClientsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Clients</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div class="clientList">\n\n        <div class="client" *ngFor="let clientDetails of clientsDetails">\n\n            <div class="left">\n\n              <div class="username">{{clientDetails.username}}</div>\n\n              <div class="message">messaged you.</div>\n\n            </div>  \n\n            <div class="right">\n\n              <div class="elem"><button ion-button icon-only (click)="chat(clientDetails.clientID)">Chat<ion-icon name="send"></ion-icon></button></div>\n\n              </div>\n\n    \n\n        </div>\n\n    </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\clients\clients.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */]) === "function" && _d || Object])
     ], ClientsPage);
     return ClientsPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=clients.js.map
@@ -1137,6 +1139,9 @@ var DataService = /** @class */ (function () {
     };
     DataService.prototype.loadVolunteers = function () {
         return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/volunteers/all');
+    };
+    DataService.prototype.getUserById = function (id) {
+        return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/user/' + id);
     };
     DataService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),

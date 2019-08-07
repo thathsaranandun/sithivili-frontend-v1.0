@@ -41,11 +41,11 @@ export class ClientChatsPage {
       console.log('vols array length' + this.vols.length)
       this.volsDetails=[];
       for(let j=0;j<this.vols.length;j++){
-        this.dataService.getUser(this.vols[j]).subscribe((data:any) => {
+        this.dataService.getUserById(this.vols[j]).subscribe((data:any) => {
           console.log(data);
           this.volsDetails.push({
             username:data.username,
-            volID:data.userId,
+            volID:data.userid,
           });
           console.log('volunteer details from mysql db' + this.volsDetails[j])
   
