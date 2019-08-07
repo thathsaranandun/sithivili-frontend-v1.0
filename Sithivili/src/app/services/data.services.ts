@@ -12,7 +12,8 @@ interface User {
 export class DataService {
   constructor(private http: HttpClient) {}
 
-
+  //HEROKU NODE.JS SERVER REQUESTS
+  /*  
   getUser(id:number){
     return this.http.get('https://sithivili-server.herokuapp.com/api/users/'+id)
   }
@@ -46,5 +47,39 @@ export class DataService {
       'name':name,
       'password':password
     })
+  } 
+ */
+
+
+  //SPRING BOOT SERVER REQUESTS
+  deleteUser(id:number){
+    return this.http.delete('https://sithivili-sb-server.herokuapp.com/api/users/user/delete/'+id)
+  }
+
+  addVolunteer(name:string,password:string,gender:string){
+    return this.http.post('https://sithivili-sb-server.herokuapp.com/api/admin/new/volunteer',{
+      'username':name,
+      'password':password,
+      'gender':gender
+    })
+  }
+
+  signUp(mobile:string,username:string,password:string){
+    return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/new',{
+      'mobile':mobile,
+      'username':username,
+      'password':password
+    })
+  }
+
+  login(username:string,password:string){
+    return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/login',{
+      'username':username,
+      'password':password
+    })
+  }
+
+  loadVolunteers(){
+    return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/volunteers/all');
   }
 }

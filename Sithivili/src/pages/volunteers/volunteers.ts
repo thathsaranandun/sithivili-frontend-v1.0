@@ -29,7 +29,7 @@ export class VolunteersPage {
     console.log('from local storage: '+ localStorage.getItem('userid'))
     this.userId=Number(localStorage.getItem('userid'));
     console.log('Volunteer Page User ID: '+ this.userId);
-    this.dataService.getVolunteers().subscribe((data: any) => {
+    this.dataService.loadVolunteers().subscribe((data: any) => {
       console.log('Volunteer Data: ' + data);
       this.volunteers=data
     });
