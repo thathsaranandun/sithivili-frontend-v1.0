@@ -43,13 +43,13 @@ page-chat {
 
     ion-scroll {
         white-space: nowrap;
-        height: 500px;
+        height: 95%;
     }
 
     .container{
         display:block;
-        height: 200px;
-        max-height: 200px;
+        height: 100%;
+        max-height: 100%;
     }
 
 }

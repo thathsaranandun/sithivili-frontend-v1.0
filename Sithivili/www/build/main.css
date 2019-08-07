@@ -25746,13 +25746,13 @@ page-chat div#footer {
 
 page-chat ion-scroll {
   white-space: nowrap;
-  height: 500px;
+  height: 95%;
 }
 
 page-chat .container {
   display: block;
-  height: 200px;
-  max-height: 200px;
+  height: 100%;
+  max-height: 100%;
 }
 
 page-client-chats .vol {
