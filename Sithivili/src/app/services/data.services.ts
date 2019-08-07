@@ -52,11 +52,11 @@ export class DataService {
 
   //SPRING BOOT SERVER REQUESTS
   deleteUser(id:number){
-    return this.http.delete('https://locallhost:8080/api/users/user/delete/'+id)
+    return this.http.delete('https://localhost:8080/api/users/user/delete/'+id)
   }
 
   addVolunteer(name:string,password:string,gender:string){
-    return this.http.post('https://locallhost:8080/api/admin/new/volunteer',{
+    return this.http.post('https://localhost:8080/api/admin/new/volunteer',{
       'username':name,
       'password':password,
       'gender':gender
@@ -64,7 +64,7 @@ export class DataService {
   }
 
   signUp(mobile:string,username:string,password:string){
-    return this.http.post('https://locallhost:8080/api/users/user/new',{
+    return this.http.post('http://localhost:8080/api/users/user/new',{
       'mobile':mobile,
       'username':username,
       'password':password
@@ -76,5 +76,9 @@ export class DataService {
       'username':username,
       'password':password
     })
+  }
+
+  loadVolunteers(){
+    return this.http.get('http://localhost:8080/api/users/volunteers/all');
   }
 }
