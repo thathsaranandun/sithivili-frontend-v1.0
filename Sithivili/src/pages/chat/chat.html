@@ -11,25 +11,24 @@
 </ion-header>
 
 <ion-content class="bgimg" padding overflow-scroll="false">
-    <div id="chatMessages"  class="container">
-      <ion-scroll scrollY="true">
+  <div id="chatMessages"  class="container">
+    New messages will appear on top.
+    <ion-scroll scrollY="true">
       <div class="message" *ngFor="let stackmsg of stackmsgs">
-            <div class="innerMessage">
-                <div class="username">{{stackmsg.username}}</div>
-                <div class="message">{{stackmsg.message}}</div>
-            </div>
+        <div class="innerMessage">
+          <div class="username">{{stackmsg.username}}</div>
+          <div class="message">{{stackmsg.message}}</div>
+        </div>
       </div>
     </ion-scroll>
-    </div>
-    <ion-footer>
-        <ion-toolbar>
-          <div id="footer">
-              <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>
-              <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>
-          </div>
-          
-        </ion-toolbar>
-      </ion-footer>
-  
+  </div>
+  <ion-footer>
+    <ion-toolbar>
+      <div id="footer">
+        <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>
+          <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>
+        </div>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
 
