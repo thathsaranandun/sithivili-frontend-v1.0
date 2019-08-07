@@ -1075,60 +1075,68 @@ var DataService = /** @class */ (function () {
         this.http = http;
     }
     //HEROKU NODE.JS SERVER REQUESTS
-    DataService.prototype.getUser = function (id) {
-        return this.http.get('https://sithivili-server.herokuapp.com/api/users/' + id);
-    };
-    DataService.prototype.postUser = function (name) {
-        return this.http.post('https://sithivili-server.herokuapp.com/api/user', { 'name': name });
-    };
-    DataService.prototype.getVolunteers = function () {
-        return this.http.get('https://sithivili-server.herokuapp.com/api/volunteers/');
-    };
-    DataService.prototype.postSignUp = function (mobile, username, password) {
-        return this.http.post('https://sithivili-server.herokuapp.com/api/newuser', {
-            'mobile': mobile,
-            'username': username,
-            'password': password
-        });
-    };
-    DataService.prototype.postLogIn = function (name, password) {
-        return this.http.post('https://sithivili-server.herokuapp.com/api/userlogin', {
-            'name': name,
-            'password': password
-        });
-    };
-    DataService.prototype.postLogVol = function (name, password) {
-        return this.http.post('https://sithivili-server.herokuapp.com/api/vollogin', {
-            'name': name,
-            'password': password
-        });
-    };
+    /*
+    getUser(id:number){
+      return this.http.get('https://sithivili-server.herokuapp.com/api/users/'+id)
+    }
+  
+    postUser(name:string){
+      return this.http.post('https://sithivili-server.herokuapp.com/api/user',{'name':name})
+    }
+  
+    getVolunteers(){
+      return this.http.get('https://sithivili-server.herokuapp.com/api/volunteers/')
+    }
+    
+  
+    postSignUp(mobile:string,username:string,password:string){
+      return this.http.post('https://sithivili-server.herokuapp.com/api/newuser',{
+        'mobile':mobile,
+        'username':username,
+        'password':password
+      })
+    }
+  
+    postLogIn(name:string,password:string){
+      return this.http.post('https://sithivili-server.herokuapp.com/api/userlogin',{
+        'name':name,
+        'password':password
+      })
+    }
+  
+    postLogVol(name:string,password:string){
+      return this.http.post('https://sithivili-server.herokuapp.com/api/vollogin',{
+        'name':name,
+        'password':password
+      })
+    }
+   */
     //SPRING BOOT SERVER REQUESTS
     DataService.prototype.deleteUser = function (id) {
-        return this.http.delete('https://localhost:8080/api/users/user/delete/' + id);
+        return this.http.delete('https://sithivili-sb-server.herokuapp.com/api/users/user/delete/' + id);
     };
     DataService.prototype.addVolunteer = function (name, password, gender) {
-        return this.http.post('https://localhost:8080/api/admin/new/volunteer', {
+        return this.http.post('https://sithivili-sb-server.herokuapp.com/api/admin/new/volunteer', {
             'username': name,
             'password': password,
             'gender': gender
         });
     };
     DataService.prototype.signUp = function (mobile, username, password) {
-        return this.http.post('http://localhost:8080/api/users/user/new', {
+        return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/new', {
             'mobile': mobile,
             'username': username,
             'password': password
         });
     };
     DataService.prototype.login = function (username, password) {
-        return this.http.post('http://localhost:8080/api/users/user/login', {
+        return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/login', {
             'username': username,
             'password': password
         });
     };
     DataService.prototype.loadVolunteers = function () {
-        return this.http.get('http://localhost:8080/api/users/volunteers/all');
+        return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/volunteers/all');
     };
     DataService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
