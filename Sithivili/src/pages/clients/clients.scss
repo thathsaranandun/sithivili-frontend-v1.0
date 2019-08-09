@@ -1,13 +1,12 @@
 page-clients {
     .client{
-        display: block;
-        padding: 5px 8px;
-        background: color($colors,'primary');
+        padding: 5px 10px;
+        background: rgba(156, 156, 156, 0.36);
         margin:5px;
-        color: white;
-        border-radius: 5px;
-        height: 50px;
-
+        color: black;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: 75% 25%;
     }
 
     .username{
@@ -21,19 +20,11 @@ page-clients {
     }
 
     .elem button{
-        border-radius: 0;
         margin: 0;
+        background: rgba(156, 156, 156, 0);
+        border-radius: 25px;
+        color: black;
     
-    }
-
-    div#footer div.elem:first-child{
-        flex-grow: 1;
-
-    }
-
-    div#footer{
-        display: flex;
-        flex-direction: row;
     }
 
     .left{
@@ -48,6 +39,34 @@ page-clients {
     .client {
         display: grid;
         grid-template-columns: 75% 25%;
-      }
+    }
+    
+    .user-img {
+        position: absolute;
+        border-radius: 45px;
+        width: 45px;
+        height: 45px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+    }
+    .msg-detail {
+        width: 100%;
+        padding-left: 60px;
+        display: inline-block;
+        p {
+          margin: 0;
+        }
+        .msg-info {
+          p {
+            font-size: 1.1em;
+            color: rgb(128, 128, 128);
+            font-weight: bold;
+          }
+        }
+
+        .username{
+            font-weight: bold;
+        }
+    }
+
 
 }
