@@ -25798,6 +25798,7 @@ page-chat .container .message {
   position: relative;
   padding: 7px 7px;
   background-color: #ebebeb;
+  padding-bottom: 12px;
 }
 
 page-chat .container .message .msg-content {
