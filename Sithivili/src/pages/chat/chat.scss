@@ -86,10 +86,12 @@ page-chat {
         padding: 7px 7px;
         background-color: rgb(235, 235, 235);
         padding-bottom: 12px;
+        word-break: break-all;
+    
     
         .msg-content {
             color: #343434;
-            float: left;        
+            float: left;       
         }
         .user-img {
             position: absolute;

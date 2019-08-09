@@ -25799,6 +25799,7 @@ page-chat .container .message {
   padding: 7px 7px;
   background-color: #ebebeb;
   padding-bottom: 12px;
+  word-break: break-all;
 }
 
 page-chat .container .message .msg-content {
