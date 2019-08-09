@@ -25790,10 +25790,11 @@ page-client-chats .vol {
   border-radius: 25px;
   display: grid;
   grid-template-columns: 75% 25%;
+  padding-bottom: 7px;
 }
 
 page-client-chats .elem button {
-  margin: 0;
+  margin-top: 3px;
   background: rgba(156, 156, 156, 0);
   border-radius: 25px;
   color: black;
@@ -25868,6 +25869,7 @@ page-clients .client {
   border-radius: 25px;
   display: grid;
   grid-template-columns: 75% 25%;
+  padding-bottom: 7px;
 }
 
 page-clients .username {
@@ -25880,7 +25882,7 @@ page-clients .message {
 }
 
 page-clients .elem button {
-  margin: 0;
+  margin-top: 3px;
   background: rgba(156, 156, 156, 0);
   border-radius: 25px;
   color: black;
@@ -25971,10 +25973,11 @@ page-volunteers .volunteer {
   border-radius: 25px;
   display: grid;
   grid-template-columns: 75% 25%;
+  padding-bottom: 7px;
 }
 
 page-volunteers .elem button {
-  margin: 0;
+  margin-top: 3px;
   background: rgba(156, 156, 156, 0);
   border-radius: 25px;
   color: black;
