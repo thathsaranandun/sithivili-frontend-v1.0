@@ -8,13 +8,13 @@ page-chat {
         padding: 5px;
         display: flex;
         textarea {
-          flex: 3;
+          flex: 3.5;
           border: 0;
           border-bottom: 1px #000;
           border-style: solid;
         }
         button {
-            flex: 1;
+            flex: 0.5;
         }
     }
     ion-footer {
