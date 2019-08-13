@@ -25711,20 +25711,20 @@ page-chat .input-wrap {
 }
 
 page-chat .input-wrap textarea {
-  -webkit-box-flex: 3;
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
+  -webkit-box-flex: 3.5;
+  -webkit-flex: 3.5;
+  -ms-flex: 3.5;
+  flex: 3.5;
   border: 0;
   border-bottom: 1px #000;
   border-style: solid;
 }
 
 page-chat .input-wrap button {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-box-flex: 0.5;
+  -webkit-flex: 0.5;
+  -ms-flex: 0.5;
+  flex: 0.5;
 }
 
 page-chat ion-footer {
@@ -25788,9 +25788,28 @@ page-client-chats .vol {
   margin: 5px;
   color: black;
   border-radius: 25px;
-  display: grid;
-  grid-template-columns: 75% 25%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-bottom: 7px;
+}
+
+page-client-chats .vol .left {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+page-client-chats .vol .right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 page-client-chats .elem button {
@@ -25817,19 +25836,6 @@ page-client-chats div#footer {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-}
-
-page-client-chats .left {
-  grid-column: 1;
-}
-
-page-client-chats .right {
-  grid-column: 2;
-}
-
-page-client-chats .vol {
-  display: grid;
-  grid-template-columns: 75% 25%;
 }
 
 page-client-chats .user-img {
@@ -25867,9 +25873,28 @@ page-clients .client {
   margin: 5px;
   color: black;
   border-radius: 25px;
-  display: grid;
-  grid-template-columns: 75% 25%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-bottom: 7px;
+}
+
+page-clients .client .left {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+page-clients .client .right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 page-clients .username {
@@ -25886,19 +25911,6 @@ page-clients .elem button {
   background: rgba(156, 156, 156, 0);
   border-radius: 25px;
   color: black;
-}
-
-page-clients .left {
-  grid-column: 1;
-}
-
-page-clients .right {
-  grid-column: 2;
-}
-
-page-clients .client {
-  display: grid;
-  grid-template-columns: 75% 25%;
 }
 
 page-clients .user-img {
@@ -25965,15 +25977,45 @@ page-menu .lang {
   height: 25%;
 }
 
+page-volunteers {
+  /*     .left{
+        grid-column: 1;
+    }
+
+    .right{
+        grid-column: 2;
+
+    } */
+}
+
 page-volunteers .volunteer {
   padding: 5px 10px;
   background: rgba(156, 156, 156, 0.36);
   margin: 5px;
   color: black;
   border-radius: 25px;
-  display: grid;
-  grid-template-columns: 75% 25%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-bottom: 7px;
+}
+
+page-volunteers .volunteer .left {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+page-volunteers .volunteer .right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 page-volunteers .elem button {
@@ -25983,12 +26025,12 @@ page-volunteers .elem button {
   color: black;
 }
 
-page-volunteers .left {
-  grid-column: 1;
-}
-
-page-volunteers .right {
-  grid-column: 2;
+page-volunteers .input-wrap {
+  padding: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 page-volunteers .user-img {

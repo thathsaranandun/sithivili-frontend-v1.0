@@ -5,9 +5,15 @@ page-volunteers {
         margin:5px;
         color: black;
         border-radius: 25px;
-        display: grid;
-        grid-template-columns: 75% 25%;
+        display: flex;
         padding-bottom: 7px;
+        .left {
+            flex: 3;
+          }
+          .right {
+              flex: 1;
+              align-content: center;
+          }
 
     }
 
@@ -19,14 +25,19 @@ page-volunteers {
     
     }
 
-    .left{
+    .input-wrap {
+        padding: 5px;
+        display: flex;
+        
+    }
+/*     .left{
         grid-column: 1;
     }
 
     .right{
         grid-column: 2;
 
-    }
+    } */
 
     .user-img {
         position: absolute;
