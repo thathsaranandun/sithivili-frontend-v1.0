@@ -20,7 +20,7 @@ export class SignupPage {
   userMobile:string='';
   userName:string='';
   userPassword:string='';
-
+  clicked:boolean=false;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController) {
@@ -34,9 +34,20 @@ export class SignupPage {
     /* this.dataService.getUser(this.username).subscribe((data:any) =>{
       this.dbuser=data.dbuser;
     }); */
-    this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
-      this.alert('User Registration',data.msg);
-    })
+    if(!this.clicked){
+      this.clicked=true;
+      this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+        this.alert('User Registration', data.msg);
+        var failed = 'failed';
+        failed=JSON.stringify(data.user.userid);
+        if(failed!='failed'){
+          this.clicked=false;
+        }
+      })
+      
+      
+    }
+    
     this.userMobile='';
     this.userName='';
     this.userPassword='';
