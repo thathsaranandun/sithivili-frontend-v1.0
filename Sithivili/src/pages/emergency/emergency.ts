@@ -22,4 +22,8 @@ export class EmergencyPage {
     console.log('ionViewDidLoad EmergencyPage');
   }
 
+  callNumber(phoneNumber){
+    window.open('tel:' + phoneNumber);
+}
+
 }
