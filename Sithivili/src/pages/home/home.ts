@@ -13,6 +13,8 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class HomePage {
 
+  notclicked:boolean=true;
+  clicked:boolean=false;
   username:string='';
   password:string='';
   userID:number;
@@ -39,6 +41,8 @@ export class HomePage {
   
   loginUser(){
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
+      this.clicked=true;
+      this.notclicked=false;
       //Validate
       console.log("Validating...")
       this.dataService.login(this.username,this.password).subscribe((data:any) => {
@@ -47,13 +51,13 @@ export class HomePage {
         this.user=data.user;
 
         console.log('enteredDataStatus:'+this.enteredDataStatus)
-        console.log('User ID:'+ this.user.userid)
-        this.userType=data.userType;
-        localStorage.setItem('userid', this.user.userid);
-        localStorage.setItem('username', this.user.username);
-        
-        console.log('UserType: '+ this.user.usertype)
+            
         if(this.enteredDataStatus){
+          console.log('User ID:'+ this.user.userid)
+          this.userType=data.userType;
+          console.log('UserType: '+ this.user.usertype)
+          localStorage.setItem('userid', this.user.userid);
+          localStorage.setItem('username', this.user.username);
           if(this.user.usertype=='Client'){
             this.userID=this.user.userid;
             this.navCtrl.push(TabsPage,{
@@ -74,6 +78,8 @@ export class HomePage {
           
   
         }else{
+          this.clicked=false;
+          this.notclicked=true;
           this.alert('Error','Invalid Login details. Please enter again.');
           this.username='';
           this.password='';

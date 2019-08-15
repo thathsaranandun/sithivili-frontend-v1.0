@@ -5,45 +5,56 @@
 </ion-header>
 
 <ion-content class="bgimg" padding>
-  <br>
-  <h2>Welcome to Sithivili!</h2>
-  <br>
-  <br>
+  <div *ngIf="notclicked">
 
-  <ion-item>
-    <ion-label position="fixed">Username</ion-label>
-    <ion-input type="text" [(ngModel)]="username"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="fixed">Password</ion-label>
-    <ion-input type="password" [(ngModel)]="password"></ion-input>
-  </ion-item>
-  <!-- <ion-item>
-    <ion-label position="fixed">Password</ion-label>
-    <ion-input type="password" [(ngModel)]="password"></ion-input>
-  </ion-item> -->
-  <br>
-  <table>
-    <tr>
-      <td>
-
-          <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>
-          <h5>Dont have an account?</h5>
-          <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>
-      </td>
-      <td>
-
-          <img style="width: 100%; height:100%;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik1lc3NhZ2VfQW5kX0NvbW11bmljYXRpb25fSWNvbnMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNy40LDE3LjR2My45TDM0LjksMTloLTAuNXYtMC42TDMzLjksMThIMzNsMS4xLDFoLTMuN3YtMWgtMS4xdjcuMUgxNi41bC0wLjUsMC40ICAgICAgYzAuMSwwLjEsMC4yLDAuMywwLjMsMC40YzEsMC42LDEuNiwxLjcsMS42LDIuOWMwLDEuOS0xLjYsMy40LTMuNCwzLjRjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjkgICAgICBjMC0xLjcsMS4zLTMuMSwyLjktMy4zdi03LjFINS44djE5LjNoNC40YzAsMCwwLTAuMSwwLTAuMWwtMS4xLDBjMC0yLjQsMi00LjQsNC41LTQuNGMxLjQsMCwyLjcsMC43LDMuNSwxLjggICAgICBjMC45LDAuNiwxLjUsMS42LDEuOCwyLjdoMTMuMXYtMS44YzAtMi40LDItNC40LDQuNS00LjRjMS40LDAsMi43LDAuNywzLjUsMS44YzEuMSwwLjgsMS45LDIuMSwxLjksMy43bDAsMC43aDIuNFYxNy40SDM3LjR6ICAgICAgIE0zNy4zLDMwLjVjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjljMC0xLjksMS42LTMuNCwzLjQtMy40YzEuMiwwLDIuMiwwLjYsMi44LDEuNiAgICAgIGMwLjksMC42LDEuNiwxLjcsMS41LDIuOUM0MC44LDI5LDM5LjIsMzAuNiwzNy4zLDMwLjV6IiBzdHlsZT0iZmlsbDojNERFMEY5OyIvPjwvZz48L2c+PGc+PGc+PHBvbHlnb24gcG9pbnRzPSI0NC44LDM4IDQzLjYsMzggNDMuNiwxNS4yIDM4LjYsMTUuMiAzOC42LDE0IDQ0LjgsMTQgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwb2x5Z29uIHBvaW50cz0iNi40LDM4IDUuMiwzOCA1LjIsMTQgMTEuMSwxNCAxMS4xLDE1LjIgNi40LDE1LjIgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik00NC43LDQySDUuM2MtMS4yLDAtMi4xLTEtMi4xLTIuMXYtMi41aDE5djEuMmw1LjcsMGwwLTEuM2gxOXYyLjVDNDYuOSw0MS4xLDQ1LjksNDIsNDQuNyw0MnogICAgICAgTTQuMywzOC42djEuM2MwLDAuNSwwLjQsMC45LDAuOSwwLjloMzkuNWMwLjUsMCwwLjktMC40LDAuOS0wLjl2LTEuM2wtMTYuNiwwYzAsMC43LTAuNiwxLjItMS4yLDEuMmgtNS43ICAgICAgYy0wLjcsMC0xLjItMC42LTEuMi0xLjJ2MEg0LjN6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0xMi41LDI3LjdWMTRoMTYuNHYxMC43SDE1LjhMMTIuNSwyNy43eiBNMTMuNywxNS4yVjI1bDEuNi0xLjVoMTIuNHYtOC4zSDEzLjd6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PGc+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS44IiB4PSIyMi4zIiB5PSIxNy41Ii8+PC9nPjwvZz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIzLjYiIHg9IjE3LjQiIHk9IjE3LjUiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjYuNyIgeD0iMTcuNCIgeT0iMjAuMSIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48cG9seWdvbiBwb2ludHM9IjM3LDIxLjYgMzMuNywxOC42IDI4LjUsMTguNiAyOC41LDE3LjQgMzQuMSwxNy40IDM1LjgsMTguOSAzNS44LDkuMiAyMS43LDkuMiAgICAgICAyMS43LDE0LjUgMjAuNSwxNC41IDIwLjUsOCAzNyw4ICAgICAiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIxLjgiIHg9IjI1LjMiIHk9IjExLjQiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjMuNiIgeD0iMjguNCIgeT0iMTEuNCIvPjwvZz48L2c+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS42IiB4PSIzMC41IiB5PSIxNCIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48Zz48cGF0aCBkPSJNMTMuNiwzMS44QzEzLjYsMzEuOCwxMy41LDMxLjgsMTMuNiwzMS44Yy0yLjMsMC00LTEuOC00LTQuMWMwLTIuMSwxLjctMy44LDMuNy00bDAuMSwxLjIgICAgICAgYy0xLjQsMC4xLTIuNiwxLjMtMi42LDIuOGMwLDAuOCwwLjMsMS41LDAuOCwyYzAuNSwwLjUsMS4yLDAuOCwyLDAuOGMwLjgsMCwxLjUtMC4zLDItMC44YzAuNS0wLjUsMC44LTEuMiwwLjgtMiAgICAgICBjMC0xLjEtMC42LTIuMi0xLjctMi42bDAuNS0xLjFjMS41LDAuNiwyLjQsMi4xLDIuNCwzLjdjMCwxLjEtMC40LDIuMS0xLjIsMi44QzE1LjYsMzEuNCwxNC42LDMxLjgsMTMuNiwzMS44eiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik0xOC42LDM2LjZsLTEuMiwwYzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMwLDAsMCwwLDAsMCAgICAgICBjLTIuMSwwLTMuOCwxLjctMy44LDMuOGwtMS4yLDBjMC0yLjgsMi4zLTUsNS01YzAsMCwwLDAsMC4xLDBDMTYuNCwzMS42LDE4LjYsMzMuOSwxOC42LDM2LjZ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNi40LDMwLjFDMzYuNCwzMC4xLDM2LjMsMzAuMSwzNi40LDMwLjFjLTIuMywwLTQtMS44LTQtNC4xYzAtMi4yLDEuOC00LDQtNGMwLDAsMCwwLDAsMCAgICAgICBjMi4yLDAsNCwxLjgsNCw0LjFDNDAuNCwyOC40LDM4LjYsMzAuMSwzNi40LDMwLjF6IE0zNi40LDIzLjNjLTEuNSwwLTIuOCwxLjItMi44LDIuOGMwLDEuNSwxLjIsMi44LDIuOCwyLjggICAgICAgYzEuNSwwLDIuOC0xLjIsMi44LTIuOFMzOCwyMy4zLDM2LjQsMjMuM0MzNi40LDIzLjMsMzYuNCwyMy4zLDM2LjQsMjMuM3oiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48cGF0aCBkPSJNNDAuMiwzNi42bDAtMS43YzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMtMSwwLTIsMC40LTIuNywxLjEgICAgICAgcy0xLjEsMS43LTEuMSwyLjd2MS44aC0xLjJ2LTEuOGMwLTEuMywwLjYtMi42LDEuNS0zLjVjMS0wLjksMi4yLTEuNSwzLjYtMS40YzEuMywwLDIuNiwwLjUsMy41LDEuNXMxLjQsMi4yLDEuNCwzLjZsMCwxLjcgICAgICAgSDQwLjJ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+">
-
-      </td>
-    </tr>
-  </table>
-  <div class="button_div">
-    <div class="left_btn_div">
-      
-    </div>
+      <br>
+      <h2>Welcome to Sithivili!</h2>
+      <br>
+      <br>
+    
+      <ion-item>
+        <ion-label position="fixed">Username</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label position="fixed">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item> -->
+      <br>
+      <table>
+        <tr>
+          <td>
+    
+              <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>
+              <h5>Dont have an account?</h5>
+              <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>
+          </td>
+          <td>
+    
+              <img style="width: 100%; height:100%;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik1lc3NhZ2VfQW5kX0NvbW11bmljYXRpb25fSWNvbnMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNy40LDE3LjR2My45TDM0LjksMTloLTAuNXYtMC42TDMzLjksMThIMzNsMS4xLDFoLTMuN3YtMWgtMS4xdjcuMUgxNi41bC0wLjUsMC40ICAgICAgYzAuMSwwLjEsMC4yLDAuMywwLjMsMC40YzEsMC42LDEuNiwxLjcsMS42LDIuOWMwLDEuOS0xLjYsMy40LTMuNCwzLjRjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjkgICAgICBjMC0xLjcsMS4zLTMuMSwyLjktMy4zdi03LjFINS44djE5LjNoNC40YzAsMCwwLTAuMSwwLTAuMWwtMS4xLDBjMC0yLjQsMi00LjQsNC41LTQuNGMxLjQsMCwyLjcsMC43LDMuNSwxLjggICAgICBjMC45LDAuNiwxLjUsMS42LDEuOCwyLjdoMTMuMXYtMS44YzAtMi40LDItNC40LDQuNS00LjRjMS40LDAsMi43LDAuNywzLjUsMS44YzEuMSwwLjgsMS45LDIuMSwxLjksMy43bDAsMC43aDIuNFYxNy40SDM3LjR6ICAgICAgIE0zNy4zLDMwLjVjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjljMC0xLjksMS42LTMuNCwzLjQtMy40YzEuMiwwLDIuMiwwLjYsMi44LDEuNiAgICAgIGMwLjksMC42LDEuNiwxLjcsMS41LDIuOUM0MC44LDI5LDM5LjIsMzAuNiwzNy4zLDMwLjV6IiBzdHlsZT0iZmlsbDojNERFMEY5OyIvPjwvZz48L2c+PGc+PGc+PHBvbHlnb24gcG9pbnRzPSI0NC44LDM4IDQzLjYsMzggNDMuNiwxNS4yIDM4LjYsMTUuMiAzOC42LDE0IDQ0LjgsMTQgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwb2x5Z29uIHBvaW50cz0iNi40LDM4IDUuMiwzOCA1LjIsMTQgMTEuMSwxNCAxMS4xLDE1LjIgNi40LDE1LjIgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik00NC43LDQySDUuM2MtMS4yLDAtMi4xLTEtMi4xLTIuMXYtMi41aDE5djEuMmw1LjcsMGwwLTEuM2gxOXYyLjVDNDYuOSw0MS4xLDQ1LjksNDIsNDQuNyw0MnogICAgICAgTTQuMywzOC42djEuM2MwLDAuNSwwLjQsMC45LDAuOSwwLjloMzkuNWMwLjUsMCwwLjktMC40LDAuOS0wLjl2LTEuM2wtMTYuNiwwYzAsMC43LTAuNiwxLjItMS4yLDEuMmgtNS43ICAgICAgYy0wLjcsMC0xLjItMC42LTEuMi0xLjJ2MEg0LjN6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0xMi41LDI3LjdWMTRoMTYuNHYxMC43SDE1LjhMMTIuNSwyNy43eiBNMTMuNywxNS4yVjI1bDEuNi0xLjVoMTIuNHYtOC4zSDEzLjd6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PGc+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS44IiB4PSIyMi4zIiB5PSIxNy41Ii8+PC9nPjwvZz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIzLjYiIHg9IjE3LjQiIHk9IjE3LjUiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjYuNyIgeD0iMTcuNCIgeT0iMjAuMSIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48cG9seWdvbiBwb2ludHM9IjM3LDIxLjYgMzMuNywxOC42IDI4LjUsMTguNiAyOC41LDE3LjQgMzQuMSwxNy40IDM1LjgsMTguOSAzNS44LDkuMiAyMS43LDkuMiAgICAgICAyMS43LDE0LjUgMjAuNSwxNC41IDIwLjUsOCAzNyw4ICAgICAiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIxLjgiIHg9IjI1LjMiIHk9IjExLjQiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjMuNiIgeD0iMjguNCIgeT0iMTEuNCIvPjwvZz48L2c+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS42IiB4PSIzMC41IiB5PSIxNCIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48Zz48cGF0aCBkPSJNMTMuNiwzMS44QzEzLjYsMzEuOCwxMy41LDMxLjgsMTMuNiwzMS44Yy0yLjMsMC00LTEuOC00LTQuMWMwLTIuMSwxLjctMy44LDMuNy00bDAuMSwxLjIgICAgICAgYy0xLjQsMC4xLTIuNiwxLjMtMi42LDIuOGMwLDAuOCwwLjMsMS41LDAuOCwyYzAuNSwwLjUsMS4yLDAuOCwyLDAuOGMwLjgsMCwxLjUtMC4zLDItMC44YzAuNS0wLjUsMC44LTEuMiwwLjgtMiAgICAgICBjMC0xLjEtMC42LTIuMi0xLjctMi42bDAuNS0xLjFjMS41LDAuNiwyLjQsMi4xLDIuNCwzLjdjMCwxLjEtMC40LDIuMS0xLjIsMi44QzE1LjYsMzEuNCwxNC42LDMxLjgsMTMuNiwzMS44eiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik0xOC42LDM2LjZsLTEuMiwwYzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMwLDAsMCwwLDAsMCAgICAgICBjLTIuMSwwLTMuOCwxLjctMy44LDMuOGwtMS4yLDBjMC0yLjgsMi4zLTUsNS01YzAsMCwwLDAsMC4xLDBDMTYuNCwzMS42LDE4LjYsMzMuOSwxOC42LDM2LjZ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNi40LDMwLjFDMzYuNCwzMC4xLDM2LjMsMzAuMSwzNi40LDMwLjFjLTIuMywwLTQtMS44LTQtNC4xYzAtMi4yLDEuOC00LDQtNGMwLDAsMCwwLDAsMCAgICAgICBjMi4yLDAsNCwxLjgsNCw0LjFDNDAuNCwyOC40LDM4LjYsMzAuMSwzNi40LDMwLjF6IE0zNi40LDIzLjNjLTEuNSwwLTIuOCwxLjItMi44LDIuOGMwLDEuNSwxLjIsMi44LDIuOCwyLjggICAgICAgYzEuNSwwLDIuOC0xLjIsMi44LTIuOFMzOCwyMy4zLDM2LjQsMjMuM0MzNi40LDIzLjMsMzYuNCwyMy4zLDM2LjQsMjMuM3oiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48cGF0aCBkPSJNNDAuMiwzNi42bDAtMS43YzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMtMSwwLTIsMC40LTIuNywxLjEgICAgICAgcy0xLjEsMS43LTEuMSwyLjd2MS44aC0xLjJ2LTEuOGMwLTEuMywwLjYtMi42LDEuNS0zLjVjMS0wLjksMi4yLTEuNSwzLjYtMS40YzEuMywwLDIuNiwwLjUsMy41LDEuNXMxLjQsMi4yLDEuNCwzLjZsMCwxLjcgICAgICAgSDQwLjJ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+">
+    
+          </td>
+        </tr>
+      </table>
+      <div class="button_div">
+        <div class="left_btn_div">
+          
+        </div>
+      </div>
+    
   </div>
+  <div *ngIf="clicked" class="waiting">
+    <div class="waitmsg">
 
+        <p>Logging in...</p>
+    </div>
+    
+  </div>
+  
  
 
 
