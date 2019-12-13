@@ -11,6 +11,8 @@ interface User {
 @Injectable()
 export class DataService {
   constructor(private http: HttpClient) {}
+  baseurl:string = "https://sithivili-sb-server.herokuapp.com/";
+  // baseurl:string = "http://localhost:8080/";
 
   //HEROKU NODE.JS SERVER REQUESTS
   /*  
@@ -53,11 +55,11 @@ export class DataService {
 
   //SPRING BOOT SERVER REQUESTS
   deleteUser(id:number){
-    return this.http.delete('https://sithivili-sb-server.herokuapp.com/api/users/user/delete/'+id)
+    return this.http.delete(this.baseurl + 'api/users/user/delete/'+id)
   }
 
   addVolunteer(name:string,password:string,gender:string){
-    return this.http.post('https://sithivili-sb-server.herokuapp.com/api/admin/new/volunteer',{
+    return this.http.post(this.baseurl +'api/admin/new/volunteer',{
       'username':name,
       'password':password,
       'gender':gender
@@ -65,7 +67,7 @@ export class DataService {
   }
 
   signUp(mobile:string,username:string,password:string){
-    return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/new',{
+    return this.http.post(this.baseurl+'api/users/user/new',{
       'mobile':mobile,
       'username':username,
       'password':password
@@ -73,17 +75,17 @@ export class DataService {
   }
 
   login(username:string,password:string){
-    return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/login',{
+    return this.http.post(this.baseurl+'api/users/user/login',{
       'username':username,
       'password':password
     })
   }
 
   loadVolunteers(){
-    return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/volunteers/all');
+    return this.http.get(this.baseurl+'api/users/volunteers/all');
   }
 
   getUserById(id:number){
-    return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/user/'+id)
+    return this.http.get(this.baseurl+'/api/users/user/'+id)
   }
 }

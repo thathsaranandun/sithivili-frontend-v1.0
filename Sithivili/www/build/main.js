@@ -441,10 +441,9 @@ var SignupPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item-divider>Personal Details</ion-item-divider>\n\n\n\n    <ion-item>\n\n      <ion-label>Mobile No</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userMobile"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Username</ion-label>\n\n      <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n      <ion-label>Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n    </ion-item>\n\n    <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], SignupPage);
     return SignupPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=signup.js.map
@@ -621,15 +620,15 @@ var map = {
 	],
 	"../pages/signup/signup.module": [
 		615,
-		0
+		2
 	],
 	"../pages/volunteers/volunteers.module": [
 		616,
-		2
+		1
 	],
 	"../pages/welcome/welcome.module": [
 		617,
-		1
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -715,6 +714,8 @@ var HomePage = /** @class */ (function () {
                     localStorage.setItem('username', _this.user.username);
                     if (_this.user.usertype == 'Client') {
                         _this.userID = _this.user.userid;
+                        _this.clicked = false;
+                        _this.notclicked = true;
                         _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__tabs_tabs__["a" /* TabsPage */], {
                             username: _this.username,
                             userID: _this.userID
@@ -722,6 +723,8 @@ var HomePage = /** @class */ (function () {
                     }
                     else if (_this.user.usertype == 'Volunteer') {
                         _this.userID = _this.user.userid;
+                        _this.clicked = false;
+                        _this.notclicked = true;
                         _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__clients_clients__["a" /* ClientsPage */], {
                             username: _this.username,
                             volID: _this.userID
@@ -1092,7 +1095,9 @@ interface User {
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
+        this.baseurl = "https://sithivili-sb-server.herokuapp.com/";
     }
+    // baseurl:string = "http://localhost:8080/";
     //HEROKU NODE.JS SERVER REQUESTS
     /*
     getUser(id:number){
@@ -1132,33 +1137,33 @@ var DataService = /** @class */ (function () {
    */
     //SPRING BOOT SERVER REQUESTS
     DataService.prototype.deleteUser = function (id) {
-        return this.http.delete('https://sithivili-sb-server.herokuapp.com/api/users/user/delete/' + id);
+        return this.http.delete(this.baseurl + 'api/users/user/delete/' + id);
     };
     DataService.prototype.addVolunteer = function (name, password, gender) {
-        return this.http.post('https://sithivili-sb-server.herokuapp.com/api/admin/new/volunteer', {
+        return this.http.post(this.baseurl + 'api/admin/new/volunteer', {
             'username': name,
             'password': password,
             'gender': gender
         });
     };
     DataService.prototype.signUp = function (mobile, username, password) {
-        return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/new', {
+        return this.http.post(this.baseurl + 'api/users/user/new', {
             'mobile': mobile,
             'username': username,
             'password': password
         });
     };
     DataService.prototype.login = function (username, password) {
-        return this.http.post('https://sithivili-sb-server.herokuapp.com/api/users/user/login', {
+        return this.http.post(this.baseurl + 'api/users/user/login', {
             'username': username,
             'password': password
         });
     };
     DataService.prototype.loadVolunteers = function () {
-        return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/volunteers/all');
+        return this.http.get(this.baseurl + 'api/users/volunteers/all');
     };
     DataService.prototype.getUserById = function (id) {
-        return this.http.get('https://sithivili-sb-server.herokuapp.com/api/users/user/' + id);
+        return this.http.get(this.baseurl + '/api/users/user/' + id);
     };
     DataService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),

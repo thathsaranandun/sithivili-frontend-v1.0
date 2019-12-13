@@ -60,12 +60,16 @@ export class HomePage {
           localStorage.setItem('username', this.user.username);
           if(this.user.usertype=='Client'){
             this.userID=this.user.userid;
+            this.clicked=false;
+            this.notclicked=true;
             this.navCtrl.push(TabsPage,{
               username:this.username,
               userID:this.userID
             });
           }else if(this.user.usertype=='Volunteer'){
             this.userID=this.user.userid;
+            this.clicked=false;
+            this.notclicked=true;
             this.navCtrl.push(ClientsPage,{
               username:this.username,
               volID:this.userID
