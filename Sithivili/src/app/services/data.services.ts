@@ -11,8 +11,8 @@ interface User {
 @Injectable()
 export class DataService {
   constructor(private http: HttpClient) {}
-  baseurl:string = "https://sithivili-sb-server.herokuapp.com/";
-  // baseurl:string = "http://localhost:8080/";
+  // baseurl:string = "https://sithivili-sb-server.herokuapp.com/";
+  baseurl:string = "http://localhost:8080/";
 
   //HEROKU NODE.JS SERVER REQUESTS
   /*  

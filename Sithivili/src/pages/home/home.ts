@@ -13,6 +13,8 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class HomePage {
 
+
+
   notclicked:boolean=true;
   clicked:boolean=false;
   username:string='';
@@ -27,6 +29,25 @@ export class HomePage {
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {
     
 
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+    this.userID=Number(localStorage.getItem('userid'));
+    if(!(localStorage.getItem('userid') == 'null' || localStorage.getItem('userid') == null)){
+      if(localStorage.getItem('usertype')=='Client'){
+        this.navCtrl.push(TabsPage,{
+          username:localStorage.getItem('username'),
+          userID:localStorage.getItem('userid')
+        });
+      }else if(localStorage.getItem('usertype')=='Volunteer'){
+        this.navCtrl.push(ClientsPage,{
+          username:localStorage.getItem('username'),
+          volID:localStorage.getItem('userid')
+        });
+      }
+      
+    }
   }
 
   alert(title:string,message:string){
@@ -58,6 +79,8 @@ export class HomePage {
           console.log('UserType: '+ this.user.usertype)
           localStorage.setItem('userid', this.user.userid);
           localStorage.setItem('username', this.user.username);
+          localStorage.setItem('usertype',this.user.usertype);
+          console.log('UserType in storage:'+ localStorage.getItem('usertype'));
           if(this.user.usertype=='Client'){
             this.userID=this.user.userid;
             this.clicked=false;

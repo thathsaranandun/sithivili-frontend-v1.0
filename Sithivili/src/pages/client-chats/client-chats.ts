@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { DataService } from '../../app/services/data.services';
 import { ChatPage } from '../chat/chat';
+import { MenuPage } from '../menu/menu';
 
 /**
  * Generated class for the ClientChatsPage page.
@@ -23,6 +24,7 @@ export class ClientChatsPage {
   vols:number[]=[];
   volIDs:number[]=[];
   volsDetails:object[]=[];
+  menuPage=MenuPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
     this.userID=Number(localStorage.getItem('userid'));
@@ -31,8 +33,6 @@ export class ClientChatsPage {
     this.firebase.list('/volunteers/client'+this.userID).valueChanges().subscribe((data:any) => {
       console.log(data);
       for(let i=0;i<data.length;i++){
-        console.log('fb data array length: '+ data.length);
-        console.log(i+') Volunteer ID(Chat History)'+data[i].volID);
         this.volIDs.push(data[i].volID);
       }
 
@@ -42,13 +42,10 @@ export class ClientChatsPage {
       this.volsDetails=[];
       for(let j=0;j<this.vols.length;j++){
         this.dataService.getUserById(this.vols[j]).subscribe((data:any) => {
-          console.log(data);
           this.volsDetails.push({
             username:data.username,
             volID:data.userid,
-          });
-          console.log('volunteer details from mysql db' + this.volsDetails[j])
-  
+          });  
         })
 
       }
@@ -71,6 +68,15 @@ export class ClientChatsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ClientChatsPage');
+    localStorage.setItem('leaveToChat','false');
   }
+
+  logout(){
+    localStorage.setItem('userid', null);
+    localStorage.setItem('username', null);
+    localStorage.setItem('usertype', null);
+    this.navCtrl.push(MenuPage);
+  }
+
 
 }

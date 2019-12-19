@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
+import { MenuPage } from '../menu/menu';
 
 /**
  * Generated class for the ClientsPage page.
@@ -18,6 +19,7 @@ import { DataService } from '../../app/services/data.services';
 })
 export class ClientsPage {
 
+  menuPage=MenuPage;
   volID:number;
   username:string;
   clients:number[]=[];
@@ -52,7 +54,19 @@ export class ClientsPage {
     });
   }
 
+  ionViewCanLeave() {
+    if(localStorage.getItem('leaveToChat')=='false'){
+      console.log("ionViewEntered")
+         this.navCtrl.setRoot(MenuPage);
+         this.navCtrl.popToRoot(); 
+    }
+    
+     return true;
+  }
+
   chat(userID:number){
+    localStorage.setItem('leaveToChat','true');
+
     console.log('userID:'+userID)
 
     this.navCtrl.push(ChatPage,{
@@ -68,6 +82,15 @@ export class ClientsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ClientsPage');
+    localStorage.setItem('leaveToChat','false');
+
+  }
+
+  logout(){
+    localStorage.setItem('userid', null);
+    localStorage.setItem('username', null);
+    localStorage.setItem('usertype', null);
+    this.navCtrl.push(MenuPage);
   }
 
 }
