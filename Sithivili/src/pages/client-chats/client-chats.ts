@@ -4,6 +4,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { DataService } from '../../app/services/data.services';
 import { ChatPage } from '../chat/chat';
 import { MenuPage } from '../menu/menu';
+import { DomSanitizer } from '@angular/platform-browser';
 
 /**
  * Generated class for the ClientChatsPage page.
@@ -25,8 +26,10 @@ export class ClientChatsPage {
   volIDs:number[]=[];
   volsDetails:object[]=[];
   menuPage=MenuPage;
+  defaultImage= this.dataService.defaultImage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private domSanitizer: DomSanitizer) {
     this.userID=Number(localStorage.getItem('userid'));
     console.log('Client ID(Chat history): '+this.userID);
     this.username=localStorage.getItem('username');
@@ -45,6 +48,7 @@ export class ClientChatsPage {
           this.volsDetails.push({
             username:data.username,
             volID:data.userid,
+            image:data.image
           });  
         })
 

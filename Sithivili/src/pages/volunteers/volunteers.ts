@@ -5,6 +5,7 @@ import { DataService } from '../../app/services/data.services';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { MenuPage } from '../menu/menu';
 import { HomePage } from '../home/home';
+import { DomSanitizer } from '@angular/platform-browser';
 
 /**
  * Generated class for the VolunteersPage page.
@@ -25,9 +26,12 @@ export class VolunteersPage {
   volunteers:object[]=[];
   volID:number;
   menuPage=MenuPage;
+  user;
+  defaultImage= this.dataService.defaultImage;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase,private domSanitizer: DomSanitizer) {
     this.username=localStorage.getItem('username');
     console.log('Username: ' + this.username);
     console.log('from local storage: '+ localStorage.getItem('userid'))
@@ -75,6 +79,8 @@ export class VolunteersPage {
     
      return true;
   }
+
+
 
   logout(){
     localStorage.setItem('userid', null);
