@@ -1,4 +1,3 @@
-include ':sithivili'
 // GENERATED FILE - DO NOT EDIT
 include ":"
 include ":CordovaLib"
