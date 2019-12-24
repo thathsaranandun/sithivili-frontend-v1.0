@@ -26,9 +26,13 @@ export class ClientsPage {
   clientIDs:number[]=[];
   clientsDetails:object[]=[];
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService) {
-    this.volID=this.navParams.get('volID');
+    localStorage.setItem('isVol','true');
+    localStorage.setItem('isClient','false');
+    //this.volID=this.navParams.get('volID');
     this.username=this.navParams.get('username');
+    this.volID=Number(localStorage.getItem('userid'));
 
+    
     console.log(this.volID);
     this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe((data:any) => {
       console.log(data);
@@ -83,13 +87,18 @@ export class ClientsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ClientsPage');
     localStorage.setItem('leaveToChat','false');
+    let elements = document.querySelectorAll(".tabbar");
+
+    if (elements != null) {
+        Object.keys(elements).map((key) => {
+            elements[key].style.display = 'none';
+        });
+    }
 
   }
 
   logout(){
-    localStorage.setItem('userid', null);
-    localStorage.setItem('username', null);
-    localStorage.setItem('usertype', null);
+    localStorage.clear();
     this.navCtrl.push(MenuPage);
   }
 

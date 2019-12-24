@@ -7,29 +7,59 @@
 </ion-header>
 
 
-<ion-content>
-  <ion-list>
-    <ion-item-divider>Personal Details</ion-item-divider>
+<ion-content style="background-color: lightskyblue;">
+  <div *ngIf="notclicked" class= "signupbox">
+    <ion-list>
+      <ion-label text-center style="padding-top: 10px; font-size: 20px;">
+        <b>Personal Details</b>
+      </ion-label>
+  
+      <ion-item>
+        <ion-label>Mobile No</ion-label>
+        <ion-input type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)"></ion-input>
+      </ion-item>
+  
+  
+      <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="userName"></ion-input>
+      </ion-item>
+  
+  
+  
+      <ion-item>
+        <ion-label style="font-size: 14px;">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="userPassword"></ion-input>
+        
+      </ion-item>
+      <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">
+        <ng2-password-strength-bar text-center 
+        [passwordToCheck]="userPassword"
+        [barLabel]="barLabel"
+        [barColors]="myColors">
+</ng2-password-strength-bar>
+      </div>
+      
 
-    <ion-item>
-      <ion-label>Mobile No</ion-label>
-      <ion-input type="text" [(ngModel)]="userMobile"></ion-input>
-    </ion-item>
+      
 
+      <div text-center>
+        <button ion-button (click)="signup()">Sign Up</button>
 
-    <ion-item>
-      <ion-label>Username</ion-label>
-      <ion-input type="text" [(ngModel)]="userName"></ion-input>
-    </ion-item>
+      </div>
+  
+  
+      </ion-list>
+  </div>
+  
 
-
-
-    <ion-item>
-      <ion-label>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="userPassword"></ion-input>
-    </ion-item>
-    <button ion-button (click)="signup()">Sign Up</button>
-
-
-    </ion-list>
+    <div *ngIf="clicked" class="waiting">
+      <div class="waitmsg">
+  
+          <p>Logging in...</p>
+      </div>
+      
+    </div>
 </ion-content>
+
+

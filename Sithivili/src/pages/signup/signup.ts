@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { DataService } from '../../app/services/data.services';
 
@@ -20,10 +20,13 @@ export class SignupPage {
   userMobile:string='';
   userName:string='';
   userPassword:string='';
+  notclicked:boolean=true;
   clicked:boolean=false;
+  public barLabel: string = "Password strength:";
+  public myColors = ['#DD2C00', '#FF6D00', '#FFD600', '#AEEA00', '#00C853'];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController,public cdRef:ChangeDetectorRef) {
   }
 
   ionViewDidLoad() {
@@ -31,22 +34,19 @@ export class SignupPage {
   }
 
   signup(){
+    this.clicked=true;
+    this.notclicked=false;
     /* this.dataService.getUser(this.username).subscribe((data:any) =>{
       this.dbuser=data.dbuser;
     }); */
-    if(!this.clicked){
-      this.clicked=true;
-      this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
-        this.alert('User Registration', data.msg);
-        var failed = 'failed';
-        failed=JSON.stringify(data.user.userid);
-        if(failed!='failed'){
-          this.clicked=false;
-        }
-      })
-      
-      
-    }
+    this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+      this.alert('User Registration', data.msg);
+      console.log(data);
+      if(data.user == null){
+        this.clicked=false;
+        this.notclicked=true;
+      }
+    })
     
     this.userMobile='';
     this.userName='';
@@ -63,5 +63,13 @@ export class SignupPage {
     });
     alert.present();
   }
+
+  change(value){
+    //manually launch change detection
+    this.cdRef.detectChanges();
+    this.userMobile = value.length > 10 ? value.substring(0,10) : value;
+  }
+
+  
 
 }

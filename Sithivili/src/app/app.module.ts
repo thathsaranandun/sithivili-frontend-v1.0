@@ -20,6 +20,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { MenuPage } from '../pages/menu/menu';
 import { ClientChatsPage } from '../pages/client-chats/client-chats';
 import { EmergencyPage } from '../pages/emergency/emergency';
+import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
 
 
 var config = {
@@ -53,6 +54,7 @@ var config = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
     HttpClientModule,
+    PasswordStrengthBarModule,
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
@@ -70,7 +72,7 @@ var config = {
     ClientChatsPage,
     MenuPage,
     TabsPage
-  ],
+    ],
   providers: [
     StatusBar,
     DataService,

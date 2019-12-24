@@ -24,6 +24,8 @@ export class HomePage {
   userType:string;
   user:any;
   dbuser:string='';
+  type: string = "text";
+  isActive: Boolean = true; 
 
   enteredDataStatus:boolean=false;
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {
@@ -32,6 +34,13 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
+    let elements = document.querySelectorAll(".tabbar");
+
+    if (elements != null) {
+        Object.keys(elements).map((key) => {
+            elements[key].style.display = 'none';
+        });
+    }
     console.log('ionViewDidLoad HomePage');
     this.userID=Number(localStorage.getItem('userid'));
     if(!(localStorage.getItem('userid') == 'null' || localStorage.getItem('userid') == null)){
@@ -128,38 +137,13 @@ export class HomePage {
     this.navCtrl.push(SignupPage);
   }
 
-  /* logVolunteer(){
-    if(/^[a-zA-Z0-9]+$/.test(this.username)){
-      //Validate
-      this.dataService.postLogVol(this.username,this.password).subscribe((data:any) => {
-        console.log(data);
-        this.enteredDataStatus=data.dbdata;
-        console.log('enteredDataStatus:'+this.enteredDataStatus)
-        console.log('Volunteer ID:'+ data.volID)
-        if(this.enteredDataStatus){
-          this.volunID=data.volID;
-          this.navCtrl.push(ClientsPage,{
-            username:this.username,
-            volID:this.volunID
-          });
-  
-        }else{
-          this.alert('Error','Invalid Login details. Please enter again.');
-          this.username='';
-          this.password='';
-          console.log('cant load chat page');
-        }
-
-      })
-
-      
-       
-
-    }else{
-      this.alert('Error','Invalid Username');
+  getType() {
+        return this.isActive ? 'password' : 'text';
     }
-    
-  } */
+
+    setType() {
+        this.type = this.isActive ? 'password' : 'text';
+    }
   
 
 }

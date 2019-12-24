@@ -34,6 +34,7 @@
     "ionicons": "3.0.0",
     "jquery": "^3.4.1",
     "ng-socket-io": "^0.2.4",
+    "ng2-password-strength-bar": "^1.2.3",
     "ngx-socket-io": "^3.0.1",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.5.2",

@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 617:
+/***/ 620:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var WelcomePageModule = /** @class */ (function () {
     function WelcomePageModule() {
     }
     WelcomePageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__welcome__["a" /* WelcomePage */],
             ],

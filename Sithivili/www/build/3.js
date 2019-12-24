@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 613:
+/***/ 618:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var MenuPageModule = /** @class */ (function () {
     function MenuPageModule() {
     }
     MenuPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */],
             ],

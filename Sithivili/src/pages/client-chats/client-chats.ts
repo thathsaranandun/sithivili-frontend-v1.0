@@ -71,16 +71,14 @@ export class ClientChatsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ClientChatsPage');
     localStorage.setItem('leaveToChat','false');
   }
 
   logout(){
-    localStorage.setItem('userid', null);
-    localStorage.setItem('username', null);
-    localStorage.setItem('usertype', null);
+    localStorage.clear();
     this.navCtrl.push(MenuPage);
   }
+
 
 
 }

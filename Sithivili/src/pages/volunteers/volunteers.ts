@@ -6,6 +6,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { MenuPage } from '../menu/menu';
 import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the VolunteersPage page.
@@ -32,6 +33,8 @@ export class VolunteersPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase,private domSanitizer: DomSanitizer) {
+    localStorage.setItem('isVol','false');
+    localStorage.setItem('isClient','true');
     this.username=localStorage.getItem('username');
     console.log('Username: ' + this.username);
     console.log('from local storage: '+ localStorage.getItem('userid'))
@@ -45,6 +48,7 @@ export class VolunteersPage {
 
   ionViewDidLoad() {
     localStorage.setItem('leaveToChat','false');
+  
     console.log('ionViewDidLoad VolunteersPage');
   }
 
@@ -83,9 +87,9 @@ export class VolunteersPage {
 
 
   logout(){
-    localStorage.setItem('userid', null);
-    localStorage.setItem('username', null);
-    localStorage.setItem('usertype', null);
+    localStorage.clear();
     this.navCtrl.push(MenuPage);
   }
+
+
 }

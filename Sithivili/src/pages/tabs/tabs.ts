@@ -8,6 +8,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VolunteersPage } from '../volunteers/volunteers';
 import { ClientChatsPage } from '../client-chats/client-chats';
 import { MenuPage } from '../menu/menu';
+import { ClientsPage } from '../clients/clients';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -16,7 +17,6 @@ export class TabsPage {
 
   tab1Root = VolunteersPage;
   tab2Root = ClientChatsPage;
-
 
   constructor(public navCtrl: NavController) {
 
@@ -32,4 +32,5 @@ export class TabsPage {
     
      return true;
   }
+
 }

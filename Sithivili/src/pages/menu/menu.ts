@@ -25,13 +25,20 @@ export class MenuPage {
   }
 
   ionViewDidLoad() {
+    let elements = document.querySelectorAll(".tabbar");
+
+    if (elements != null) {
+        Object.keys(elements).map((key) => {
+            elements[key].style.display = 'none';
+        });
+    }
     console.log('ionViewDidLoad MenuPage');
   }
 
   login(){
     this.userID=Number(localStorage.getItem('userid'));
     console.log(localStorage.getItem('userid'));
-    if(localStorage.getItem('userid') == 'null' || localStorage.getItem('userid') == null){
+    if(localStorage.getItem('userid') == 'null' || localStorage.getItem('userid') == null || Number(localStorage.getItem('userid')) == 0){
       console.log('not logged in');
       this.navCtrl.push(HomePage);
     }else{
@@ -45,6 +52,9 @@ export class MenuPage {
           username:localStorage.getItem('username'),
           volID:localStorage.getItem('userid')
         });
+      }else{
+        console.log('re login');
+        this.navCtrl.push(HomePage);
       }
     
     }
