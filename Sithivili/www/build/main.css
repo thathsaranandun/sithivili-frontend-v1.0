@@ -25942,6 +25942,14 @@ page-clients .msg-detail .username {
   font-weight: bold;
 }
 
+page-edit-profile .user-img {
+  border-radius: 45px;
+  width: 100px;
+  height: 100px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+}
+
 page-emergency #emergency {
   background-color: rgba(216, 216, 216, 0.726);
   padding: 10px;

@@ -9,6 +9,7 @@ import { VolunteersPage } from '../volunteers/volunteers';
 import { ClientChatsPage } from '../client-chats/client-chats';
 import { MenuPage } from '../menu/menu';
 import { ClientsPage } from '../clients/clients';
+import { EditProfilePage } from '../edit-profile/edit-profile';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -17,6 +18,7 @@ export class TabsPage {
 
   tab1Root = VolunteersPage;
   tab2Root = ClientChatsPage;
+  tab3Root = EditProfilePage;
 
   constructor(public navCtrl: NavController) {
 

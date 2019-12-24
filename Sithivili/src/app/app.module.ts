@@ -21,6 +21,7 @@ import { MenuPage } from '../pages/menu/menu';
 import { ClientChatsPage } from '../pages/client-chats/client-chats';
 import { EmergencyPage } from '../pages/emergency/emergency';
 import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
+import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 
 
 var config = {
@@ -47,7 +48,8 @@ var config = {
     WelcomePage,
     ClientChatsPage,
     MenuPage,
-    TabsPage
+    TabsPage,
+    EditProfilePage
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,8 @@ var config = {
     WelcomePage,
     ClientChatsPage,
     MenuPage,
-    TabsPage
+    TabsPage,
+    EditProfilePage
     ],
   providers: [
     StatusBar,
