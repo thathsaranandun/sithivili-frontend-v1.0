@@ -133,8 +133,8 @@ var ChatPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__volunteers_volunteers__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__client_chats_client_chats__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__volunteers_volunteers__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__client_chats_client_chats__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_menu__ = __webpack_require__(56);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -181,6 +181,54 @@ var TabsPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 196:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmergencyPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the EmergencyPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var EmergencyPage = /** @class */ (function () {
+    function EmergencyPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    EmergencyPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EmergencyPage');
+    };
+    EmergencyPage.prototype.callNumber = function (phoneNumber) {
+        window.open('tel:' + phoneNumber);
+    };
+    EmergencyPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-emergency',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\emergency\emergency.html"*/'<!--\n\n  Generated template for the EmergencyPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Emergency</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="my-container">\n\n    <table>\n\n    <tr>\n\n      <div id="emergency">\n\n        <td style="width: 50%">\n\n            Police Emergency Hotline - &nbsp; &nbsp;\n\n        </td>\n\n        <td>\n\n          <button class="btn" ion-button (click)="callNumber(118)">118 &nbsp;<ion-icon name="call"></ion-icon></button> / <button class="btn" ion-button  (click)="callNumber(119)">119 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n        </td>\n\n      </div>\n\n    </tr>\n\n    <tr>\n\n        <div id="emergency">\n\n          <td>\n\n              Ambulance -  &nbsp; &nbsp;\n\n          </td>\n\n          <td>\n\n              <button class="btn" ion-button (click)="callNumber(110)">110 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n          </td>\n\n        </div>\n\n      </tr>\n\n      <tr>\n\n          <div id="emergency">\n\n            <td>\n\n                Child Help Line -  &nbsp; &nbsp;\n\n            </td>\n\n            <td>\n\n                <button class="btn" ion-button  (click)="callNumber(1929)">1929 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n            </td>\n\n          </div>\n\n        </tr>\n\n        <tr>\n\n            <div id="emergency">\n\n              <td>\n\n                  Women Help Line -  &nbsp; &nbsp;\n\n              </td>\n\n              <td>\n\n                  <button class="btn" ion-button  (click)="callNumber(1938)">1938 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n              </td>\n\n            </div>\n\n          </tr>\n\n          <tr>\n\n              <div id="emergency">\n\n                <td>\n\n                    Hot line for counseling and operational activities -  &nbsp; &nbsp;\n\n                </td>\n\n                <td>\n\n                    <button class="btn" ion-button  (click)="callNumber(1984)">1984 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                </td>\n\n              </div>\n\n            </tr>\n\n            <tr>\n\n                <div id="emergency">\n\n                  <td>\n\n                      Emergency Pre - Hospital Care Ambulance Service -   &nbsp; &nbsp;\n\n                  </td>\n\n                  <td>\n\n                      <button class="btn" ion-button  (click)="callNumber(1990)">1990 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                  </td>\n\n                </div>\n\n              </tr>\n\n  </table>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\emergency\emergency.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], EmergencyPage);
+    return EmergencyPage;
+}());
+
+//# sourceMappingURL=emergency.js.map
+
+/***/ }),
+
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -279,7 +327,7 @@ var ClientChatsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -383,7 +431,7 @@ var VolunteersPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -472,54 +520,6 @@ var SignupPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 199:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmergencyPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the EmergencyPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var EmergencyPage = /** @class */ (function () {
-    function EmergencyPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    EmergencyPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EmergencyPage');
-    };
-    EmergencyPage.prototype.callNumber = function (phoneNumber) {
-        window.open('tel:' + phoneNumber);
-    };
-    EmergencyPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-emergency',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\emergency\emergency.html"*/'<!--\n\n  Generated template for the EmergencyPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Emergency</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="my-container">\n\n    <table>\n\n    <tr>\n\n      <div id="emergency">\n\n        <td style="width: 50%">\n\n            Police Emergency Hotline - &nbsp; &nbsp;\n\n        </td>\n\n        <td>\n\n          <button class="btn" ion-button (click)="callNumber(118)">118 &nbsp;<ion-icon name="call"></ion-icon></button> / <button class="btn" ion-button  (click)="callNumber(119)">119 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n        </td>\n\n      </div>\n\n    </tr>\n\n    <tr>\n\n        <div id="emergency">\n\n          <td>\n\n              Ambulance -  &nbsp; &nbsp;\n\n          </td>\n\n          <td>\n\n              <button class="btn" ion-button (click)="callNumber(110)">110 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n          </td>\n\n        </div>\n\n      </tr>\n\n      <tr>\n\n          <div id="emergency">\n\n            <td>\n\n                Child Help Line -  &nbsp; &nbsp;\n\n            </td>\n\n            <td>\n\n                <button class="btn" ion-button  (click)="callNumber(1929)">1929 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n            </td>\n\n          </div>\n\n        </tr>\n\n        <tr>\n\n            <div id="emergency">\n\n              <td>\n\n                  Women Help Line -  &nbsp; &nbsp;\n\n              </td>\n\n              <td>\n\n                  <button class="btn" ion-button  (click)="callNumber(1938)">1938 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n              </td>\n\n            </div>\n\n          </tr>\n\n          <tr>\n\n              <div id="emergency">\n\n                <td>\n\n                    Hot line for counseling and operational activities -  &nbsp; &nbsp;\n\n                </td>\n\n                <td>\n\n                    <button class="btn" ion-button  (click)="callNumber(1984)">1984 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                </td>\n\n              </div>\n\n            </tr>\n\n            <tr>\n\n                <div id="emergency">\n\n                  <td>\n\n                      Emergency Pre - Hospital Care Ambulance Service -   &nbsp; &nbsp;\n\n                  </td>\n\n                  <td>\n\n                      <button class="btn" ion-button  (click)="callNumber(1990)">1990 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                  </td>\n\n                </div>\n\n              </tr>\n\n  </table>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\emergency\emergency.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], EmergencyPage);
-    return EmergencyPage;
-}());
-
-//# sourceMappingURL=emergency.js.map
-
-/***/ }),
-
 /***/ 200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -592,19 +592,19 @@ webpackEmptyAsyncContext.id = 234;
 
 var map = {
 	"../pages/client-chats/client-chats.module": [
-		614,
+		615,
 		6
 	],
 	"../pages/clients/clients.module": [
-		615,
+		616,
 		5
 	],
 	"../pages/emergency/emergency.module": [
-		616,
+		614,
 		4
 	],
 	"../pages/menu/menu.module": [
-		618,
+		620,
 		3
 	],
 	"../pages/signup/signup.module": [
@@ -616,7 +616,7 @@ var map = {
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		620,
+		618,
 		0
 	]
 };
@@ -644,7 +644,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__clients_clients__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabs_tabs__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -776,12 +776,11 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n  <div *ngIf="notclicked">\n\n\n\n      <br>\n\n      <h2>Welcome to Sithivili!</h2>\n\n      <br>\n\n      <br>\n\n    \n\n      <ion-item>\n\n        <ion-label position="fixed">Username</ion-label>\n\n        <ion-input type="text" [(ngModel)]="username"></ion-input>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input id="pwd" [type]="getType()" [(ngModel)]="password"></ion-input>\n\n        <ion-icon\n\n        [name]="isActive ? \'eye\' : \'eye-off\'"\n\n        item-right\n\n        (click)="isActive = !isActive;"\n\n        isActive=true>\n\n        </ion-icon>\n\n      </ion-item>\n\n    \n\n  \n\n     \n\n      <!-- <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n      </ion-item> -->\n\n      <br>\n\n      <table>\n\n        <tr>\n\n          <td>\n\n    \n\n              <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>\n\n              <h5>Dont have an account?</h5>\n\n              <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>\n\n          </td>\n\n          <td>\n\n    \n\n              <img style="width: 100%; height:100%;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik1lc3NhZ2VfQW5kX0NvbW11bmljYXRpb25fSWNvbnMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNy40LDE3LjR2My45TDM0LjksMTloLTAuNXYtMC42TDMzLjksMThIMzNsMS4xLDFoLTMuN3YtMWgtMS4xdjcuMUgxNi41bC0wLjUsMC40ICAgICAgYzAuMSwwLjEsMC4yLDAuMywwLjMsMC40YzEsMC42LDEuNiwxLjcsMS42LDIuOWMwLDEuOS0xLjYsMy40LTMuNCwzLjRjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjkgICAgICBjMC0xLjcsMS4zLTMuMSwyLjktMy4zdi03LjFINS44djE5LjNoNC40YzAsMCwwLTAuMSwwLTAuMWwtMS4xLDBjMC0yLjQsMi00LjQsNC41LTQuNGMxLjQsMCwyLjcsMC43LDMuNSwxLjggICAgICBjMC45LDAuNiwxLjUsMS42LDEuOCwyLjdoMTMuMXYtMS44YzAtMi40LDItNC40LDQuNS00LjRjMS40LDAsMi43LDAuNywzLjUsMS44YzEuMSwwLjgsMS45LDIuMSwxLjksMy43bDAsMC43aDIuNFYxNy40SDM3LjR6ICAgICAgIE0zNy4zLDMwLjVjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjljMC0xLjksMS42LTMuNCwzLjQtMy40YzEuMiwwLDIuMiwwLjYsMi44LDEuNiAgICAgIGMwLjksMC42LDEuNiwxLjcsMS41LDIuOUM0MC44LDI5LDM5LjIsMzAuNiwzNy4zLDMwLjV6IiBzdHlsZT0iZmlsbDojNERFMEY5OyIvPjwvZz48L2c+PGc+PGc+PHBvbHlnb24gcG9pbnRzPSI0NC44LDM4IDQzLjYsMzggNDMuNiwxNS4yIDM4LjYsMTUuMiAzOC42LDE0IDQ0LjgsMTQgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwb2x5Z29uIHBvaW50cz0iNi40LDM4IDUuMiwzOCA1LjIsMTQgMTEuMSwxNCAxMS4xLDE1LjIgNi40LDE1LjIgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik00NC43LDQySDUuM2MtMS4yLDAtMi4xLTEtMi4xLTIuMXYtMi41aDE5djEuMmw1LjcsMGwwLTEuM2gxOXYyLjVDNDYuOSw0MS4xLDQ1LjksNDIsNDQuNyw0MnogICAgICAgTTQuMywzOC42djEuM2MwLDAuNSwwLjQsMC45LDAuOSwwLjloMzkuNWMwLjUsMCwwLjktMC40LDAuOS0wLjl2LTEuM2wtMTYuNiwwYzAsMC43LTAuNiwxLjItMS4yLDEuMmgtNS43ICAgICAgYy0wLjcsMC0xLjItMC42LTEuMi0xLjJ2MEg0LjN6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0xMi41LDI3LjdWMTRoMTYuNHYxMC43SDE1LjhMMTIuNSwyNy43eiBNMTMuNywxNS4yVjI1bDEuNi0xLjVoMTIuNHYtOC4zSDEzLjd6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PGc+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS44IiB4PSIyMi4zIiB5PSIxNy41Ii8+PC9nPjwvZz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIzLjYiIHg9IjE3LjQiIHk9IjE3LjUiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjYuNyIgeD0iMTcuNCIgeT0iMjAuMSIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48cG9seWdvbiBwb2ludHM9IjM3LDIxLjYgMzMuNywxOC42IDI4LjUsMTguNiAyOC41LDE3LjQgMzQuMSwxNy40IDM1LjgsMTguOSAzNS44LDkuMiAyMS43LDkuMiAgICAgICAyMS43LDE0LjUgMjAuNSwxNC41IDIwLjUsOCAzNyw4ICAgICAiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIxLjgiIHg9IjI1LjMiIHk9IjExLjQiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjMuNiIgeD0iMjguNCIgeT0iMTEuNCIvPjwvZz48L2c+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS42IiB4PSIzMC41IiB5PSIxNCIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48Zz48cGF0aCBkPSJNMTMuNiwzMS44QzEzLjYsMzEuOCwxMy41LDMxLjgsMTMuNiwzMS44Yy0yLjMsMC00LTEuOC00LTQuMWMwLTIuMSwxLjctMy44LDMuNy00bDAuMSwxLjIgICAgICAgYy0xLjQsMC4xLTIuNiwxLjMtMi42LDIuOGMwLDAuOCwwLjMsMS41LDAuOCwyYzAuNSwwLjUsMS4yLDAuOCwyLDAuOGMwLjgsMCwxLjUtMC4zLDItMC44YzAuNS0wLjUsMC44LTEuMiwwLjgtMiAgICAgICBjMC0xLjEtMC42LTIuMi0xLjctMi42bDAuNS0xLjFjMS41LDAuNiwyLjQsMi4xLDIuNCwzLjdjMCwxLjEtMC40LDIuMS0xLjIsMi44QzE1LjYsMzEuNCwxNC42LDMxLjgsMTMuNiwzMS44eiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik0xOC42LDM2LjZsLTEuMiwwYzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMwLDAsMCwwLDAsMCAgICAgICBjLTIuMSwwLTMuOCwxLjctMy44LDMuOGwtMS4yLDBjMC0yLjgsMi4zLTUsNS01YzAsMCwwLDAsMC4xLDBDMTYuNCwzMS42LDE4LjYsMzMuOSwxOC42LDM2LjZ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNi40LDMwLjFDMzYuNCwzMC4xLDM2LjMsMzAuMSwzNi40LDMwLjFjLTIuMywwLTQtMS44LTQtNC4xYzAtMi4yLDEuOC00LDQtNGMwLDAsMCwwLDAsMCAgICAgICBjMi4yLDAsNCwxLjgsNCw0LjFDNDAuNCwyOC40LDM4LjYsMzAuMSwzNi40LDMwLjF6IE0zNi40LDIzLjNjLTEuNSwwLTIuOCwxLjItMi44LDIuOGMwLDEuNSwxLjIsMi44LDIuOCwyLjggICAgICAgYzEuNSwwLDIuOC0xLjIsMi44LTIuOFMzOCwyMy4zLDM2LjQsMjMuM0MzNi40LDIzLjMsMzYuNCwyMy4zLDM2LjQsMjMuM3oiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48cGF0aCBkPSJNNDAuMiwzNi42bDAtMS43YzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMtMSwwLTIsMC40LTIuNywxLjEgICAgICAgcy0xLjEsMS43LTEuMSwyLjd2MS44aC0xLjJ2LTEuOGMwLTEuMywwLjYtMi42LDEuNS0zLjVjMS0wLjksMi4yLTEuNSwzLjYtMS40YzEuMywwLDIuNiwwLjUsMy41LDEuNXMxLjQsMi4yLDEuNCwzLjZsMCwxLjcgICAgICAgSDQwLjJ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+">\n\n    \n\n          </td>\n\n        </tr>\n\n      </table>\n\n      <div class="button_div">\n\n        <div class="left_btn_div">\n\n          \n\n        </div>\n\n      </div>\n\n    \n\n  </div>\n\n  <div *ngIf="clicked" class="waiting">\n\n    <div class="waitmsg">\n\n\n\n        <p>Logging in...</p>\n\n    </div>\n\n    \n\n  </div>\n\n  \n\n \n\n\n\n\n\n</ion-content>  \n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n  <div *ngIf="notclicked">\n\n\n\n      <br>\n\n      <h2>Welcome to Sithivili!</h2>\n\n      <br>\n\n      <br>\n\n    \n\n      <ion-item>\n\n        <ion-label position="fixed">Username</ion-label>\n\n        <ion-input type="text" [(ngModel)]="username"></ion-input>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input id="pwd" [type]="getType()" [(ngModel)]="password"></ion-input>\n\n        <button ion-button clear color="dark" type="button" item-right\n\n        (click)="isActive = !isActive;"\n\n        isActive=true>\n\n          <ion-icon name="eye"> </ion-icon>\n\n        </button>\n\n        <ion-icon\n\n        [name]="isActive ? \'eye\' : \'eye-off\'">\n\n        </ion-icon>\n\n      </ion-item>\n\n    \n\n  \n\n     \n\n      <!-- <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n      </ion-item> -->\n\n      <br>\n\n      <table>\n\n        <tr>\n\n          <td>\n\n    \n\n              <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>\n\n              <h5>Dont have an account?</h5>\n\n              <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>\n\n          </td>\n\n          <td>\n\n    \n\n              <img style="width: 100%; height:100%;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik1lc3NhZ2VfQW5kX0NvbW11bmljYXRpb25fSWNvbnMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNy40LDE3LjR2My45TDM0LjksMTloLTAuNXYtMC42TDMzLjksMThIMzNsMS4xLDFoLTMuN3YtMWgtMS4xdjcuMUgxNi41bC0wLjUsMC40ICAgICAgYzAuMSwwLjEsMC4yLDAuMywwLjMsMC40YzEsMC42LDEuNiwxLjcsMS42LDIuOWMwLDEuOS0xLjYsMy40LTMuNCwzLjRjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjkgICAgICBjMC0xLjcsMS4zLTMuMSwyLjktMy4zdi03LjFINS44djE5LjNoNC40YzAsMCwwLTAuMSwwLTAuMWwtMS4xLDBjMC0yLjQsMi00LjQsNC41LTQuNGMxLjQsMCwyLjcsMC43LDMuNSwxLjggICAgICBjMC45LDAuNiwxLjUsMS42LDEuOCwyLjdoMTMuMXYtMS44YzAtMi40LDItNC40LDQuNS00LjRjMS40LDAsMi43LDAuNywzLjUsMS44YzEuMSwwLjgsMS45LDIuMSwxLjksMy43bDAsMC43aDIuNFYxNy40SDM3LjR6ICAgICAgIE0zNy4zLDMwLjVjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjljMC0xLjksMS42LTMuNCwzLjQtMy40YzEuMiwwLDIuMiwwLjYsMi44LDEuNiAgICAgIGMwLjksMC42LDEuNiwxLjcsMS41LDIuOUM0MC44LDI5LDM5LjIsMzAuNiwzNy4zLDMwLjV6IiBzdHlsZT0iZmlsbDojNERFMEY5OyIvPjwvZz48L2c+PGc+PGc+PHBvbHlnb24gcG9pbnRzPSI0NC44LDM4IDQzLjYsMzggNDMuNiwxNS4yIDM4LjYsMTUuMiAzOC42LDE0IDQ0LjgsMTQgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwb2x5Z29uIHBvaW50cz0iNi40LDM4IDUuMiwzOCA1LjIsMTQgMTEuMSwxNCAxMS4xLDE1LjIgNi40LDE1LjIgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik00NC43LDQySDUuM2MtMS4yLDAtMi4xLTEtMi4xLTIuMXYtMi41aDE5djEuMmw1LjcsMGwwLTEuM2gxOXYyLjVDNDYuOSw0MS4xLDQ1LjksNDIsNDQuNyw0MnogICAgICAgTTQuMywzOC42djEuM2MwLDAuNSwwLjQsMC45LDAuOSwwLjloMzkuNWMwLjUsMCwwLjktMC40LDAuOS0wLjl2LTEuM2wtMTYuNiwwYzAsMC43LTAuNiwxLjItMS4yLDEuMmgtNS43ICAgICAgYy0wLjcsMC0xLjItMC42LTEuMi0xLjJ2MEg0LjN6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0xMi41LDI3LjdWMTRoMTYuNHYxMC43SDE1LjhMMTIuNSwyNy43eiBNMTMuNywxNS4yVjI1bDEuNi0xLjVoMTIuNHYtOC4zSDEzLjd6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PGc+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS44IiB4PSIyMi4zIiB5PSIxNy41Ii8+PC9nPjwvZz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIzLjYiIHg9IjE3LjQiIHk9IjE3LjUiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjYuNyIgeD0iMTcuNCIgeT0iMjAuMSIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48cG9seWdvbiBwb2ludHM9IjM3LDIxLjYgMzMuNywxOC42IDI4LjUsMTguNiAyOC41LDE3LjQgMzQuMSwxNy40IDM1LjgsMTguOSAzNS44LDkuMiAyMS43LDkuMiAgICAgICAyMS43LDE0LjUgMjAuNSwxNC41IDIwLjUsOCAzNyw4ICAgICAiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIxLjgiIHg9IjI1LjMiIHk9IjExLjQiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjMuNiIgeD0iMjguNCIgeT0iMTEuNCIvPjwvZz48L2c+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS42IiB4PSIzMC41IiB5PSIxNCIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48Zz48cGF0aCBkPSJNMTMuNiwzMS44QzEzLjYsMzEuOCwxMy41LDMxLjgsMTMuNiwzMS44Yy0yLjMsMC00LTEuOC00LTQuMWMwLTIuMSwxLjctMy44LDMuNy00bDAuMSwxLjIgICAgICAgYy0xLjQsMC4xLTIuNiwxLjMtMi42LDIuOGMwLDAuOCwwLjMsMS41LDAuOCwyYzAuNSwwLjUsMS4yLDAuOCwyLDAuOGMwLjgsMCwxLjUtMC4zLDItMC44YzAuNS0wLjUsMC44LTEuMiwwLjgtMiAgICAgICBjMC0xLjEtMC42LTIuMi0xLjctMi42bDAuNS0xLjFjMS41LDAuNiwyLjQsMi4xLDIuNCwzLjdjMCwxLjEtMC40LDIuMS0xLjIsMi44QzE1LjYsMzEuNCwxNC42LDMxLjgsMTMuNiwzMS44eiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik0xOC42LDM2LjZsLTEuMiwwYzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMwLDAsMCwwLDAsMCAgICAgICBjLTIuMSwwLTMuOCwxLjctMy44LDMuOGwtMS4yLDBjMC0yLjgsMi4zLTUsNS01YzAsMCwwLDAsMC4xLDBDMTYuNCwzMS42LDE4LjYsMzMuOSwxOC42LDM2LjZ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNi40LDMwLjFDMzYuNCwzMC4xLDM2LjMsMzAuMSwzNi40LDMwLjFjLTIuMywwLTQtMS44LTQtNC4xYzAtMi4yLDEuOC00LDQtNGMwLDAsMCwwLDAsMCAgICAgICBjMi4yLDAsNCwxLjgsNCw0LjFDNDAuNCwyOC40LDM4LjYsMzAuMSwzNi40LDMwLjF6IE0zNi40LDIzLjNjLTEuNSwwLTIuOCwxLjItMi44LDIuOGMwLDEuNSwxLjIsMi44LDIuOCwyLjggICAgICAgYzEuNSwwLDIuOC0xLjIsMi44LTIuOFMzOCwyMy4zLDM2LjQsMjMuM0MzNi40LDIzLjMsMzYuNCwyMy4zLDM2LjQsMjMuM3oiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48cGF0aCBkPSJNNDAuMiwzNi42bDAtMS43YzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMtMSwwLTIsMC40LTIuNywxLjEgICAgICAgcy0xLjEsMS43LTEuMSwyLjd2MS44aC0xLjJ2LTEuOGMwLTEuMywwLjYtMi42LDEuNS0zLjVjMS0wLjksMi4yLTEuNSwzLjYtMS40YzEuMywwLDIuNiwwLjUsMy41LDEuNXMxLjQsMi4yLDEuNCwzLjZsMCwxLjcgICAgICAgSDQwLjJ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+">\n\n    \n\n          </td>\n\n        </tr>\n\n      </table>\n\n      <div class="button_div">\n\n        <div class="left_btn_div">\n\n          \n\n        </div>\n\n      </div>\n\n    \n\n  </div>\n\n  <div *ngIf="clicked" class="waiting">\n\n    <div class="waitmsg">\n\n\n\n        <p>Logging in...</p>\n\n    </div>\n\n    \n\n  </div>\n\n  \n\n \n\n\n\n\n\n</ion-content>  \n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -824,13 +823,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(344);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_data_services__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__ = __webpack_require__(612);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -894,13 +893,13 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/emergency/emergency.module#EmergencyPageModule', name: 'EmergencyPage', segment: 'emergency', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/client-chats/client-chats.module#ClientChatsPageModule', name: 'ClientChatsPage', segment: 'client-chats', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/clients/clients.module#ClientsPageModule', name: 'ClientsPage', segment: 'clients', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/emergency/emergency.module#EmergencyPageModule', name: 'EmergencyPage', segment: 'emergency', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/volunteers/volunteers.module#VolunteersPageModule', name: 'VolunteersPage', segment: 'volunteers', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_4_angularfire2__["AngularFireModule"].initializeApp(config),
@@ -1059,7 +1058,7 @@ var DataService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__emergency_emergency__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__emergency_emergency__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tabs_tabs__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__clients_clients__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1164,12 +1163,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen) {
+        var _this = this;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__["a" /* WelcomePage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
             splashScreen.hide();
+            // used for an example of ngFor and navigation
+            _this.pages = [
+                { title: 'List', component: __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__["a" /* WelcomePage */] }
+            ];
         });
     }
     MyApp = __decorate([

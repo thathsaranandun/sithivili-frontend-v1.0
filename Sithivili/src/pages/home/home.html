@@ -19,11 +19,13 @@
       <ion-item>
         <ion-label position="fixed">Password</ion-label>
         <ion-input id="pwd" [type]="getType()" [(ngModel)]="password"></ion-input>
-        <ion-icon
-        [name]="isActive ? 'eye' : 'eye-off'"
-        item-right
+        <button ion-button clear color="dark" type="button" item-right
         (click)="isActive = !isActive;"
         isActive=true>
+          <ion-icon name="eye"> </ion-icon>
+        </button>
+        <ion-icon
+        [name]="isActive ? 'eye' : 'eye-off'">
         </ion-icon>
       </ion-item>
     
