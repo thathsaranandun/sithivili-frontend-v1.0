@@ -1,7 +1,7 @@
 page-volunteers {
     .volunteer{
         padding: 5px 10px;
-        background: rgba(156, 156, 156, 0.36);
+        background: rgba(255, 255, 255, 0.7);
         margin:5px;
         color: black;
         border-radius: 25px;
@@ -45,11 +45,13 @@ page-volunteers {
         width: 45px;
         height: 45px;
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+        margin-top: 4px;
     }
     .msg-detail {
         width: 100%;
         padding-left: 60px;
         display: inline-block;
+        margin-top: 8px;
         p {
           margin: 0;
         }

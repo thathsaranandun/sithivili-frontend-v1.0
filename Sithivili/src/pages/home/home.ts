@@ -26,6 +26,8 @@ export class HomePage {
   dbuser:string='';
   type: string = "text";
   isActive: Boolean = true; 
+  signUp=SignupPage;
+  logoImg=this.dataService.logoImgURL;
 
   enteredDataStatus:boolean=false;
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {

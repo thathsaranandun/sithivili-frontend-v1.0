@@ -6,46 +6,47 @@
 -->
 <ion-header>
   <ion-navbar hideBackButton>
-    <ion-title>Menu</ion-title>
+    <ion-title class="new-background">Menu</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <table style="width: 100%;">
-    <tr>
-      <td align="center">
-          <div class="lang" style="display: flex; justify-content: center;" (click)="login()">
-              <img style="width: 150px; height: 150px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI1NiAyNTYiIGhlaWdodD0iMjU2cHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI1NiAyNTYiIHdpZHRoPSIyNTZweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgaWQ9IkxheWVyXzEiPjxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyOCIgZmlsbD0iIzJBQjFFMCIgcj0iMTI4Ii8+PC9nPjxnIGlkPSJMYXllcl8zIj48cGF0aCBkPSJNMTQ2Ljc1LDY5LjIyaC0xMDBjLTYuOTAzLDAtMTIuNSw1LjU5Ni0xMi41LDEyLjV2NTguMzMzYzAsNi45MDMsNS41OTcsMTIuNTAxLDEyLjUsMTIuNTAxaDcuNzU5aDAuODYyICAgdjE3LjI5N2wyMi44NDQtMTcuMjk3aDY4LjUzNmM2LjkwMiwwLDEyLjUtNS41OTgsMTIuNS0xMi41MDFWODEuNzJDMTU5LjI1LDc0LjgxNiwxNTMuNjUyLDY5LjIyLDE0Ni43NSw2OS4yMnoiIGZpbGw9IiMwODQwNDkiLz48L2c+PGcgaWQ9IkxheWVyXzIiPjxwYXRoIGQ9Ik0yMDkuMjUsMTEwLjcwM2gtMTAwYy02LjkwMywwLTEyLjUsNS41OTYtMTIuNSwxMi41djU4LjMzNGMwLDYuOTAyLDUuNTk3LDEyLjUsMTIuNSwxMi41aDUuNjA0ICAgbDIyLjg0NCwxNy4yOTd2LTE3LjI5N2g3MS41NTNjNi45MDIsMCwxMi41LTUuNTk4LDEyLjUtMTIuNXYtNTguMzM0QzIyMS43NSwxMTYuMjk5LDIxNi4xNTIsMTEwLjcwMywyMDkuMjUsMTEwLjcwM3oiIGZpbGw9IiNGOUY5RkEiLz48L2c+PGcgaWQ9IkxheWVyXzQiPjxjaXJjbGUgY3g9IjEyOS41MDkiIGN5PSIxNTIuNTU1IiBmaWxsPSIjMkFCMUUwIiByPSIxMCIvPjxjaXJjbGUgY3g9IjE1OS42ODEiIGN5PSIxNTIuNTU1IiBmaWxsPSIjMkFCMUUwIiByPSIxMCIvPjxjaXJjbGUgY3g9IjE4OC45OSIgY3k9IjE1Mi41NTUiIGZpbGw9IiMyQUIxRTAiIHI9IjEwIi8+PC9nPjwvc3ZnPg==">
-            </div>
-            <p>Chat</p>
-            <hr>
-
-      </td>
-      <!-- <td align="center">
-          <div class="lang" style="display: flex; justify-content: center;">
-              <img style="width: 150px; height: 150px;" src="assets/imgs/doctor icon.png">
-            </div>
-            <p>Doctors</p>
-            <hr>
-      </td> -->
-    </tr>
-    <tr>
-        <td align="center">
-            <div class="lang" style="display: flex; justify-content: center;"  [navPush]="emergencypg">
-                <img style="width: 150px; height: 150px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQnPjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIGhlaWdodD0iMzIiIG92ZXJmbG93PSJ2aXNpYmxlIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGc+PGcgaWQ9IkVtZXJnZW5jeV8xXyI+PGcgaWQ9IkVtZXJnZW5jeSI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgZmlsbD0iI0U2RTZFNiIgaWQ9IkVtYmxlbSIgcj0iMTYiLz48cG9seWdvbiBmaWxsPSIjRUYzNTM1IiBpZD0iUGx1c19TeW1ib2wiIHBvaW50cz0iMjYsMTQgMTgsMTQgMTgsNiAxNCw2IDE0LDE0IDYsMTQgNiwxOCAxNCwxOCAxNCwyNiAxOCwyNiAgICAgICAgIDE4LDE4IDI2LDE4ICIvPjwvZz48L2c+PC9nPjwvc3ZnPg==">
-              </div>
-              <p>Emergency Contact</p>
-            <hr>
-  
+<ion-content class="bgimg" padding>
+  <div>
+    <table style="margin:auto;">
+      <tr>
+        <td>
+            <div class="card" (click)="login()">
+              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/chat.png">
+              <p>Chat</p>
+          </div>
+            
+              
         </td>
-        <!-- <td align="center">
-            <div class="lang" style="display: flex; justify-content: center;">
-                <img style="width: 150px; height: 150px;" src="assets/imgs/institutes icon.jpg">
-              </div>
-              <p>Institutes</p>
-            <hr>
-        </td> -->
+        <td>
+            <div class="card">
+                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/therapist.png">
+                <p>Doctors</p>
+            </div>
+        </td>
       </tr>
-  </table>
+        
+      <tr>
+        <td>
+            <div class="card" [navPush]="emergencypg">
+                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/warning.png">
+                <p>Emergency Contact</p>
+            </div>
+        </td>
+        
+        <td>
+            <div class="card">
+              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/awareness.png">
+              <p>Awareness</p>
+            </div>
+        </td>
+        
+      </tr>
+    </table>
+  </div>
           
 </ion-content>

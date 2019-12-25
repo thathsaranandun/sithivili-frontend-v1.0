@@ -17,12 +17,15 @@
       <div>
         <div class="container-margin">
           <div class="container">
+            <div class="logo-img login-logo">
+              <ion-img class="logo-img" [src]= "logoImg"></ion-img>
+            </div>
             <ion-item>
               <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>
             </ion-item>
             <ion-item>
               <ion-input id="pwd" [type]="getType()" [(ngModel)]="password" placeholder="Password"></ion-input>
-              <button ion-button clear color="dark" type="button" item-right
+              <button style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right
               (click)="isActive = !isActive;"
               isActive=true>
                 <ion-icon name="eye"> </ion-icon>
@@ -31,13 +34,19 @@
               [name]="isActive ? 'eye' : 'eye-off'">
               </ion-icon>
             </ion-item>
-            <div>
-              <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>
+            <div class="button-radius">
+              <button class="button-radius" style="margin-top: 20px;" ion-button color="primary" full (click)="loginUser()">Start Chatting</button>
             </div>
-            <h5>Dont have an account?</h5>
-            <div>
-              <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>  
-            </div>  
+            <div style="display: flex;">
+              <div style="display: flex;margin: auto;">
+                <p>Don't have an account?</p>
+                <p style="padding-left: 5px;color: #3897f0;" [navPush]="signUp"><strong>Sign Up</strong></p>
+              </div>
+              <!-- <div class="button-margin">
+                <button style="margin-top: 20px;" ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>  
+              </div> -->
+            </div>
+              
           </div>
 
         </div>
