@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { WelcomePage } from '../pages/welcome/welcome';
 import { from } from 'rxjs';
+import { MenuPage } from '../pages/menu/menu';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = WelcomePage;
+  rootPage:any = MenuPage;
 
   
 

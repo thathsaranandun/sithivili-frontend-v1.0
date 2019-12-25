@@ -10,7 +10,7 @@ webpackJsonp([8],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabs_tabs__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__clients_clients__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -135,7 +135,7 @@ var ChatPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__volunteers_volunteers__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__client_chats_client_chats__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_menu__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_menu__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit_profile_edit_profile__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -192,9 +192,9 @@ var TabsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__chat_chat__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -290,10 +290,10 @@ var ClientChatsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat_chat__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angularfire2_database__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -393,7 +393,7 @@ var VolunteersPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -464,7 +464,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content style="background-color: lightskyblue;">\n\n  <div *ngIf="notclicked" class= "signupbox">\n\n    <ion-list>\n\n      <ion-label text-center style="padding-top: 10px; font-size: 20px;">\n\n        <b>Personal Details</b>\n\n      </ion-label>\n\n  \n\n      <ion-item>\n\n        <ion-label>Mobile No</ion-label>\n\n        <ion-input type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label>Username</ion-label>\n\n        <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label style="font-size: 14px;">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n        \n\n      </ion-item>\n\n      <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">\n\n        <ng2-password-strength-bar text-center \n\n        [passwordToCheck]="userPassword"\n\n        [barLabel]="barLabel"\n\n        [barColors]="myColors">\n\n</ng2-password-strength-bar>\n\n      </div>\n\n      \n\n\n\n      \n\n\n\n      <div text-center>\n\n        <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n      </div>\n\n  \n\n  \n\n      </ion-list>\n\n  </div>\n\n  \n\n\n\n    <div *ngIf="clicked" class="waiting">\n\n      <div class="waitmsg">\n\n  \n\n          <p>Logging in...</p>\n\n      </div>\n\n      \n\n    </div>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content style="background:linear-gradient(104deg, deepskyblue, lightcyan);">\n\n  <div *ngIf="notclicked" class= "signupbox">\n\n    <ion-list>\n\n      <ion-label text-center style="padding-top: 10px; font-size: 20px;">\n\n        <b>Personal Details</b>\n\n      </ion-label>\n\n  \n\n      <ion-item>\n\n        <ion-label>Mobile No</ion-label>\n\n        <ion-input type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label>Username</ion-label>\n\n        <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label style="font-size: 14px;">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n        \n\n      </ion-item>\n\n      <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">\n\n        <ng2-password-strength-bar text-center \n\n        [passwordToCheck]="userPassword"\n\n        [barLabel]="barLabel"\n\n        [barColors]="myColors">\n\n</ng2-password-strength-bar>\n\n      </div>\n\n      \n\n\n\n      \n\n\n\n      <div text-center>\n\n        <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n      </div>\n\n  \n\n  \n\n      </ion-list>\n\n  </div>\n\n  \n\n\n\n    <div *ngIf="clicked" class="waiting">\n\n      <div class="waitmsg">\n\n  \n\n          <p>Logging in...</p>\n\n      </div>\n\n      \n\n    </div>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]])
     ], SignupPage);
@@ -530,8 +530,8 @@ var EmergencyPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu_menu__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu_menu__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -623,57 +623,7 @@ var EditProfilePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 201:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(52);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the WelcomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var WelcomePage = /** @class */ (function () {
-    function WelcomePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    WelcomePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad WelcomePage');
-    };
-    WelcomePage.prototype.login = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__menu_menu__["a" /* MenuPage */]);
-    };
-    WelcomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\welcome\welcome.html"*/'<!--\n\n  Generated template for the WelcomePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Welcome</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="bgimg">\n\n<h1 style="text-align:center">Welcome to Sithivili!</h1>\n\n<br>\n\n<h3 style="text-align:center">Select a language</h3>\n\n<div class="lang" style="display: flex; justify-content: center;">\n\n  <button ion-button color="primary" round full (click)="login()">English</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\welcome\welcome.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], WelcomePage);
-    return WelcomePage;
-}());
-
-//# sourceMappingURL=welcome.js.map
-
-/***/ }),
-
-/***/ 235:
+/***/ 234:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -686,11 +636,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 235;
+webpackEmptyAsyncContext.id = 234;
 
 /***/ }),
 
-/***/ 277:
+/***/ 276:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -719,11 +669,11 @@ var map = {
 		2
 	],
 	"../pages/volunteers/volunteers.module": [
-		621,
+		622,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		622,
+		621,
 		0
 	]
 };
@@ -738,19 +688,19 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 277;
+webpackAsyncContext.id = 276;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 302:
+/***/ 301:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__clients_clients__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabs_tabs__ = __webpack_require__(117);
@@ -883,7 +833,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n  <div *ngIf="notclicked">\n\n\n\n      <br>\n\n      <h2>Welcome to Sithivili!</h2>\n\n      <br>\n\n      <br>\n\n    \n\n      <ion-item>\n\n        <ion-label position="fixed">Username</ion-label>\n\n        <ion-input type="text" [(ngModel)]="username"></ion-input>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input id="pwd" [type]="getType()" [(ngModel)]="password"></ion-input>\n\n        <button ion-button clear color="dark" type="button" item-right\n\n        (click)="isActive = !isActive;"\n\n        isActive=true>\n\n          <ion-icon name="eye"> </ion-icon>\n\n        </button>\n\n        <ion-icon\n\n        [name]="isActive ? \'eye\' : \'eye-off\'">\n\n        </ion-icon>\n\n      </ion-item>\n\n    \n\n  \n\n     \n\n      <!-- <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n      </ion-item> -->\n\n      <br>\n\n      <table>\n\n        <tr>\n\n          <td>\n\n    \n\n              <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>\n\n              <h5>Dont have an account?</h5>\n\n              <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>\n\n          </td>\n\n          <td>\n\n    \n\n              <img style="width: 100%; height:100%;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik1lc3NhZ2VfQW5kX0NvbW11bmljYXRpb25fSWNvbnMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNy40LDE3LjR2My45TDM0LjksMTloLTAuNXYtMC42TDMzLjksMThIMzNsMS4xLDFoLTMuN3YtMWgtMS4xdjcuMUgxNi41bC0wLjUsMC40ICAgICAgYzAuMSwwLjEsMC4yLDAuMywwLjMsMC40YzEsMC42LDEuNiwxLjcsMS42LDIuOWMwLDEuOS0xLjYsMy40LTMuNCwzLjRjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjkgICAgICBjMC0xLjcsMS4zLTMuMSwyLjktMy4zdi03LjFINS44djE5LjNoNC40YzAsMCwwLTAuMSwwLTAuMWwtMS4xLDBjMC0yLjQsMi00LjQsNC41LTQuNGMxLjQsMCwyLjcsMC43LDMuNSwxLjggICAgICBjMC45LDAuNiwxLjUsMS42LDEuOCwyLjdoMTMuMXYtMS44YzAtMi40LDItNC40LDQuNS00LjRjMS40LDAsMi43LDAuNywzLjUsMS44YzEuMSwwLjgsMS45LDIuMSwxLjksMy43bDAsMC43aDIuNFYxNy40SDM3LjR6ICAgICAgIE0zNy4zLDMwLjVjLTEuMiwwLTIuMi0wLjYtMi44LTEuNmMtMC45LTAuNi0xLjYtMS43LTEuNS0yLjljMC0xLjksMS42LTMuNCwzLjQtMy40YzEuMiwwLDIuMiwwLjYsMi44LDEuNiAgICAgIGMwLjksMC42LDEuNiwxLjcsMS41LDIuOUM0MC44LDI5LDM5LjIsMzAuNiwzNy4zLDMwLjV6IiBzdHlsZT0iZmlsbDojNERFMEY5OyIvPjwvZz48L2c+PGc+PGc+PHBvbHlnb24gcG9pbnRzPSI0NC44LDM4IDQzLjYsMzggNDMuNiwxNS4yIDM4LjYsMTUuMiAzOC42LDE0IDQ0LjgsMTQgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwb2x5Z29uIHBvaW50cz0iNi40LDM4IDUuMiwzOCA1LjIsMTQgMTEuMSwxNCAxMS4xLDE1LjIgNi40LDE1LjIgICAgICIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik00NC43LDQySDUuM2MtMS4yLDAtMi4xLTEtMi4xLTIuMXYtMi41aDE5djEuMmw1LjcsMGwwLTEuM2gxOXYyLjVDNDYuOSw0MS4xLDQ1LjksNDIsNDQuNyw0MnogICAgICAgTTQuMywzOC42djEuM2MwLDAuNSwwLjQsMC45LDAuOSwwLjloMzkuNWMwLjUsMCwwLjktMC40LDAuOS0wLjl2LTEuM2wtMTYuNiwwYzAsMC43LTAuNiwxLjItMS4yLDEuMmgtNS43ICAgICAgYy0wLjcsMC0xLjItMC42LTEuMi0xLjJ2MEg0LjN6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0xMi41LDI3LjdWMTRoMTYuNHYxMC43SDE1LjhMMTIuNSwyNy43eiBNMTMuNywxNS4yVjI1bDEuNi0xLjVoMTIuNHYtOC4zSDEzLjd6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PGc+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS44IiB4PSIyMi4zIiB5PSIxNy41Ii8+PC9nPjwvZz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIzLjYiIHg9IjE3LjQiIHk9IjE3LjUiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjYuNyIgeD0iMTcuNCIgeT0iMjAuMSIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48cG9seWdvbiBwb2ludHM9IjM3LDIxLjYgMzMuNywxOC42IDI4LjUsMTguNiAyOC41LDE3LjQgMzQuMSwxNy40IDM1LjgsMTguOSAzNS44LDkuMiAyMS43LDkuMiAgICAgICAyMS43LDE0LjUgMjAuNSwxNC41IDIwLjUsOCAzNyw4ICAgICAiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48Zz48cmVjdCBoZWlnaHQ9IjEuMiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiIHdpZHRoPSIxLjgiIHg9IjI1LjMiIHk9IjExLjQiLz48L2c+PC9nPjxnPjxnPjxyZWN0IGhlaWdodD0iMS4yIiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIgd2lkdGg9IjMuNiIgeD0iMjguNCIgeT0iMTEuNCIvPjwvZz48L2c+PGc+PGc+PHJlY3QgaGVpZ2h0PSIxLjIiIHN0eWxlPSJmaWxsOiMwRDVGQzM7IiB3aWR0aD0iMS42IiB4PSIzMC41IiB5PSIxNCIvPjwvZz48L2c+PC9nPjwvZz48Zz48Zz48Zz48Zz48cGF0aCBkPSJNMTMuNiwzMS44QzEzLjYsMzEuOCwxMy41LDMxLjgsMTMuNiwzMS44Yy0yLjMsMC00LTEuOC00LTQuMWMwLTIuMSwxLjctMy44LDMuNy00bDAuMSwxLjIgICAgICAgYy0xLjQsMC4xLTIuNiwxLjMtMi42LDIuOGMwLDAuOCwwLjMsMS41LDAuOCwyYzAuNSwwLjUsMS4yLDAuOCwyLDAuOGMwLjgsMCwxLjUtMC4zLDItMC44YzAuNS0wLjUsMC44LTEuMiwwLjgtMiAgICAgICBjMC0xLjEtMC42LTIuMi0xLjctMi42bDAuNS0xLjFjMS41LDAuNiwyLjQsMi4xLDIuNCwzLjdjMCwxLjEtMC40LDIuMS0xLjIsMi44QzE1LjYsMzEuNCwxNC42LDMxLjgsMTMuNiwzMS44eiIgc3R5bGU9ImZpbGw6IzBENUZDMzsiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGQ9Ik0xOC42LDM2LjZsLTEuMiwwYzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMwLDAsMCwwLDAsMCAgICAgICBjLTIuMSwwLTMuOCwxLjctMy44LDMuOGwtMS4yLDBjMC0yLjgsMi4zLTUsNS01YzAsMCwwLDAsMC4xLDBDMTYuNCwzMS42LDE4LjYsMzMuOSwxOC42LDM2LjZ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNi40LDMwLjFDMzYuNCwzMC4xLDM2LjMsMzAuMSwzNi40LDMwLjFjLTIuMywwLTQtMS44LTQtNC4xYzAtMi4yLDEuOC00LDQtNGMwLDAsMCwwLDAsMCAgICAgICBjMi4yLDAsNCwxLjgsNCw0LjFDNDAuNCwyOC40LDM4LjYsMzAuMSwzNi40LDMwLjF6IE0zNi40LDIzLjNjLTEuNSwwLTIuOCwxLjItMi44LDIuOGMwLDEuNSwxLjIsMi44LDIuOCwyLjggICAgICAgYzEuNSwwLDIuOC0xLjIsMi44LTIuOFMzOCwyMy4zLDM2LjQsMjMuM0MzNi40LDIzLjMsMzYuNCwyMy4zLDM2LjQsMjMuM3oiIHN0eWxlPSJmaWxsOiMwRDVGQzM7Ii8+PC9nPjwvZz48Zz48Zz48cGF0aCBkPSJNNDAuMiwzNi42bDAtMS43YzAtMS0wLjQtMi0xLjEtMi43Yy0wLjctMC43LTEuNy0xLjEtMi43LTEuMWMtMSwwLTIsMC40LTIuNywxLjEgICAgICAgcy0xLjEsMS43LTEuMSwyLjd2MS44aC0xLjJ2LTEuOGMwLTEuMywwLjYtMi42LDEuNS0zLjVjMS0wLjksMi4yLTEuNSwzLjYtMS40YzEuMywwLDIuNiwwLjUsMy41LDEuNXMxLjQsMi4yLDEuNCwzLjZsMCwxLjcgICAgICAgSDQwLjJ6IiBzdHlsZT0iZmlsbDojMEQ1RkMzOyIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+">\n\n    \n\n          </td>\n\n        </tr>\n\n      </table>\n\n      <div class="button_div">\n\n        <div class="left_btn_div">\n\n          \n\n        </div>\n\n      </div>\n\n    \n\n  </div>\n\n  <div *ngIf="clicked" class="waiting">\n\n    <div class="waitmsg">\n\n\n\n        <p>Logging in...</p>\n\n    </div>\n\n    \n\n  </div>\n\n  \n\n \n\n\n\n\n\n</ion-content>  \n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar  >\n\n    <ion-title class="new-background">Login</ion-title>\n\n  </ion-navbar  >\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n  <div *ngIf="notclicked">\n\n\n\n    \n\n  \n\n     \n\n      <!-- <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n      </ion-item> -->\n\n      <div>\n\n        <div class="container-margin">\n\n          <div class="container">\n\n            <ion-item>\n\n              <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>\n\n            </ion-item>\n\n            <ion-item>\n\n              <ion-input id="pwd" [type]="getType()" [(ngModel)]="password" placeholder="Password"></ion-input>\n\n              <button ion-button clear color="dark" type="button" item-right\n\n              (click)="isActive = !isActive;"\n\n              isActive=true>\n\n                <ion-icon name="eye"> </ion-icon>\n\n              </button>\n\n              <ion-icon\n\n              [name]="isActive ? \'eye\' : \'eye-off\'">\n\n              </ion-icon>\n\n            </ion-item>\n\n            <div>\n\n              <button ion-button color="primary" round full (click)="loginUser()">Start Chatting</button>\n\n            </div>\n\n            <h5>Dont have an account?</h5>\n\n            <div>\n\n              <button ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>  \n\n            </div>  \n\n          </div>\n\n\n\n        </div>\n\n      </div>\n\n</div>\n\n\n\n    \n\n  <div *ngIf="clicked" class="waiting">\n\n    <div class="waitmsg">\n\n\n\n        <p>Logging in...</p>\n\n    </div>\n\n    \n\n  </div>\n\n  \n\n \n\n\n\n\n\n</ion-content>  \n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]])
     ], HomePage);
@@ -891,6 +841,56 @@ var HomePage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 346:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(46);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the WelcomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var WelcomePage = /** @class */ (function () {
+    function WelcomePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    WelcomePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad WelcomePage');
+    };
+    WelcomePage.prototype.login = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__menu_menu__["a" /* MenuPage */]);
+    };
+    WelcomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\welcome\welcome.html"*/'<!--\n\n  Generated template for the WelcomePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Welcome</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="bgimg">\n\n<h1 style="text-align:center">Welcome to Sithivili!</h1>\n\n<br>\n\n<h3 style="text-align:center">Select a language</h3>\n\n<div class="lang" style="display: flex; justify-content: center;">\n\n  <button ion-button color="primary" round full (click)="login()">English</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\sithivili\src\pages\welcome\welcome.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], WelcomePage);
+    return WelcomePage;
+}());
+
+//# sourceMappingURL=welcome.js.map
 
 /***/ }),
 
@@ -908,239 +908,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 468:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(602);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2__ = __webpack_require__(610);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angularfire2__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angularfire2_database__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_about_about__ = __webpack_require__(611);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__ = __webpack_require__(612);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_chat_chat__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_data_services__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__ = __webpack_require__(613);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_edit_profile_edit_profile__ = __webpack_require__(200);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var config = {
-    apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",
-    authDomain: "sithivili-chat.firebaseapp.com",
-    databaseURL: "https://sithivili-chat.firebaseio.com",
-    projectId: "sithivili-chat",
-    storageBucket: "sithivili-chat.appspot.com",
-    messagingSenderId: "1065721164060"
-};
-var AppModule = /** @class */ (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_chat_chat__["a" /* ChatPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__["a" /* VolunteersPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__["a" /* ClientsPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__["a" /* EmergencyPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__["a" /* WelcomePage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__["a" /* ClientChatsPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__["a" /* MenuPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_edit_profile_edit_profile__["a" /* EditProfilePage */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
-                    links: [
-                        { loadChildren: '../pages/client-chats/client-chats.module#ClientChatsPageModule', name: 'ClientChatsPage', segment: 'client-chats', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/clients/clients.module#ClientsPageModule', name: 'ClientsPage', segment: 'clients', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/emergency/emergency.module#EmergencyPageModule', name: 'EmergencyPage', segment: 'emergency', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/volunteers/volunteers.module#VolunteersPageModule', name: 'VolunteersPage', segment: 'volunteers', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
-                    ]
-                }),
-                __WEBPACK_IMPORTED_MODULE_4_angularfire2__["AngularFireModule"].initializeApp(config),
-                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__["PasswordStrengthBarModule"],
-                __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["AngularFireDatabaseModule"]
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__["a" /* VolunteersPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_chat_chat__["a" /* ChatPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__["a" /* ClientsPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__["a" /* EmergencyPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__["a" /* WelcomePage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__["a" /* ClientChatsPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__["a" /* MenuPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_edit_profile_edit_profile__["a" /* EditProfilePage */]
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_14__services_data_services__["a" /* DataService */],
-                __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
-            ]
-        })
-    ], AppModule);
-    return AppModule;
-}());
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 51:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(36);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-// import {Observable} from 'rxjs/observable';
-// import { map } from 'rxjs/operators';
-
-
-/*
-interface User {
-  name: string
-} */
-var DataService = /** @class */ (function () {
-    function DataService(http, domSanitizer) {
-        this.http = http;
-        this.domSanitizer = domSanitizer;
-        // baseurl:string = "http://sithivili-sb-server.herokuapp.com/";
-        this.baseurl = "http://localhost:8080/";
-        this.defaultImage = this.domSanitizer.bypassSecurityTrustUrl("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMDIgNTEyLjAwMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwMiA1MTIuMDAyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBhdGggc3R5bGU9ImZpbGw6I0ZFREFDNjsiIGQ9Ik0zNDkuNzI2LDE1My4zNjloLTguNTJ2NTEuMTIyaDguNTJjMTQuMTE4LDAsMjUuNTYxLTExLjQ0MywyNS41NjEtMjUuNTYxICBTMzYzLjgzNSwxNTMuMzY5LDM0OS43MjYsMTUzLjM2OXoiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0Y1QzRCMDsiIGQ9Ik0xMzYuNzE1LDE3OC45MzFjMCwxNC4xMTgsMTEuNDQzLDI1LjU2MSwyNS41NjEsMjUuNTYxaDguNTJ2LTUxLjEyMmgtOC41MiAgQzE0OC4xNTgsMTUzLjM2OSwxMzYuNzE1LDE2NC44MTIsMTM2LjcxNSwxNzguOTMxeiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRkVDQjY2OyIgZD0iTTM0OS43MjYsMTUzLjM2OWwxMC4wNTQtNTEuNzE5YzMuMjk3LTE5LjYzMS05Ljk1Mi0zOC4yMTQtMjkuNTgzLTQxLjUxMSAgYy0xLjk5NC0wLjMzMi00LjAxMy0wLjQ5NC02LjAzMi0wLjQ5NGwwLDBjLTUuMDk1LTE1LjI1Mi0xOS4zNjctMjUuNTQ0LTM1LjQ0NS0yNS41NjFIMTg3LjgzOEwxNzAuNzk3LDguNTIybC04LjUyLDguNTIgIGMtMjMuNTI1LDIzLjUyNS0yMy41MzMsNjEuNjYyLTAuMDE3LDg1LjE4N2MwLjAwOSwwLjAwOSwwLjAwOSwwLjAxNywwLjAxNywwLjAxN2gxNTMuMzY3TDM0OS43MjYsMTUzLjM2OXoiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0RCREJEQjsiIGQ9Ik0zNzUuNzk4LDM0OS45MzVsLTYxLjc3My04LjUyTDI1Ni4wMDEsMzc0LjlsLTU4LjAyNC0zMy4xNDRsLTYxLjc3Myw4LjUyICBjLTMzLjcyNCw0LjUwNy01OC45NjEsMzMuMTk2LTU5LjEzMiw2Ny4yMjZ2OTMuNzI1SDQzNC45M3YtOTMuNzI1QzQzNC45MywzODMuMzUyLDQwOS42NSwzNTQuNDYsMzc1Ljc5OCwzNDkuOTM1eiIvPgo8cG9seWdvbiBzdHlsZT0iZmlsbDojRkVEQUM2OyIgcG9pbnRzPSIzMTQuMDI1LDM0MS43NTYgMzA3LjEyMywzNDAuODE4IDMwNy4xMjMsMjgxLjE3NiAyMDQuODc5LDI4MS4xNzYgMjA0Ljg3OSwzNDAuODE4ICAgMTk3Ljk3NywzNDEuNzU2IDI1Ni4wMDEsMzc0LjkgIi8+CjxnPgoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0VBRUFFQTsiIHBvaW50cz0iMjA0Ljg3OSw0MDguOTgyIDI1Ni4wMDEsMzc0LjkgMjA0Ljg3OSwzNDAuODE4IDE4Ny44MzgsMzQwLjgxOCAgIi8+Cgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRUFFQUVBOyIgcG9pbnRzPSIyNTYuMDAxLDM3NC45IDMwNy4xMjMsNDA4Ljk4MiAzMjQuMTY0LDM0MC44MTggMzA3LjEyMywzNDAuODE4ICAiLz4KPC9nPgo8cG9seWxpbmUgc3R5bGU9ImZpbGw6IzJFNkFBMzsiIHBvaW50cz0iMjMwLjQ0LDUxMS4yMjcgMjM4Ljk2LDQxNy41MDIgMjMwLjQ0LDM5MS45NDEgMjU2LjAwMSwzNzQuOSAyODEuNTYyLDM5MS45NDEgICAyNzMuMDQyLDQxNy41MDIgMjgxLjU2Miw1MTEuMjI3ICIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRjVDNEIwOyIgZD0iTTMwNy4xMjMsMzI4LjM3OXYtNDcuMjAzSDIwNC44Nzl2NDcuMjAzQzI0My4yMiwzNDQuOTkzLDI2OC43ODIsMzQ0Ljk5MywzMDcuMTIzLDMyOC4zNzl6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNCRkJGQkY7IiBkPSJNNzcuMDcyLDQxNy41MDJ2OTMuNzI1aDM0LjA4MlYzNTguNTQxQzkwLjA4MywzNzAuNzA4LDc3LjA4OSwzOTMuMTc2LDc3LjA3Miw0MTcuNTAyeiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRkVEQUM2OyIgZD0iTTM0OS43MjYsMTUzLjM2OXY0OC41NjZjLTAuMDA5LDI0LjAzNi02LjEzNSw0Ny42NjMtMTcuODA4LDY4LjY3NWwwLDAgIGMtMTUuMzIsMjcuNTY0LTQ0LjM4Myw0NC42NTUtNzUuOTE3LDQ0LjY0N2wwLDBjLTMxLjUzNCwwLjAwOS02MC41OTctMTcuMDgzLTc1LjkxNy00NC42NDdsMCwwICBjLTExLjY3My0yMS4wMTEtMTcuNzk5LTQ0LjYzOC0xNy44MDgtNjguNjc1di05OS42ODloMTUzLjM2N0wzNDkuNzI2LDE1My4zNjl6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGNUM0QjA7IiBkPSJNMTk2LjM1OCwxMDIuMjQ3aC0zNC4wODJ2OTkuNjg5YzAuMDA5LDI0LjAzNiw2LjEzNSw0Ny42NjMsMTcuODA4LDY4LjY3NSAgYzguNTIsMTUuMjUyLDIxLjQ4LDI3LjU1NSwzNy4xNDksMzUuMjc1QzE4Ny44MzgsMjIxLjUzMywxOTYuMzU4LDEwMi4yNDcsMTk2LjM1OCwxMDIuMjQ3eiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRjVBRDc2OyIgZD0iTTE0Ni40MjksNDUuMzMxYy01LjA2MSwyMC40NCwwLjk1NCw0Mi4wMzEsMTUuODQ4LDU2LjkxNmgxMzYuMzI3ICBDMjAxLjgxMSwxMDIuMjQ3LDE2Mi4yNzYsNjguMTY1LDE0Ni40MjksNDUuMzMxeiIvPgo8cGF0aCBkPSJNMzQ5LjcyNiwyMTMuMDEyaC04LjUydi0xNy4wNDFoOC41MmM5LjM5OCwwLDE3LjA0MS03LjY0MywxNy4wNDEtMTcuMDQxYzAtOS4zOTgtNy42NDMtMTcuMDQxLTE3LjA0MS0xNy4wNDFoLTguNTJ2LTE3LjA0MSAgaDguNTJjMTguNzk2LDAsMzQuMDgyLDE1LjI4NiwzNC4wODIsMzQuMDgyUzM2OC41MjIsMjEzLjAxMiwzNDkuNzI2LDIxMy4wMTJ6Ii8+CjxwYXRoIGQ9Ik0xNzAuNzk3LDIxMy4wMTJoLTguNTJjLTE4Ljc5NiwwLTM0LjA4Mi0xNS4yODYtMzQuMDgyLTM0LjA4MnMxNS4yODYtMzQuMDgyLDM0LjA4Mi0zNC4wODJoOC41MnYxNy4wNDFoLTguNTIgIGMtOS4zOTgsMC0xNy4wNDEsNy42NDMtMTcuMDQxLDE3LjA0MWMwLDkuMzk4LDcuNjQzLDE3LjA0MSwxNy4wNDEsMTcuMDQxaDguNTJWMjEzLjAxMnoiLz4KPHBhdGggZD0iTTI2NC41MjEsMjMwLjA1M0gyMzguOTZjLTIuNjc1LDAtNS4xODktMS4yNTMtNi43OTktMy4zOTFjLTEuNjEtMi4xMzktMi4xMy00Ljg5OS0xLjM4OS03LjQ3MmwxNy4wNDEtNTkuNjQzbDE2LjM4NSw0LjY4NiAgbC0xMy45NDgsNDguNzc5aDE0LjI2M3YxNy4wNDFIMjY0LjUyMXoiLz4KPHBhdGggZD0iTTI1Ni4wMTgsMzIzLjc3OGMtMC4wMTcsMC0wLjAzNCwwLTAuMDUxLDBjLTM0LjU5MywwLTY2LjUyNy0xOC43NzktODMuMzM4LTQ5LjAzNSAgYy0xMi4zNDYtMjIuMjEzLTE4Ljg3My00Ny4zOTEtMTguODgxLTcyLjc5OHYtOTkuNjk3YzAtNC43MDMsMy44MTctOC41Miw4LjUyLTguNTJoMTUzLjM2N2MyLjg0NiwwLDUuNTA0LDEuNDIzLDcuMDg5LDMuNzkyICBsMzQuMDgyLDUxLjEyMmMwLjkyOSwxLjM5NywxLjQzMSwzLjA0MiwxLjQzMSw0LjcyOXY0OC41NjZjLTAuMDA5LDI1LjQwOC02LjU0NCw1MC41ODYtMTguODgxLDcyLjgwNyAgQzMyMi41NTQsMzA0Ljk5LDI5MC42MTksMzIzLjc3OCwyNTYuMDE4LDMyMy43Nzh6IE0yNTUuOTkyLDMwNi43MzdjMC4wMDgsMCwwLjAxNywwLDAuMDE3LDBjMjguNDI0LDAsNTQuNjUtMTUuNDMsNjguNDUzLTQwLjI2NyAgYzEwLjk0LTE5LjY5OSwxNi43MjYtNDIuMDE0LDE2LjczNC02NC41NDJ2LTQ1Ljk4NWwtMzAuMTItNDUuMTc1aC0xNDAuMjh2OTEuMTY4YzAuMDA5LDIyLjUyOCw1Ljc5NCw0NC44NDMsMTYuNzM0LDY0LjUzNCAgYzEzLjgwMywyNC44NDYsNDAuMDI5LDQwLjI2Nyw2OC40NDQsNDAuMjY3QzI1NS45ODQsMzA2LjczNywyNTUuOTkyLDMwNi43MzcsMjU1Ljk5MiwzMDYuNzM3eiIvPgo8cGF0aCBkPSJNMjQ4LjkyOSwyNjQuMTM1aC05Ljk2OXYtMTcuMDQxaDkuOTY5YzEzLjI2Ni0wLjAwOSwyNS43NC01LjE3MiwzNS4xMy0xNC41NTNsMTIuMDQ4LDEyLjA1NiAgQzI4My40OTYsMjU3LjE5MSwyNjYuNzQ1LDI2NC4xMjYsMjQ4LjkyOSwyNjQuMTM1eiIvPgo8Y2lyY2xlIGN4PSIyMDQuOTEzIiBjeT0iMTcwLjQxIiByPSIxNy4wNDEiLz4KPGNpcmNsZSBjeD0iMzA3LjE1OCIgY3k9IjE3MC40MSIgcj0iMTcuMDQxIi8+CjxwYXRoIGQ9Ik0zNTguMTI3LDE2My4yOTZsLTE2LjgxMS0yLjgwM2wxMC4wNTQtNjAuMjM5YzEuMjE4LTcuMjU5LTAuNDYtMTQuNTUzLTQuNzI5LTIwLjUzNCAgYy00LjI2OS01Ljk4MS0xMC42MDgtOS45NTItMTcuODU5LTExLjE3Yy0xLjUxNy0wLjI1Ni0zLjIzOC0wLjQ0My00LjYxLTAuMzc1Yy0wLjAwOSwwLTAuMDA5LDAtMC4wMTcsMCAgYy0zLjY2NCwwLTYuOTI3LTIuMzQzLTguMDc3LTUuODE5Yy0zLjk0NS0xMS44MDEtMTQuOTQ1LTE5LjczMy0yNy4zNzYtMTkuNzVIMTg3LjgzOGMtMi44NDYsMC01LjUwNC0xLjQyMy03LjA4OS0zLjc5MiAgbC0xMS4yODEtMTYuOTEzbC0xLjE3NiwxLjE2N2MtOS43NjQsOS43NjQtMTUuMTQ5LDIyLjc1OC0xNS4xNDksMzYuNTdjMCwxMy44Miw1LjM3NiwyNi44MDUsMTUuMTQxLDM2LjU3bC0xMi4wMzksMTIuMDY1ICBjLTI2LjgxNC0yNi44MjItMjYuODE0LTcwLjQ0NywwLTk3LjI1Mmw4LjUyLTguNTJjMS44MDYtMS43OTgsNC4zMjgtMi43MTgsNi44NjctMi40NTRjMi41MzksMC4yNDcsNC44MzEsMS42MjcsNi4yNDUsMy43NDkgIGwxNC41MTksMjEuNzdoOTYuMzIzYzE3Ljc5OSwwLjAxNywzMy43NDEsMTAuMjMzLDQxLjMyNCwyNS45MzZjMC41MjgsMC4wNjgsMS4wMzksMC4xNDUsMS41NjgsMC4yMyAgYzExLjc1LDEuOTY4LDIyLjAxNyw4LjM5MywyOC45MjcsMTguMDg5czkuNjI4LDIxLjQ5Nyw3LjY1MSwzMy4yMzhMMzU4LjEyNywxNjMuMjk2eiIvPgo8cGF0aCBkPSJNODUuNTkzLDUxMS4yMjdINjguNTUydi05My43MjVjMC0zOC4yNTcsMjguNTk0LTcwLjkzMiw2Ni41MjctNzYuMDExbDYxLjI3OS04LjEzN3YtMzUuMTM4aDE3LjA0MXY0Mi42MDIgIGMwLDQuMjY5LTMuMTYxLDcuODgxLTcuMzk2LDguNDQ0bC02OC42NzQsOS4xMTdjLTI5LjQ4OSwzLjk0NS01MS43MzYsMjkuMzUzLTUxLjczNiw1OS4xMTVWNTExLjIyN3oiLz4KPHBhdGggZD0iTTQ0My40NSw1MTEuMjI3aC0xNy4wNDF2LTkzLjcyNWMwLTI5Ljc2Mi0yMi4yMzgtNTUuMTc4LTUxLjc0NC01OS4xMTVsLTY4LjY2Ni05LjExN2MtNC4yMzUtMC41NjItNy4zOTYtNC4xNzUtNy4zOTYtOC40NDQgIHYtNDIuNjAyaDE3LjA0MXYzNS4xMzhsNjEuMjcsOC4xMzdjMzcuOTMzLDUuMDcsNjYuNTM2LDM3Ljc1NCw2Ni41MzYsNzYuMDExTDQ0My40NSw1MTEuMjI3TDQ0My40NSw1MTEuMjI3eiIvPgo8cmVjdCB4PSIxMzYuNzQ5IiB5PSI0NDMuMDYzIiB3aWR0aD0iMTcuMDQxIiBoZWlnaHQ9IjY4LjE2MyIvPgo8cmVjdCB4PSIzNTguMjgiIHk9IjQ0My4wNjMiIHdpZHRoPSIxNy4wNDEiIGhlaWdodD0iNjguMTYzIi8+CjxwYXRoIGQ9Ik0yMDQuODc5LDQxNy41MDJjLTEuMDM5LDAtMi4wNzktMC4xODctMy4wNzYtMC41NzFjLTIuNTgyLTAuOTk3LTQuNTE2LTMuMTk1LTUuMTg5LTUuODc5bC0xNy4wNDEtNjguMTYzbDE2LjUzLTQuMTI0ICBsMTQuMTEsNTYuNDMxbDQxLjA2LTI3LjM3Nmw5LjQ0OSwxNC4xNzhsLTUxLjEyMiwzNC4wODJDMjA4LjE4NCw0MTcuMDI1LDIwNi41MzEsNDE3LjUwMiwyMDQuODc5LDQxNy41MDJ6Ii8+CjxwYXRoIGQ9Ik0yNTYuMDAxLDM4My40MmMtMS40NTcsMC0yLjkxNC0wLjM3NS00LjIyNi0xLjEyNWwtNTkuNjQzLTM0LjA4Mmw4LjQ1Mi0xNC43OTFsNTUuNDE3LDMxLjY3bDU1LjQxNy0zMS42N2w4LjQ1MiwxNC43OTEgIGwtNTkuNjQzLDM0LjA4MkMyNTguOTE1LDM4My4wNDYsMjU3LjQ1OCwzODMuNDIsMjU2LjAwMSwzODMuNDJ6Ii8+CjxwYXRoIGQ9Ik0zMDcuMTIzLDQxNy41MDJjLTEuNjUzLDAtMy4zMDYtMC40ODYtNC43MjktMS40MzFsLTUxLjEyMi0zNC4wODJsOS40NDktMTQuMTc4bDQxLjA2LDI3LjM3NmwxNC4xMS01Ni40MzFsMTYuNTIxLDQuMTI0ICBsLTE3LjA0MSw2OC4xNjNjLTAuNjY1LDIuNjg0LTIuNjA3LDQuODgyLTUuMTg5LDUuODc5QzMwOS4yMDIsNDE3LjMxNSwzMDguMTYzLDQxNy41MDIsMzA3LjEyMyw0MTcuNTAyeiIvPgo8cGF0aCBkPSJNMjM4LjkyNiw1MTIuMDAybC0xNi45NzMtMS41NTFsOC4zNTktOTEuOTQ0bC03Ljk1OC0yMy44NzRsMTYuMTYzLTUuMzkzbDguNTIsMjUuNTYxYzAuMzY2LDEuMTE2LDAuNTExLDIuMzAxLDAuNCwzLjQ2OCAgTDIzOC45MjYsNTEyLjAwMnoiLz4KPHBhdGggZD0iTTI3My4wNjcsNTEyLjAwMmwtOC41Mi05My43MjVjLTAuMTAyLTEuMTc2LDAuMDM0LTIuMzUyLDAuNDA5LTMuNDY4bDguNTItMjUuNTYxbDE2LjE1NSw1LjM5M2wtNy45NTgsMjMuODc0bDguMzU5LDkxLjk0NCAgTDI3My4wNjcsNTEyLjAwMnoiLz4KPHJlY3QgeD0iMjM4Ljk5NCIgeT0iNDA4Ljk4MiIgd2lkdGg9IjM0LjA4MiIgaGVpZ2h0PSIxNy4wNDEiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==");
-        this.userImgURL = this.domSanitizer.bypassSecurityTrustUrl("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUzIDUzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MyA1MzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiNFN0VDRUQ7IiBkPSJNMTguNjEzLDQxLjU1MmwtNy45MDcsNC4zMTNjLTAuNDY0LDAuMjUzLTAuODgxLDAuNTY0LTEuMjY5LDAuOTAzQzE0LjA0Nyw1MC42NTUsMTkuOTk4LDUzLDI2LjUsNTMgIGM2LjQ1NCwwLDEyLjM2Ny0yLjMxLDE2Ljk2NC02LjE0NGMtMC40MjQtMC4zNTgtMC44ODQtMC42OC0xLjM5NC0wLjkzNGwtOC40NjctNC4yMzNjLTEuMDk0LTAuNTQ3LTEuNzg1LTEuNjY1LTEuNzg1LTIuODg4di0zLjMyMiAgYzAuMjM4LTAuMjcxLDAuNTEtMC42MTksMC44MDEtMS4wM2MxLjE1NC0xLjYzLDIuMDI3LTMuNDIzLDIuNjMyLTUuMzA0YzEuMDg2LTAuMzM1LDEuODg2LTEuMzM4LDEuODg2LTIuNTN2LTMuNTQ2ICBjMC0wLjc4LTAuMzQ3LTEuNDc3LTAuODg2LTEuOTY1di01LjEyNmMwLDAsMS4wNTMtNy45NzctOS43NS03Ljk3N3MtOS43NSw3Ljk3Ny05Ljc1LDcuOTc3djUuMTI2ICBjLTAuNTQsMC40ODgtMC44ODYsMS4xODUtMC44ODYsMS45NjV2My41NDZjMCwwLjkzNCwwLjQ5MSwxLjc1NiwxLjIyNiwyLjIzMWMwLjg4NiwzLjg1NywzLjIwNiw2LjYzMywzLjIwNiw2LjYzM3YzLjI0ICBDMjAuMjk2LDM5Ljg5OSwxOS42NSw0MC45ODYsMTguNjEzLDQxLjU1MnoiLz4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNTU2MDgwOyIgZD0iTTI2Ljk1MywwLjAwNEMxMi4zMi0wLjI0NiwwLjI1NCwxMS40MTQsMC4wMDQsMjYuMDQ3Qy0wLjEzOCwzNC4zNDQsMy41Niw0MS44MDEsOS40NDgsNDYuNzYgICBjMC4zODUtMC4zMzYsMC43OTgtMC42NDQsMS4yNTctMC44OTRsNy45MDctNC4zMTNjMS4wMzctMC41NjYsMS42ODMtMS42NTMsMS42ODMtMi44MzV2LTMuMjRjMCwwLTIuMzIxLTIuNzc2LTMuMjA2LTYuNjMzICAgYy0wLjczNC0wLjQ3NS0xLjIyNi0xLjI5Ni0xLjIyNi0yLjIzMXYtMy41NDZjMC0wLjc4LDAuMzQ3LTEuNDc3LDAuODg2LTEuOTY1di01LjEyNmMwLDAtMS4wNTMtNy45NzcsOS43NS03Ljk3NyAgIHM5Ljc1LDcuOTc3LDkuNzUsNy45Nzd2NS4xMjZjMC41NCwwLjQ4OCwwLjg4NiwxLjE4NSwwLjg4NiwxLjk2NXYzLjU0NmMwLDEuMTkyLTAuOCwyLjE5NS0xLjg4NiwyLjUzICAgYy0wLjYwNSwxLjg4MS0xLjQ3OCwzLjY3NC0yLjYzMiw1LjMwNGMtMC4yOTEsMC40MTEtMC41NjMsMC43NTktMC44MDEsMS4wM1YzOC44YzAsMS4yMjMsMC42OTEsMi4zNDIsMS43ODUsMi44ODhsOC40NjcsNC4yMzMgICBjMC41MDgsMC4yNTQsMC45NjcsMC41NzUsMS4zOSwwLjkzMmM1LjcxLTQuNzYyLDkuMzk5LTExLjg4Miw5LjUzNi0xOS45QzUzLjI0NiwxMi4zMiw0MS41ODcsMC4yNTQsMjYuOTUzLDAuMDA0eiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=");
-    }
-    //SPRING BOOT SERVER REQUESTS
-    DataService.prototype.deleteUser = function (id) {
-        return this.http.delete(this.baseurl + 'api/users/user/delete/' + id, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer sithivilisbbebt') });
-    };
-    DataService.prototype.addVolunteer = function (name, password, gender) {
-        return this.http.post(this.baseurl + 'api/admin/new/volunteer', {
-            'username': name,
-            'password': password,
-            'gender': gender
-        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer sithivilisbbebt') });
-    };
-    DataService.prototype.signUp = function (mobile, username, password) {
-        return this.http.post(this.baseurl + 'api/users/user/new', {
-            'mobile': mobile,
-            'username': username,
-            'password': password
-        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer sithivilisbbebt') });
-    };
-    DataService.prototype.updateUser = function (id, username, password) {
-        return this.http.put(this.baseurl + 'api/users/user/update/' + id, {
-            'username': username,
-            'password': password
-        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer sithivilisbbebt') });
-    };
-    DataService.prototype.login = function (username, password) {
-        return this.http.post(this.baseurl + 'api/users/user/login', {
-            'username': username,
-            'password': password
-        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer sithivilisbbebt') });
-    };
-    DataService.prototype.loadVolunteers = function () {
-        return this.http.get(this.baseurl + 'api/users/volunteers/all', { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer sithivilisbbebt') });
-    };
-    DataService.prototype.getUserById = function (id) {
-        return this.http.get(this.baseurl + 'api/users/user/' + id, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer sithivilisbbebt') });
-    };
-    DataService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _b || Object])
-    ], DataService);
-    return DataService;
-    var _a, _b;
-}());
-
-//# sourceMappingURL=data.services.js.map
-
-/***/ }),
-
-/***/ 52:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__emergency_emergency__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tabs_tabs__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__clients_clients__ = __webpack_require__(87);
@@ -1220,6 +995,231 @@ var MenuPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 468:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(602);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2__ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angularfire2__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angularfire2_database__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_about_about__ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__ = __webpack_require__(612);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_chat_chat__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_data_services__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_edit_profile_edit_profile__ = __webpack_require__(200);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var config = {
+    apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",
+    authDomain: "sithivili-chat.firebaseapp.com",
+    databaseURL: "https://sithivili-chat.firebaseio.com",
+    projectId: "sithivili-chat",
+    storageBucket: "sithivili-chat.appspot.com",
+    messagingSenderId: "1065721164060"
+};
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_chat_chat__["a" /* ChatPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__["a" /* VolunteersPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__["a" /* ClientsPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__["a" /* EmergencyPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__["a" /* WelcomePage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__["a" /* ClientChatsPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__["a" /* MenuPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_edit_profile_edit_profile__["a" /* EditProfilePage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/client-chats/client-chats.module#ClientChatsPageModule', name: 'ClientChatsPage', segment: 'client-chats', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/clients/clients.module#ClientsPageModule', name: 'ClientsPage', segment: 'clients', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/emergency/emergency.module#EmergencyPageModule', name: 'EmergencyPage', segment: 'emergency', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/volunteers/volunteers.module#VolunteersPageModule', name: 'VolunteersPage', segment: 'volunteers', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_4_angularfire2__["AngularFireModule"].initializeApp(config),
+                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__["PasswordStrengthBarModule"],
+                __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["AngularFireDatabaseModule"]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__["a" /* VolunteersPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_chat_chat__["a" /* ChatPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__["a" /* ClientsPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__["a" /* EmergencyPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__["a" /* WelcomePage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__["a" /* ClientChatsPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__["a" /* MenuPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_edit_profile_edit_profile__["a" /* EditProfilePage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_14__services_data_services__["a" /* DataService */],
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 52:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(36);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+// import {Observable} from 'rxjs/observable';
+// import { map } from 'rxjs/operators';
+
+
+/*
+interface User {
+  name: string
+} */
+var DataService = /** @class */ (function () {
+    function DataService(http, domSanitizer) {
+        this.http = http;
+        this.domSanitizer = domSanitizer;
+        this.baseurl = "http://sithivili-sb-server.herokuapp.com/";
+        // baseurl:string = "http://localhost:8080/";
+        this.bearer = 'Bearer sithivilisbbebt';
+        this.defaultImage = this.domSanitizer.bypassSecurityTrustUrl("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMDIgNTEyLjAwMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwMiA1MTIuMDAyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBhdGggc3R5bGU9ImZpbGw6I0ZFREFDNjsiIGQ9Ik0zNDkuNzI2LDE1My4zNjloLTguNTJ2NTEuMTIyaDguNTJjMTQuMTE4LDAsMjUuNTYxLTExLjQ0MywyNS41NjEtMjUuNTYxICBTMzYzLjgzNSwxNTMuMzY5LDM0OS43MjYsMTUzLjM2OXoiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0Y1QzRCMDsiIGQ9Ik0xMzYuNzE1LDE3OC45MzFjMCwxNC4xMTgsMTEuNDQzLDI1LjU2MSwyNS41NjEsMjUuNTYxaDguNTJ2LTUxLjEyMmgtOC41MiAgQzE0OC4xNTgsMTUzLjM2OSwxMzYuNzE1LDE2NC44MTIsMTM2LjcxNSwxNzguOTMxeiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRkVDQjY2OyIgZD0iTTM0OS43MjYsMTUzLjM2OWwxMC4wNTQtNTEuNzE5YzMuMjk3LTE5LjYzMS05Ljk1Mi0zOC4yMTQtMjkuNTgzLTQxLjUxMSAgYy0xLjk5NC0wLjMzMi00LjAxMy0wLjQ5NC02LjAzMi0wLjQ5NGwwLDBjLTUuMDk1LTE1LjI1Mi0xOS4zNjctMjUuNTQ0LTM1LjQ0NS0yNS41NjFIMTg3LjgzOEwxNzAuNzk3LDguNTIybC04LjUyLDguNTIgIGMtMjMuNTI1LDIzLjUyNS0yMy41MzMsNjEuNjYyLTAuMDE3LDg1LjE4N2MwLjAwOSwwLjAwOSwwLjAwOSwwLjAxNywwLjAxNywwLjAxN2gxNTMuMzY3TDM0OS43MjYsMTUzLjM2OXoiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0RCREJEQjsiIGQ9Ik0zNzUuNzk4LDM0OS45MzVsLTYxLjc3My04LjUyTDI1Ni4wMDEsMzc0LjlsLTU4LjAyNC0zMy4xNDRsLTYxLjc3Myw4LjUyICBjLTMzLjcyNCw0LjUwNy01OC45NjEsMzMuMTk2LTU5LjEzMiw2Ny4yMjZ2OTMuNzI1SDQzNC45M3YtOTMuNzI1QzQzNC45MywzODMuMzUyLDQwOS42NSwzNTQuNDYsMzc1Ljc5OCwzNDkuOTM1eiIvPgo8cG9seWdvbiBzdHlsZT0iZmlsbDojRkVEQUM2OyIgcG9pbnRzPSIzMTQuMDI1LDM0MS43NTYgMzA3LjEyMywzNDAuODE4IDMwNy4xMjMsMjgxLjE3NiAyMDQuODc5LDI4MS4xNzYgMjA0Ljg3OSwzNDAuODE4ICAgMTk3Ljk3NywzNDEuNzU2IDI1Ni4wMDEsMzc0LjkgIi8+CjxnPgoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0VBRUFFQTsiIHBvaW50cz0iMjA0Ljg3OSw0MDguOTgyIDI1Ni4wMDEsMzc0LjkgMjA0Ljg3OSwzNDAuODE4IDE4Ny44MzgsMzQwLjgxOCAgIi8+Cgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRUFFQUVBOyIgcG9pbnRzPSIyNTYuMDAxLDM3NC45IDMwNy4xMjMsNDA4Ljk4MiAzMjQuMTY0LDM0MC44MTggMzA3LjEyMywzNDAuODE4ICAiLz4KPC9nPgo8cG9seWxpbmUgc3R5bGU9ImZpbGw6IzJFNkFBMzsiIHBvaW50cz0iMjMwLjQ0LDUxMS4yMjcgMjM4Ljk2LDQxNy41MDIgMjMwLjQ0LDM5MS45NDEgMjU2LjAwMSwzNzQuOSAyODEuNTYyLDM5MS45NDEgICAyNzMuMDQyLDQxNy41MDIgMjgxLjU2Miw1MTEuMjI3ICIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRjVDNEIwOyIgZD0iTTMwNy4xMjMsMzI4LjM3OXYtNDcuMjAzSDIwNC44Nzl2NDcuMjAzQzI0My4yMiwzNDQuOTkzLDI2OC43ODIsMzQ0Ljk5MywzMDcuMTIzLDMyOC4zNzl6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNCRkJGQkY7IiBkPSJNNzcuMDcyLDQxNy41MDJ2OTMuNzI1aDM0LjA4MlYzNTguNTQxQzkwLjA4MywzNzAuNzA4LDc3LjA4OSwzOTMuMTc2LDc3LjA3Miw0MTcuNTAyeiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRkVEQUM2OyIgZD0iTTM0OS43MjYsMTUzLjM2OXY0OC41NjZjLTAuMDA5LDI0LjAzNi02LjEzNSw0Ny42NjMtMTcuODA4LDY4LjY3NWwwLDAgIGMtMTUuMzIsMjcuNTY0LTQ0LjM4Myw0NC42NTUtNzUuOTE3LDQ0LjY0N2wwLDBjLTMxLjUzNCwwLjAwOS02MC41OTctMTcuMDgzLTc1LjkxNy00NC42NDdsMCwwICBjLTExLjY3My0yMS4wMTEtMTcuNzk5LTQ0LjYzOC0xNy44MDgtNjguNjc1di05OS42ODloMTUzLjM2N0wzNDkuNzI2LDE1My4zNjl6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGNUM0QjA7IiBkPSJNMTk2LjM1OCwxMDIuMjQ3aC0zNC4wODJ2OTkuNjg5YzAuMDA5LDI0LjAzNiw2LjEzNSw0Ny42NjMsMTcuODA4LDY4LjY3NSAgYzguNTIsMTUuMjUyLDIxLjQ4LDI3LjU1NSwzNy4xNDksMzUuMjc1QzE4Ny44MzgsMjIxLjUzMywxOTYuMzU4LDEwMi4yNDcsMTk2LjM1OCwxMDIuMjQ3eiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRjVBRDc2OyIgZD0iTTE0Ni40MjksNDUuMzMxYy01LjA2MSwyMC40NCwwLjk1NCw0Mi4wMzEsMTUuODQ4LDU2LjkxNmgxMzYuMzI3ICBDMjAxLjgxMSwxMDIuMjQ3LDE2Mi4yNzYsNjguMTY1LDE0Ni40MjksNDUuMzMxeiIvPgo8cGF0aCBkPSJNMzQ5LjcyNiwyMTMuMDEyaC04LjUydi0xNy4wNDFoOC41MmM5LjM5OCwwLDE3LjA0MS03LjY0MywxNy4wNDEtMTcuMDQxYzAtOS4zOTgtNy42NDMtMTcuMDQxLTE3LjA0MS0xNy4wNDFoLTguNTJ2LTE3LjA0MSAgaDguNTJjMTguNzk2LDAsMzQuMDgyLDE1LjI4NiwzNC4wODIsMzQuMDgyUzM2OC41MjIsMjEzLjAxMiwzNDkuNzI2LDIxMy4wMTJ6Ii8+CjxwYXRoIGQ9Ik0xNzAuNzk3LDIxMy4wMTJoLTguNTJjLTE4Ljc5NiwwLTM0LjA4Mi0xNS4yODYtMzQuMDgyLTM0LjA4MnMxNS4yODYtMzQuMDgyLDM0LjA4Mi0zNC4wODJoOC41MnYxNy4wNDFoLTguNTIgIGMtOS4zOTgsMC0xNy4wNDEsNy42NDMtMTcuMDQxLDE3LjA0MWMwLDkuMzk4LDcuNjQzLDE3LjA0MSwxNy4wNDEsMTcuMDQxaDguNTJWMjEzLjAxMnoiLz4KPHBhdGggZD0iTTI2NC41MjEsMjMwLjA1M0gyMzguOTZjLTIuNjc1LDAtNS4xODktMS4yNTMtNi43OTktMy4zOTFjLTEuNjEtMi4xMzktMi4xMy00Ljg5OS0xLjM4OS03LjQ3MmwxNy4wNDEtNTkuNjQzbDE2LjM4NSw0LjY4NiAgbC0xMy45NDgsNDguNzc5aDE0LjI2M3YxNy4wNDFIMjY0LjUyMXoiLz4KPHBhdGggZD0iTTI1Ni4wMTgsMzIzLjc3OGMtMC4wMTcsMC0wLjAzNCwwLTAuMDUxLDBjLTM0LjU5MywwLTY2LjUyNy0xOC43NzktODMuMzM4LTQ5LjAzNSAgYy0xMi4zNDYtMjIuMjEzLTE4Ljg3My00Ny4zOTEtMTguODgxLTcyLjc5OHYtOTkuNjk3YzAtNC43MDMsMy44MTctOC41Miw4LjUyLTguNTJoMTUzLjM2N2MyLjg0NiwwLDUuNTA0LDEuNDIzLDcuMDg5LDMuNzkyICBsMzQuMDgyLDUxLjEyMmMwLjkyOSwxLjM5NywxLjQzMSwzLjA0MiwxLjQzMSw0LjcyOXY0OC41NjZjLTAuMDA5LDI1LjQwOC02LjU0NCw1MC41ODYtMTguODgxLDcyLjgwNyAgQzMyMi41NTQsMzA0Ljk5LDI5MC42MTksMzIzLjc3OCwyNTYuMDE4LDMyMy43Nzh6IE0yNTUuOTkyLDMwNi43MzdjMC4wMDgsMCwwLjAxNywwLDAuMDE3LDBjMjguNDI0LDAsNTQuNjUtMTUuNDMsNjguNDUzLTQwLjI2NyAgYzEwLjk0LTE5LjY5OSwxNi43MjYtNDIuMDE0LDE2LjczNC02NC41NDJ2LTQ1Ljk4NWwtMzAuMTItNDUuMTc1aC0xNDAuMjh2OTEuMTY4YzAuMDA5LDIyLjUyOCw1Ljc5NCw0NC44NDMsMTYuNzM0LDY0LjUzNCAgYzEzLjgwMywyNC44NDYsNDAuMDI5LDQwLjI2Nyw2OC40NDQsNDAuMjY3QzI1NS45ODQsMzA2LjczNywyNTUuOTkyLDMwNi43MzcsMjU1Ljk5MiwzMDYuNzM3eiIvPgo8cGF0aCBkPSJNMjQ4LjkyOSwyNjQuMTM1aC05Ljk2OXYtMTcuMDQxaDkuOTY5YzEzLjI2Ni0wLjAwOSwyNS43NC01LjE3MiwzNS4xMy0xNC41NTNsMTIuMDQ4LDEyLjA1NiAgQzI4My40OTYsMjU3LjE5MSwyNjYuNzQ1LDI2NC4xMjYsMjQ4LjkyOSwyNjQuMTM1eiIvPgo8Y2lyY2xlIGN4PSIyMDQuOTEzIiBjeT0iMTcwLjQxIiByPSIxNy4wNDEiLz4KPGNpcmNsZSBjeD0iMzA3LjE1OCIgY3k9IjE3MC40MSIgcj0iMTcuMDQxIi8+CjxwYXRoIGQ9Ik0zNTguMTI3LDE2My4yOTZsLTE2LjgxMS0yLjgwM2wxMC4wNTQtNjAuMjM5YzEuMjE4LTcuMjU5LTAuNDYtMTQuNTUzLTQuNzI5LTIwLjUzNCAgYy00LjI2OS01Ljk4MS0xMC42MDgtOS45NTItMTcuODU5LTExLjE3Yy0xLjUxNy0wLjI1Ni0zLjIzOC0wLjQ0My00LjYxLTAuMzc1Yy0wLjAwOSwwLTAuMDA5LDAtMC4wMTcsMCAgYy0zLjY2NCwwLTYuOTI3LTIuMzQzLTguMDc3LTUuODE5Yy0zLjk0NS0xMS44MDEtMTQuOTQ1LTE5LjczMy0yNy4zNzYtMTkuNzVIMTg3LjgzOGMtMi44NDYsMC01LjUwNC0xLjQyMy03LjA4OS0zLjc5MiAgbC0xMS4yODEtMTYuOTEzbC0xLjE3NiwxLjE2N2MtOS43NjQsOS43NjQtMTUuMTQ5LDIyLjc1OC0xNS4xNDksMzYuNTdjMCwxMy44Miw1LjM3NiwyNi44MDUsMTUuMTQxLDM2LjU3bC0xMi4wMzksMTIuMDY1ICBjLTI2LjgxNC0yNi44MjItMjYuODE0LTcwLjQ0NywwLTk3LjI1Mmw4LjUyLTguNTJjMS44MDYtMS43OTgsNC4zMjgtMi43MTgsNi44NjctMi40NTRjMi41MzksMC4yNDcsNC44MzEsMS42MjcsNi4yNDUsMy43NDkgIGwxNC41MTksMjEuNzdoOTYuMzIzYzE3Ljc5OSwwLjAxNywzMy43NDEsMTAuMjMzLDQxLjMyNCwyNS45MzZjMC41MjgsMC4wNjgsMS4wMzksMC4xNDUsMS41NjgsMC4yMyAgYzExLjc1LDEuOTY4LDIyLjAxNyw4LjM5MywyOC45MjcsMTguMDg5czkuNjI4LDIxLjQ5Nyw3LjY1MSwzMy4yMzhMMzU4LjEyNywxNjMuMjk2eiIvPgo8cGF0aCBkPSJNODUuNTkzLDUxMS4yMjdINjguNTUydi05My43MjVjMC0zOC4yNTcsMjguNTk0LTcwLjkzMiw2Ni41MjctNzYuMDExbDYxLjI3OS04LjEzN3YtMzUuMTM4aDE3LjA0MXY0Mi42MDIgIGMwLDQuMjY5LTMuMTYxLDcuODgxLTcuMzk2LDguNDQ0bC02OC42NzQsOS4xMTdjLTI5LjQ4OSwzLjk0NS01MS43MzYsMjkuMzUzLTUxLjczNiw1OS4xMTVWNTExLjIyN3oiLz4KPHBhdGggZD0iTTQ0My40NSw1MTEuMjI3aC0xNy4wNDF2LTkzLjcyNWMwLTI5Ljc2Mi0yMi4yMzgtNTUuMTc4LTUxLjc0NC01OS4xMTVsLTY4LjY2Ni05LjExN2MtNC4yMzUtMC41NjItNy4zOTYtNC4xNzUtNy4zOTYtOC40NDQgIHYtNDIuNjAyaDE3LjA0MXYzNS4xMzhsNjEuMjcsOC4xMzdjMzcuOTMzLDUuMDcsNjYuNTM2LDM3Ljc1NCw2Ni41MzYsNzYuMDExTDQ0My40NSw1MTEuMjI3TDQ0My40NSw1MTEuMjI3eiIvPgo8cmVjdCB4PSIxMzYuNzQ5IiB5PSI0NDMuMDYzIiB3aWR0aD0iMTcuMDQxIiBoZWlnaHQ9IjY4LjE2MyIvPgo8cmVjdCB4PSIzNTguMjgiIHk9IjQ0My4wNjMiIHdpZHRoPSIxNy4wNDEiIGhlaWdodD0iNjguMTYzIi8+CjxwYXRoIGQ9Ik0yMDQuODc5LDQxNy41MDJjLTEuMDM5LDAtMi4wNzktMC4xODctMy4wNzYtMC41NzFjLTIuNTgyLTAuOTk3LTQuNTE2LTMuMTk1LTUuMTg5LTUuODc5bC0xNy4wNDEtNjguMTYzbDE2LjUzLTQuMTI0ICBsMTQuMTEsNTYuNDMxbDQxLjA2LTI3LjM3Nmw5LjQ0OSwxNC4xNzhsLTUxLjEyMiwzNC4wODJDMjA4LjE4NCw0MTcuMDI1LDIwNi41MzEsNDE3LjUwMiwyMDQuODc5LDQxNy41MDJ6Ii8+CjxwYXRoIGQ9Ik0yNTYuMDAxLDM4My40MmMtMS40NTcsMC0yLjkxNC0wLjM3NS00LjIyNi0xLjEyNWwtNTkuNjQzLTM0LjA4Mmw4LjQ1Mi0xNC43OTFsNTUuNDE3LDMxLjY3bDU1LjQxNy0zMS42N2w4LjQ1MiwxNC43OTEgIGwtNTkuNjQzLDM0LjA4MkMyNTguOTE1LDM4My4wNDYsMjU3LjQ1OCwzODMuNDIsMjU2LjAwMSwzODMuNDJ6Ii8+CjxwYXRoIGQ9Ik0zMDcuMTIzLDQxNy41MDJjLTEuNjUzLDAtMy4zMDYtMC40ODYtNC43MjktMS40MzFsLTUxLjEyMi0zNC4wODJsOS40NDktMTQuMTc4bDQxLjA2LDI3LjM3NmwxNC4xMS01Ni40MzFsMTYuNTIxLDQuMTI0ICBsLTE3LjA0MSw2OC4xNjNjLTAuNjY1LDIuNjg0LTIuNjA3LDQuODgyLTUuMTg5LDUuODc5QzMwOS4yMDIsNDE3LjMxNSwzMDguMTYzLDQxNy41MDIsMzA3LjEyMyw0MTcuNTAyeiIvPgo8cGF0aCBkPSJNMjM4LjkyNiw1MTIuMDAybC0xNi45NzMtMS41NTFsOC4zNTktOTEuOTQ0bC03Ljk1OC0yMy44NzRsMTYuMTYzLTUuMzkzbDguNTIsMjUuNTYxYzAuMzY2LDEuMTE2LDAuNTExLDIuMzAxLDAuNCwzLjQ2OCAgTDIzOC45MjYsNTEyLjAwMnoiLz4KPHBhdGggZD0iTTI3My4wNjcsNTEyLjAwMmwtOC41Mi05My43MjVjLTAuMTAyLTEuMTc2LDAuMDM0LTIuMzUyLDAuNDA5LTMuNDY4bDguNTItMjUuNTYxbDE2LjE1NSw1LjM5M2wtNy45NTgsMjMuODc0bDguMzU5LDkxLjk0NCAgTDI3My4wNjcsNTEyLjAwMnoiLz4KPHJlY3QgeD0iMjM4Ljk5NCIgeT0iNDA4Ljk4MiIgd2lkdGg9IjM0LjA4MiIgaGVpZ2h0PSIxNy4wNDEiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==");
+        this.userImgURL = this.domSanitizer.bypassSecurityTrustUrl("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUzIDUzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MyA1MzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiNFN0VDRUQ7IiBkPSJNMTguNjEzLDQxLjU1MmwtNy45MDcsNC4zMTNjLTAuNDY0LDAuMjUzLTAuODgxLDAuNTY0LTEuMjY5LDAuOTAzQzE0LjA0Nyw1MC42NTUsMTkuOTk4LDUzLDI2LjUsNTMgIGM2LjQ1NCwwLDEyLjM2Ny0yLjMxLDE2Ljk2NC02LjE0NGMtMC40MjQtMC4zNTgtMC44ODQtMC42OC0xLjM5NC0wLjkzNGwtOC40NjctNC4yMzNjLTEuMDk0LTAuNTQ3LTEuNzg1LTEuNjY1LTEuNzg1LTIuODg4di0zLjMyMiAgYzAuMjM4LTAuMjcxLDAuNTEtMC42MTksMC44MDEtMS4wM2MxLjE1NC0xLjYzLDIuMDI3LTMuNDIzLDIuNjMyLTUuMzA0YzEuMDg2LTAuMzM1LDEuODg2LTEuMzM4LDEuODg2LTIuNTN2LTMuNTQ2ICBjMC0wLjc4LTAuMzQ3LTEuNDc3LTAuODg2LTEuOTY1di01LjEyNmMwLDAsMS4wNTMtNy45NzctOS43NS03Ljk3N3MtOS43NSw3Ljk3Ny05Ljc1LDcuOTc3djUuMTI2ICBjLTAuNTQsMC40ODgtMC44ODYsMS4xODUtMC44ODYsMS45NjV2My41NDZjMCwwLjkzNCwwLjQ5MSwxLjc1NiwxLjIyNiwyLjIzMWMwLjg4NiwzLjg1NywzLjIwNiw2LjYzMywzLjIwNiw2LjYzM3YzLjI0ICBDMjAuMjk2LDM5Ljg5OSwxOS42NSw0MC45ODYsMTguNjEzLDQxLjU1MnoiLz4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNTU2MDgwOyIgZD0iTTI2Ljk1MywwLjAwNEMxMi4zMi0wLjI0NiwwLjI1NCwxMS40MTQsMC4wMDQsMjYuMDQ3Qy0wLjEzOCwzNC4zNDQsMy41Niw0MS44MDEsOS40NDgsNDYuNzYgICBjMC4zODUtMC4zMzYsMC43OTgtMC42NDQsMS4yNTctMC44OTRsNy45MDctNC4zMTNjMS4wMzctMC41NjYsMS42ODMtMS42NTMsMS42ODMtMi44MzV2LTMuMjRjMCwwLTIuMzIxLTIuNzc2LTMuMjA2LTYuNjMzICAgYy0wLjczNC0wLjQ3NS0xLjIyNi0xLjI5Ni0xLjIyNi0yLjIzMXYtMy41NDZjMC0wLjc4LDAuMzQ3LTEuNDc3LDAuODg2LTEuOTY1di01LjEyNmMwLDAtMS4wNTMtNy45NzcsOS43NS03Ljk3NyAgIHM5Ljc1LDcuOTc3LDkuNzUsNy45Nzd2NS4xMjZjMC41NCwwLjQ4OCwwLjg4NiwxLjE4NSwwLjg4NiwxLjk2NXYzLjU0NmMwLDEuMTkyLTAuOCwyLjE5NS0xLjg4NiwyLjUzICAgYy0wLjYwNSwxLjg4MS0xLjQ3OCwzLjY3NC0yLjYzMiw1LjMwNGMtMC4yOTEsMC40MTEtMC41NjMsMC43NTktMC44MDEsMS4wM1YzOC44YzAsMS4yMjMsMC42OTEsMi4zNDIsMS43ODUsMi44ODhsOC40NjcsNC4yMzMgICBjMC41MDgsMC4yNTQsMC45NjcsMC41NzUsMS4zOSwwLjkzMmM1LjcxLTQuNzYyLDkuMzk5LTExLjg4Miw5LjUzNi0xOS45QzUzLjI0NiwxMi4zMiw0MS41ODcsMC4yNTQsMjYuOTUzLDAuMDA0eiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=");
+    }
+    //SPRING BOOT SERVER REQUESTS
+    DataService.prototype.deleteUser = function (id) {
+        return this.http.delete(this.baseurl + 'api/users/user/delete/' + id, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', this.bearer) });
+    };
+    DataService.prototype.addVolunteer = function (name, password, gender) {
+        return this.http.post(this.baseurl + 'api/admin/new/volunteer', {
+            'username': name,
+            'password': password,
+            'gender': gender
+        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', this.bearer) });
+    };
+    DataService.prototype.signUp = function (mobile, username, password) {
+        return this.http.post(this.baseurl + 'api/users/user/new', {
+            'mobile': mobile,
+            'username': username,
+            'password': password
+        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', this.bearer) });
+    };
+    DataService.prototype.updateUser = function (id, username, password) {
+        return this.http.put(this.baseurl + 'api/users/user/update/' + id, {
+            'username': username,
+            'password': password
+        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', this.bearer) });
+    };
+    DataService.prototype.login = function (username, password) {
+        return this.http.post(this.baseurl + 'api/users/user/login', {
+            'username': username,
+            'password': password
+        }, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', this.bearer) });
+    };
+    DataService.prototype.loadVolunteers = function () {
+        return this.http.get(this.baseurl + 'api/users/volunteers/all', { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', this.bearer) });
+    };
+    DataService.prototype.getUserById = function (id) {
+        return this.http.get(this.baseurl + 'api/users/user/' + id, { headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', this.bearer) });
+    };
+    DataService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], DataService);
+    return DataService;
+}());
+
+//# sourceMappingURL=data.services.js.map
+
+/***/ }),
+
 /***/ 602:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1227,9 +1227,9 @@ var MenuPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_menu_menu__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1246,7 +1246,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__["a" /* WelcomePage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_menu_menu__["a" /* MenuPage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -1346,8 +1346,8 @@ var ContactPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat_chat__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

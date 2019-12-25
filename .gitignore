@@ -1,3 +1,9 @@
 Sithivili/platforms/**
 
+/Sithivili/node_modules/**
+
+node_modules/
+/node_modules
+.npm
+
 *.zip
