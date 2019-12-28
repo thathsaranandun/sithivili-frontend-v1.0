@@ -46,7 +46,7 @@
 </ion-header>
 <ion-content padding class="bgimg">
   <div class="container">
-    <div *ngFor="let stackmsg of stackmsgs" >
+    <div *ngFor="let stackmsg of messages" >
       <!-- for volunteer -->
       <div *ngIf="userType == volunteer">
         <div *ngIf="stackmsg.username != volUser" class="message left ">

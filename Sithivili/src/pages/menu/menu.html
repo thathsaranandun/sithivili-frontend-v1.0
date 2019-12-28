@@ -54,9 +54,16 @@
       <!-- recent chat start -->
       <div>
         <div class="recent-bar">
-          <div class="recent"><strong>Recent Chats</strong></div>
+          <div *ngIf="volsDetails != null" class="recent"><strong>Recent Chats</strong></div>
           <div class="avatar-icon">
-            <ul>
+            <div class="vol" *ngFor="let volDetails of volsDetails">
+              <div (click)="chat(volDetails.volID)">
+                <img class="avatar" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">
+              <p>{{volDetails.username}}</p>
+              </div>
+              
+            </div>
+            <!-- <ul>
               <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
               <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
               <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
@@ -65,8 +72,8 @@
               <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
               <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
               <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-            </ul>
-          </div>
+            </ul>-->
+          </div> 
         </div>
       </div>
       <!-- recent chat end -->

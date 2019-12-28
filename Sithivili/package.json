@@ -27,7 +27,6 @@
     "@ionic/storage": "2.2.0",
     "angular2-websocket": "^0.9.8",
     "angularfire2": "^5.2.3",
-    "cordova-android": "^8.1.0",
     "express": "^4.17.1",
     "firebase": "^5.11.1",
     "ionic-angular": "3.9.3",
@@ -66,8 +65,6 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {}
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   }
 }

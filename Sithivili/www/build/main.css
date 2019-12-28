@@ -26224,11 +26224,11 @@ page-menu .recent-bar ul {
   margin-left: -46px;
 }
 
-page-menu .recent-bar li {
+page-menu .recent-bar .vol {
   display: inline-table;
 }
 
-page-menu .recent-bar li p {
+page-menu .recent-bar .vol p {
   margin: auto;
   margin-left: 10px;
   margin-top: 5px;

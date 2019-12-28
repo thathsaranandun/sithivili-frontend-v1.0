@@ -44,9 +44,7 @@ export class ChatPage {
   //<volunteer_id>w<client_id>
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,private domSanitizer: DomSanitizer,public dataService:DataService) {
     this.username=this.navParams.get('username');
-  
-    this.userType=localStorage.getItem('usertype');
-    this.userID=navParams.get('userID');
+      this.userID=navParams.get('userID');
     this.volID=this.navParams.get('voluID');
     console.log('Volunteer ID(Chat): '+ this.volID)
     console.log('Client ID(Chat): '+ this.userID)
@@ -88,7 +86,9 @@ export class ChatPage {
 
   }
   ionViewDidLoad() {
-    
+    this.userType=localStorage.getItem('usertype');
+
+    console.log(this.userType);
     console.log('ionViewDidLoad ChatPage');
     localStorage.setItem('leaveToChat','false');
     let elements = document.querySelectorAll(".tabbar");
