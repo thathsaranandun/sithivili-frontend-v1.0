@@ -26075,30 +26075,149 @@ page-menu .content {
   padding: 0px 50px 0px 50px;
 }
 
-page-menu .card {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+page-menu .parallel-card {
   border-radius: 15px !important;
-  width: 140px;
-  height: 170px;
-  -webkit-box-shadow: 13px 13px 9px -7px #3d3c38;
-  box-shadow: 13px 13px 9px -7px #3d3c38;
-  padding-top: 10px;
-  background-color: #e6f5ff !important;
-  margin-right: 15px;
-  margin-left: 15px;
+  width: 100%;
+  height: 60px;
+  padding-top: 5px;
+  margin: auto;
+  margin-top: 15px;
+  -webkit-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+page-menu .parallel-card p {
+  margin: auto;
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
+  padding-right: 50px;
+}
+
+page-menu .parallel-card img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  font-size: large;
+}
+
+page-menu .parallel-card .display-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+}
+
+page-menu .card {
+  border-radius: 15px !important;
+  padding-top: 5px;
   margin-top: 30px;
-  border-style: inset;
+  -webkit-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: auto;
+  height: 130px;
+}
+
+page-menu .card .center-align {
+  text-align: center;
+}
+
+page-menu .card p {
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 15px;
+}
+
+page-menu .card img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+page-menu .common-width {
+  width: 100%;
 }
 
 page-menu .row {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 page-menu p {
   text-align: center;
+}
+
+page-menu .quote-card {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  -webkit-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-height: 100px;
+}
+
+page-menu .quote-card p {
+  text-align: center;
+  padding: 20px;
+  font-style: oblique;
+  font-family: auto;
+  margin-top: 24px;
+}
+
+page-menu .recent-bar {
+  border-bottom: 1px groove #1111113d;
+}
+
+page-menu .recent-bar ul {
+  margin-left: -46px;
+}
+
+page-menu .recent-bar li {
+  display: inline-table;
+}
+
+page-menu .recent-bar li p {
+  margin: auto;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+page-menu .recent-bar .avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 11px;
+  overflow-x: scroll;
+}
+
+page-menu .recent-bar .avatar-icon {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+page-menu .display-flex-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+page-menu .quote-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 page-signup .button_div {

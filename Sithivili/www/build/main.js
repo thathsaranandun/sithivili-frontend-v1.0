@@ -115,7 +115,7 @@ var ChatPage = /** @class */ (function () {
     };
     ChatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\chat\chat.html"*/'<!--\n\n  Generated template for the ChatPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<!-- <ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Chat Room</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding overflow-scroll="false">\n\n  <div id="chatMessages"  class="container">\n\n    New messages will appear on top.\n\n    <ion-scroll scrollY="true">\n\n      <div class="message" *ngFor="let stackmsg of stackmsgs">\n\n        <div class="innerMessage">\n\n          <div class="username">{{stackmsg.username}}</div>\n\n          <div class="message">{{stackmsg.message}}</div>\n\n        </div>\n\n      </div>\n\n    </ion-scroll>\n\n  </div>\n\n  <ion-footer>\n\n    <ion-toolbar>\n\n      <div id="footer">\n\n        <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>\n\n          <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>\n\n        </div>\n\n    </ion-toolbar>\n\n  </ion-footer>\n\n</ion-content> -->\n\n\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-title class="new-background">\n\n      Chat Room\n\n    </ion-title>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only (click)="loadTabs()">\n\n        <ion-icon name=\'arrow-round-back\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content padding class="bgimg">\n\n  <div class="container">\n\n    <div *ngFor="let stackmsg of stackmsgs" class="message left ">\n\n      <img class="user-img" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">\n\n      <div class="msg-detail">\n\n        <div class="msg-info">\n\n          <p>\n\n            {{stackmsg.username}}\n\n          </p>\n\n        </div>\n\n        <div class="msg-content">\n\n          <span class="triangle"></span>\n\n          <p class="line-breaker">{{stackmsg.message}}</p>\n\n        </div>\n\n      </div>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n<ion-footer no-border>\n\n  <div class="input-wrap">\n\n    <textarea #messageInput placeholder="Enter your message!" [(ngModel)]="message" (keyup.enter)="sendMessage()">\n\n    </textarea>\n\n    <button ion-button clear icon-only item-right (click)="sendMessage()">\n\n      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>\n\n    </button>\n\n  </div>\n\n</ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\chat\chat.html"*/,
+            selector: 'page-chat',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/'<!--\n\n  Generated template for the ChatPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<!-- <ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Chat Room</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding overflow-scroll="false">\n\n  <div id="chatMessages"  class="container">\n\n    New messages will appear on top.\n\n    <ion-scroll scrollY="true">\n\n      <div class="message" *ngFor="let stackmsg of stackmsgs">\n\n        <div class="innerMessage">\n\n          <div class="username">{{stackmsg.username}}</div>\n\n          <div class="message">{{stackmsg.message}}</div>\n\n        </div>\n\n      </div>\n\n    </ion-scroll>\n\n  </div>\n\n  <ion-footer>\n\n    <ion-toolbar>\n\n      <div id="footer">\n\n        <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>\n\n          <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>\n\n        </div>\n\n    </ion-toolbar>\n\n  </ion-footer>\n\n</ion-content> -->\n\n\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-title class="new-background">\n\n      Chat Room\n\n    </ion-title>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only (click)="loadTabs()">\n\n        <ion-icon name=\'arrow-round-back\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content padding class="bgimg">\n\n  <div class="container">\n\n    <div *ngFor="let stackmsg of stackmsgs" class="message left ">\n\n      <img class="user-img" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">\n\n      <div class="msg-detail">\n\n        <div class="msg-info">\n\n          <p>\n\n            {{stackmsg.username}}\n\n          </p>\n\n        </div>\n\n        <div class="msg-content">\n\n          <span class="triangle"></span>\n\n          <p class="line-breaker">{{stackmsg.message}}</p>\n\n        </div>\n\n      </div>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n<ion-footer no-border>\n\n  <div class="input-wrap">\n\n    <textarea #messageInput placeholder="Enter your message!" [(ngModel)]="message" (keyup.enter)="sendMessage()">\n\n    </textarea>\n\n    <button ion-button clear icon-only item-right (click)="sendMessage()">\n\n      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>\n\n    </button>\n\n  </div>\n\n</ion-footer>\n\n\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\chat\chat.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */]])
     ], ChatPage);
@@ -133,8 +133,8 @@ var ChatPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__volunteers_volunteers__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__client_chats_client_chats__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__volunteers_volunteers__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__client_chats_client_chats__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_menu__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit_profile_edit_profile__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -172,7 +172,7 @@ var TabsPage = /** @class */ (function () {
         return true;
     };
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Volunteers" tabIcon="contacts"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Chats" tabIcon="chatbubbles"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Profile" tabIcon="person"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Volunteers" tabIcon="contacts"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Chats" tabIcon="chatbubbles"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Profile" tabIcon="person"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], TabsPage);
@@ -184,6 +184,105 @@ var TabsPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 196:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClientChatsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__chat_chat__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(36);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/**
+ * Generated class for the ClientChatsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ClientChatsPage = /** @class */ (function () {
+    function ClientChatsPage(navCtrl, navParams, firebase, dataService, domSanitizer) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.firebase = firebase;
+        this.dataService = dataService;
+        this.domSanitizer = domSanitizer;
+        this.vols = [];
+        this.volIDs = [];
+        this.volsDetails = [];
+        this.menuPage = __WEBPACK_IMPORTED_MODULE_5__menu_menu__["a" /* MenuPage */];
+        this.defaultImage = this.dataService.defaultImage;
+        this.userID = Number(localStorage.getItem('userid'));
+        console.log('Client ID(Chat history): ' + this.userID);
+        this.username = localStorage.getItem('username');
+        this.firebase.list('/volunteers/client' + this.userID).valueChanges().subscribe(function (data) {
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                _this.volIDs.push(data[i].volID);
+            }
+            _this.vols = Array.from(new Set(_this.volIDs));
+            console.log('Volunteers array: ' + _this.vols);
+            console.log('vols array length' + _this.vols.length);
+            _this.volsDetails = [];
+            for (var j = 0; j < _this.vols.length; j++) {
+                _this.dataService.getUserById(_this.vols[j]).subscribe(function (data) {
+                    _this.volsDetails.push({
+                        username: data.username,
+                        volID: data.userid,
+                        image: data.image
+                    });
+                });
+            }
+        });
+    }
+    ClientChatsPage.prototype.chat = function (volID) {
+        console.log('userID:' + this.userID);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__chat_chat__["a" /* ChatPage */], {
+            username: this.username,
+            userID: this.userID,
+            voluID: volID
+        });
+    };
+    ClientChatsPage.prototype.ionViewDidLoad = function () {
+        localStorage.setItem('leaveToChat', 'false');
+    };
+    ClientChatsPage.prototype.logout = function () {
+        localStorage.clear();
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__menu_menu__["a" /* MenuPage */]);
+    };
+    ClientChatsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-client-chats',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\client-chats\client-chats.html"*/'<!--\n\n  Generated template for the ClientChatsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Chat History</ion-title>\n\n    <ion-buttons right>\n\n      <button ion-button icon-only (click)="logout()">\n\n        <ion-icon name=\'ios-log-out\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only [navPush]="menuPage">\n\n        <ion-icon name=\'ios-home-outline\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  \n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div class="volList">\n\n        <div class="vol" *ngFor="let volDetails of volsDetails">\n\n            <div class="left">\n\n                <div>\n\n                  <img class="user-img" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">\n\n\n\n        \n\n                    <div class="msg-detail">\n\n        \n\n                        <div class="message">You started a conversation with,</div>\n\n                        <div class="username">{{volDetails.username}}</div>\n\n                    </div>\n\n                        \n\n                </div>\n\n              \n\n              \n\n            </div>  \n\n            <div class="right">\n\n              <div class="elem"><button ion-button icon-only (click)="chat(volDetails.volID)">&nbsp;&nbsp; Chat<ion-icon name="send"></ion-icon></button></div>\n\n              </div>\n\n    \n\n        </div>\n\n    </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\client-chats\client-chats.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], ClientChatsPage);
+    return ClientChatsPage;
+}());
+
+//# sourceMappingURL=client-chats.js.map
+
+/***/ }),
+
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -276,7 +375,7 @@ var VolunteersPage = /** @class */ (function () {
     };
     VolunteersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-volunteers',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Select a Volunteer</ion-title>\n\n    <ion-buttons right>\n\n      <button ion-button icon-only (click)="logout()">\n\n        <ion-icon name=\'ios-log-out\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only [navPush]="menuPage">\n\n        <ion-icon name=\'ios-home-outline\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer" *ngFor="let volunteer of volunteers" (click)="chat(volunteer.userid)" >\n\n      \n\n      <div class="left">\n\n        <div>\n\n          <img class="user-img" [src]="volunteer.image != null  ? volunteer.image : defaultImage" alt="">\n\n\n\n          \n\n          \n\n            <div class="msg-detail">\n\n\n\n                <div class="username">{{volunteer.username}}</div>\n\n                <div class="message">Gender: {{volunteer.gender}}</div>\n\n            </div>\n\n                \n\n        </div>\n\n        \n\n      </div>  \n\n      <div class="right">\n\n        <div class="elem"><button style="background: transparent" ion-button icon-only >&nbsp;&nbsp; <ion-icon name="send"></ion-icon></button></div>\n\n      </div>\n\n      \n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\volunteers\volunteers.html"*/,
+            selector: 'page-volunteers',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/'<!--\n\n  Generated template for the VolunteersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Select a Volunteer</ion-title>\n\n    <ion-buttons right>\n\n      <button ion-button icon-only (click)="logout()">\n\n        <ion-icon name=\'ios-log-out\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only [navPush]="menuPage">\n\n        <ion-icon name=\'ios-home-outline\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n\n\n  <div class="volunteerList">\n\n    <div class="volunteer" *ngFor="let volunteer of volunteers" (click)="chat(volunteer.userid)" >\n\n      \n\n      <div class="left">\n\n        <div>\n\n          <img class="user-img" [src]="volunteer.image != null  ? volunteer.image : defaultImage" alt="">\n\n\n\n          \n\n          \n\n            <div class="msg-detail">\n\n\n\n                <div class="username">{{volunteer.username}}</div>\n\n                <div class="message">Gender: {{volunteer.gender}}</div>\n\n                <div class="fa fa-circle"></div>\n\n            </div>\n\n                \n\n        </div>\n\n        \n\n      </div>  \n\n      <div class="right">\n\n        <div class="elem"><button style="background: transparent" ion-button icon-only >&nbsp;&nbsp; <ion-icon name="send"></ion-icon></button></div>\n\n      </div>\n\n      \n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\volunteers\volunteers.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]])
     ], VolunteersPage);
@@ -287,7 +386,7 @@ var VolunteersPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -365,7 +464,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content style="background:linear-gradient(104deg, deepskyblue, lightcyan);">\n\n  <div *ngIf="notclicked" class= "signupbox">\n\n    <ion-list>\n\n      <ion-label text-center style="padding-top: 10px; font-size: 20px;">\n\n        <b>Personal Details</b>\n\n      </ion-label>\n\n  \n\n      <ion-item>\n\n        <ion-label>Mobile No</ion-label>\n\n        <ion-input type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label>Username</ion-label>\n\n        <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label style="font-size: 14px;">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n        \n\n      </ion-item>\n\n      <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">\n\n        <ng2-password-strength-bar text-center \n\n        [passwordToCheck]="userPassword"\n\n        [barLabel]="barLabel"\n\n        [barColors]="myColors">\n\n</ng2-password-strength-bar>\n\n      </div>\n\n      \n\n\n\n      \n\n\n\n      <div text-center>\n\n        <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n      </div>\n\n  \n\n  \n\n      </ion-list>\n\n  </div>\n\n  \n\n\n\n    <div *ngIf="clicked" class="waiting">\n\n      <div class="waitmsg">\n\n  \n\n          <p>Logging in...</p>\n\n      </div>\n\n      \n\n    </div>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Sign Up</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content style="background:linear-gradient(104deg, deepskyblue, lightcyan);">\n\n  <div *ngIf="notclicked" class= "signupbox">\n\n    <ion-list>\n\n      <ion-label text-center style="padding-top: 10px; font-size: 20px;">\n\n        <b>Personal Details</b>\n\n      </ion-label>\n\n  \n\n      <ion-item>\n\n        <ion-label>Mobile No</ion-label>\n\n        <ion-input type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label>Username</ion-label>\n\n        <ion-input type="text" [(ngModel)]="userName"></ion-input>\n\n      </ion-item>\n\n  \n\n  \n\n  \n\n      <ion-item>\n\n        <ion-label style="font-size: 14px;">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="userPassword"></ion-input>\n\n        \n\n      </ion-item>\n\n      <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">\n\n        <ng2-password-strength-bar text-center \n\n        [passwordToCheck]="userPassword"\n\n        [barLabel]="barLabel"\n\n        [barColors]="myColors">\n\n</ng2-password-strength-bar>\n\n      </div>\n\n      \n\n\n\n      \n\n\n\n      <div text-center>\n\n        <button ion-button (click)="signup()">Sign Up</button>\n\n\n\n      </div>\n\n  \n\n  \n\n      </ion-list>\n\n  </div>\n\n  \n\n\n\n    <div *ngIf="clicked" class="waiting">\n\n      <div class="waitmsg">\n\n  \n\n          <p>Logging in...</p>\n\n      </div>\n\n      \n\n    </div>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\signup\signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]])
     ], SignupPage);
@@ -376,7 +475,7 @@ var SignupPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -413,7 +512,7 @@ var EmergencyPage = /** @class */ (function () {
     };
     EmergencyPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-emergency',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\emergency\emergency.html"*/'<!--\n\n  Generated template for the EmergencyPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Emergency</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="my-container">\n\n    <table>\n\n    <tr>\n\n      <div id="emergency">\n\n        <td style="width: 50%">\n\n            Police Emergency Hotline - &nbsp; &nbsp;\n\n        </td>\n\n        <td>\n\n          <button class="btn" ion-button (click)="callNumber(118)">118 &nbsp;<ion-icon name="call"></ion-icon></button> / <button class="btn" ion-button  (click)="callNumber(119)">119 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n        </td>\n\n      </div>\n\n    </tr>\n\n    <tr>\n\n        <div id="emergency">\n\n          <td>\n\n              Ambulance -  &nbsp; &nbsp;\n\n          </td>\n\n          <td>\n\n              <button class="btn" ion-button (click)="callNumber(110)">110 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n          </td>\n\n        </div>\n\n      </tr>\n\n      <tr>\n\n          <div id="emergency">\n\n            <td>\n\n                Child Help Line -  &nbsp; &nbsp;\n\n            </td>\n\n            <td>\n\n                <button class="btn" ion-button  (click)="callNumber(1929)">1929 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n            </td>\n\n          </div>\n\n        </tr>\n\n        <tr>\n\n            <div id="emergency">\n\n              <td>\n\n                  Women Help Line -  &nbsp; &nbsp;\n\n              </td>\n\n              <td>\n\n                  <button class="btn" ion-button  (click)="callNumber(1938)">1938 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n              </td>\n\n            </div>\n\n          </tr>\n\n          <tr>\n\n              <div id="emergency">\n\n                <td>\n\n                    Hot line for counseling and operational activities -  &nbsp; &nbsp;\n\n                </td>\n\n                <td>\n\n                    <button class="btn" ion-button  (click)="callNumber(1984)">1984 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                </td>\n\n              </div>\n\n            </tr>\n\n            <tr>\n\n                <div id="emergency">\n\n                  <td>\n\n                      Emergency Pre - Hospital Care Ambulance Service -   &nbsp; &nbsp;\n\n                  </td>\n\n                  <td>\n\n                      <button class="btn" ion-button  (click)="callNumber(1990)">1990 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                  </td>\n\n                </div>\n\n              </tr>\n\n  </table>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\emergency\emergency.html"*/,
+            selector: 'page-emergency',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\emergency\emergency.html"*/'<!--\n\n  Generated template for the EmergencyPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Emergency</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="my-container">\n\n    <table>\n\n    <tr>\n\n      <div id="emergency">\n\n        <td style="width: 50%">\n\n            Police Emergency Hotline - &nbsp; &nbsp;\n\n        </td>\n\n        <td>\n\n          <button class="btn" ion-button (click)="callNumber(118)">118 &nbsp;<ion-icon name="call"></ion-icon></button> / <button class="btn" ion-button  (click)="callNumber(119)">119 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n        </td>\n\n      </div>\n\n    </tr>\n\n    <tr>\n\n        <div id="emergency">\n\n          <td>\n\n              Ambulance -  &nbsp; &nbsp;\n\n          </td>\n\n          <td>\n\n              <button class="btn" ion-button (click)="callNumber(110)">110 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n          </td>\n\n        </div>\n\n      </tr>\n\n      <tr>\n\n          <div id="emergency">\n\n            <td>\n\n                Child Help Line -  &nbsp; &nbsp;\n\n            </td>\n\n            <td>\n\n                <button class="btn" ion-button  (click)="callNumber(1929)">1929 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n            </td>\n\n          </div>\n\n        </tr>\n\n        <tr>\n\n            <div id="emergency">\n\n              <td>\n\n                  Women Help Line -  &nbsp; &nbsp;\n\n              </td>\n\n              <td>\n\n                  <button class="btn" ion-button  (click)="callNumber(1938)">1938 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n              </td>\n\n            </div>\n\n          </tr>\n\n          <tr>\n\n              <div id="emergency">\n\n                <td>\n\n                    Hot line for counseling and operational activities -  &nbsp; &nbsp;\n\n                </td>\n\n                <td>\n\n                    <button class="btn" ion-button  (click)="callNumber(1984)">1984 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                </td>\n\n              </div>\n\n            </tr>\n\n            <tr>\n\n                <div id="emergency">\n\n                  <td>\n\n                      Emergency Pre - Hospital Care Ambulance Service -   &nbsp; &nbsp;\n\n                  </td>\n\n                  <td>\n\n                      <button class="btn" ion-button  (click)="callNumber(1990)">1990 &nbsp;<ion-icon name="call"></ion-icon></button>\n\n                  </td>\n\n                </div>\n\n              </tr>\n\n  </table>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\emergency\emergency.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], EmergencyPage);
@@ -421,105 +520,6 @@ var EmergencyPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=emergency.js.map
-
-/***/ }),
-
-/***/ 199:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClientChatsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__chat_chat__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(36);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-/**
- * Generated class for the ClientChatsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ClientChatsPage = /** @class */ (function () {
-    function ClientChatsPage(navCtrl, navParams, firebase, dataService, domSanitizer) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.firebase = firebase;
-        this.dataService = dataService;
-        this.domSanitizer = domSanitizer;
-        this.vols = [];
-        this.volIDs = [];
-        this.volsDetails = [];
-        this.menuPage = __WEBPACK_IMPORTED_MODULE_5__menu_menu__["a" /* MenuPage */];
-        this.defaultImage = this.dataService.defaultImage;
-        this.userID = Number(localStorage.getItem('userid'));
-        console.log('Client ID(Chat history): ' + this.userID);
-        this.username = localStorage.getItem('username');
-        this.firebase.list('/volunteers/client' + this.userID).valueChanges().subscribe(function (data) {
-            console.log(data);
-            for (var i = 0; i < data.length; i++) {
-                _this.volIDs.push(data[i].volID);
-            }
-            _this.vols = Array.from(new Set(_this.volIDs));
-            console.log('Volunteers array: ' + _this.vols);
-            console.log('vols array length' + _this.vols.length);
-            _this.volsDetails = [];
-            for (var j = 0; j < _this.vols.length; j++) {
-                _this.dataService.getUserById(_this.vols[j]).subscribe(function (data) {
-                    _this.volsDetails.push({
-                        username: data.username,
-                        volID: data.userid,
-                        image: data.image
-                    });
-                });
-            }
-        });
-    }
-    ClientChatsPage.prototype.chat = function (volID) {
-        console.log('userID:' + this.userID);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__chat_chat__["a" /* ChatPage */], {
-            username: this.username,
-            userID: this.userID,
-            voluID: volID
-        });
-    };
-    ClientChatsPage.prototype.ionViewDidLoad = function () {
-        localStorage.setItem('leaveToChat', 'false');
-    };
-    ClientChatsPage.prototype.logout = function () {
-        localStorage.clear();
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__menu_menu__["a" /* MenuPage */]);
-    };
-    ClientChatsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-client-chats',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\client-chats\client-chats.html"*/'<!--\n\n  Generated template for the ClientChatsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Chat History</ion-title>\n\n    <ion-buttons right>\n\n      <button ion-button icon-only (click)="logout()">\n\n        <ion-icon name=\'ios-log-out\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only [navPush]="menuPage">\n\n        <ion-icon name=\'ios-home-outline\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  \n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div class="volList">\n\n        <div class="vol" *ngFor="let volDetails of volsDetails">\n\n            <div class="left">\n\n                <div>\n\n                  <img class="user-img" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">\n\n\n\n        \n\n                    <div class="msg-detail">\n\n        \n\n                        <div class="message">You started a conversation with,</div>\n\n                        <div class="username">{{volDetails.username}}</div>\n\n                    </div>\n\n                        \n\n                </div>\n\n              \n\n              \n\n            </div>  \n\n            <div class="right">\n\n              <div class="elem"><button ion-button icon-only (click)="chat(volDetails.volID)">&nbsp;&nbsp; Chat<ion-icon name="send"></ion-icon></button></div>\n\n              </div>\n\n    \n\n        </div>\n\n    </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\client-chats\client-chats.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_3__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]])
-    ], ClientChatsPage);
-    return ClientChatsPage;
-}());
-
-//# sourceMappingURL=client-chats.js.map
 
 /***/ }),
 
@@ -612,7 +612,7 @@ var EditProfilePage = /** @class */ (function () {
     };
     EditProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-edit-profile',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\edit-profile\edit-profile.html"*/'<!--\n\n  Generated template for the EditProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>My Profile</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <!-- <img class="user-img" [src]="client.image != null  ? client.image : defaultImage" alt=""> -->\n\n  <div text-center>\n\n    <img class="user-img" [src]="userImgURL" alt=""> \n\n  </div>\n\n  \n\n  <div text-center>\n\n    <ion-label style="font-size: 30px;">{{username}}</ion-label>    \n\n  </div>\n\n  <div>\n\n    <ion-item text-center>\n\n      <ion-label>\n\n        Update User Details\n\n      </ion-label>\n\n\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">Username</ion-label>\n\n      <ion-input type="text" [(ngModel)]="username"></ion-input>    \n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">Current Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="password"></ion-input> \n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">New Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="newpass"></ion-input>    \n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">Confirm Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="newpasscon"></ion-input>    \n\n    </ion-item>\n\n    \n\n    <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">\n\n      <ng2-password-strength-bar text-center \n\n      [passwordToCheck]="newpass"\n\n      [barLabel]="barLabel"\n\n      [barColors]="myColors">\n\n      </ng2-password-strength-bar>\n\n    </div>\n\n    <div text-center>\n\n      <button ion-button primary (click)="update()">\n\n          Update\n\n      </button>\n\n    </div>\n\n  </div>\n\n  <div text-center>\n\n    <button (click)="logout()" style="background-color: transparent; padding-top: 15px;" >\n\n      <ion-label style="font-size: 20px;float:left">Sign Out</ion-label><ion-icon name="log-out" style="font-size: 40px;float:right"></ion-icon>\n\n    </button>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\edit-profile\edit-profile.html"*/,
+            selector: 'page-edit-profile',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\edit-profile\edit-profile.html"*/'<!--\n\n  Generated template for the EditProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>My Profile</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <!-- <img class="user-img" [src]="client.image != null  ? client.image : defaultImage" alt=""> -->\n\n  <div text-center>\n\n    <img class="user-img" [src]="userImgURL" alt=""> \n\n  </div>\n\n  \n\n  <div text-center>\n\n    <ion-label style="font-size: 30px;">{{username}}</ion-label>    \n\n  </div>\n\n  <div>\n\n    <ion-item text-center>\n\n      <ion-label>\n\n        Update User Details\n\n      </ion-label>\n\n\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">Username</ion-label>\n\n      <ion-input type="text" [(ngModel)]="username"></ion-input>    \n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">Current Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="password"></ion-input> \n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">New Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="newpass"></ion-input>    \n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label position="fixed">Confirm Password</ion-label>\n\n      <ion-input type="password" [(ngModel)]="newpasscon"></ion-input>    \n\n    </ion-item>\n\n    \n\n    <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">\n\n      <ng2-password-strength-bar text-center \n\n      [passwordToCheck]="newpass"\n\n      [barLabel]="barLabel"\n\n      [barColors]="myColors">\n\n      </ng2-password-strength-bar>\n\n    </div>\n\n    <div text-center>\n\n      <button ion-button primary (click)="update()">\n\n          Update\n\n      </button>\n\n    </div>\n\n  </div>\n\n  <div text-center>\n\n    <button (click)="logout()" style="background-color: transparent; padding-top: 15px;" >\n\n      <ion-label style="font-size: 20px;float:left">Sign Out</ion-label><ion-icon name="log-out" style="font-size: 40px;float:right"></ion-icon>\n\n    </button>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\edit-profile\edit-profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], EditProfilePage);
@@ -645,11 +645,11 @@ webpackEmptyAsyncContext.id = 234;
 
 var map = {
 	"../pages/client-chats/client-chats.module": [
-		616,
+		615,
 		7
 	],
 	"../pages/clients/clients.module": [
-		615,
+		616,
 		6
 	],
 	"../pages/edit-profile/edit-profile.module": [
@@ -657,23 +657,23 @@ var map = {
 		5
 	],
 	"../pages/emergency/emergency.module": [
-		618,
+		620,
 		4
 	],
 	"../pages/menu/menu.module": [
-		619,
+		618,
 		3
 	],
 	"../pages/signup/signup.module": [
-		622,
+		619,
 		2
 	],
 	"../pages/volunteers/volunteers.module": [
-		620,
+		621,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		621,
+		622,
 		0
 	]
 };
@@ -701,7 +701,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__clients_clients__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabs_tabs__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -835,7 +835,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar  >\n\n    <ion-title class="new-background">Login</ion-title>\n\n  </ion-navbar  >\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n  <div *ngIf="notclicked">\n\n\n\n    \n\n  \n\n     \n\n      <!-- <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n      </ion-item> -->\n\n      <div>\n\n        <div class="container-margin">\n\n          <div class="container">\n\n            <div class="logo-img login-logo">\n\n              <ion-img class="logo-img" [src]= "logoImg"></ion-img>\n\n            </div>\n\n            <ion-item>\n\n              <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>\n\n            </ion-item>\n\n            <ion-item>\n\n              <ion-input id="pwd" [type]="getType()" [(ngModel)]="password" placeholder="Password"></ion-input>\n\n              <button style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right\n\n              (click)="isActive = !isActive;"\n\n              isActive=true>\n\n                <ion-icon name="eye"> </ion-icon>\n\n              </button>\n\n              <ion-icon\n\n              [name]="isActive ? \'eye\' : \'eye-off\'">\n\n              </ion-icon>\n\n            </ion-item>\n\n            <div class="button-radius">\n\n              <button class="button-radius" style="margin-top: 20px;" ion-button color="primary" full (click)="loginUser()">Start Chatting</button>\n\n            </div>\n\n            <div style="display: flex;">\n\n              <div style="display: flex;margin: auto;">\n\n                <p>Don\'t have an account?</p>\n\n                <p style="padding-left: 5px;color: #3897f0;" [navPush]="signUp"><strong>Sign Up</strong></p>\n\n              </div>\n\n              <!-- <div class="button-margin">\n\n                <button style="margin-top: 20px;" ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>  \n\n              </div> -->\n\n            </div>\n\n              \n\n          </div>\n\n\n\n        </div>\n\n      </div>\n\n</div>\n\n\n\n    \n\n  <div *ngIf="clicked" class="waiting">\n\n    <div class="waitmsg">\n\n\n\n        <p>Logging in...</p>\n\n    </div>\n\n    \n\n  </div>\n\n  \n\n \n\n\n\n\n\n</ion-content>  \n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar  >\n\n    <ion-title class="new-background">Login</ion-title>\n\n  </ion-navbar  >\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n  <div *ngIf="notclicked">\n\n\n\n    \n\n  \n\n     \n\n      <!-- <ion-item>\n\n        <ion-label position="fixed">Password</ion-label>\n\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n\n      </ion-item> -->\n\n      <div>\n\n        <div class="container-margin">\n\n          <div class="container">\n\n            <div class="logo-img login-logo">\n\n              <ion-img class="logo-img" [src]= "logoImg"></ion-img>\n\n            </div>\n\n            <ion-item>\n\n              <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>\n\n            </ion-item>\n\n            <ion-item>\n\n              <ion-input id="pwd" [type]="getType()" [(ngModel)]="password" placeholder="Password"></ion-input>\n\n              <button style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right\n\n              (click)="isActive = !isActive;"\n\n              isActive=true>\n\n                <ion-icon name="eye"> </ion-icon>\n\n              </button>\n\n              <ion-icon\n\n              [name]="isActive ? \'eye\' : \'eye-off\'">\n\n              </ion-icon>\n\n            </ion-item>\n\n            <div class="button-radius">\n\n              <button class="button-radius" style="margin-top: 20px;" ion-button color="primary" full (click)="loginUser()">Start Chatting</button>\n\n            </div>\n\n            <div style="display: flex;">\n\n              <div style="display: flex;margin: auto;">\n\n                <p>Don\'t have an account?</p>\n\n                <p style="padding-left: 5px;color: #3897f0;" [navPush]="signUp"><strong>Sign Up</strong></p>\n\n              </div>\n\n              <!-- <div class="button-margin">\n\n                <button style="margin-top: 20px;" ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>  \n\n              </div> -->\n\n            </div>\n\n              \n\n          </div>\n\n\n\n        </div>\n\n      </div>\n\n</div>\n\n\n\n    \n\n  <div *ngIf="clicked" class="waiting">\n\n    <div class="waitmsg">\n\n\n\n        <p>Logging in...</p>\n\n    </div>\n\n    \n\n  </div>\n\n  \n\n \n\n\n\n\n\n</ion-content>  \n\n\n\n\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__app_services_data_services__["a" /* DataService */]])
     ], HomePage);
@@ -885,7 +885,7 @@ var WelcomePage = /** @class */ (function () {
     };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\welcome\welcome.html"*/'<!--\n\n  Generated template for the WelcomePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Welcome</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="bgimg">\n\n<h1 style="text-align:center">Welcome to Sithivili!</h1>\n\n<br>\n\n<h3 style="text-align:center">Select a language</h3>\n\n<div class="lang" style="display: flex; justify-content: center;">\n\n  <button ion-button color="primary" round full (click)="login()">English</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\welcome\welcome.html"*/,
+            selector: 'page-welcome',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\welcome\welcome.html"*/'<!--\n\n  Generated template for the WelcomePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title class="new-background">Welcome</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="bgimg">\n\n<h1 style="text-align:center">Welcome to Sithivili!</h1>\n\n<br>\n\n<h3 style="text-align:center">Select a language</h3>\n\n<div class="lang" style="display: flex; justify-content: center;">\n\n  <button ion-button color="primary" round full (click)="login()">English</button>\n\n</div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\welcome\welcome.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], WelcomePage);
@@ -918,7 +918,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__emergency_emergency__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__emergency_emergency__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tabs_tabs__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__clients_clients__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -986,7 +986,7 @@ var MenuPage = /** @class */ (function () {
     };
     MenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-menu',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\menu\menu.html"*/'<!--\n\n  Generated template for the MenuPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar hideBackButton>\n\n    <ion-title class="new-background">Menu</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n  <div>\n\n    <table style="margin:auto;">\n\n      <tr>\n\n        <td>\n\n            <div class="card" (click)="login()">\n\n              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/chat.png">\n\n              <p>Chat</p>\n\n          </div>\n\n            \n\n              \n\n        </td>\n\n        <td>\n\n            <div class="card">\n\n                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/therapist.png">\n\n                <p>Doctors</p>\n\n            </div>\n\n        </td>\n\n      </tr>\n\n        \n\n      <tr>\n\n        <td>\n\n            <div class="card" [navPush]="emergencypg">\n\n                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/warning.png">\n\n                <p>Emergency Contact</p>\n\n            </div>\n\n        </td>\n\n        \n\n        <td>\n\n            <div class="card">\n\n              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/awareness.png">\n\n              <p>Awareness</p>\n\n            </div>\n\n        </td>\n\n        \n\n      </tr>\n\n    </table>\n\n  </div>\n\n          \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\menu\menu.html"*/,
+            selector: 'page-menu',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\menu\menu.html"*/'<!--\n\n  Generated template for the MenuPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar hideBackButton>\n\n    <ion-title class="new-background">Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="" padding>\n\n  <!-- <div>\n\n    <table style="margin:auto; width: 100%;">\n\n      <tr>\n\n        <td>\n\n            <div class="card" (click)="login()">\n\n              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/chat.png">\n\n              <p>Chat</p>\n\n          </div>\n\n            \n\n              \n\n        </td>\n\n        <td>\n\n            <div class="card">\n\n                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/therapist.png">\n\n                <p>Doctors</p>\n\n            </div>\n\n        </td>\n\n      </tr>\n\n        \n\n      <tr>\n\n        <td>\n\n            <div class="card" [navPush]="emergencypg">\n\n                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/warning.png">\n\n                <p>Emergency Contact</p>\n\n            </div>\n\n        </td>\n\n        \n\n        <td>\n\n            <div class="card">\n\n              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/awareness.png">\n\n              <p>Awareness</p>\n\n            </div>\n\n        </td>\n\n        \n\n      </tr>\n\n    </table>\n\n  </div> -->\n\n\n\n  <div class="page-body">\n\n    <div class="body-content">\n\n      <!-- recent chat start -->\n\n      <div>\n\n        <div class="recent-bar">\n\n          <div class="recent"><strong>Recent Chats</strong></div>\n\n          <div class="avatar-icon">\n\n            <ul>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>\n\n            </ul>\n\n          </div>\n\n        </div>\n\n      </div>\n\n      <!-- recent chat end -->\n\n\n\n      <!-- quote card start -->\n\n      <div class="row">\n\n        <div class="quote-heading"><strong>Quote of the Day...</strong></div>\n\n        <div class="quote-card">\n\n          <p>"You are strong... Cherish your life"</p>\n\n        </div>\n\n      </div>\n\n      <!-- quote card end -->\n\n\n\n      <div style="margin-bottom: 30px;">\n\n        <!-- chat card start -->\n\n        <div class="row">\n\n            <div class="parallel-card" style="background: skyblue;">\n\n              <div class="display-flex">\n\n                <div>\n\n                  <img src="../../assets/imgs/chat.png">\n\n                </div>\n\n                <p>CHAT</p>\n\n              </div>\n\n            </div>\n\n        </div> \n\n        <!-- chat card end -->\n\n\n\n        <div class="display-flex-card">\n\n          <!-- emergency card start -->\n\n          <div class="common-width" style="margin-right: 20px;">\n\n            <div class="card" style="background: #ff0000a1;">\n\n              <div class="">\n\n                <div class="center-align">\n\n                  <img src="../../assets/imgs/warning.png">\n\n                </div>\n\n                <p>EMERGENCY <br> CONTACTS</p>\n\n              </div>\n\n            </div>\n\n          </div> \n\n          <!-- emergency card end -->\n\n\n\n          <!-- professional card start -->\n\n          <div class="common-width">\n\n            <div class="card" style="background: violet;">\n\n              <div class="">\n\n                <div class="center-align">\n\n                  <img src="../../assets/imgs/therapist.png">\n\n                </div>\n\n                <p>PROFESSIONAL <br> CONTACT</p>\n\n              </div>\n\n            </div>\n\n          </div> \n\n          <!-- professinal card end -->\n\n        </div>\n\n\n\n        <div class="display-flex-card">\n\n          <!-- institute card start -->\n\n          <div class="common-width" style="margin-right: 20px;">\n\n            <div class="card" style="background: khaki;">\n\n              <div class="">\n\n                <div class="center-align">\n\n                  <img src="../../assets/imgs/red-cross.png">\n\n                </div>\n\n                <p>INSTITUTES</p>\n\n              </div>\n\n            </div>\n\n          </div> \n\n          <!-- institute card end -->\n\n\n\n          <!-- awareness card start -->\n\n          <div class="common-width">\n\n            <div class="card" style="background: lightgreen;">\n\n              <div class="">\n\n                <div class="center-align">\n\n                  <img src="../../assets/imgs/awareness.png">\n\n                </div>\n\n                <p>AWARENESS</p>\n\n              </div>\n\n            </div>\n\n          </div> \n\n          <!-- awareness card end -->\n\n        </div>\n\n        \n\n      </div>\n\n    </div>\n\n  </div>\n\n       \n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\menu\menu.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], MenuPage);
@@ -1019,13 +1019,13 @@ var MenuPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(344);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_data_services__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_volunteers_volunteers__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_clients_clients__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_welcome_welcome__ = __webpack_require__(346);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_menu_menu__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_client_chats_client_chats__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_emergency_emergency__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__ = __webpack_require__(613);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_ng2_password_strength_bar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_edit_profile_edit_profile__ = __webpack_require__(200);
@@ -1092,14 +1092,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/clients/clients.module#ClientsPageModule', name: 'ClientsPage', segment: 'clients', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/client-chats/client-chats.module#ClientChatsPageModule', name: 'ClientChatsPage', segment: 'client-chats', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/clients/clients.module#ClientsPageModule', name: 'ClientsPage', segment: 'clients', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/emergency/emergency.module#EmergencyPageModule', name: 'EmergencyPage', segment: 'emergency', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/emergency/emergency.module#EmergencyPageModule', name: 'EmergencyPage', segment: 'emergency', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/volunteers/volunteers.module#VolunteersPageModule', name: 'VolunteersPage', segment: 'volunteers', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_4_angularfire2__["AngularFireModule"].initializeApp(config),
@@ -1261,7 +1261,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1296,7 +1296,7 @@ var AboutPage = /** @class */ (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\about\about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], AboutPage);
@@ -1331,7 +1331,7 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-contact',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-icon name="ionic" item-start></ion-icon>\n\n      @ionicframework\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-icon name="ionic" item-start></ion-icon>\n\n      @ionicframework\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\contact\contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], ContactPage);
@@ -1447,7 +1447,7 @@ var ClientsPage = /** @class */ (function () {
     };
     ClientsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-clients',template:/*ion-inline-start:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\clients\clients.html"*/'<!--\n\n  Generated template for the ClientsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar hideBackButton >\n\n    <ion-title class="new-background">Clients</ion-title>\n\n    <ion-buttons right>\n\n      <button ion-button icon-only (click)="logout()">\n\n        <ion-icon name=\'ios-log-out\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only [navPush]="menuPage">\n\n        <ion-icon name=\'ios-home-outline\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div class="clientList">\n\n        <div class="client" *ngFor="let clientDetails of clientsDetails">\n\n            <div class="left">\n\n                <div>\n\n                    <img class="user-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3\n\n                    dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI2IDI2IiBpZD0i0KHQu9C+0LlfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwI\n\n                    DAgMjYgMjYiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNS\n\n                    wxM2MwLTYuNjE2Njk5Mi01LjM4MjgxMjUtMTItMTItMTJTMSw2LjM4MzMwMDgsMSwxM2MwLDMuMzgzNjA2LDEuNDEzMjA4LDYuNDM4NjU5NywzLjY3MzY0NSw4LjYyMjI1MzQgIGMwLjA1MjkxNzUsMC4wNjg5MDg\n\n                    3LDAuMTE1NjAwNiwwLjEyNDc1NTksMC4xODg5NjQ4LDAuMTcxODE0QzcuMDAzODQ1MiwyMy43NzY5MTY1LDkuODU4Mjc2NCwyNSwxMywyNSAgczUuOTk2MTU0OC0xLjIyMzA4MzUsOC4xMzczOTAxLTMuMjA1OTMy\n\n                    NmMwLjA3MzM2NDMtMC4wNDcwNTgxLDAuMTM2MDQ3NC0wLjEwMjkwNTMsMC4xODg5NjQ4LTAuMTcxODE0ICBDMjMuNTg2NzkyLDE5LjQzODY1OTcsMjUsMTYuMzgzNjA2LDI1LDEzeiBNMTMsMi41YzUuNzkwMDM5M\n\n                    SwwLDEwLjUsNC43MTA0NDkyLDEwLjUsMTAuNSAgYzAsMi40NTQ5NTYxLTAuODUzMjcxNSw0LjcxMDgxNTQtMi4yNzAyNjM3LDYuNTAwODU0NWMtMC42NTA1MTI3LTIuMDk3ODM5NC0yLjUwNzYyOTQtMy43NDAxMT\n\n                    IzLTUuMDI4MTM3Mi00LjQ5NTc4ODYgIGMxLjM3MzU5NjItMC45OTQwNzk2LDIuMjcyMDMzNy0yLjYwNDYxNDMsMi4yNzIwMzM3LTQuNDI0NDk5NWMwLTMuMDE0MTYwMi0yLjQ1NTA3ODEtNS40NjYzMDg2LTUuNDc\n\n                    zNjMyOC01LjQ2NjMwODYgIHMtNS40NzM2MzI4LDIuNDUyMTQ4NC01LjQ3MzYzMjgsNS40NjYzMDg2YzAsMS44MTk4ODUzLDAuODk4NDM3NSwzLjQzMDQxOTksMi4yNzIwMzM3LDQuNDI0NDk5NSAgYy0yLjUyMDUw\n\n                    NzgsMC43NTU2NzYzLTQuMzc3NjI0NSwyLjM5Nzk0OTItNS4wMjgxMzcyLDQuNDk1Nzg4NkMzLjM1MzI3MTUsMTcuNzEwODE1NCwyLjUsMTUuNDU0OTU2MSwyLjUsMTMgIEMyLjUsNy4yMTA0NDkyLDcuMjA5OTYwO\n\n                    SwyLjUsMTMsMi41eiBNOS4wMjYzNjcyLDEwLjU4MDU2NjRjMC0yLjE4NzAxMTcsMS43ODIyMjY2LTMuOTY2MzA4NiwzLjk3MzYzMjgtMy45NjYzMDg2ICBzMy45NzM2MzI4LDEuNzc5Mjk2OSwzLjk3MzYzMjgsMy\n\n                    45NjYzMDg2UzE1LjE5MTQwNjMsMTQuNTQ2ODc1LDEzLDE0LjU0Njg3NVM5LjAyNjM2NzIsMTIuNzY3NTc4MSw5LjAyNjM2NzIsMTAuNTgwNTY2NHogICBNNi4wMzA3NjE3LDIwLjgzMTk3MDJDNi4yNTYyMjU2LDE\n\n                    4LjA4MjAzMTMsOS4xNzIzNjMzLDE2LjA0Njg3NSwxMywxNi4wNDY4NzVzNi43NDM3NzQ0LDIuMDM1MTU2Myw2Ljk2OTIzODMsNC43ODUwOTUyICBDMTguMTEzMDk4MSwyMi40ODU1MzQ3LDE1LjY3NTcyMDIsMjMu\n\n                    NSwxMywyMy41UzcuODg2OTAxOSwyMi40ODU1MzQ3LDYuMDMwNzYxNywyMC44MzE5NzAyeiIgZmlsbD0iIzFEMUQxQiIvPjwvc3ZnPg==" alt="">\n\n        \n\n                    <div class="msg-detail">\n\n                        <div class="username">{{clientDetails.username}}</div>\n\n                        <div class="message">messaged you.</div>\n\n                    </div>\n\n                        \n\n                </div>\n\n              \n\n            </div>  \n\n            <div class="right">\n\n              <div class="elem"><button ion-button icon-only (click)="chat(clientDetails.clientID)">&nbsp;&nbsp; Chat<ion-icon name="send"></ion-icon></button></div>\n\n              </div>\n\n    \n\n        </div>\n\n    </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Nandun\Downloads\Sithivili-v1.0\Sithivili\src\pages\clients\clients.html"*/,
+            selector: 'page-clients',template:/*ion-inline-start:"E:\Sithivili-v1.0\sithivili\src\pages\clients\clients.html"*/'<!--\n\n  Generated template for the ClientsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar hideBackButton >\n\n    <ion-title class="new-background">Clients</ion-title>\n\n    <ion-buttons right>\n\n      <button ion-button icon-only (click)="logout()">\n\n        <ion-icon name=\'ios-log-out\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-buttons left>\n\n      <button ion-button icon-only [navPush]="menuPage">\n\n        <ion-icon name=\'ios-home-outline\'></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bgimg" padding>\n\n    <div class="clientList">\n\n        <div class="client" *ngFor="let clientDetails of clientsDetails">\n\n            <div class="left">\n\n                <div>\n\n                    <img class="user-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3\n\n                    dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI2IDI2IiBpZD0i0KHQu9C+0LlfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwI\n\n                    DAgMjYgMjYiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNS\n\n                    wxM2MwLTYuNjE2Njk5Mi01LjM4MjgxMjUtMTItMTItMTJTMSw2LjM4MzMwMDgsMSwxM2MwLDMuMzgzNjA2LDEuNDEzMjA4LDYuNDM4NjU5NywzLjY3MzY0NSw4LjYyMjI1MzQgIGMwLjA1MjkxNzUsMC4wNjg5MDg\n\n                    3LDAuMTE1NjAwNiwwLjEyNDc1NTksMC4xODg5NjQ4LDAuMTcxODE0QzcuMDAzODQ1MiwyMy43NzY5MTY1LDkuODU4Mjc2NCwyNSwxMywyNSAgczUuOTk2MTU0OC0xLjIyMzA4MzUsOC4xMzczOTAxLTMuMjA1OTMy\n\n                    NmMwLjA3MzM2NDMtMC4wNDcwNTgxLDAuMTM2MDQ3NC0wLjEwMjkwNTMsMC4xODg5NjQ4LTAuMTcxODE0ICBDMjMuNTg2NzkyLDE5LjQzODY1OTcsMjUsMTYuMzgzNjA2LDI1LDEzeiBNMTMsMi41YzUuNzkwMDM5M\n\n                    SwwLDEwLjUsNC43MTA0NDkyLDEwLjUsMTAuNSAgYzAsMi40NTQ5NTYxLTAuODUzMjcxNSw0LjcxMDgxNTQtMi4yNzAyNjM3LDYuNTAwODU0NWMtMC42NTA1MTI3LTIuMDk3ODM5NC0yLjUwNzYyOTQtMy43NDAxMT\n\n                    IzLTUuMDI4MTM3Mi00LjQ5NTc4ODYgIGMxLjM3MzU5NjItMC45OTQwNzk2LDIuMjcyMDMzNy0yLjYwNDYxNDMsMi4yNzIwMzM3LTQuNDI0NDk5NWMwLTMuMDE0MTYwMi0yLjQ1NTA3ODEtNS40NjYzMDg2LTUuNDc\n\n                    zNjMyOC01LjQ2NjMwODYgIHMtNS40NzM2MzI4LDIuNDUyMTQ4NC01LjQ3MzYzMjgsNS40NjYzMDg2YzAsMS44MTk4ODUzLDAuODk4NDM3NSwzLjQzMDQxOTksMi4yNzIwMzM3LDQuNDI0NDk5NSAgYy0yLjUyMDUw\n\n                    NzgsMC43NTU2NzYzLTQuMzc3NjI0NSwyLjM5Nzk0OTItNS4wMjgxMzcyLDQuNDk1Nzg4NkMzLjM1MzI3MTUsMTcuNzEwODE1NCwyLjUsMTUuNDU0OTU2MSwyLjUsMTMgIEMyLjUsNy4yMTA0NDkyLDcuMjA5OTYwO\n\n                    SwyLjUsMTMsMi41eiBNOS4wMjYzNjcyLDEwLjU4MDU2NjRjMC0yLjE4NzAxMTcsMS43ODIyMjY2LTMuOTY2MzA4NiwzLjk3MzYzMjgtMy45NjYzMDg2ICBzMy45NzM2MzI4LDEuNzc5Mjk2OSwzLjk3MzYzMjgsMy\n\n                    45NjYzMDg2UzE1LjE5MTQwNjMsMTQuNTQ2ODc1LDEzLDE0LjU0Njg3NVM5LjAyNjM2NzIsMTIuNzY3NTc4MSw5LjAyNjM2NzIsMTAuNTgwNTY2NHogICBNNi4wMzA3NjE3LDIwLjgzMTk3MDJDNi4yNTYyMjU2LDE\n\n                    4LjA4MjAzMTMsOS4xNzIzNjMzLDE2LjA0Njg3NSwxMywxNi4wNDY4NzVzNi43NDM3NzQ0LDIuMDM1MTU2Myw2Ljk2OTIzODMsNC43ODUwOTUyICBDMTguMTEzMDk4MSwyMi40ODU1MzQ3LDE1LjY3NTcyMDIsMjMu\n\n                    NSwxMywyMy41UzcuODg2OTAxOSwyMi40ODU1MzQ3LDYuMDMwNzYxNywyMC44MzE5NzAyeiIgZmlsbD0iIzFEMUQxQiIvPjwvc3ZnPg==" alt="">\n\n        \n\n                    <div class="msg-detail">\n\n                        <div class="username">{{clientDetails.username}}</div>\n\n                        <div class="message">messaged you.</div>\n\n                    </div>\n\n                        \n\n                </div>\n\n              \n\n            </div>  \n\n            <div class="right">\n\n              <div class="elem"><button ion-button icon-only (click)="chat(clientDetails.clientID)">&nbsp;&nbsp; Chat<ion-icon name="send"></ion-icon></button></div>\n\n              </div>\n\n    \n\n        </div>\n\n    </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Sithivili-v1.0\sithivili\src\pages\clients\clients.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_4__app_services_data_services__["a" /* DataService */]])
     ], ClientsPage);
