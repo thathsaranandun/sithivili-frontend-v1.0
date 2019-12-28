@@ -25764,6 +25764,8 @@ page-chat .line-breaker {
 }
 
 page-chat .container .message {
+  width: 90%;
+  margin-right: 10%;
   border-radius: 10px;
   margin-top: 10px;
   position: relative;
@@ -25801,6 +25803,49 @@ page-chat .container .message .msg-detail .msg-info p {
   font-size: 1.1em;
   color: gray;
   font-weight: bold;
+}
+
+page-chat .msg-content-2nd {
+  color: #343434;
+}
+
+page-chat .user-img-2nd {
+  position: absolute;
+  border-radius: 45px;
+  width: 45px;
+  height: 45px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+  float: right;
+}
+
+page-chat .msg-detail-2nd {
+  width: 85%;
+  display: inline-block;
+}
+
+page-chat .msg-detail-2nd p {
+  text-align: right;
+  margin: 0;
+}
+
+page-chat .msg-detail-2nd .msg-info-2nd p {
+  text-align: right;
+  font-size: 1.1em;
+  color: gray;
+  font-weight: bold;
+}
+
+page-chat .message-2nd {
+  border-radius: 10px;
+  margin-top: 10px;
+  position: relative;
+  padding: 7px 7px;
+  background-color: rgba(235, 235, 235, 0.815);
+  padding-bottom: 12px;
+  word-break: break-all;
+  width: 90%;
+  margin-left: 10%;
 }
 
 page-client-chats .vol {

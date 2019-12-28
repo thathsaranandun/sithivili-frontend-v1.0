@@ -32,6 +32,8 @@ page-chat {
     .container {
     
       .message {
+        width: 90%;
+        margin-right: 10%;
         border-radius: 10px;
         margin-top: 10px;
         position: relative;
@@ -69,6 +71,47 @@ page-chat {
         }
       }
     }
+
+    .msg-content-2nd {
+      color: #343434;      
+    }
+    .user-img-2nd {
+        position: absolute;
+        border-radius: 45px;
+        width: 45px;
+        height: 45px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+        float: right;
+    }
+    .msg-detail-2nd {
+        width: 85%;
+        // padding-left: 60px;
+        display: inline-block;
+        p {
+          text-align: right;
+          margin: 0;
+        }
+        .msg-info-2nd {
+          p {
+            text-align: right;
+            font-size: 1.1em;
+            color: rgb(128, 128, 128);
+            font-weight: bold;
+          }
+        }
+  }
+
+  .message-2nd {
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+    padding: 7px 7px;
+    background-color: rgba(235, 235, 235, 0.815);
+    padding-bottom: 12px;
+    word-break: break-all;
+    width: 90%;
+    margin-left: 10%;
+  }
 
 }
  

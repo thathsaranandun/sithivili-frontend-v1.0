@@ -84,7 +84,7 @@
         <!-- chat card start -->
         <div class="row">
             <div class="parallel-card" style="background: skyblue;">
-              <div class="display-flex">
+              <div class="display-flex" (click)="login()">
                 <div>
                   <img src="../../assets/imgs/chat.png">
                 </div>
@@ -98,7 +98,7 @@
           <!-- emergency card start -->
           <div class="common-width" style="margin-right: 20px;">
             <div class="card" style="background: #ff0000a1;">
-              <div class="">
+              <div class="" [navPush]="emergencypg">
                 <div class="center-align">
                   <img src="../../assets/imgs/warning.png">
                 </div>
