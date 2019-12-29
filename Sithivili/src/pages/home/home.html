@@ -4,7 +4,7 @@
   </ion-navbar  >
 </ion-header>
 
-<ion-content class="" padding>
+<ion-content class="bgimg" padding>
   <div *ngIf="notclicked">
 
     
@@ -14,7 +14,7 @@
         <ion-label position="fixed">Password</ion-label>
         <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item> -->
-      <!-- <div>
+      <div>
         <div class="container-margin">
           <div class="container">
             <div class="logo-img login-logo">
@@ -41,47 +41,14 @@
               <div style="display: flex;margin: auto;">
                 <p>Don't have an account?</p>
                 <p style="padding-left: 5px;color: #3897f0;" [navPush]="signUp"><strong>Sign Up</strong></p>
-              </div> -->
+              </div>
               <!-- <div class="button-margin">
                 <button style="margin-top: 20px;" ion-button color="primary" round full (click)="loadSignUp()">Create Account</button>  
               </div> -->
-            <!-- </div>
+            </div>
               
           </div>
 
-        </div>
-      </div> -->
-
-      <div class="page-body">
-        <div class="body-content">
-
-          <!--logo start-->
-          <div class="logo">
-            <div class="logo-img login-logo">
-              <ion-img class="logo-img" [src]= "logoImg"></ion-img>
-            </div>
-          </div>
-          <!--logo end-->
-
-          <!--input field start-->
-          <div>
-            <div class="margin-top-username">
-              <input class="input-username" type="text" name="username" placeholder="Username">
-            </div>
-            <div class="margin-top-middle">
-              <input class="input-password" type="password" name="password" placeholder="Password">
-            </div>
-          </div>
-          <!--input field end-->
-
-          <!--button start-->
-          <div class="margin-top-button">
-            <button class="btn-login" type="button">Login</button>
-          </div>
-          <div class="margin-top-middle">
-            <button class="btn-signup" type="button" (click)="loadSignUp()">Sign Up</button>
-          </div>
-          <!--button end-->
         </div>
       </div>
 </div>
