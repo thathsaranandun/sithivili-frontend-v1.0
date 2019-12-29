@@ -4,20 +4,30 @@ page-chat {
       }
       
     .input-wrap {
+        background: #d3d3d37a;
         padding: 5px;
         display: flex;
+
         textarea {
+          height: 38px;
+          padding-top: 9px;
+          border-radius: 20px;
+          padding-left: 16px;
+          border: none;
+          margin-top: 3px;
+          font-size: initial;
           flex: 3.5;
-          border: 0;
-          border-bottom: 1px #000;
-          border-style: solid;
+          // border: 0;
+          // border-bottom: 1px #000;
+          // border-style: solid;
+          background: white;
         }
         button {
             flex: 0.5;
         }
     }
     ion-footer {
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
+        box-shadow: 0px 0px 9px rgb(0, 0, 0);
         background-color: #fff;
     }
     ion-content .scroll-content {
@@ -30,6 +40,7 @@ page-chat {
     .container {
     
       .message {
+        box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.44);
         width: 90%;
         margin-right: 10%;
         border-radius: 10px;
@@ -83,6 +94,7 @@ page-chat {
     }
     .msg-detail-2nd {
         width: 85%;
+        padding-right: 12px;
         // padding-left: 60px;
         display: inline-block;
         p {
@@ -100,6 +112,7 @@ page-chat {
   }
 
   .message-2nd {
+    box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.44);
     border-radius: 10px;
     margin-top: 10px;
     position: relative;
@@ -109,6 +122,7 @@ page-chat {
     word-break: break-all;
     width: 90%;
     margin-left: 10%;
+    padding-right: 15px;
   }
 
 }

@@ -19,20 +19,21 @@
           <!--logo end-->
 
           <!--input field start-->
-          <div>
-            <div class="margin-top-username">
-              <input class="input-username" type="text" name="username" placeholder="Username" [(ngModel)]="username">
+          <div class="margin-top-username">
+            <div class="input-username">
+              <ion-input type="text" name="username" placeholder="Username" [(ngModel)]="username"></ion-input>
             </div>
             <div class="margin-top-middle">
-              <input id="pwd" [type]="getType()" class="input-password" name="password" placeholder="Password" [(ngModel)]="password">
-              <button style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right
-              (click)="isActive = !isActive;"
-              isActive=true>
-              <ion-icon
-              [name]="isActive ? 'eye' : 'eye-off'">
-              </ion-icon>
-              </button>
-              
+              <div  class="input-password">
+                <ion-input id="pwd" [type]="getType()" class="" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                <i><button style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right
+                (click)="isActive = !isActive;"
+                isActive=true>
+                <ion-icon
+                [name]="isActive ? 'eye' : 'eye-off'">
+                </ion-icon>
+                </button></i>
+              </div>
             </div>
           </div>
           <!--input field end-->
@@ -46,13 +47,13 @@
           </div>
           <!--button end-->
         </div>
+        
       </div>
 </div>
 
     
   <div *ngIf="clicked" class="waiting">
     <div class="waitmsg">
-
         <p>Logging in...</p>
     </div>
     

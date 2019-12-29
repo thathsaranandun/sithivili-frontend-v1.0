@@ -77,18 +77,34 @@
         <!--input field start-->
         <div>
           <div class="margin-top-username">
-            <input class="input-username" type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)" name="email" placeholder="Mobile Number">
+            <div class="input-username">
+              <ion-input type="text" name="username" placeholder="Username" [(ngModel)]="userName"></ion-input>
+            </div>
           </div>
           <div class="margin-top-middle">
-            <input class="input-username" type="text" name="username" placeholder="Username" [(ngModel)]="userName">
+            <div class="input-username">
+              <ion-input type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)" name="moblie" placeholder="Mobile Number"></ion-input>
+            </div>
           </div>
           <div class="margin-top-middle">
-            <input class="input-password" type="password" name="password" placeholder="Password" [(ngModel)]="userPassword">
+            <div class="input-password">
+              <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="userPassword"></ion-input>
+              <i><button id="passeye" style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right
+                (click)="isActive = !isActive;"
+                isActive=true>
+                <ion-icon
+                [name]="isActive ? 'eye' : 'eye-off'">
+                </ion-icon>
+                </button></i>
+            </div>
+            
           </div>
           <div class="margin-top-middle">
-            <input class="input-password" type="password" name="confirmpassword" [(ngModel)]="userPasswordCon" placeholder="Confirm Password">
+            <div class="input-password">
+              <ion-input type="password" name="confirmpassword" [(ngModel)]="userPasswordCon" placeholder="Confirm Password"></ion-input>
+            </div>
           </div>
-          <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;font-size: 20px;">
+          <div style="background-color: white;margin-top: 5px;padding-bottom: 10px;font-size: 20px;">
             <ng2-password-strength-bar text-center 
             [passwordToCheck]="userPassword"
             [barLabel]="barLabel"

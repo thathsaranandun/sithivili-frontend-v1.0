@@ -6,12 +6,12 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title class="new-background">Emergency</ion-title>
+    <ion-title class="new-background">Emergency Contacts</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="my-container">
-    <table>
+<ion-content padding style="background: #ff000073;">
+    <!-- <table>
     <tr>
       <div id="emergency">
         <td style="width: 50%">
@@ -72,5 +72,60 @@
                   </td>
                 </div>
               </tr>
-  </table>
+  </table> -->
+
+  <div class="page-body">
+    <div class="page-content">
+
+      <div>
+        <div class="emergency-card">
+          <div class="call-name">Police Emergency Contact</div>
+          <button class="btn" ion-button (click)="callNumber(118)">118 &nbsp;<ion-icon name="call"></ion-icon></button>
+        </div>
+      </div>
+
+      <div class="margin-top-middle">
+        <div class="emergency-card">
+          <div class="call-name">Police Emergency Contact</div>
+          <button class="btn" ion-button (click)="callNumber(119)">119 &nbsp;<ion-icon name="call"></ion-icon></button>
+        </div>
+      </div>
+
+      <div class="margin-top-middle">
+        <div class="emergency-card">
+          <div class="call-name">Ambulance</div>
+          <button class="btn" ion-button (click)="callNumber(110)">110 &nbsp;<ion-icon name="call"></ion-icon></button>
+        </div>
+      </div>
+
+      <div class="margin-top-middle">
+        <div class="emergency-card">
+          <div class="call-name">Child Help Line</div>
+          <button class="btn" ion-button  (click)="callNumber(1929)">1929 &nbsp;<ion-icon name="call"></ion-icon></button>
+        </div>
+      </div>
+
+      <div class="margin-top-middle">
+        <div class="emergency-card">
+          <div class="call-name">Women Help Line</div>
+          <button class="btn" ion-button  (click)="callNumber(1938)">1938 &nbsp;<ion-icon name="call"></ion-icon></button>
+        </div>
+      </div>
+
+      <div class="margin-top-middle">
+        <div class="emergency-card">
+          <div class="call-name">Counseling and Operational Activities</div>
+          <button class="btn" ion-button  (click)="callNumber(1984)">1984 &nbsp;<ion-icon name="call"></ion-icon></button>
+        </div>
+      </div>
+
+      <div class="margin-top-middle">
+        <div class="emergency-card">
+          <div class="call-name">Pre-Hospital Care Ambulance Service</div>
+          <button class="btn" ion-button  (click)="callNumber(1990)">1990 &nbsp;<ion-icon name="call"></ion-icon></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </ion-content>
