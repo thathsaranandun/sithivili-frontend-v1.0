@@ -11,50 +11,13 @@
 </ion-header>
 
 <ion-content class="" padding>
-  <!-- <div>
-    <table style="margin:auto; width: 100%;">
-      <tr>
-        <td>
-            <div class="card" (click)="login()">
-              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/chat.png">
-              <p>Chat</p>
-          </div>
-            
-              
-        </td>
-        <td>
-            <div class="card">
-                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/therapist.png">
-                <p>Doctors</p>
-            </div>
-        </td>
-      </tr>
-        
-      <tr>
-        <td>
-            <div class="card" [navPush]="emergencypg">
-                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/warning.png">
-                <p>Emergency Contact</p>
-            </div>
-        </td>
-        
-        <td>
-            <div class="card">
-              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/awareness.png">
-              <p>Awareness</p>
-            </div>
-        </td>
-        
-      </tr>
-    </table>
-  </div> -->
-
+ 
   <div class="page-body">
     <div class="body-content">
       <!-- recent chat start -->
       <div>
         <div class="recent-bar">
-          <div *ngIf="volsDetails != null" class="recent"><strong>Recent Chats</strong></div>
+          <div *ngIf="userType == client" class="recent"><strong>Recent Chats</strong></div>
           <div class="avatar-icon">
             <div class="vol" *ngFor="let volDetails of volsDetails">
               <div (click)="chat(volDetails.volID)">
@@ -63,16 +26,6 @@
               </div>
               
             </div>
-            <!-- <ul>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-              <li><img class="avatar" src="../../assets/imgs/chat.png"><p>Anthony</p></li>
-            </ul>-->
           </div> 
         </div>
       </div>

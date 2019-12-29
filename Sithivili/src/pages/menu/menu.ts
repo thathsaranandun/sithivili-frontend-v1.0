@@ -30,6 +30,8 @@ export class MenuPage {
   volsDetails:object[]=[];
   menuPage=MenuPage;
   defaultImage= this.dataService.defaultImage;
+  userType = localStorage.getItem('usertype');
+  client = 'Client';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
     this.userID=Number(localStorage.getItem('userid'));
