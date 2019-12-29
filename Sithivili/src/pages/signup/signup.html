@@ -62,48 +62,58 @@
     </div>
 </ion-content> -->
 <ion-content style="padding: 16px;">
-  <div class="page-body" style="padding-left: 16px; padding-right: 16px;">
-    <div class="body-content">
-  
-      <!--heading start-->
-      <div class="heading">
-        <div class="">
-          <div>Create an Account</div>
+  <div *ngIf="notclicked" class= "signupbox">
+    <div class="page-body" style="padding-left: 16px; padding-right: 16px;">
+      <div class="body-content">
+    
+        <!--heading start-->
+        <div class="heading">
+          <div class="">
+            <div>Create an Account</div>
+          </div>
         </div>
+        <!--heading end-->
+    
+        <!--input field start-->
+        <div>
+          <div class="margin-top-username">
+            <input class="input-username" type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)" name="email" placeholder="Mobile Number">
+          </div>
+          <div class="margin-top-middle">
+            <input class="input-username" type="text" name="username" placeholder="Username" [(ngModel)]="userName">
+          </div>
+          <div class="margin-top-middle">
+            <input class="input-password" type="password" name="password" placeholder="Password" [(ngModel)]="userPassword">
+          </div>
+          <div class="margin-top-middle">
+            <input class="input-password" type="password" name="confirmpassword" [(ngModel)]="userPasswordCon" placeholder="Confirm Password">
+          </div>
+          <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;font-size: 20px;">
+            <ng2-password-strength-bar text-center 
+            [passwordToCheck]="userPassword"
+            [barLabel]="barLabel"
+            [barColors]="myColors">
+            </ng2-password-strength-bar>
+          </div>
+        </div>
+        <!--input field end-->
+    
+        <!--button start-->
+        <div class="margin-top-button">
+          <button class="btn-login" type="button" (click)="signup()">Sign Up</button>
+        </div>
+        <!--button end-->
       </div>
-      <!--heading end-->
-  
-      <!--input field start-->
-      <div>
-        <div class="margin-top-username">
-          <input class="input-username" type="email" name="email" placeholder="Email">
-        </div>
-        <div class="margin-top-middle">
-          <input class="input-username" type="text" name="username" placeholder="Username">
-        </div>
-        <div class="margin-top-middle">
-          <input class="input-password" type="password" name="password" placeholder="Password">
-        </div>
-        <div class="margin-top-middle">
-          <input class="input-password" type="password" name="confirmpassword" placeholder="Confirm Password">
-        </div>
-        <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">
-          <ng2-password-strength-bar text-center 
-          [passwordToCheck]="userPassword"
-          [barLabel]="barLabel"
-          [barColors]="myColors">
-          </ng2-password-strength-bar>
-        </div>
-      </div>
-      <!--input field end-->
-  
-      <!--button start-->
-      <div class="margin-top-button">
-        <button class="btn-login" type="button">Sign Up</button>
-      </div>
-      <!--button end-->
     </div>
   </div>
+  <div *ngIf="clicked" class="waiting">
+    <div class="waitmsg">
+
+        <p>Please wait...</p>
+    </div>
+    
+  </div>
+    
 </ion-content>
 
 

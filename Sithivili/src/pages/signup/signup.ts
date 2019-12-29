@@ -20,6 +20,7 @@ export class SignupPage {
   userMobile:string='';
   userName:string='';
   userPassword:string='';
+  userPasswordCon:string='';
   notclicked:boolean=true;
   clicked:boolean=false;
   public barLabel: string = "Password strength:";
@@ -39,14 +40,18 @@ export class SignupPage {
     /* this.dataService.getUser(this.username).subscribe((data:any) =>{
       this.dbuser=data.dbuser;
     }); */
-    this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
-      this.alert('User Registration', data.msg);
-      console.log(data);
-      if(data.user == null){
+    if(this.userPassword==this.userPasswordCon){
+      this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+        this.alert('User Registration', data.msg);
+        console.log(data);
         this.clicked=false;
         this.notclicked=true;
-      }
-    })
+      })
+    }else{
+      this.alert("Error","Password mismatch.");
+      this.clicked=false;
+      this.notclicked=true;
+    }
     
     this.userMobile='';
     this.userName='';
