@@ -119,7 +119,7 @@
 </ion-content>
 <ion-footer no-border>
   <div class="input-wrap">
-    <textarea #messageInput placeholder="Enter your message!" [(ngModel)]="message" (keyup.enter)="sendMessage()">
+    <textarea #messageInput placeholder="Type your message here..." [(ngModel)]="message" (keyup.enter)="sendMessage()">
     </textarea>
     <button ion-button clear icon-only item-right (click)="sendMessage()">
       <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>

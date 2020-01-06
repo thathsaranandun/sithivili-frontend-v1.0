@@ -62,7 +62,7 @@ page-chat {
         min-height: 55px;
         margin-right: 40px;
         padding-top: 5px;
-        padding-left: 12px;
+        padding-left: 8px;
     
     
         .msg-content {
@@ -174,7 +174,7 @@ page-chat {
     // position: relative;
 
     color: black;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0373d8 100%);
+    background: #98cdfb;
     background-attachment: fixed;
     position: relative;
     border-radius: 12px;
@@ -182,7 +182,9 @@ page-chat {
     min-height: 55px;
     margin-left: 40px;
     padding-top: 5px;
-    // padding-right: 12px;
+    // padding-right: 20px;
+    text-align: right;
+    padding-right: 52px
   }
 
   // .message-2nd::after {
@@ -206,7 +208,7 @@ page-chat {
     right: -8px;
     height: 20px;
     width: 20px;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0373d8 100%);
+    background: #98cdfb;
     background-attachment: fixed;
     border-bottom-left-radius: 15px;
   }
