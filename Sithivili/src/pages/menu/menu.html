@@ -18,7 +18,7 @@
       <div>
         <div class="recent-bar">
           <div *ngIf="userType == client" class="recent"><strong>Recent Chats</strong></div>
-          <div class="avatar-icon">
+          <div *ngIf="userType == client" class="avatar-icon">
             <div class="vol" *ngFor="let volDetails of volsDetails">
               <div (click)="chat(volDetails.volID)">
                 <img class="avatar" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">
@@ -86,7 +86,7 @@
           <!-- institute card start -->
           <div class="common-width" style="margin-right: 20px;">
             <div class="card" style="background: khaki;">
-              <div class="">
+              <div class="" [navPush]="mappg">
                 <div class="center-align">
                   <img src="../../assets/imgs/red-cross.png">
                 </div>

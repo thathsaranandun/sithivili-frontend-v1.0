@@ -22,6 +22,9 @@ import { ClientChatsPage } from '../pages/client-chats/client-chats';
 import { EmergencyPage } from '../pages/emergency/emergency';
 import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
+import { MapPage } from '../pages/map/map';
+import { Geolocation } from '@ionic-native/geolocation';
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 
 
 var config = {
@@ -49,6 +52,7 @@ var config = {
     ClientChatsPage,
     MenuPage,
     TabsPage,
+    MapPage,
     EditProfilePage
   ],
   imports: [
@@ -57,7 +61,11 @@ var config = {
     AngularFireModule.initializeApp(config),
     HttpClientModule,
     PasswordStrengthBarModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBfcSSCT15tcAIvt3ODVtghqbLO8GCYw-M',
+      libraries: ['places']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -74,11 +82,14 @@ var config = {
     ClientChatsPage,
     MenuPage,
     TabsPage,
+    MapPage,
     EditProfilePage
     ],
   providers: [
     StatusBar,
     DataService,
+    Geolocation,
+    GoogleMapsAPIWrapper,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

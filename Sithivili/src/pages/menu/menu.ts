@@ -7,6 +7,7 @@ import { ClientsPage } from '../clients/clients';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { DataService } from '../../app/services/data.services';
 import { ChatPage } from '../chat/chat';
+import { MapPage } from '../map/map';
 
 /**
  * Generated class for the MenuPage page.
@@ -22,6 +23,7 @@ import { ChatPage } from '../chat/chat';
 })
 export class MenuPage {
   emergencypg = EmergencyPage;
+  mappg = MapPage;
   userID=null;
   username:string;
   volID:number;
