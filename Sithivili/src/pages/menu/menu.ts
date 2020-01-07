@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { EmergencyPage } from '../emergency/emergency';
 import { TabsPage } from '../tabs/tabs';
@@ -35,7 +35,7 @@ export class MenuPage {
   userType = localStorage.getItem('usertype');
   client = 'Client';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private alertCtrl:AlertController) {
     this.userID=Number(localStorage.getItem('userid'));
     console.log('Client ID(Chat history): '+this.userID);
     this.username=localStorage.getItem('username');
@@ -107,6 +107,22 @@ export class MenuPage {
       userID:this.userID,
       voluID:volID
     });  
+  }
+
+  alert(title:string,message:string){
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: message,
+      buttons: [{
+        text: 'OK'
+      }]
+
+    });
+    alert.present();
+  }
+
+  future(){
+    this.alert("Under Construction","This feature will be available after the next update.")
   }
 
 }

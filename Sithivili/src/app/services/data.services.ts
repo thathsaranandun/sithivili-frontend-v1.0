@@ -61,6 +61,10 @@ export class DataService {
     return this.http.get(this.baseurl+'api/users/volunteers/all',{headers:new HttpHeaders().set('Authorization',this.bearer)});
   }
 
+  loadLocations(){
+    return this.http.get(this.baseurl+'api/locations/location/all');
+  }
+
   getUserById(id:number){
     return this.http.get(this.baseurl+'api/users/user/'+id,{headers:new HttpHeaders().set('Authorization',this.bearer)})
   }
