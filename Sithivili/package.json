@@ -33,6 +33,7 @@
     "angular2-websocket": "^0.9.8",
     "angularfire2": "^5.2.3",
     "cordova-android": "^8.1.0",
+    "cordova-plugin-geolocation": "^4.0.2",
     "express": "^4.17.1",
     "firebase": "^5.11.1",
     "ionic-angular": "3.9.3",
@@ -41,6 +42,7 @@
     "ng-socket-io": "^0.2.4",
     "ng2-password-strength-bar": "^1.2.3",
     "ngx-socket-io": "^3.0.1",
+    "org.apache.cordova.geolocation": "^0.3.6",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.5.3",
     "socket.io": "^2.3.0",
@@ -70,7 +72,8 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-geolocation": {}
     },
     "platforms": [
       "android"

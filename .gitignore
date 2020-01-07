@@ -1,4 +1,7 @@
 Sithivili/platforms/**
+Sithivili/plugins/**
+Sithivili/.sourcemaps/**
+
 Sithivili/www/**
 /Sithivili/node_modules/**
 

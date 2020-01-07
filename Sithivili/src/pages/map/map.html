@@ -10,9 +10,14 @@
   </ion-navbar>
 </ion-header>
 
-<agm-map [latitude]="latitude" [longitude]="longitude">
+<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=11>
   <agm-marker *ngFor="let i of agmMarkers" 
       [latitude]="i.lat" [longitude]="i.lng" [iconUrl]="i.icn">
+      <agm-info-window #infoWindow>
+        <b>{{i.name}}</b>
+        <br>
+        {{i.address}}
+      </agm-info-window>
     </agm-marker>
 
 </agm-map>
