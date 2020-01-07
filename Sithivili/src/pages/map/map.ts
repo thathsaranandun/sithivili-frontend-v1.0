@@ -1,9 +1,7 @@
-import { Component, ViewChild, NgZone } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MapsAPILoader, AgmMap } from '@agm/core';
-import { GoogleMapsAPIWrapper } from '@agm/core/services';
 import { IonicPage, AlertController, NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-declare var google;
 /**
  * Generated class for the MapPage page.
  *
