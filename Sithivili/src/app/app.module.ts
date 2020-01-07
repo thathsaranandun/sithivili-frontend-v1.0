@@ -25,6 +25,8 @@ import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { MapPage } from '../pages/map/map';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
+import { LocationAccuracy } from '@ionic-native/location-accuracy';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 
 var config = {
@@ -90,6 +92,8 @@ var config = {
     DataService,
     Geolocation,
     GoogleMapsAPIWrapper,
+    LocationAccuracy,
+    Diagnostic,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
