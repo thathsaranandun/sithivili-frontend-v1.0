@@ -7,6 +7,7 @@ import { MenuPage } from '../menu/menu';
 import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TabsPage } from '../tabs/tabs';
+import { EditProfilePage } from '../edit-profile/edit-profile';
 
 /**
  * Generated class for the VolunteersPage page.
@@ -22,6 +23,7 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class VolunteersPage {
 
+  profilepg=EditProfilePage;
   username:string;
   userId:number;
   volunteers:object[]=[];
@@ -86,9 +88,9 @@ export class VolunteersPage {
 
 
 
-  logout(){
-    localStorage.clear();
-    this.navCtrl.push(MenuPage);
+  profile(){
+    localStorage.setItem('leaveToChat','true');
+    this.navCtrl.push(EditProfilePage);
   }
 
 
