@@ -46,7 +46,7 @@
 </ion-header>
 <ion-content padding class="bgimg">
   <div class="container">
-    <div *ngFor="let stackmsg of messages" >
+    <div *ngFor="let stackmsg of messages;let last = last" >
       <!-- for volunteer -->
       <div *ngIf="userType == volunteer">
         <div *ngIf="stackmsg.username != volUser" class="message left ">
@@ -112,7 +112,7 @@
           
         </div>
       </div>
-      
+      {{last ? callFunction() : ''}}  
       
     </div>
   </div>
