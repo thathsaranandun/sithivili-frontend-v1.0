@@ -126,6 +126,8 @@ page-menu {
 
         .vol {
             display: inline-table;
+            text-align: center;
+            margin: 2px;
 
             p{
                 margin: auto;
@@ -145,13 +147,14 @@ page-menu {
             overflow-x: scroll;
         }
 
-        // .recent {
-        //     padding-bottom: 10px;
-        // }
+        .recent {
+            padding-bottom: 10px;
+        }
 
         .avatar-icon {
             overflow: auto;
             white-space: nowrap;
+            line-height: 32px;
         }
     }
 
