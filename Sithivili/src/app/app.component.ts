@@ -5,13 +5,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { from } from 'rxjs';
 import { MenuPage } from '../pages/menu/menu';
 import { MapPage } from '../pages/map/map';
+import { ScalePage } from '../pages/scale/scale';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = MenuPage;
+  rootPage:any = ScalePage;
 
   
 

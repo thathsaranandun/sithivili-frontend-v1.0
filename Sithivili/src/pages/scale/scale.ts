@@ -15,11 +15,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ScalePage {
 
+  question:number=1;
+  questions = [];
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ScalePage');
+  }
+
+  next(number){
+    this.question = number + 2;
+    console.log(this.questions[number]);
+
+  }
+
+  submit(number){
+    console.log(this.questions);
+
   }
 
 }

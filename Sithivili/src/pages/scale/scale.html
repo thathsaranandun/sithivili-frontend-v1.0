@@ -15,59 +15,75 @@
     <div class="page-content">
       <div>
         <form class="scale-form">
-          <div>
+          <div *ngIf="question == 1">
             <label>1. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[0]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(0)">Next</button>
           </div>
 
-          <div>
+          <div *ngIf="question == 2">
             <label>2. What's your gender?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[1]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(1)">Next</button>
           </div>
 
-          <div>
+          <div *ngIf="question == 3">
             <label>3. What's your religion?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[2]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(2)">Next</button>
+
           </div>
 
-          <div>
+          <div *ngIf="question == 4">
             <label>4. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[3]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(3)">Next</button>
+
           </div>
 
-          <div>
+          <div *ngIf="question == 5">
             <label>5. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[4]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(4)">Next</button>
+
           </div>
 
-          <div>
+          <div *ngIf="question == 6">
             <label>6. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[5]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(5)">Next</button>
+
           </div>
 
-          <div>
+          <div *ngIf="question == 7">
             <label>7. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[6]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(6)">Next</button>
+
           </div>
 
-          <div>
+          <div *ngIf="question == 8">
             <label>8. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[7]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(7)">Next</button>
+
           </div>
 
-          <div>
+          <div *ngIf="question == 9">
             <label>9. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[8]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="next(8)">Next</button>
+
           </div>
 
-          <div>
+          <div *ngIf="question == 10">
             <label>10. What's your age?</label>
-            <ion-input type="text" name="age"></ion-input>
+            <ion-input [(ngModel)]="questions[9]" type="text" name="age"></ion-input>
+            <button ion-button primary type="button" (click)="submit(9)">Submit</button>
+
           </div>
           
-          <div class="row">
-            <ion-button>Submit</ion-button>
-          </div>
+        
         </form>
       </div>
     </div>

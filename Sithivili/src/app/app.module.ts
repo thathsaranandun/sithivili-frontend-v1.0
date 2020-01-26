@@ -27,6 +27,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
 import { Diagnostic } from '@ionic-native/diagnostic';
+import { ScalePage } from '../pages/scale/scale';
 
 
 var config = {
@@ -55,7 +56,8 @@ var config = {
     MenuPage,
     TabsPage,
     MapPage,
-    EditProfilePage
+    EditProfilePage,
+    ScalePage
   ],
   imports: [
     BrowserModule,
@@ -85,7 +87,8 @@ var config = {
     MenuPage,
     TabsPage,
     MapPage,
-    EditProfilePage
+    EditProfilePage,
+    ScalePage
     ],
   providers: [
     StatusBar,
