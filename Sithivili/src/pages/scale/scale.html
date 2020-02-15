@@ -15,72 +15,127 @@
     <div class="page-content">
       <div>
         <form class="scale-form">
+
+          <div>
+            <div style="font-size: larger; font-weight: bold;">
+              Please read the following carefully.
+            </div>
+            <br>
+            <label>
+              The first 3 questions are optional & will be used as your preference in choosing a Volunteer.
+              Please skip these 3 if you don't have a Volunteer Preference.
+            </label>
+            <div>
+              <br><label>
+                For questions 4 and above; <br>
+                Please read each statement and select 
+                a number 0, 1, 2 or 3 which indicates 
+                how much the statement applied to you over the past week. 
+                There are no right or wrong answers. Do not spend too much time on any statement.
+              </label>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="continue">Continue</button>
+            </div>
+          </div>
+
           <div *ngIf="question == 1">
             <label>1. What's your age?</label>
-            <ion-input [(ngModel)]="questions[0]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(0)">Next</button>
+            <!-- <ion-input [(ngModel)]="questions[0]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="age" value="young"> 15 - 20<br>
+              <input type="radio" name="age" value="middle"> 21 - 30<br>
+              <input type="radio" name="age" value="older"> 30 +
+            </div> 
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="skip">Skip</button>
+              <button ion-button primary type="button" (click)="next(0)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 2">
             <label>2. What's your gender?</label>
-            <ion-input [(ngModel)]="questions[1]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(1)">Next</button>
+            <!-- <ion-input [(ngModel)]="questions[1]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="gender" value="male"> Male<br>
+              <input type="radio" name="gender" value="female"> Female<br>
+              <input type="radio" name="gender" value="other"> Other
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="skip">Skip</button>
+              <button ion-button primary type="button" (click)="next(1)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 3">
             <label>3. What's your religion?</label>
             <ion-input [(ngModel)]="questions[2]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(2)">Next</button>
-
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="skip">Skip</button>
+              <button ion-button primary type="button" (click)="next(2)">Next</button>
+            </div>
           </div>
 
+          <div>
+            0 - Did not apply to me at all<br>
+            1 - Applied to me to some degree, or some of the time<br>
+            2 - Applied to me to a considerable degree, or a good part of time<br>
+            3 - Applied to me very much, or most of the time<br>
+          </div>
           <div *ngIf="question == 4">
             <label>4. What's your age?</label>
             <ion-input [(ngModel)]="questions[3]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(3)">Next</button>
-
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="next(3)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 5">
             <label>5. What's your age?</label>
             <ion-input [(ngModel)]="questions[4]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(4)">Next</button>
-
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="next(4)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 6">
             <label>6. What's your age?</label>
             <ion-input [(ngModel)]="questions[5]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(5)">Next</button>
-
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="next(5)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 7">
             <label>7. What's your age?</label>
             <ion-input [(ngModel)]="questions[6]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(6)">Next</button>
-
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="next(6)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 8">
             <label>8. What's your age?</label>
             <ion-input [(ngModel)]="questions[7]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(7)">Next</button>
-
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="next(7)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 9">
             <label>9. What's your age?</label>
             <ion-input [(ngModel)]="questions[8]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="next(8)">Next</button>
-
+            <div class="form-button">            
+              <button ion-button primary type="button" (click)="next(8)">Next</button>
+            </div>
           </div>
 
           <div *ngIf="question == 10">
             <label>10. What's your age?</label>
             <ion-input [(ngModel)]="questions[9]" type="text" name="age"></ion-input>
-            <button ion-button primary type="button" (click)="submit(9)">Submit</button>
-
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(9)">Submit</button>
+            </div>
           </div>
           
         
