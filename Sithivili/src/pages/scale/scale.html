@@ -16,7 +16,7 @@
       <div>
         <form class="scale-form">
 
-          <div>
+          <div *ngIf="question == 0">
             <div style="font-size: larger; font-weight: bold;">
               Please read the following carefully.
             </div>
@@ -35,7 +35,7 @@
               </label>
             </div>
             <div class="form-button">
-              <button ion-button primary type="button" (click)="continue">Continue</button>
+              <button ion-button primary type="button" (click)="next(0)">Continue</button>
             </div>
           </div>
 
@@ -49,7 +49,7 @@
             </div> 
             <div class="form-button">
               <button ion-button primary type="button" (click)="skip">Skip</button>
-              <button ion-button primary type="button" (click)="next(0)">Next</button>
+              <button ion-button primary type="button" (click)="next(1)">Next</button>
             </div>
           </div>
 
@@ -63,7 +63,7 @@
             </div>
             <div class="form-button">
               <button ion-button primary type="button" (click)="skip">Skip</button>
-              <button ion-button primary type="button" (click)="next(1)">Next</button>
+              <button ion-button primary type="button" (click)="next(2)">Next</button>
             </div>
           </div>
 
@@ -72,7 +72,7 @@
             <ion-input [(ngModel)]="questions[2]" type="text" name="age"></ion-input>
             <div class="form-button">
               <button ion-button primary type="button" (click)="skip">Skip</button>
-              <button ion-button primary type="button" (click)="next(2)">Next</button>
+              <button ion-button primary type="button" (click)="next(3)">Next</button>
             </div>
           </div>
 
@@ -86,7 +86,7 @@
             <label>4. What's your age?</label>
             <ion-input [(ngModel)]="questions[3]" type="text" name="age"></ion-input>
             <div class="form-button">
-              <button ion-button primary type="button" (click)="next(3)">Next</button>
+              <button ion-button primary type="button" (click)="next(4)">Next</button>
             </div>
           </div>
 
@@ -94,7 +94,7 @@
             <label>5. What's your age?</label>
             <ion-input [(ngModel)]="questions[4]" type="text" name="age"></ion-input>
             <div class="form-button">
-              <button ion-button primary type="button" (click)="next(4)">Next</button>
+              <button ion-button primary type="button" (click)="next(5)">Next</button>
             </div>
           </div>
 
@@ -102,7 +102,7 @@
             <label>6. What's your age?</label>
             <ion-input [(ngModel)]="questions[5]" type="text" name="age"></ion-input>
             <div class="form-button">
-              <button ion-button primary type="button" (click)="next(5)">Next</button>
+              <button ion-button primary type="button" (click)="next(6)">Next</button>
             </div>
           </div>
 
@@ -110,7 +110,7 @@
             <label>7. What's your age?</label>
             <ion-input [(ngModel)]="questions[6]" type="text" name="age"></ion-input>
             <div class="form-button">
-              <button ion-button primary type="button" (click)="next(6)">Next</button>
+              <button ion-button primary type="button" (click)="next(7)">Next</button>
             </div>
           </div>
 
@@ -118,7 +118,7 @@
             <label>8. What's your age?</label>
             <ion-input [(ngModel)]="questions[7]" type="text" name="age"></ion-input>
             <div class="form-button">
-              <button ion-button primary type="button" (click)="next(7)">Next</button>
+              <button ion-button primary type="button" (click)="next(8)">Next</button>
             </div>
           </div>
 
@@ -126,7 +126,7 @@
             <label>9. What's your age?</label>
             <ion-input [(ngModel)]="questions[8]" type="text" name="age"></ion-input>
             <div class="form-button">            
-              <button ion-button primary type="button" (click)="next(8)">Next</button>
+              <button ion-button primary type="button" (click)="next(9)">Next</button>
             </div>
           </div>
 
@@ -134,7 +134,7 @@
             <label>10. What's your age?</label>
             <ion-input [(ngModel)]="questions[9]" type="text" name="age"></ion-input>
             <div class="form-button">
-              <button ion-button primary type="button" (click)="submit(9)">Submit</button>
+              <button ion-button primary type="button" (click)="submit(10)">Submit</button>
             </div>
           </div>
           

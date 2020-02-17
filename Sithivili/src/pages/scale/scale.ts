@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ScalePage {
 
-  question:number=1;
+  question:number=0;
   questions = [];
 
 
@@ -27,7 +27,7 @@ export class ScalePage {
   }
 
   next(number){
-    this.question = number + 2;
+    this.question = number + 1;
     console.log(this.questions[number]);
 
   }
