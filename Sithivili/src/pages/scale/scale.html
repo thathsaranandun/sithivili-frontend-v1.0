@@ -69,72 +69,303 @@
 
           <div *ngIf="question == 3">
             <label>3. What's your religion?</label>
-            <ion-input [(ngModel)]="questions[2]" type="text" name="age"></ion-input>
+            <ion-input style="background:white;margin-top: 15px;" [(ngModel)]="questions[2]" type="text" name="age"></ion-input>
             <div class="form-button">
               <button ion-button primary type="button" (click)="skip">Skip</button>
               <button ion-button primary type="button" (click)="next(3)">Next</button>
             </div>
           </div>
 
-          <div>
-            0 - Did not apply to me at all<br>
-            1 - Applied to me to some degree, or some of the time<br>
-            2 - Applied to me to a considerable degree, or a good part of time<br>
-            3 - Applied to me very much, or most of the time<br>
-          </div>
           <div *ngIf="question == 4">
-            <label>4. What's your age?</label>
-            <ion-input [(ngModel)]="questions[3]" type="text" name="age"></ion-input>
+            <label>4. I found it hard to wind down</label>
+            <!-- <ion-input [(ngModel)]="questions[3]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
             <div class="form-button">
               <button ion-button primary type="button" (click)="next(4)">Next</button>
             </div>
           </div>
 
           <div *ngIf="question == 5">
-            <label>5. What's your age?</label>
-            <ion-input [(ngModel)]="questions[4]" type="text" name="age"></ion-input>
+            <label>5. I was aware of dryness of my mouth</label>
+            <!-- <ion-input [(ngModel)]="questions[4]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
             <div class="form-button">
               <button ion-button primary type="button" (click)="next(5)">Next</button>
             </div>
           </div>
 
           <div *ngIf="question == 6">
-            <label>6. What's your age?</label>
-            <ion-input [(ngModel)]="questions[5]" type="text" name="age"></ion-input>
+            <label>6. I couldn’t seem to experience any positive feeling at all</label>
+            <!-- <ion-input [(ngModel)]="questions[5]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
             <div class="form-button">
               <button ion-button primary type="button" (click)="next(6)">Next</button>
             </div>
           </div>
 
           <div *ngIf="question == 7">
-            <label>7. What's your age?</label>
-            <ion-input [(ngModel)]="questions[6]" type="text" name="age"></ion-input>
+            <label>7. I experienced breathing difficulty (e.g. excessively rapid breathing, breathlessness in the absence of physical exertion)</label>
+            <!-- <ion-input [(ngModel)]="questions[6]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
             <div class="form-button">
               <button ion-button primary type="button" (click)="next(7)">Next</button>
             </div>
           </div>
 
           <div *ngIf="question == 8">
-            <label>8. What's your age?</label>
-            <ion-input [(ngModel)]="questions[7]" type="text" name="age"></ion-input>
+            <label>8. I found it difficult to work up the initiative to do things</label>
+            <!-- <ion-input [(ngModel)]="questions[7]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
             <div class="form-button">
               <button ion-button primary type="button" (click)="next(8)">Next</button>
             </div>
           </div>
 
           <div *ngIf="question == 9">
-            <label>9. What's your age?</label>
-            <ion-input [(ngModel)]="questions[8]" type="text" name="age"></ion-input>
+            <label>9. I tended to over-react to situations</label>
+            <!-- <ion-input [(ngModel)]="questions[8]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
             <div class="form-button">            
               <button ion-button primary type="button" (click)="next(9)">Next</button>
             </div>
           </div>
 
           <div *ngIf="question == 10">
-            <label>10. What's your age?</label>
-            <ion-input [(ngModel)]="questions[9]" type="text" name="age"></ion-input>
+            <label>10. I experienced trembling (e.g. in the hands)</label>
+            <!-- <ion-input [(ngModel)]="questions[9]" type="text" name=""></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
             <div class="form-button">
               <button ion-button primary type="button" (click)="submit(10)">Submit</button>
+            </div>
+          </div>
+          <div *ngIf="question == 11">
+            <label>11. I felt that I was using a lot of nervous energy</label>
+            <!-- <ion-input [(ngModel)]="questions[10]" type="text" name=""></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(11)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 12">
+            <label>12. I was worried about situations in which I might panic and make a fool of myself</label>
+            <!-- <ion-input [(ngModel)]="questions[11]" type="text" name=""></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(12)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 13">
+            <label>13. I felt that I had nothing to look forward to</label>
+            <!-- <ion-input [(ngModel)]="questions[12]" type="text" name=""></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(13)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 14">
+            <label>14. I found myself getting agitated</label>
+            <!-- <ion-input [(ngModel)]="questions[13]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(14)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 15">
+            <label>15. I found it difficult to relax</label>
+            <!-- <ion-input [(ngModel)]="questions[14]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(15)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 16">
+            <label>16. I felt down-hearted and blue</label>
+            <!-- <ion-input [(ngModel)]="questions[15]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(16)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 17">
+            <label>17. I was intolerant of anything that kept me from getting on with what I was doing</label>
+            <!-- <ion-input [(ngModel)]="questions[16]" type="text" name=""></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(17)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 18">
+            <label>18. I felt I was close to panic</label>
+            <!-- <ion-input [(ngModel)]="questions[17]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(18)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 19">
+            <label>19. I was unable to become enthusiastic about anything</label>
+            <!-- <ion-input [(ngModel)]="questions[18]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(19)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 20">
+            <label>20. I felt I wasn’t worth much as a person</label>
+            <!-- <ion-input [(ngModel)]="questions[19]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(20)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 21">
+            <label>21. I felt that I was rather touchy</label>
+            <!-- <ion-input [(ngModel)]="questions[20]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(21)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 22">
+            <label>22. I was aware of the action of my heart in the absence of physical exertion (e.g. sense of heart rate increase, heart missing a beat)</label>
+            <!-- <ion-input [(ngModel)]="questions[21]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(22)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 23">
+            <label>23. I felt scared without any good reason</label>
+            <!-- <ion-input [(ngModel)]="questions[22]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(23)">Submit</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 24">
+            <label>24. I felt that life was meaningless</label>
+            <!-- <ion-input [(ngModel)]="questions[23]" type="text" name="age"></ion-input> -->
+            <div class="radio-buttons">
+              <input type="radio" name="" value="0"> Did not apply to me at all<br>
+              <input type="radio" name="" value="1"> Applied to me to some degree, or some of the time<br>
+              <input type="radio" name="" value="2"> Applied to me to a considerable degree, or a good part of time<br>
+              <input type="radio" name="" value="3"> Applied to me very much, or most of the time<br>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="submit(24)">Submit</button>
             </div>
           </div>
           
