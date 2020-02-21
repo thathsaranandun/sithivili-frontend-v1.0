@@ -47,7 +47,7 @@
             
               <ion-item>
                 <ion-label>15 - 20</ion-label>
-                <ion-radio  value="15-20"></ion-radio>
+                <ion-radio id="radio" value="15-20"></ion-radio>
               </ion-item>
             
               <ion-item>
@@ -62,7 +62,7 @@
 
               <div class="form-button">
                 <button ion-button primary type="button" (click)="skip(1)">Skip</button>
-                <button ion-button primary type="button" (click)="next(1)">Next</button>
+                <button id="next" ion-button primary type="button"  (click)="next(1)">Next</button>
               </div>
             </ion-list>
           
@@ -91,7 +91,7 @@
 
               <div class="form-button">
                 <button ion-button primary type="button" (click)="skip(2)">Skip</button>
-                <button ion-button primary type="button" (click)="next(2)">Next</button>
+                <button ion-button primary type="button"  (click)="next(2)">Next</button>
               </div>
             </ion-list>
           </div>
@@ -124,7 +124,7 @@
 
               <div class="form-button">
                 <button ion-button primary type="button" (click)="skip(3)">Skip</button>
-                <button ion-button primary type="button" (click)="next(3)">Next</button>
+                <button ion-button primary type="button"  (click)="next(3)">Next</button>
               </div>
             </ion-list>
           </div>
@@ -157,10 +157,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(4)">Skip</button>
-                <button ion-button primary type="button" (click)="next(4)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(4)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(4)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 5">
@@ -191,10 +212,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(5)">Skip</button>
-                <button ion-button primary type="button" (click)="next(5)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(5)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(5)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 6">
@@ -225,10 +267,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(6)">Skip</button>
-                <button ion-button primary type="button" (click)="next(6)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(6)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(6)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 7">
@@ -259,10 +322,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(7)">Skip</button>
-                <button ion-button primary type="button" (click)="next(7)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(7)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(7)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 8">
@@ -293,10 +377,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(8)">Skip</button>
-                <button ion-button primary type="button" (click)="next(8)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(8)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(8)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 9">
@@ -327,10 +432,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(9)">Skip</button>
-                <button ion-button primary type="button" (click)="next(9)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(9)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(9)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 10">
@@ -361,11 +487,33 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(10)">Skip</button>
-                <button ion-button primary type="button" (click)="next(10)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(10)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(10)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
+
           <div *ngIf="question == 11">
             <ion-list radio-group (ionChange)="mcqAnswer(11,$event,'s')">
               <label>
@@ -394,10 +542,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(11)">Skip</button>
-                <button ion-button primary type="button" (click)="next(11)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(11)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(11)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 12">
@@ -428,10 +597,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(12)">Skip</button>
-                <button ion-button primary type="button" (click)="next(12)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(12)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(12)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 13">
@@ -462,10 +652,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(13)">Skip</button>
-                <button ion-button primary type="button" (click)="next(13)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(13)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(13)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 14">
@@ -496,10 +707,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(14)">Skip</button>
-                <button ion-button primary type="button" (click)="next(14)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(14)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(14)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 15">
@@ -530,10 +762,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(15)">Skip</button>
-                <button ion-button primary type="button" (click)="next(15)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(15)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(15)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 16">
@@ -564,10 +817,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(16)">Skip</button>
-                <button ion-button primary type="button" (click)="next(16)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(16)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(16)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 17">
@@ -598,10 +872,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(17)">Skip</button>
-                <button ion-button primary type="button" (click)="next(17)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(17)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(17)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 18">
@@ -632,10 +927,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(18)">Skip</button>
-                <button ion-button primary type="button" (click)="next(18)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(18)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(18)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 19">
@@ -666,10 +982,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(19)">Skip</button>
-                <button ion-button primary type="button" (click)="next(19)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(19)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(19)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 20">
@@ -700,10 +1037,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(20)">Skip</button>
-                <button ion-button primary type="button" (click)="next(20)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(20)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(20)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 21">
@@ -734,10 +1092,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(21)">Skip</button>
-                <button ion-button primary type="button" (click)="next(21)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(21)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(21)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 22">
@@ -768,10 +1147,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(22)">Skip</button>
-                <button ion-button primary type="button" (click)="next(22)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(22)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(22)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 23">
@@ -802,10 +1202,31 @@
 
 
               <div class="form-button">
-                <button ion-button primary type="button" (click)="skip(23)">Skip</button>
-                <button ion-button primary type="button" (click)="next(23)">Next</button>
+                <!-- <button ion-button primary type="button" (click)="skip(23)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(23)">Next</button>
               </div>
             </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
           </div>
 
           <div *ngIf="question == 24">
@@ -839,8 +1260,28 @@
                 <button ion-button primary type="button" (click)="submit(24)">Submit</button>
               </div>
             </ion-list>
-          </div>
-          
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>          
         
         </form>
       </div>
