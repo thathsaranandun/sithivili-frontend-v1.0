@@ -116,7 +116,7 @@ export class ScalePage {
     console.log('Depression Level: '+ this.depressionStatus);
     console.log('Stress Level: '+ this.stressStatus);
     if(this.depressionStatus == 'Extremely Severe' || this.anxietyStatus == 'Extremely Severe' || this.stressStatus == 'Extremely Severe'){
-      this.alert("Idiot","Die");
+      this.alert("","By analysing the questionnaire you just completed, we recommend you to consult a professional. Please note that this is not something to be worried and this recommendation is for the betterment of you.");
     }
 
   }
@@ -156,7 +156,7 @@ export class ScalePage {
       buttons: [{
         text: 'Continue',
         handler: () => {
-          this.alertNext("HI","HI")
+          this.alertNext("","Please note that this application is to help you. Therefore, while using the application, it's upto you to decide what's good for you and we won't take any responsibility regarding the decisions you make.")
         }
       }]
 
