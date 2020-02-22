@@ -47,9 +47,7 @@ export class SignupPage {
         console.log(data);
         this.clicked=false;
         this.notclicked=true;
-        if(data.msg == 'Registration successful!'){
-          this.navCtrl.push(ScalePage);
-        }
+        
       })
     }else{
       this.alert("Error","Password mismatch.");
@@ -68,7 +66,14 @@ export class SignupPage {
     let alert = this.alertCtrl.create({
       title: title,
       subTitle: message,
-      buttons: ['OK']
+      buttons: [{
+        text: 'OK',
+        handler: () => {
+          if(message == 'Registration successful!'){
+            this.navCtrl.push(ScalePage);
+          }
+        }
+      }]
     });
     alert.present();
   }
