@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ScalePage page.
@@ -34,7 +35,7 @@ export class ScalePage {
 
 
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl:AlertController) {
   }
 
   ionViewDidLoad() {
@@ -104,6 +105,8 @@ export class ScalePage {
       }
 
       
+
+      
     }
 
     console.log('anxiety: '+ this.anxiety);
@@ -112,6 +115,9 @@ export class ScalePage {
     console.log('Anxiety Level: '+ this.anxietyStatus);
     console.log('Depression Level: '+ this.depressionStatus);
     console.log('Stress Level: '+ this.stressStatus);
+    if(this.depressionStatus == 'Extremely Severe' || this.anxietyStatus == 'Extremely Severe' || this.stressStatus == 'Extremely Severe'){
+      this.alert("Idiot","Die");
+    }
 
   }
 
@@ -141,5 +147,35 @@ export class ScalePage {
       type:type
     });
     console.log(this.answers);
+  }
+
+  alert(title:string,message:string){
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: message,
+      buttons: [{
+        text: 'Continue',
+        handler: () => {
+          this.alertNext("HI","HI")
+        }
+      }]
+
+    });
+    alert.present();
+  }
+
+  alertNext(title:string,message:string){
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: message,
+      buttons: [{
+        text: 'Continue',
+        handler: () => {
+          this.navCtrl.push(HomePage);
+        }
+      }]
+
+    });
+    alert.present();
   }
 }
