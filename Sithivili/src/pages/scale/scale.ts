@@ -156,7 +156,7 @@ export class ScalePage {
       buttons: [{
         text: 'Continue',
         handler: () => {
-          this.alertNext("","Please note that this application is to help you. Therefore, while using the application, it's upto you to decide what's good for you and we won't take any responsibility regarding the decisions you make.")
+          this.alertNext("","Please note that this application is to help you. Therefore, while using the application, it's upto you to decide what's good for you.")
         }
       }]
 
