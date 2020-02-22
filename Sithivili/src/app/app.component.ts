@@ -12,7 +12,7 @@ import { ScalePage } from '../pages/scale/scale';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ScalePage;
+  rootPage:any = MenuPage;
 
   
 

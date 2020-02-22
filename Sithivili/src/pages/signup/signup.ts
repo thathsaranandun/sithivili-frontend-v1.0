@@ -1,6 +1,7 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { DataService } from '../../app/services/data.services';
+import { ScalePage } from '../scale/scale';
 
 /**
  * Generated class for the SignupPage page.
@@ -46,6 +47,9 @@ export class SignupPage {
         console.log(data);
         this.clicked=false;
         this.notclicked=true;
+        if(data.msg == 'Registration successful!'){
+          this.navCtrl.push(ScalePage);
+        }
       })
     }else{
       this.alert("Error","Password mismatch.");
