@@ -22,6 +22,7 @@
             </div>
             <br>
             <label>
+              You will be taken through a questionnaire in the next step.<br>
               The first 3 questions are optional & will be used as your preference in choosing a Volunteer.
               Please skip these 3 if you don't have a Volunteer Preference.
             </label>
@@ -40,11 +41,11 @@
           </div>
 
           <div *ngIf="question == 1">
-            <ion-list radio-group (ionChange)="mcqAnswer(1,$event,'n')">
+            <ion-list radio-group (ionChange)="mcqAnswer(1,$event,'n')" >
               <label>
                 1. What's your age?
               </label>
-            
+            <div></div>
               <ion-item>
                 <ion-label>15 - 20</ion-label>
                 <ion-radio id="radio" value="15-20"></ion-radio>

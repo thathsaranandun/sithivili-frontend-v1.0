@@ -135,6 +135,7 @@ export class ScalePage {
 
 
   mcqAnswer(question,value,type){
+
     console.log(this.answers.length)
     for(var i=0;i<this.answers.length;i++){
       console.log('for loop' + this.answers)
@@ -142,7 +143,7 @@ export class ScalePage {
         this.answers.splice(i,1);
       }
     }
-    
+
     this.answers.push({
       number:question,
       value:value,
