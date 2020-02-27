@@ -117,6 +117,8 @@ export class ScalePage {
     console.log('Stress Level: '+ this.stressStatus);
     if(this.depressionStatus == 'Extremely Severe' || this.anxietyStatus == 'Extremely Severe' || this.stressStatus == 'Extremely Severe'){
       this.alert("","By analysing the questionnaire you just completed, we recommend you to consult a professional. Please note that this is not something to be worried and this recommendation is for the betterment of you.");
+    }else{
+      this.alertNext("Thank You For Your Support","Continue to login");
     }
 
   }
