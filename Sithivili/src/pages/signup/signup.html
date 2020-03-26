@@ -83,15 +83,15 @@
           </div>
           <div class="margin-top-middle">
             <div class="input-username">
-              <ion-input type="number" [(ngModel)]="userMobile" (ngModelChange)="change($event)" name="moblie" placeholder="Mobile Number"></ion-input>
+              <ion-input type="text" [(ngModel)]="userMobile" name="moblie" placeholder="Email"></ion-input>
               <!-- <ion-input type="email" name="email" placeholder="Email"></ion-input> -->
 
             </div>
           </div>
           <div class="margin-top-middle">
             <div class="input-password">
-              <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="userPassword"></ion-input>
-              <i><button id="passeye" style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right
+              <ion-input [type]="getType()" name="password" placeholder="Password" [(ngModel)]="userPassword"></ion-input>
+              <i><button style="font-size: 1.8rem;" ion-button clear color="dark" type="button" item-right
                 (click)="isActive = !isActive;"
                 isActive=true>
                 <ion-icon

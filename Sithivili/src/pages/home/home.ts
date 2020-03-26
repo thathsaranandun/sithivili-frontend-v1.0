@@ -21,13 +21,14 @@ export class HomePage {
   password:string='';
   userID:number;
   volunID:number;
+  verified:Boolean;
   userType:string;
   user:any;
   dbuser:string='';
   type: string = "text";
   isActive: Boolean = true; 
   signUp=SignupPage;
-  logoImg=this.dataService.logoImgURL;
+  result:any;
 
   enteredDataStatus:boolean=false;
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {
@@ -77,22 +78,28 @@ export class HomePage {
       this.notclicked=false;
       //Validate
       console.log("Validating...")
-      this.dataService.login(this.username,this.password).subscribe((data:any) => {
-        console.log("Data: "+data.dbdata);
-        this.enteredDataStatus=data.dbdata;
-        this.user=data.user;
+      this.dataService.login(this.username,this.password).subscribe((data)=> {
+      
+        this.result = data;
+
+        console.log(JSON.stringify(this.result));
+        this.enteredDataStatus=this.result.dbdata;
+        this.user=this.result.user;
 
         console.log('enteredDataStatus:'+this.enteredDataStatus)
             
         if(this.enteredDataStatus){
           console.log('User ID:'+ this.user.userid)
-          this.userType=data.userType;
+          this.userType=this.result.userType;
           console.log('UserType: '+ this.user.usertype)
           localStorage.setItem('userid', this.user.userid);
           localStorage.setItem('username', this.user.username);
           localStorage.setItem('usertype',this.user.usertype);
+          localStorage.setItem('authToken', this.result.token);
           console.log('UserType in storage:'+ localStorage.getItem('usertype'));
-          if(this.user.usertype=='Client'){
+          this.verified =  this.result.user.verified;
+          console.log('Verified?'+this.verified);
+          if(this.user.usertype=='Client' && this.verified){
             this.userID=this.user.userid;
             this.clicked=false;
             this.notclicked=true;
@@ -110,7 +117,18 @@ export class HomePage {
             });
 
           }else{
-            console.log('Invalid User Type.')
+            let alert = this.alertCtrl.create({
+              title: 'Email Verification',
+              subTitle: 'Please verify your email and continue to login',
+              buttons: [{
+                text: 'Continue',
+                handler: () => {
+                  this.clicked=false;
+                  this.notclicked=true;
+                }
+              }]
+            });
+            alert.present();
           }
     
           

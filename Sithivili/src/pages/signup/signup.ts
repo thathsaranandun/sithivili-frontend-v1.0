@@ -2,6 +2,7 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { DataService } from '../../app/services/data.services';
 import { ScalePage } from '../scale/scale';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SignupPage page.
@@ -24,6 +25,8 @@ export class SignupPage {
   userPasswordCon:string='';
   notclicked:boolean=true;
   clicked:boolean=false;
+  type: string = "text";
+  isActive: Boolean = true; 
   public barLabel: string = "Password strength:";
   public myColors = ['#DD2C00', '#FF6D00', '#FFD600', '#AEEA00', '#00C853'];
 
@@ -43,8 +46,21 @@ export class SignupPage {
     }); */
     if(this.userPassword==this.userPasswordCon){
       this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+        if(data.msg == 'Registration successful!'){
+          let alert = this.alertCtrl.create({
+            title: 'Email Verification',
+            subTitle: 'Verification Email has been sent to your mail. Please verify continue',
+            buttons: [{
+              text: 'Continue to Login',
+              handler: () => {
+                  this.navCtrl.push(HomePage);
+              }
+            }]
+          });
+          alert.present();
+        }else{
         this.alert('User Registration', data.msg);
-        console.log(data);
+        }
         this.clicked=false;
         this.notclicked=true;
         
@@ -58,6 +74,7 @@ export class SignupPage {
     this.userMobile='';
     this.userName='';
     this.userPassword='';
+    this.userPasswordCon='';
     
     
   }
@@ -83,6 +100,14 @@ export class SignupPage {
     this.cdRef.detectChanges();
     this.userMobile = value.length > 10 ? value.substring(0,10) : value;
   }
+
+  getType() {
+    return this.isActive ? 'password' : 'text';
+}
+
+setType() {
+    this.type = this.isActive ? 'password' : 'text';
+}
 
   
 

@@ -60,7 +60,6 @@ export class EditProfilePage {
   }
 
   update(){ 
-    if(this.oldpass==this.password){
       if(this.newpass==this.newpasscon){
         console.log('sending update request...')
         this.dataService.updateUser(this.userid,this.username,this.newpass).subscribe((data:any) => {
@@ -70,9 +69,6 @@ export class EditProfilePage {
         this.alert("Error","Password mismatch.");
       }
       
-    }else{
-      this.alert("Error","Incorrect Current Password.");
-    }
     this.password='';
     this.newpass='';
     this.newpasscon='';
