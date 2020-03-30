@@ -4,6 +4,7 @@ import { DataService } from '../../app/services/data.services';
 import { MenuPage } from '../menu/menu';
 import { TabsPage } from '../tabs/tabs';
 import { ClientsPage } from '../clients/clients';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the EditProfilePage page.
@@ -38,7 +39,25 @@ export class EditProfilePage {
         this.username=data.username;
         this.oldpass=data.password;
       }
-    });
+    },error => {
+      console.log(error.status)
+      if(error.status == 401){
+        let alert = this.alertCtrl.create({
+          title: 'Session Time Out',
+          subTitle: 'Your session has timed out. Please login again to continue.',
+          buttons: [{
+            text: 'Login',
+            handler: () => {
+              localStorage.clear();
+              this.navCtrl.push(HomePage);
+              
+            }
+          }]
+        });
+        alert.present();
+      }
+    }
+    );
   }
 
   ionViewDidLoad() {

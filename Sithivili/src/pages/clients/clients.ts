@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
 import { MenuPage } from '../menu/menu';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ClientsPage page.
@@ -25,7 +26,7 @@ export class ClientsPage {
   clients:number[]=[];
   clientIDs:number[]=[];
   clientsDetails:object[]=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService, public alertCtrl:AlertController) {
     localStorage.setItem('isVol','true');
     localStorage.setItem('isClient','false');
     //this.volID=this.navParams.get('volID');
@@ -55,7 +56,25 @@ export class ClientsPage {
 
       }
           
-    });
+    },error => {
+      console.log(error.status)
+      if(error.status == 401){
+        let alert = this.alertCtrl.create({
+          title: 'Session Time Out',
+          subTitle: 'Your session has timed out. Please login again to continue.',
+          buttons: [{
+            text: 'Login',
+            handler: () => {
+              localStorage.clear();
+              this.navCtrl.push(HomePage);
+              
+            }
+          }]
+        });
+        alert.present();
+      }
+    }
+    );
   }
 
   ionViewCanLeave() {

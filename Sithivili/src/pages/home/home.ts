@@ -164,6 +164,34 @@ export class HomePage {
     setType() {
         this.type = this.isActive ? 'password' : 'text';
     }
+
+    passwordReset(){
+      let alert = this.alertCtrl.create({
+        title: 'Forgot Password?',
+        subTitle: 'Please enter your email address.',
+        inputs: [
+          {
+            name: 'email',
+            placeholder: 'Email'
+          },
+        ],
+        buttons: [{
+          text: 'Reset Password',
+          handler: data => {
+            console.log(data.email)
+            this.dataService.resetPassword(data.email).subscribe((data:any) =>{
+              console.log(data)
+              if(data == false){
+                this.alert('Invalid Email','Please enter a valid email address.');
+              }else{
+                this.alert('Email Sent','Password reset email has been sent to your email address.');
+              }
+            });
+          }
+        }]
+      });
+      alert.present();
+    }
   
 
 }

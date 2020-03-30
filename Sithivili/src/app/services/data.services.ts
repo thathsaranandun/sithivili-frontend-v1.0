@@ -58,7 +58,7 @@ export class DataService {
     },{headers:new HttpHeaders().set(this.headerKey,this.bearer)})
   }
 
-  loadVolunteers(){
+  loadVolunteers():any{
     console.log()
     return this.http.get(this.baseurl+'api/users/volunteers/all',{headers:new HttpHeaders().set(this.headerKey,this.bearer).set('authorization','Bearer '+  localStorage.getItem('authToken'))});
   }
@@ -69,5 +69,11 @@ export class DataService {
 
   getUserById(id:number){
     return this.http.get(this.baseurl+'api/users/user/'+id,{headers:new HttpHeaders().set(this.headerKey,this.bearer).set('authorization','Bearer '+  localStorage.getItem('authToken'))})
+  }
+
+  //reset password
+  resetPassword(email:string){
+    return this.http.post(this.baseurl+'api/users/user/email/reset', email ,{headers:new HttpHeaders().set(this.headerKey,this.bearer)});
+
   }
 }
