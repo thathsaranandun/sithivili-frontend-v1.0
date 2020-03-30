@@ -1,0 +1,1291 @@
+<!--
+  Generated template for the ScalePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Scale</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="page-body">
+    <div class="page-content">
+      <div>
+        <form class="scale-form">
+
+          <div *ngIf="question == 0">
+            <div style="font-size: larger; font-weight: bold;">
+              Please read the following carefully.
+            </div>
+            <br>
+            <label>
+              You will be taken through a questionnaire in the next step.<br>
+              The first 3 questions are optional & will be used as your preference in choosing a Volunteer.
+              Please skip these 3 if you don't have a Volunteer Preference.
+            </label>
+            <div>
+              <br><label>
+                For questions 4 and above; <br>
+                Please read each statement and select 
+                a number 0, 1, 2 or 3 which indicates 
+                how much the statement applied to you over the past week. 
+                There are no right or wrong answers. Do not spend too much time on any statement.
+              </label>
+            </div>
+            <div class="form-button">
+              <button ion-button primary type="button" (click)="next(0)">Continue</button>
+            </div>
+          </div>
+
+          <div *ngIf="question == 1">
+            <ion-list radio-group (ionChange)="mcqAnswer(1,$event,'n')" >
+              <label>
+                1. What's your age?
+              </label>
+            <div></div>
+              <ion-item>
+                <ion-label>15 - 20</ion-label>
+                <ion-radio id="radio" value="15-20"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>21 - 30</ion-label>
+                <ion-radio  value="21-30"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>30 +</ion-label>
+                <ion-radio  value="30+"></ion-radio>
+              </ion-item>
+
+              <div class="form-button">
+                <button ion-button primary type="button" (click)="skip(1)">Skip</button>
+                <button id="next" ion-button primary type="button"  (click)="next(1)">Next</button>
+              </div>
+            </ion-list>
+          
+          </div>
+
+          <div *ngIf="question == 2">
+            <ion-list radio-group (ionChange)="mcqAnswer(2,$event,'n')">
+              <label>
+                2. What's your gender?
+              </label>
+            
+              <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio  value="Male"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio  value="Female"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>Other</ion-label>
+                <ion-radio  value="Other"></ion-radio>
+              </ion-item>
+
+              <div class="form-button">
+                <button ion-button primary type="button" (click)="skip(2)">Skip</button>
+                <button ion-button primary type="button"  (click)="next(2)">Next</button>
+              </div>
+            </ion-list>
+          </div>
+          <div *ngIf="question == 3">
+            <ion-list radio-group (ionChange)="mcqAnswer(3,$event,'n')">
+              <label>
+                3. What's your religion?
+              </label>
+            
+              <ion-item>
+                <ion-label>Buddhism</ion-label>
+                <ion-radio  value="Buddhism"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>Christianity</ion-label>
+                <ion-radio  value="Christianity"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>Islam</ion-label>
+                <ion-radio  value="Islam"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Other</ion-label>
+                <ion-radio  value="Other"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <button ion-button primary type="button" (click)="skip(3)">Skip</button>
+                <button ion-button primary type="button"  (click)="next(3)">Next</button>
+              </div>
+            </ion-list>
+          </div>
+
+          <div *ngIf="question == 4">
+            <ion-list radio-group (ionChange)="mcqAnswer(4,$event,'s')">
+              <label>
+                4. I found it hard to wind down
+              </label>
+            
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(4)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(4)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 5">
+            <ion-list radio-group (ionChange)="mcqAnswer(5,$event,'a')">
+              <label>
+                5. I was aware of dryness of my mouth
+              </label>
+            
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(5)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(5)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 6">
+            <ion-list radio-group (ionChange)="mcqAnswer(6,$event,'d')">
+              <label>
+                6. I couldn’t seem to experience any positive feeling at all
+              </label>
+            
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(6)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(6)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 7">
+            <ion-list radio-group (ionChange)="mcqAnswer(7,$event,'a')">
+              <label>
+                7. I experienced breathing difficulty (e.g. excessively rapid breathing, breathlessness in the absence of physical exertion)
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(7)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(7)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 8">
+            <ion-list radio-group (ionChange)="mcqAnswer(8,$event,'d')">
+              <label>
+                8. I found it difficult to work up the initiative to do things
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(8)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(8)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 9">
+            <ion-list radio-group (ionChange)="mcqAnswer(9,$event,'s')">
+              <label>
+                9. I tended to over-react to situations
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(9)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(9)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 10">
+            <ion-list radio-group (ionChange)="mcqAnswer(10,$event,'a')">
+              <label>
+                10. I experienced trembling (e.g. in the hands)
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(10)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(10)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 11">
+            <ion-list radio-group (ionChange)="mcqAnswer(11,$event,'s')">
+              <label>
+                11. I felt that I was using a lot of nervous energy
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(11)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(11)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 12">
+            <ion-list radio-group (ionChange)="mcqAnswer(12,$event,'a')">
+              <label>
+                12. I was worried about situations in which I might panic and make a fool of myself
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(12)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(12)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 13">
+            <ion-list radio-group (ionChange)="mcqAnswer(13,$event,'d')">
+              <label>
+                13. I felt that I had nothing to look forward to
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(13)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(13)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 14">
+            <ion-list radio-group (ionChange)="mcqAnswer(14,$event,'s')">
+              <label>
+                14. I found myself getting agitated
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(14)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(14)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 15">
+            <ion-list radio-group (ionChange)="mcqAnswer(15,$event,'s')">
+              <label>
+                15. I found it difficult to relax
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(15)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(15)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 16">
+            <ion-list radio-group (ionChange)="mcqAnswer(16,$event,'d')">
+              <label>
+                16. I felt down-hearted and blue
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(16)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(16)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 17">
+            <ion-list radio-group (ionChange)="mcqAnswer(17,$event,'s')">
+              <label>
+                17. I was intolerant of anything that kept me from getting on with what I was doing
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(17)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(17)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 18">
+            <ion-list radio-group (ionChange)="mcqAnswer(18,$event,'a')">
+              <label>
+                18. I felt I was close to panic
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(18)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(18)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 19">
+            <ion-list radio-group (ionChange)="mcqAnswer(19,$event,'d')">
+              <label>
+                19. I was unable to become enthusiastic about anything
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(19)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(19)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 20">
+            <ion-list radio-group (ionChange)="mcqAnswer(20,$event,'d')">
+              <label>
+                20. I felt I wasn’t worth much as a person
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(20)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(20)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 21">
+            <ion-list radio-group (ionChange)="mcqAnswer(21,$event,'s')">
+              <label>
+                21. I felt that I was rather touchy
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(21)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(21)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 22">
+            <ion-list radio-group (ionChange)="mcqAnswer(22,$event,'a')">
+              <label>
+                22. I was aware of the action of my heart in the absence of physical exertion (e.g. sense of heart rate increase, heart missing a beat)
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(22)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(22)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 23">
+            <ion-list radio-group (ionChange)="mcqAnswer(23,$event,'a')">
+              <label>
+                23. I felt scared without any good reason
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <!-- <button ion-button primary type="button" (click)="skip(23)">Skip</button> -->
+                <button ion-button primary type="button"  (click)="next(23)">Next</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="question == 24">
+            <ion-list radio-group (ionChange)="mcqAnswer(24,$event,'d')">
+              <label>
+                24. I felt that life was meaningless
+              </label>
+              
+              <ion-item>
+                <ion-label>0</ion-label>
+                <ion-radio  value="0"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>1</ion-label>
+                <ion-radio  value="1"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>2</ion-label>
+                <ion-radio  value="2"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>3</ion-label>
+                <ion-radio  value="3"></ion-radio>
+              </ion-item>
+
+
+              <div class="form-button">
+                <button ion-button primary type="button" (click)="submit(24)">Submit</button>
+              </div>
+            </ion-list>
+            <div>
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>0</div>
+                <div>- Did not apply to me at all</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>1</div>
+                <div>- Applied to me to some degree, or some of the time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>2</div>
+                <div>- Applied to me to a considerable degree or a good part of time</div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 5px;">
+                <div>3</div>
+                <div>- Applied to me very much or most of the time</div>
+              </div>
+            </div>
+          </div>          
+        
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

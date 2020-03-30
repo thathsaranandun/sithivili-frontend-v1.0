@@ -4,7 +4,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { DataService } from '../../app/services/data.services';
 import { ChatPage } from '../chat/chat';
 import { MenuPage } from '../menu/menu';
-import { DomSanitizer } from '@angular/platform-browser';
+import { EditProfilePage } from '../edit-profile/edit-profile';
 
 /**
  * Generated class for the ClientChatsPage page.
@@ -13,6 +13,10 @@ import { DomSanitizer } from '@angular/platform-browser';
  * Ionic pages and navigation.
  */
 
+interface volChat {
+  volDetails: object[];
+  lastMsg: string;
+}
 @IonicPage()
 @Component({
   selector: 'page-client-chats',
@@ -27,9 +31,10 @@ export class ClientChatsPage {
   volsDetails:object[]=[];
   menuPage=MenuPage;
   defaultImage= this.dataService.defaultImage;
+  volChats:volChat[]=[];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private domSanitizer: DomSanitizer) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
     this.userID=Number(localStorage.getItem('userid'));
     console.log('Client ID(Chat history): '+this.userID);
     this.username=localStorage.getItem('username');
@@ -74,9 +79,9 @@ export class ClientChatsPage {
     localStorage.setItem('leaveToChat','false');
   }
 
-  logout(){
-    localStorage.clear();
-    this.navCtrl.push(MenuPage);
+  profile(){
+    localStorage.setItem('leaveToChat','true');
+    this.navCtrl.push(EditProfilePage);
   }
 
 

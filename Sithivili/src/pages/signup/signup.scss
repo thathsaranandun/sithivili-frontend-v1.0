@@ -39,11 +39,25 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
       .signupbox{
         background-color: rgba(255, 255, 255, 0.747);
         margin-top: 25px;
-        margin-left: 10px;
-        margin-right: 10px;
+        // margin-left: 10px;
+        // margin-right: 10px;
         border-radius: 20px;
       }
 
+      .heading {
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 18px;
+        /* identical to box height, or 64% */
+
+        text-align: center;
+        letter-spacing: 1px;
+
+        color: #56CCF2;
+      }
       
 
 }

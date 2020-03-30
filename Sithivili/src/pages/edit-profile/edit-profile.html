@@ -5,9 +5,16 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>My Profile</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-title class="new-background">
+      My Profile
+    </ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="loadTabs()">
+        <ion-icon name='arrow-round-back'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
@@ -31,17 +38,17 @@
       <ion-label position="fixed">Username</ion-label>
       <ion-input type="text" [(ngModel)]="username"></ion-input>    
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label position="fixed">Current Password</ion-label>
       <ion-input type="password" [(ngModel)]="password"></ion-input> 
-    </ion-item>
+    </ion-item> -->
     <ion-item>
       <ion-label position="fixed">New Password</ion-label>
       <ion-input type="password" [(ngModel)]="newpass"></ion-input>    
     </ion-item>
     <ion-item>
       <ion-label position="fixed">Confirm Password</ion-label>
-      <ion-input type="password" [(ngModel)]="newpasscon"></ion-input>    
+      <ion-input type="password" [(ngModel)]="newpasscon" ></ion-input>    
     </ion-item>
     
     <div style="background-color: white;padding-top: 5px;padding-bottom: 10px;">

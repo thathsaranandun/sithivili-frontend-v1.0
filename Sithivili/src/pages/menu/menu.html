@@ -6,47 +6,112 @@
 -->
 <ion-header>
   <ion-navbar hideBackButton>
-    <ion-title class="new-background">Menu</ion-title>
+    <ion-title class="new-background">Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="bgimg" padding>
-  <div>
-    <table style="margin:auto;">
-      <tr>
-        <td>
-            <div class="card" (click)="login()">
-              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/chat.png">
-              <p>Chat</p>
-          </div>
-            
+<ion-content class="" padding>
+ 
+  <div class="page-body">
+    <div class="body-content">
+      <!-- recent chat start -->
+      <div>
+        <div class="recent-bar">
+          <div *ngIf="userType == client" class="recent"><strong>Recent Chats</strong></div>
+          <div *ngIf="userType == client" class="avatar-icon">
+            <div class="vol" *ngFor="let volDetails of volsDetails">
+              <div (click)="chat(volDetails.volID)">
+                <img class="avatar" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">
+              <p>{{volDetails.username}}</p>
+              </div>
               
-        </td>
-        <td>
-            <div class="card">
-                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/therapist.png">
-                <p>Doctors</p>
             </div>
-        </td>
-      </tr>
-        
-      <tr>
-        <td>
-            <div class="card" [navPush]="emergencypg">
-                <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/warning.png">
-                <p>Emergency Contact</p>
+          </div> 
+        </div>
+      </div>
+      <!-- recent chat end -->
+
+      <!-- quote card start -->
+      <div class="row">
+        <div class="quote-heading"><strong>Quote of the Day...</strong></div>
+        <div class="quote-card">
+          <p>"You are strong... Cherish your life"</p>
+        </div>
+      </div>
+      <!-- quote card end -->
+
+      <div>
+        <!-- chat card start -->
+        <div class="row">
+            <div class="parallel-card" style="background: #0cb0efb8;">
+              <div class="display-flex" (click)="login()">
+                <div>
+                  <img src="../../assets/imgs/chat.png">
+                </div>
+                <p>CHAT</p>
+              </div>
             </div>
-        </td>
-        
-        <td>
-            <div class="card">
-              <img style="width: 100px; height: 100px;margin-left: 20px;" src="../../assets/imgs/awareness.png">
-              <p>Awareness</p>
+        </div> 
+        <!-- chat card end -->
+
+        <div class="display-flex-card">
+          <!-- emergency card start -->
+          <div class="common-width" style="margin-right: 20px;">
+            <div class="card" style="background: #efdd0cc4;">
+              <div class="" [navPush]="emergencypg">
+                <div class="center-align">
+                  <img src="../../assets/imgs/warning.png">
+                </div>
+                <p>EMERGENCY <br> CONTACTS</p>
+              </div>
             </div>
-        </td>
+          </div> 
+          <!-- emergency card end -->
+
+          <!-- professional card start -->
+          <div class="common-width">
+            <div class="card" style="background: violet;">
+              <div class="" (click)="future()">
+                <div class="center-align">
+                  <img src="../../assets/imgs/therapist.png">
+                </div>
+                <p>PROFESSIONAL <br> CONTACT</p>
+              </div>
+            </div>
+          </div> 
+          <!-- professinal card end -->
+        </div>
+
+        <div class="display-flex-card">
+          <!-- institute card start -->
+          <div class="common-width" style="margin-right: 20px;">
+            <div class="card" style="background: #8ff5ff;">
+              <div class="" [navPush]="mappg">
+                <div class="center-align">
+                  <img src="../../assets/imgs/institute.png">
+                </div>
+                <p>INSTITUTES</p>
+              </div>
+            </div>
+          </div> 
+          <!-- institute card end -->
+
+          <!-- awareness card start -->
+          <div class="common-width">
+            <div class="card" style="background: #4bff4b;">
+              <div class=""  (click)="future()">
+                <div class="center-align">
+                  <img src="../../assets/imgs/awareness.png">
+                </div>
+                <p>AWARENESS</p>
+              </div>
+            </div>
+          </div> 
+          <!-- awareness card end -->
+        </div>
         
-      </tr>
-    </table>
+      </div>
+    </div>
   </div>
-          
+       
 </ion-content>

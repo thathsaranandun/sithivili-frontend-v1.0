@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { DataService } from '../../app/services/data.services';
 import { MenuPage } from '../menu/menu';
+import { TabsPage } from '../tabs/tabs';
+import { ClientsPage } from '../clients/clients';
+import { HomePage } from '../home/home';
+import 'rxjs/add/operator/map';
 
 /**
  * Generated class for the EditProfilePage page.
@@ -36,20 +40,49 @@ export class EditProfilePage {
         this.username=data.username;
         this.oldpass=data.password;
       }
-    });
+    },error => {
+      console.log(error.status)
+      if(error.status == 401){
+        let alert = this.alertCtrl.create({
+          title: 'Session Time Out',
+          subTitle: 'Your session has timed out. Please login again to continue.',
+          buttons: [{
+            text: 'Login',
+            handler: () => {
+              this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
+              localStorage.clear();
+              this.navCtrl.push(HomePage);
+              
+            }
+          }]
+        });
+        alert.present();
+      }
+    }
+    );
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditProfilePage');
+    localStorage.setItem('leaveToChat','false');
+    let elements = document.querySelectorAll(".tabbar");
+
+    if (elements != null) {
+        Object.keys(elements).map((key) => {
+            elements[key].style.display = 'none';
+        });
+    }
+
   }
 
   logout(){
+    this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
     localStorage.clear();
     this.navCtrl.push(MenuPage);
+    
   }
 
   update(){ 
-    if(this.oldpass==this.password){
       if(this.newpass==this.newpasscon){
         console.log('sending update request...')
         this.dataService.updateUser(this.userid,this.username,this.newpass).subscribe((data:any) => {
@@ -59,9 +92,6 @@ export class EditProfilePage {
         this.alert("Error","Password mismatch.");
       }
       
-    }else{
-      this.alert("Error","Incorrect Current Password.");
-    }
     this.password='';
     this.newpass='';
     this.newpasscon='';
@@ -76,5 +106,20 @@ export class EditProfilePage {
     });
     alert.present();
   }
+
+  loadTabs(){
+    if(localStorage.getItem('usertype')=='Client'){
+      this.navCtrl.push(TabsPage,{
+        username:localStorage.getItem('username'),
+        userID:localStorage.getItem('userid')
+      });
+    }else if(localStorage.getItem('usertype')=='Volunteer'){
+      this.navCtrl.push(ClientsPage,{
+        username:localStorage.getItem('username'),
+        volID:localStorage.getItem('userid')
+      });
+    }
+  }
+              
 
 }

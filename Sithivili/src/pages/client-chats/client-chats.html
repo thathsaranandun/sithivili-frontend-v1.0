@@ -8,8 +8,8 @@
   <ion-navbar>
     <ion-title class="new-background">Chat History</ion-title>
     <ion-buttons right>
-      <button ion-button icon-only (click)="logout()">
-        <ion-icon name='ios-log-out'></ion-icon>
+      <button ion-button icon-only (click)="profile()">
+        <ion-icon name='person'></ion-icon>
       </button>
     </ion-buttons>
     <ion-buttons left>
@@ -40,7 +40,7 @@
               
             </div>  
             <div class="right">
-              <div class="elem"><button ion-button icon-only (click)="chat(volDetails.volID)">&nbsp;&nbsp; Chat<ion-icon name="send"></ion-icon></button></div>
+              <div class="elem"><button class="select-button" ion-button icon-only (click)="chat(volDetails.volID)"><ion-icon name="send"></ion-icon></button></div>
               </div>
     
         </div>
