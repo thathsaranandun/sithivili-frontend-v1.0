@@ -76,4 +76,9 @@ export class DataService {
     return this.http.post(this.baseurl+'api/users/user/email/reset', email ,{headers:new HttpHeaders().set(this.headerKey,this.bearer)});
 
   }
+
+  //logout
+  logout(id:number){
+    return this.http.get(this.baseurl+'api/users/user/logout/'+ id ,{headers:new HttpHeaders().set(this.headerKey,this.bearer)});
+  }
 }

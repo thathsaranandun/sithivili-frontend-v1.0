@@ -65,6 +65,7 @@ export class ClientsPage {
           buttons: [{
             text: 'Login',
             handler: () => {
+              this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
               localStorage.clear();
               this.navCtrl.push(HomePage);
               

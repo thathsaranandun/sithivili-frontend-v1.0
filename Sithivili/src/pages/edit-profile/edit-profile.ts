@@ -5,6 +5,7 @@ import { MenuPage } from '../menu/menu';
 import { TabsPage } from '../tabs/tabs';
 import { ClientsPage } from '../clients/clients';
 import { HomePage } from '../home/home';
+import 'rxjs/add/operator/map';
 
 /**
  * Generated class for the EditProfilePage page.
@@ -48,6 +49,7 @@ export class EditProfilePage {
           buttons: [{
             text: 'Login',
             handler: () => {
+              this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
               localStorage.clear();
               this.navCtrl.push(HomePage);
               
@@ -74,8 +76,10 @@ export class EditProfilePage {
   }
 
   logout(){
+    this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
     localStorage.clear();
     this.navCtrl.push(MenuPage);
+    
   }
 
   update(){ 
