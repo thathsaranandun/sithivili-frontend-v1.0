@@ -81,4 +81,9 @@ export class DataService {
   logout(id:number){
     return this.http.get(this.baseurl+'api/users/user/logout/'+ id ,{headers:new HttpHeaders().set(this.headerKey,this.bearer)});
   }
+
+  //get quote
+  getQuote(){
+    return this.http.get(this.baseurl+'api/quotes/latest/quote/get');
+  }
 }
