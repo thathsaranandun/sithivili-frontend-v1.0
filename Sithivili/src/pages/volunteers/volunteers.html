@@ -36,10 +36,10 @@
                 <div class="username">{{volunteer.username}}</div>
                 <div class="message">Gender: {{volunteer.gender}}</div>
                 <div *ngIf="volunteer.loginFlag == true">
-                  <img style="height: 10px; width: 10px;" src="../../assets/imgs/Icon_Transparent_Green.png"/> Available
+                  <img style="height: 10px; width: 10px;" src="../../assets/imgs/online-icon.png"/> Available
                 </div>
                 <div *ngIf="volunteer.loginFlag == false">
-                  <img style="height: 10px; width: 10px;" src="../../assets/imgs/Icon_Transparent_Red.png"/> Not Available
+                  <img style="height: 10px; width: 10px;" src="../../assets/imgs/offline-icon.png"/> Not Available
                 </div>
                 <div class="fa fa-circle"></div>
             </div>
@@ -47,7 +47,7 @@
         </div>
         
       </div>  
-      <div class="right">
+      <div class="right" style="display: none;">
         <div class="elem" style="margin-top: 10px;"><button class="select-button" ion-button icon-only >&nbsp;&nbsp; <ion-icon name="send"></ion-icon></button></div>
       </div>
       
