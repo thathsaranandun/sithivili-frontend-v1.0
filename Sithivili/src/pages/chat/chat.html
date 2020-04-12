@@ -32,7 +32,7 @@
   </ion-footer>
 </ion-content> -->
 
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-title class="new-background">
       Chat
@@ -43,9 +43,16 @@
       </button>
     </ion-buttons>
   </ion-toolbar>
+  <div>
+    <div class="nav-radius">
+      
+    </div>
+    <div class="nav-curve">
+    </div>
+  </div>
 </ion-header>
 <ion-content padding class="bgimg">
-  <div class="container">
+  <div class="container" style="margin-top: 28px;">
     <div *ngFor="let stackmsg of messages;let last = last" >
       <!-- for volunteer -->
       <div *ngIf="userType == volunteer">

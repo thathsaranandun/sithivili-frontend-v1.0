@@ -1,12 +1,24 @@
 page-client-chats {
     .vol{
-        padding: 5px 10px;
+        // padding: 5px 10px;
+        // background: white;
+        // margin:5px;
+        // color: black;
+        // // border-radius: 25px;
+        // display: flex;
+        // padding-bottom: 7px;
+
+        padding: 12px 10px;
         background: white;
-        margin:5px;
+        margin: 5px;
         color: black;
-        // border-radius: 25px;
+        border-radius: 10px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         padding-bottom: 7px;
+
         .left {
             flex: 3;
           }
