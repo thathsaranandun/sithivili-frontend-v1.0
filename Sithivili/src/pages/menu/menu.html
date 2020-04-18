@@ -23,7 +23,7 @@
   <div class="page-body">
     <div class="body-content">
       <!-- recent chat start -->
-      <div>
+      <div class="recent-card">
         <div class="recent-bar">
           <div *ngIf="userType == client" class="recent"><strong>Recent Chats</strong></div>
           <div *ngIf="userType == client" class="avatar-icon">
@@ -43,7 +43,7 @@
       <div class="row">
         <div class="quote-heading"><strong>Quote of the Day...</strong></div>
         <div class="quote-card">
-          <p>"{{quote}}"<br>- {{author}}</p>
+          <p><i style="font-style: initial; font-size: 15px;">"{{quote}}"</i><br><i>-{{author}}-</i></p>
         </div>
       </div>
       <!-- quote card end -->
