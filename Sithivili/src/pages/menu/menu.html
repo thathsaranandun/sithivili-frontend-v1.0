@@ -23,7 +23,7 @@
   <div class="page-body">
     <div class="body-content">
       <!-- recent chat start -->
-      <div class="recent-card">
+      <div *ngIf="userType == client && volsDetails[0] != null" class="recent-card">
         <div class="recent-bar">
           <div *ngIf="userType == client && volsDetails[0] != null" class="recent"><strong>Recent Chats</strong></div>
           <div *ngIf="userType == client" class="avatar-icon">
@@ -56,7 +56,7 @@
                 <div>
                   <img src="../../assets/imgs/chat.png">
                 </div>
-                <p>CHAT</p>
+                <p>SPEAK TO A FRIEND</p>
               </div>
             </div>
         </div> 

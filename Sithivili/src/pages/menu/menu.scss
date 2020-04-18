@@ -99,7 +99,7 @@ page-menu {
 
     .quote-card {
         box-sizing: border-box;
-        background: white;
+        background: #deeaff;
         border-radius: 10px;
         margin: auto;
         // height: 100px;
@@ -122,18 +122,17 @@ page-menu {
 
     .recent-card{
         box-sizing: border-box;
-        background: white;
+        background: #e4fbff;
         border-radius: 10px;
         margin: auto;
+        padding: 10px;
         // height: 100px;
-        width: 80%;
-        text-align: center;
-        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
     }
 
     .recent-bar {
 
-        border-bottom: 1px groove #1111113d;
+        // border-bottom: 1px groove #1111113d;
         // padding-bottom: 10px;
         ul {
             margin-left: -46px;
