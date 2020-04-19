@@ -70,6 +70,9 @@
               <span class="triangle"></span>
               <p class="line-breaker">{{stackmsg.message}}</p>
             </div>
+            <div class = "date">
+              <p class = "msg-date">{{stackmsg.dateTime}}</p>
+            </div>
           </div>
         </div>
         <div *ngIf="stackmsg.username == volUser" class="message-2nd left ">
@@ -82,6 +85,9 @@
             <div class="msg-content-2nd">
               <span class="triangle"></span>
               <p class="line-breaker">{{stackmsg.message}}</p>
+            </div>
+            <div class = "date">
+              <p class = "msg-date">{{stackmsg.dateTime}}</p>
             </div>
           </div>
           <img class="user-img-2nd" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
@@ -103,6 +109,9 @@
               <span class="triangle"></span>
               <p class="line-breaker">{{stackmsg.message}}</p>
             </div>
+            <div class = "date">
+              <p class = "msg-date">{{stackmsg.dateTime}}</p>
+            </div>
           </div>
         </div>
         <div *ngIf="stackmsg.username != volUser" class="message-2nd left ">
@@ -115,6 +124,9 @@
             <div class="msg-content-2nd">
               <span class="triangle"></span>
               <p class="line-breaker">{{stackmsg.message}}</p>
+            </div>
+            <div class = "date">
+              <p class = "msg-date">{{stackmsg.dateTime}}</p>
             </div>
           </div>
           <img class="user-img-2nd" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
