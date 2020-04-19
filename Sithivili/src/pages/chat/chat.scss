@@ -63,14 +63,14 @@ page-chat {
         border-radius: 12px;
         margin-bottom: 6px;
         min-height: 55px;
-        margin-right: 40px;
+        // margin-right: 40px;
         padding-top: 5px;
         padding-left: 8px;
     
     
         .msg-content {
             color: #343434;
-            float: left;       
+            // float: left;       
         }
         .user-img {
             position: absolute;
@@ -170,8 +170,9 @@ page-chat {
           color: gray;
           font-size: 11px;
           text-align: right;
-      }
-  }
+        }
+      
+    }
 
   .message-2nd {
     // box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.44);
@@ -197,7 +198,7 @@ page-chat {
     border-radius: 12px;
     margin-bottom: 6px;
     min-height: 55px;
-    margin-left: 40px;
+    // margin-left: 40px;
     padding-top: 5px;
     // padding-right: 20px;
     text-align: right;
