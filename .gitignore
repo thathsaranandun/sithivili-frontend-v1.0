@@ -4,6 +4,8 @@ Sithivili/.sourcemaps/**
 
 Sithivili/www/**
 /Sithivili/node_modules/**
+/Sithivili/resources/android/**
+/Sithivili/resources/ios/**
 
 
 .npm
