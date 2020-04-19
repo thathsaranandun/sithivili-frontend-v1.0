@@ -1,11 +1,14 @@
+
 page-volunteers {
+
     .volunteer{
-        box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.6);
+        // box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.6);
+        // box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
         padding: 5px 10px;
         background: white;
         margin:5px;
         color: black;
-        border-radius: 25px;
+        border-radius: 10px;
         display: flex;
         padding-bottom: 7px;
         .left {
@@ -16,6 +19,18 @@ page-volunteers {
               align-content: center;
           }
 
+    }
+
+    div#footer div.elem:first-child{
+        flex-grow: 1;
+
+    }
+
+    .wave{
+        width: 36px;
+        height: 36px;
+        margin-top: 2px;
+        margin-left: 30px;
     }
     
     .input-wrap {
@@ -59,6 +74,11 @@ page-volunteers {
         .username{
             font-weight: bold;
         }
+    }
+
+    
+    .scroll-content{
+        margin-bottom: 58px;
     }
 
 

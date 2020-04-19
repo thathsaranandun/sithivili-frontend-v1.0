@@ -77,7 +77,7 @@ export class MapPage {
                 
               }).catch(error => 
                 {
-                  this.alert("Error",error)
+                  console.log(error);
                 }
                 );
             } else {
@@ -86,7 +86,7 @@ export class MapPage {
                   this.getUserPosition().then(a => resolve(a), e => resolve(e));
                 }
               }, error => {
-                this.alert("Error",error);
+                console.log(error);
 
                 resolve(error)
               });

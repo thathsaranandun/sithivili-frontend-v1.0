@@ -34,8 +34,15 @@ export class MenuPage {
   defaultImage= this.dataService.defaultImage;
   userType = localStorage.getItem('usertype');
   client = 'Client';
+  quote:string = "It’s okay to not be okay, but never give up on yourself.";
+  author:string = "Asad Meah";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private alertCtrl:AlertController) {
+    this.dataService.getQuote().subscribe((data:any) => {
+      this.quote = data.quote;
+      this.author = data.author;
+    })
+    
     this.userID=Number(localStorage.getItem('userid'));
     console.log('Client ID(Chat history): '+this.userID);
     this.username=localStorage.getItem('username');

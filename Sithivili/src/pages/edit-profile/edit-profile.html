@@ -4,10 +4,10 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
-    <ion-title class="new-background">
-      My Profile
+    <ion-title style="padding-right: 40px;" class="new-background">
+      Edit Profile
     </ion-title>
     <ion-buttons left>
       <button ion-button icon-only (click)="loadTabs()">
@@ -15,9 +15,16 @@
       </button>
     </ion-buttons>
   </ion-toolbar>
+  <div>
+    <div class="nav-radius">
+      
+    </div>
+    <div class="nav-curve">
+    </div>
+  </div>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="margin-top: 56px;">
 
   <!-- <img class="user-img" [src]="client.image != null  ? client.image : defaultImage" alt=""> -->
   <div text-center>
@@ -29,9 +36,9 @@
   </div>
   <div>
     <ion-item text-center>
-      <ion-label>
+      <!-- <ion-label>
         Update User Details
-      </ion-label>
+      </ion-label> -->
 
     </ion-item>
     <ion-item>
@@ -66,7 +73,8 @@
   </div>
   <div text-center>
     <button (click)="logout()" style="background-color: transparent; padding-top: 15px;" >
-      <ion-label style="font-size: 20px;float:left">Sign Out</ion-label><ion-icon name="log-out" style="font-size: 40px;float:right"></ion-icon>
+      <ion-label style="font-size: 20px;float:left; font-weight: 500; height: 22px;">Sign Out</ion-label>
+      <ion-icon name="log-out" style="font-size: 30px;float:right;padding-top: 10px;"></ion-icon>
     </button>
   </div>
 </ion-content>

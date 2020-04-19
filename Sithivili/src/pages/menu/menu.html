@@ -4,10 +4,18 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header no-border>
   <ion-navbar hideBackButton>
     <ion-title class="new-background">Home</ion-title>
   </ion-navbar>
+  
+  <div>
+    <div class="nav-radius">
+      
+    </div>
+    <div class="nav-curve">
+    </div>
+  </div>
 </ion-header>
 
 <ion-content class="" padding>
@@ -15,9 +23,9 @@
   <div class="page-body">
     <div class="body-content">
       <!-- recent chat start -->
-      <div>
+      <div *ngIf="userType == client && volsDetails[0] != null" class="recent-card">
         <div class="recent-bar">
-          <div *ngIf="userType == client" class="recent"><strong>Recent Chats</strong></div>
+          <div *ngIf="userType == client && volsDetails[0] != null" class="recent"><strong>Recent Chats</strong></div>
           <div *ngIf="userType == client" class="avatar-icon">
             <div class="vol" *ngFor="let volDetails of volsDetails">
               <div (click)="chat(volDetails.volID)">
@@ -35,7 +43,7 @@
       <div class="row">
         <div class="quote-heading"><strong>Quote of the Day...</strong></div>
         <div class="quote-card">
-          <p>"You are strong... Cherish your life"</p>
+          <p><i style="font-style: initial; font-size: 15px;">"{{quote}}"</i><br><i>-{{author}}-</i></p>
         </div>
       </div>
       <!-- quote card end -->
@@ -48,7 +56,7 @@
                 <div>
                   <img src="../../assets/imgs/chat.png">
                 </div>
-                <p>CHAT</p>
+                <p>SPEAK TO A FRIEND</p>
               </div>
             </div>
         </div> 

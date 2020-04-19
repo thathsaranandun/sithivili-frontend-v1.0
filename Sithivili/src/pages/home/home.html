@@ -1,7 +1,14 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar  >
     <ion-title class="new-background" style="padding-right: 60px">Login</ion-title>
   </ion-navbar  >
+  <div>
+    <div class="nav-radius">
+      
+    </div>
+    <div class="nav-curve">
+    </div>
+  </div>
 </ion-header>
 
 <ion-content class="" padding>
@@ -42,7 +49,7 @@
           <div class="margin-top-button">
             <button class="btn-login" type="button" (click)="loginUser()">Login</button>
             <br><br>
-            <label (click)="passwordReset()">Forgot Password? <u>Click Here</u></label>
+            <label (click)="passwordReset()">Forgot Password? <u style="color: blue;">Click Here</u></label>
           </div>
           <div class="margin-top-middle">
             <button class="btn-signup" type="button" (click)="loadSignUp()">Sign Up</button>

@@ -1,3 +1,7 @@
+ion-header::after {
+    background-image: none;
+    }
+
 page-menu {
     .lang{
         width: 45%;
@@ -95,7 +99,7 @@ page-menu {
 
     .quote-card {
         box-sizing: border-box;
-        background: white;
+        background: #deeaff;
         border-radius: 10px;
         margin: auto;
         // height: 100px;
@@ -116,9 +120,19 @@ page-menu {
         }
     }
 
+    .recent-card{
+        box-sizing: border-box;
+        background: #e4fbff;
+        border-radius: 10px;
+        margin: auto;
+        padding: 10px;
+        // height: 100px;
+        width: 100%;
+    }
+
     .recent-bar {
 
-        border-bottom: 1px groove #1111113d;
+        // border-bottom: 1px groove #1111113d;
         // padding-bottom: 10px;
         ul {
             margin-left: -46px;
@@ -149,6 +163,8 @@ page-menu {
 
         .recent {
             padding-bottom: 10px;
+            text-align: center;
+            padding-top: 5px;
         }
 
         .avatar-icon {
