@@ -90,6 +90,12 @@ page-chat {
                 font-weight: bold;
               }
             }
+            
+            .msg-date-vol{
+              color: gray;
+              font-size: 11px;
+              text-align: left;
+            }
         }
       }
 
@@ -146,7 +152,7 @@ page-chat {
         // padding-left: 60px;
         display: inline-block;
         p {
-          text-align: right;
+          text-align: justify;
           margin: 0;
         }
         .msg-info-2nd {
@@ -157,6 +163,11 @@ page-chat {
             font-weight: bold;
           }
         }
+        .msg-date{
+          color: gray;
+          font-size: 11px;
+          text-align: right;
+      }
   }
 
   .message-2nd {
@@ -225,13 +236,8 @@ page-chat {
     border-bottom-left-radius: 10px;
 }
 
-.msg-date{
-    color: gray;
-    font-size: 11px;
-}
-
 .date{
-    padding-top: 5px;
+    padding-top: 8px;
     padding-bottom: 5px;
 }
 
