@@ -67,9 +67,9 @@ export class ChatPage {
         console.log(this.messages[i].dateTime);
         let date = new Date(this.messages[i].dateTime);
         let today = new Date();
-        // if(date.getDate() == today.getDate()){
-        //   this.messages[i].dateTime = date.toLocaleTimeString("en-US", {timeZone: "Asia/Kolkata"});
-        // }
+        if(date.getDate() == today.getDate()){
+          this.messages[i].dateTime = date.toLocaleTimeString("en-US", {timeZone: "Asia/Kolkata"});
+        }
         this.stackmsgs.push(this.messages[i]);
       }
     });
