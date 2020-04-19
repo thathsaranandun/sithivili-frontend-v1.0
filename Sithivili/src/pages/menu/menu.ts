@@ -8,6 +8,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { DataService } from '../../app/services/data.services';
 import { ChatPage } from '../chat/chat';
 import { MapPage } from '../map/map';
+import { WebpagePage } from '../webpage/webpage';
 
 /**
  * Generated class for the MenuPage page.
@@ -130,6 +131,10 @@ export class MenuPage {
 
   future(){
     this.alert("Under Construction","This feature will be available after the next update.")
+  }
+
+  webpage(){
+    this.navCtrl.push(WebpagePage);  
   }
 
 }

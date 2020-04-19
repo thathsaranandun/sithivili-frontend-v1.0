@@ -28,6 +28,7 @@ import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { ScalePage } from '../pages/scale/scale';
+import { WebpagePage } from '../pages/webpage/webpage';
 
 
 var config = {
@@ -57,6 +58,7 @@ var config = {
     TabsPage,
     MapPage,
     EditProfilePage,
+    WebpagePage,
     ScalePage
   ],
   imports: [
@@ -88,6 +90,7 @@ var config = {
     TabsPage,
     MapPage,
     EditProfilePage,
+    WebpagePage,
     ScalePage
     ],
   providers: [
