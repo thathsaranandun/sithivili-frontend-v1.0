@@ -31,16 +31,15 @@
   <!-- <ion-scroll scrollY="true" style="width: 100%; height: 100%;"> -->
 
     <div class="volList" style="margin-top: 28px;">
-        <div class="vol" *ngFor="let volDetails of volsDetails"  (click)="chat(volDetails.volID)">
+        <div class="vol" *ngFor="let volChat of volChats"  (click)="chat(volChat.volDetails.volID)">
             <div class="left">
                 <div>
-                  <img class="user-img" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">
+                  <img class="user-img" [src]="volChat.volDetails.image != null  ? volChat.volDetails.image : defaultImage" alt="">
 
         
                     <div class="msg-detail">
-        
-                        <div class="message">You started a conversation with,</div>
-                        <div class="username">{{volDetails.username}}</div>
+                        <div class="username">{{volChat.volDetails.username}}</div>
+                        <div class="message">{{volChat.lastUser}}: {{volChat.lastMsg}}</div>
                     </div>
                         
                 </div>
