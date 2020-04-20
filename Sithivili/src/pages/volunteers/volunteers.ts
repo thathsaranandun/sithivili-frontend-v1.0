@@ -35,6 +35,12 @@ export class VolunteersPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase,private domSanitizer: DomSanitizer, public alertCtrl:AlertController) {
+    
+  }
+
+  ionViewDidLoad() {
+    localStorage.setItem('leaveToChat','false');
+  
     localStorage.setItem('isVol','false');
     localStorage.setItem('isClient','true');
     this.username=localStorage.getItem('username');
@@ -66,11 +72,6 @@ export class VolunteersPage {
       }
     }
     );
-  }
-
-  ionViewDidLoad() {
-    localStorage.setItem('leaveToChat','false');
-  
     console.log('ionViewDidLoad VolunteersPage');
   }
 

@@ -33,8 +33,6 @@ export class ClientChatsPage {
   menuPage=MenuPage;
   defaultImage= this.dataService.defaultImage;
   volChats:volChat[]=[];
-  lastChat:string='';
-  lastChats:string[]=[];
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
@@ -42,13 +40,7 @@ export class ClientChatsPage {
 
   }
 
-  getLastChat(volID){
-    console.log('getting last chat');
-    
 
-    
-    
-  }
 
   chat(volID:number){
     console.log('userID:'+this.userID)
@@ -81,9 +73,6 @@ export class ClientChatsPage {
         this.dataService.getUserById(this.vols[j]).subscribe((data:any) => {
           this.firebase.list('/'+this.vols[j]+'w'+this.userID, ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
             console.log(lastItems); 
-            if(lastItems[0]!=null){
-              this.lastChats.push(lastItems[0].message); 
-            }
             console.log('message '+ lastItems[0].message);
             this.volChats.push(
               {
@@ -100,7 +89,6 @@ export class ClientChatsPage {
           });
           
         })
-        this.lastChat = '';
 
       }
           
