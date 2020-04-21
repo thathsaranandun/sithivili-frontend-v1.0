@@ -27,6 +27,46 @@ export class ClientsPage {
   clientIDs:number[]=[];
   clientsDetails:object[]=[];
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService, public alertCtrl:AlertController) {
+    
+  }
+
+  ionViewCanLeave() {
+    if(localStorage.getItem('leaveToChat')=='false'){
+      console.log("ionViewEntered")
+         this.navCtrl.setRoot(MenuPage);
+         this.navCtrl.popToRoot(); 
+    }
+    
+     return true;
+  }
+
+  chat(userID:number){
+    localStorage.setItem('leaveToChat','true');
+
+    console.log('userID:'+userID)
+
+    this.navCtrl.push(ChatPage,{
+      username:this.username,
+      userID:userID,
+      voluID:this.volID
+    }); 
+    console.log('vol id pushed: '+ this.volID); 
+    console.log('user id pushed: '+userID);
+
+
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ClientsPage');
+    localStorage.setItem('leaveToChat','false');
+    let elements = document.querySelectorAll(".tabbar");
+
+    if (elements != null) {
+        Object.keys(elements).map((key) => {
+            elements[key].style.display = 'none';
+        });
+    }
+
     localStorage.setItem('isVol','true');
     localStorage.setItem('isClient','false');
     //this.volID=this.navParams.get('volID');
@@ -76,44 +116,6 @@ export class ClientsPage {
       }
     }
     );
-  }
-
-  ionViewCanLeave() {
-    if(localStorage.getItem('leaveToChat')=='false'){
-      console.log("ionViewEntered")
-         this.navCtrl.setRoot(MenuPage);
-         this.navCtrl.popToRoot(); 
-    }
-    
-     return true;
-  }
-
-  chat(userID:number){
-    localStorage.setItem('leaveToChat','true');
-
-    console.log('userID:'+userID)
-
-    this.navCtrl.push(ChatPage,{
-      username:this.username,
-      userID:userID,
-      voluID:this.volID
-    }); 
-    console.log('vol id pushed: '+ this.volID); 
-    console.log('user id pushed: '+userID);
-
-
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ClientsPage');
-    localStorage.setItem('leaveToChat','false');
-    let elements = document.querySelectorAll(".tabbar");
-
-    if (elements != null) {
-        Object.keys(elements).map((key) => {
-            elements[key].style.display = 'none';
-        });
-    }
 
   }
 
