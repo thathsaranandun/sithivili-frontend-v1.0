@@ -82,15 +82,29 @@ export class EditProfilePage {
     
   }
 
-  update(){ 
+  update(){
+    if(this.newpass == ''){
+      this.newpass = null;
+      if (this.username != ''){
+        this.dataService.updateUser(this.userid,this.username,this.newpass).subscribe((data:any) => {
+          this.alert("Success","User details updated.");          
+        });
+      }
+    }else{
+      if(this.username == ''){
+        this.username = null;
+      } 
       if(this.newpass==this.newpasscon){
         console.log('sending update request...')
+        
         this.dataService.updateUser(this.userid,this.username,this.newpass).subscribe((data:any) => {
           this.alert("Success","User details updated.");          
         });
       }else{
         this.alert("Error","Password mismatch.");
       }
+    }
+    
       
     this.password='';
     this.newpass='';

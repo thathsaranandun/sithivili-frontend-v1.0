@@ -14,8 +14,9 @@ import { EditProfilePage } from '../edit-profile/edit-profile';
  */
 
 interface volChat {
-  volDetails: object[];
+  volDetails: any;
   lastMsg: string;
+  lastUser: string;
 }
 @IonicPage()
 @Component({
@@ -35,33 +36,11 @@ export class ClientChatsPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService) {
-    this.userID=Number(localStorage.getItem('userid'));
-    console.log('Client ID(Chat history): '+this.userID);
-    this.username=localStorage.getItem('username');
-    this.firebase.list('/volunteers/client'+this.userID).valueChanges().subscribe((data:any) => {
-      console.log(data);
-      for(let i=0;i<data.length;i++){
-        this.volIDs.push(data[i].volID);
-      }
-
-      this.vols=Array.from(new Set(this.volIDs))
-      console.log('Volunteers array: ' + this.vols);
-      console.log('vols array length' + this.vols.length)
-      this.volsDetails=[];
-      for(let j=0;j<this.vols.length;j++){
-        this.dataService.getUserById(this.vols[j]).subscribe((data:any) => {
-          this.volsDetails.push({
-            username:data.username,
-            volID:data.userid,
-            image:data.image
-          });  
-        })
-
-      }
-          
-    });
+    
 
   }
+
+
 
   chat(volID:number){
     console.log('userID:'+this.userID)
@@ -77,6 +56,43 @@ export class ClientChatsPage {
 
   ionViewDidLoad() {
     localStorage.setItem('leaveToChat','false');
+    this.userID=Number(localStorage.getItem('userid'));
+    console.log('Client ID(Chat history): '+this.userID);
+    this.username=localStorage.getItem('username');
+    this.firebase.list('/volunteers/client'+this.userID).valueChanges().subscribe((data:any) => {
+      console.log(data);
+      for(let i=0;i<data.length;i++){
+        this.volIDs.push(data[i].volID);
+      }
+
+      this.vols=Array.from(new Set(this.volIDs))
+      console.log('Volunteers array: ' + this.vols);
+      console.log('vols array length' + this.vols.length)
+      this.volsDetails=[];
+      for(let j=0;j<this.vols.length;j++){
+        this.dataService.getUserById(this.vols[j]).subscribe((data:any) => {
+          this.firebase.list('/'+this.vols[j]+'w'+this.userID, ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
+            console.log(lastItems); 
+            console.log('message '+ lastItems[0].message);
+            this.volChats.push(
+              {
+                volDetails:{
+                  username:data.username,
+                  volID:data.userid,
+                  image:data.image
+                },
+                lastMsg:lastItems[0].message,
+                lastUser:lastItems[0].username
+              
+              }          
+              )
+          });
+          
+        })
+
+      }
+          
+    });
   }
 
   profile(){

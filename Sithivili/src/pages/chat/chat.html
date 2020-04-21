@@ -70,6 +70,9 @@
               <span class="triangle"></span>
               <p class="line-breaker">{{stackmsg.message}}</p>
             </div>
+            <div class = "date">
+              <p class = "msg-date-vol">{{stackmsg.dateTime}}</p>
+            </div>
           </div>
         </div>
         <div *ngIf="stackmsg.username == volUser" class="message-2nd left ">
@@ -83,6 +86,9 @@
               <span class="triangle"></span>
               <p class="line-breaker">{{stackmsg.message}}</p>
             </div>
+            <div class = "date">
+              <p class = "msg-date">{{stackmsg.dateTime}}</p>
+            </div>
           </div>
           <img class="user-img-2nd" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
           
@@ -93,7 +99,7 @@
       <div *ngIf="userType == client">
         <div *ngIf="stackmsg.username == volUser" class="message left ">
           <img class="user-img" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
-          <div class="msg-detail">
+          <div class="msg-detail" style="padding-right: 28px;">
             <div class="msg-info">
               <p>
                 {{stackmsg.username}}
@@ -103,23 +109,32 @@
               <span class="triangle"></span>
               <p class="line-breaker">{{stackmsg.message}}</p>
             </div>
-          </div>
-        </div>
-        <div *ngIf="stackmsg.username != volUser" class="message-2nd left ">
-          <div class="msg-detail-2nd">
-            <div class="msg-info-2nd">
-              <p>
-                {{stackmsg.username}}
-              </p>
-            </div>
-            <div class="msg-content-2nd">
-              <span class="triangle"></span>
-              <p class="line-breaker">{{stackmsg.message}}</p>
+            <div class = "date">
+              <p class = "msg-date-vol">{{stackmsg.dateTime}}</p>
             </div>
           </div>
-          <img class="user-img-2nd" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
-          
         </div>
+        <div  style="text-align: right;">
+          <div *ngIf="stackmsg.username != volUser" class="message-2nd left ">
+            <div class="msg-detail-2nd">
+              <div class="msg-info-2nd">
+                <p>
+                  {{stackmsg.username}}
+                </p>
+              </div>
+              <div class="msg-content-2nd">
+                <span class="triangle"></span>
+                <p class="line-breaker">{{stackmsg.message}}</p>
+              </div>
+              <div class = "date">
+                <p class = "msg-date">{{stackmsg.dateTime}}</p>
+              </div>
+            </div>
+            <img class="user-img-2nd" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
+            
+          </div>
+        </div>
+        
       </div>
       {{last ? callFunction() : ''}}  
       

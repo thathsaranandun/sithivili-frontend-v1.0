@@ -52,6 +52,9 @@ page-chat {
         // word-break: break-all;
         // position: relative;
 
+        display: inline-block;
+        min-width: 190px;
+        max-width: 300px;
         color: black;
         // background: linear-gradient(to bottom, #00D0EA 0%, #0373d8 100%);
         background-color: rgb(222, 222, 222);
@@ -60,14 +63,14 @@ page-chat {
         border-radius: 12px;
         margin-bottom: 6px;
         min-height: 55px;
-        margin-right: 40px;
+        // margin-right: 40px;
         padding-top: 5px;
         padding-left: 8px;
     
     
         .msg-content {
             color: #343434;
-            float: left;       
+            // float: left;       
         }
         .user-img {
             position: absolute;
@@ -89,6 +92,12 @@ page-chat {
                 color: rgb(128, 128, 128);
                 font-weight: bold;
               }
+            }
+            
+            .msg-date-vol{
+              color: gray;
+              font-size: 11px;
+              text-align: right;
             }
         }
       }
@@ -146,7 +155,7 @@ page-chat {
         // padding-left: 60px;
         display: inline-block;
         p {
-          text-align: right;
+          text-align: left;
           margin: 0;
         }
         .msg-info-2nd {
@@ -157,7 +166,13 @@ page-chat {
             font-weight: bold;
           }
         }
-  }
+        .msg-date{
+          color: gray;
+          font-size: 11px;
+          text-align: right;
+        }
+      
+    }
 
   .message-2nd {
     // box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.44);
@@ -173,6 +188,9 @@ page-chat {
     // padding-right: 15px;
     // position: relative;
 
+    display: inline-block;
+    min-width: 190px;
+    max-width: 300px;
     color: black;
     background: #98cdfb;
     background-attachment: fixed;
@@ -180,7 +198,7 @@ page-chat {
     border-radius: 12px;
     margin-bottom: 6px;
     min-height: 55px;
-    margin-left: 40px;
+    // margin-left: 40px;
     padding-top: 5px;
     // padding-right: 20px;
     text-align: right;
@@ -223,6 +241,11 @@ page-chat {
     height: 20px;
     background: #ffffff;
     border-bottom-left-radius: 10px;
+}
+
+.date{
+    padding-top: 8px;
+    padding-bottom: 5px;
 }
 
 }

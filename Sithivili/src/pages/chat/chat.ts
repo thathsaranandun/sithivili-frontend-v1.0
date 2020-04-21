@@ -64,20 +64,62 @@ export class ChatPage {
       var i:number;
       this.stackmsgs=[];
       for(i = this.messages.length-1;i>=0;i--){
+        console.log(this.messages[i].dateTime);
+        let date = new Date(this.messages[i].dateTime);
+        let today = new Date();
+        if(date.getDate() == today.getDate()){
+          this.messages[i].dateTime = date.toLocaleTimeString("en-US", {timeZone: "Asia/Kolkata"});
+        }
         this.stackmsgs.push(this.messages[i]);
       }
     });
 
   }
 
+  getDateTime(){
+    let d = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
+    console.log('Date Check:'+ d);
+    var date = new Date(d);
+    
+    var year = date.getFullYear();
+    var month = (date.getMonth() +1);
+    var day = date.getDate();
+    
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    
+    return this.formateTime(year, month, day, hour, minute, second);
+  }
+  
+  formateTime(year, month, day, hour, minute, second){
+    return this.makeDoubleDigit(year) + "-" + 
+           this.makeDoubleDigit(month) + "-" + 
+           this.makeDoubleDigit(day) + " " + 
+           this.makeDoubleDigit(hour) + ":" + 
+           this.makeDoubleDigit(minute) + ":" + 
+           this.makeDoubleDigit(second);
+  }
+  
+  makeDoubleDigit(x){
+    return (x < 10) ? "0" + x : x;
+  }
+
+
+
   sendMessage(){
     // this.messages.push({
     //   username:this.username,
     //   message:this.message
     // })
+    
+    let dateTime:string = this.getDateTime();
+    console.log('Date Time check '+dateTime);
+    
     this.firebase.list('/'+this.volID+'w'+this.userID).push({
       username:this.username,
-      message:this.message
+      message:this.message,
+      dateTime:dateTime
     })
 
     
