@@ -13,8 +13,8 @@ interface User {
 export class DataService {
   constructor(private http: HttpClient,private domSanitizer:DomSanitizer) {}
   // baseurl:string = "http://sithivili-sb-server.herokuapp.com/";
-  // baseurl:string = "http://localhost:8083/";
-  baseurl:string = "https://sithivili.azurewebsites.net/"
+  baseurl:string = "http://localhost:8080/";
+  // baseurl:string = "https://sithivili.azurewebsites.net/"
   bearer:string = 'Bearer sithivilisbbebt';
   headerKey:string = 'bearer';
 
@@ -45,7 +45,8 @@ export class DataService {
   }
 
   updateUser(id:number,username:string,password:string){
-    return this.http.put(this.baseurl+'api/users/user/update/'+id,{
+    return this.http.post(this.baseurl+'api/users/user/update',{
+      'userid':id,
       'username':username,
       'password':password
     },{headers:new HttpHeaders().set(this.headerKey,this.bearer).set('authorization','Bearer '+   localStorage.getItem('authToken'))})
