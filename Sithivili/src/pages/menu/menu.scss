@@ -17,25 +17,36 @@ page-menu {
     .parallel-card
     {
         // align-items: center;
-        border-radius: 15px!important;
-        width: 100%;
-        height:60px;
-        // box-shadow: 13px 13px 9px -7px rgba(61,60,56,1);
+        // border-radius: 15px!important;
+        width: 80%;
+        height: 100%;
+        // height:60px;
+        // padding-top: 5px;
+        // margin: auto;
+        // margin-top: 15px;
+
+        // min-width: 164px;
+        min-height: 110px;
+        text-align: center;
+        border-radius: 3px !important;
         padding-top: 5px;
-        // background-color: skyblue!important;
-        // margin-right: 15px;
-        // margin-left: 15px;
         margin: auto;
         margin-top: 15px;
-        // border-style: inset;
-        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
         p{
+            // margin: auto;
+            // font-weight: bold;
+            // width: 80%;
+            // text-align: center;
+            // padding-right: 50px;
+            padding-top: 10px;
+            font-size: 12px;
             margin: auto;
             font-weight: bold;
             width: 80%;
             text-align: center;
-            padding-right: 50px;
         }
 
         img {
@@ -58,7 +69,7 @@ page-menu {
         border-radius: 15px!important;
         padding-top: 5px;
         margin-top: 30px;
-        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        // box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         width: 100%;
         margin: auto;
         height: 130px;
@@ -90,7 +101,7 @@ page-menu {
     }
 
     .row{
-        padding-top: 20px;
+        width: 100%;
     }
 
     p{
@@ -99,7 +110,7 @@ page-menu {
 
     .quote-card {
         box-sizing: border-box;
-        background: #deeaff;
+        background: white;
         border-radius: 10px;
         margin: auto;
         // height: 100px;
@@ -113,16 +124,18 @@ page-menu {
 
         p{
             text-align: center;
-            padding: 20px;
+            // padding: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
             font-style: oblique;
             font-family: auto;
-            margin-top: 24px;
+            // margin-top: 24px;
         }
     }
 
     .recent-card{
         box-sizing: border-box;
-        background: #e4fbff;
+        // background: #e4fbff;
         border-radius: 10px;
         margin: auto;
         padding: 10px;
@@ -183,6 +196,17 @@ page-menu {
         width: 100%;
         text-align: center;
         margin-bottom: 5px;
+    }
+
+    td{
+        min-width: 170px;
+        min-height: 170px;
+    }
+
+    .user-status{
+        position: absolute;
+                right: 18px;
+                bottom: 28px;
     }
 
 }
