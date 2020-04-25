@@ -19,6 +19,11 @@ interface clientChat {
   lastUser: string;
 }
 
+interface clientDetails {
+  username:string,
+  clientID:number
+}
+
 @IonicPage()
 @Component({
   selector: 'page-clients',
@@ -29,10 +34,11 @@ export class ClientsPage {
   menuPage=MenuPage;
   volID:number;
   username:string;
-  clients:number[]=[];
+  // clients:number[]=[];
   clientIDs:number[]=[];
-  clientsDetails:object[]=[];
+  clientsDetails:clientDetails[]=[];
   clientChats:clientChat[]=[];
+  clientDates:Date[]=[];
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService, public alertCtrl:AlertController) {
     
   }
@@ -82,37 +88,44 @@ export class ClientsPage {
 
     
     console.log(this.volID);
-    this.firebase.list('/clients/vol'+this.volID, ref => ref.limitToLast(100)).valueChanges().subscribe((lastItems:any) =>{
-      console.log('Clients :'+lastItems);
-      for(let i=0;i<lastItems.length;i++){
-        console.log(lastItems[i].clientID);
-        this.clientIDs.push(lastItems[i].clientID);
+    this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe((data:Array<{clientID: number, dateTime: Date}>) =>{
+      data.sort((a, b) => a.dateTime <= b.dateTime ? -1 : 1)
+      console.log('Clients :'+data);
+      for(let i=0;i<data.length;i++){
+        console.log(data[i].clientID);
+        this.clientIDs.push(data[i].clientID);
       }
-      this.clients=Array.from(new Set(this.clientIDs))
-      console.log('Client IDS: '+this.clients);
-      for(let j=0;j<this.clients.length;j++){
-        this.dataService.getUserById(this.clients[j]).subscribe((data:any) => {
-          this.firebase.list('/'+this.volID+'w'+this.clients[j], ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
-            console.log(lastItems);
-            if(lastItems[0]!=null) {
-              this.clientChats.push(
-                {
-                  clientDetails:{
-                    username:data.username,
-                    clientID:data.userid,
-                  },
-                  lastMsg:lastItems[0].message,
-                  lastUser:lastItems[0].username
-                
-                }          
-                )
-            }
-            
-          });
-          console.log('client details: '+this.clientsDetails)
-  
+      // this.clients=Array.from(new Set(this.clientIDs))
+      console.log('Client IDS: '+this.clientIDs);
+      for(let j=0;j<this.clientIDs.length;j++){
+        this.dataService.getUserById(this.clientIDs[j]).subscribe((data:any) => {
+          console.log('retrieved chat username for client id '+this.clientIDs[j] + ' as : ' +data.username)
+          this.clientsDetails[j] = {username:data.username,clientID:data.userid}
         })
+        console.log('Client details : ' +this.clientsDetails)
+        
 
+      }
+
+      for(let j = this.clientIDs.length -1 ;j>-1;j--){
+        console.log(this.clientIDs[j])
+        this.firebase.list('/'+this.volID+'w'+this.clientIDs[j], ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
+          console.log(lastItems);
+          if(lastItems[0]!=null) {
+            this.clientChats.push(
+              {
+                clientDetails:{
+                  username:this.clientsDetails[j],
+                  clientID:this.clientsDetails[j]
+                },
+                lastMsg:lastItems[0].message,
+                lastUser:lastItems[0].username
+              
+              }          
+              )
+          }
+          
+        });  
       }
           
     },error => {
