@@ -72,20 +72,22 @@ export class ClientChatsPage {
       for(let j=0;j<this.vols.length;j++){
         this.dataService.getUserById(this.vols[j]).subscribe((data:any) => {
           this.firebase.list('/'+this.vols[j]+'w'+this.userID, ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
-            console.log(lastItems); 
-            console.log('message '+ lastItems[0].message);
-            this.volChats.push(
-              {
-                volDetails:{
-                  username:data.username,
-                  volID:data.userid,
-                  image:data.image
-                },
-                lastMsg:lastItems[0].message,
-                lastUser:lastItems[0].username
-              
-              }          
-              )
+            console.log(lastItems);
+            if(lastItems[0]!=null) {
+              this.volChats.push(
+                {
+                  volDetails:{
+                    username:data.username,
+                    volID:data.userid,
+                    image:data.image
+                  },
+                  lastMsg:lastItems[0].message,
+                  lastUser:lastItems[0].username
+                
+                }          
+                )
+            }
+            
           });
           
         })
