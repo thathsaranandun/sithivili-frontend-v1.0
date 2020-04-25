@@ -57,10 +57,11 @@
   <div class="container" style="margin-top: 28px;">
     <div *ngFor="let stackmsg of messages;let last = last" >
       <!-- for volunteer -->
+      <!-- receiver -->
       <div *ngIf="userType == volunteer">
         <div *ngIf="stackmsg.username != volUser" class="message left ">
           <img class="user-img" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
-          <div class="msg-detail">
+          <div class="msg-detail" style="padding-right: 28px;">
             <div class="msg-info">
               <p>
                 {{stackmsg.username}}
@@ -75,27 +76,33 @@
             </div>
           </div>
         </div>
-        <div *ngIf="stackmsg.username == volUser" class="message-2nd left ">
-          <div class="msg-detail-2nd">
-            <div class="msg-info-2nd">
-              <p>
-                {{stackmsg.username}}
-              </p>
+
+        <!-- sender -->
+        <div style="text-align: right;">
+          <div *ngIf="stackmsg.username == volUser" class="message-2nd left ">
+            <div class="msg-detail-2nd">
+              <div class="msg-info-2nd">
+                <p>
+                  {{stackmsg.username}}
+                </p>
+              </div>
+              <div class="msg-content-2nd">
+                <span class="triangle"></span>
+                <p class="line-breaker">{{stackmsg.message}}</p>
+              </div>
+              <div class = "date">
+                <p class = "msg-date">{{stackmsg.dateTime}}</p>
+              </div>
             </div>
-            <div class="msg-content-2nd">
-              <span class="triangle"></span>
-              <p class="line-breaker">{{stackmsg.message}}</p>
-            </div>
-            <div class = "date">
-              <p class = "msg-date">{{stackmsg.dateTime}}</p>
-            </div>
+            <img class="user-img-2nd" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
+            
           </div>
-          <img class="user-img-2nd" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
-          
         </div>
+        
       </div>
 
-      <!-- for client -->
+      <!-- for user -->
+      <!-- receiver -->
       <div *ngIf="userType == client">
         <div *ngIf="stackmsg.username == volUser" class="message left ">
           <img class="user-img" [src]="stackmsg.username != volUser  ? userImgURL : volImgURL" alt="">
@@ -114,6 +121,8 @@
             </div>
           </div>
         </div>
+
+        <!-- sender -->
         <div  style="text-align: right;">
           <div *ngIf="stackmsg.username != volUser" class="message-2nd left ">
             <div class="msg-detail-2nd">

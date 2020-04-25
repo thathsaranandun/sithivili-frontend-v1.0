@@ -6,7 +6,7 @@
 -->
 <ion-header no-border>
   <ion-navbar hideBackButton >
-    <ion-title class="new-background">Clients</ion-title>
+    <ion-title class="new-background">Choose Your Friend</ion-title>
     <ion-buttons right>
       <button ion-button icon-only (click)="logout()">
         <ion-icon name='ios-log-out'></ion-icon>
@@ -31,7 +31,7 @@
   <!-- <ion-scroll scrollY="true" style="width: 100%; height: 100%;"> -->
 
     <div class="clientList">
-        <div class="client" *ngFor="let clientDetails of clientsDetails">
+        <div class="client" *ngFor="let clientDetails of clientsDetails" (click)="chat(clientDetails.clientID)">
             <div class="left">
                 <div>
                     <img class="user-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3
@@ -58,8 +58,9 @@
               
             </div>  
             <div class="right">
-              <div class="elem"><button class="select-button" ion-button icon-only (click)="chat(clientDetails.clientID)"><ion-icon name="send"></ion-icon></button></div>
-              </div>
+              <!-- <div class="elem"><button class="select-button" ion-button icon-only (click)="chat(clientDetails.clientID)"><ion-icon name="send"></ion-icon></button></div> -->
+              <div class ="elem" style="margin-top: 10px;"><img class="wave" src = "../../assets/imgs/hand_wave.png"/></div>
+            </div>
     
         </div>
     </div>
