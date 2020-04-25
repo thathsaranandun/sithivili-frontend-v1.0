@@ -135,7 +135,7 @@ page-menu {
 
     .recent-card{
         box-sizing: border-box;
-        background: #e4fbff;
+        // background: #e4fbff;
         border-radius: 10px;
         margin: auto;
         padding: 10px;
@@ -201,6 +201,12 @@ page-menu {
     td{
         min-width: 170px;
         min-height: 170px;
+    }
+
+    .user-status{
+        position: absolute;
+                right: 18px;
+                bottom: 28px;
     }
 
 }

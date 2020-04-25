@@ -42,11 +42,18 @@
           <div class="recent-bar">
             <div *ngIf="userType == client && volsDetails[0] != null" class="recent"><strong>Recent Chats</strong></div>
             <div *ngIf="userType == client" class="avatar-icon">
-              <div class="vol" *ngFor="let volDetails of volsDetails">
+              <div class="vol" style="position: relative;" *ngFor="let volDetails of volsDetails">
                 <div (click)="chat(volDetails.volID)">
                   <img class="avatar" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">
                 <p>{{volDetails.username}}</p>
                 </div>
+                
+                <div class="user-status">
+                  <img style="height: 12px; width: 12px;" src="../../assets/imgs/online-icon.png"/>
+                </div>
+                <!-- <div class="user-status">
+                  <img style="height: 12px; width: 12px;" src="../../assets/imgs/offline-icon.png"/>
+                </div> -->
                 
               </div>
             </div> 
