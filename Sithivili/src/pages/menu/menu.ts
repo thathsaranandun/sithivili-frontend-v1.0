@@ -62,7 +62,8 @@ export class MenuPage {
           this.volsDetails.push({
             username:data.username,
             volID:data.userid,
-            image:data.image
+            image:data.image,
+            loginFlag:data.loginFlag
           });  
         })
 

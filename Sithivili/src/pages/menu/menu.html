@@ -47,7 +47,7 @@
                 <p>{{volDetails.username}}</p>
                 </div>
                 
-                <div class="user-status">
+                <div class="user-status" *ngIf="volDetails.loginFlag == true">
                   <img style="height: 12px; width: 12px;" src="../../assets/imgs/online-icon.png"/>
                 </div>
                 <!-- <div class="user-status">
