@@ -82,8 +82,10 @@ export class VolunteersPage {
       clientID:this.userId,
     })
 
+    let dateTime:string = this.getDateTime();
     this.firebase.list('/volunteers/client'+this.userId).push({
       volID:voluID,
+      dateTime:dateTime
     })
 
     this.navCtrl.push(ChatPage,{
@@ -112,6 +114,36 @@ export class VolunteersPage {
   profile(){
     localStorage.setItem('leaveToChat','true');
     this.navCtrl.push(EditProfilePage);
+  }
+
+
+  getDateTime(){
+    let d = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
+    console.log('Date Check:'+ d);
+    var date = new Date(d);
+    
+    var year = date.getFullYear();
+    var month = (date.getMonth() +1);
+    var day = date.getDate();
+    
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    
+    return this.formateTime(year, month, day, hour, minute, second);
+  }
+  
+  formateTime(year, month, day, hour, minute, second){
+    return this.makeDoubleDigit(year) + "-" + 
+           this.makeDoubleDigit(month) + "-" + 
+           this.makeDoubleDigit(day) + " " + 
+           this.makeDoubleDigit(hour) + ":" + 
+           this.makeDoubleDigit(minute) + ":" + 
+           this.makeDoubleDigit(second);
+  }
+  
+  makeDoubleDigit(x){
+    return (x < 10) ? "0" + x : x;
   }
 
 

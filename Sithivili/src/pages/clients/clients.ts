@@ -13,6 +13,12 @@ import { HomePage } from '../home/home';
  * Ionic pages and navigation.
  */
 
+interface clientChat {
+  clientDetails: any;
+  lastMsg: string;
+  lastUser: string;
+}
+
 @IonicPage()
 @Component({
   selector: 'page-clients',
@@ -26,6 +32,7 @@ export class ClientsPage {
   clients:number[]=[];
   clientIDs:number[]=[];
   clientsDetails:object[]=[];
+  clientChats:clientChat[]=[];
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService, public alertCtrl:AlertController) {
     
   }
@@ -75,20 +82,32 @@ export class ClientsPage {
 
     
     console.log(this.volID);
-    this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe((data:any) => {
-      console.log(data);
-      for(let i=0;i<data.length;i++){
-        console.log(data[i].clientID);
-        this.clientIDs.push(data[i].clientID);
+    this.firebase.list('/clients/vol'+this.volID, ref => ref.limitToLast(100)).valueChanges().subscribe((lastItems:any) =>{
+      console.log('Clients :'+lastItems);
+      for(let i=0;i<lastItems.length;i++){
+        console.log(lastItems[i].clientID);
+        this.clientIDs.push(lastItems[i].clientID);
       }
       this.clients=Array.from(new Set(this.clientIDs))
-      console.log('Client: '+this.clients);
+      console.log('Client IDS: '+this.clients);
       for(let j=0;j<this.clients.length;j++){
         this.dataService.getUserById(this.clients[j]).subscribe((data:any) => {
-          console.log(data);
-          this.clientsDetails.push({
-            username:data.username,
-            clientID:data.userid
+          this.firebase.list('/'+this.volID+'w'+this.clients[j], ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
+            console.log(lastItems);
+            if(lastItems[0]!=null) {
+              this.clientChats.push(
+                {
+                  clientDetails:{
+                    username:data.username,
+                    clientID:data.userid,
+                  },
+                  lastMsg:lastItems[0].message,
+                  lastUser:lastItems[0].username
+                
+                }          
+                )
+            }
+            
           });
           console.log('client details: '+this.clientsDetails)
   

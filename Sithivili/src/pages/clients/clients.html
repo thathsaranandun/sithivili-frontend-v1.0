@@ -31,7 +31,7 @@
   <!-- <ion-scroll scrollY="true" style="width: 100%; height: 100%;"> -->
 
     <div class="clientList">
-        <div class="client" *ngFor="let clientDetails of clientsDetails" (click)="chat(clientDetails.clientID)">
+        <div class="client" *ngFor="let clientChat of clientChats" (click)="chat(clientChat.clientDetails.clientID)">
             <div class="left">
                 <div>
                     <img class="user-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3
@@ -50,8 +50,8 @@
                     NSwxMywyMy41UzcuODg2OTAxOSwyMi40ODU1MzQ3LDYuMDMwNzYxNywyMC44MzE5NzAyeiIgZmlsbD0iIzFEMUQxQiIvPjwvc3ZnPg==" alt="">
         
                     <div class="msg-detail">
-                        <div class="username">{{clientDetails.username}}</div>
-                        <div class="message">messaged you.</div>
+                        <div class="username">{{clientChat.clientDetails.username}}</div>
+                        <div class="message"><b>{{clientChat.lastUser}}</b>: {{clientChat.lastMsg}}</div>
                     </div>
                         
                 </div>
