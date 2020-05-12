@@ -31,9 +31,9 @@ page-clients {
 
     }
 
-    .message{
-        font-size: 80%;
-    }
+    // .message{
+    //     font-size: 80%;
+    // }
 
     
     .user-img {
@@ -83,6 +83,13 @@ page-clients {
 
       .username{
           font-weight: bold;
+      }
+
+      .message{
+        white-space: nowrap; 
+        width: 150px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
       }
   }
     .scroll-content{
