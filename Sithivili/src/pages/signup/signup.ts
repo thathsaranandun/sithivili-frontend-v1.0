@@ -49,7 +49,7 @@ export class SignupPage {
         if(data.msg == 'Registration successful!'){
           let alert = this.alertCtrl.create({
             title: 'Email Verification',
-            subTitle: 'Verification Email has been sent to your mail. Please verify continue',
+            subTitle: 'Verification Email has been sent to your mail. Please verify to continue',
             buttons: [{
               text: 'Continue to Login',
               handler: () => {
