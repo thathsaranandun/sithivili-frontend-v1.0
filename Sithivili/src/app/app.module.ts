@@ -29,7 +29,8 @@ import { LocationAccuracy } from '@ionic-native/location-accuracy';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { ScalePage } from '../pages/scale/scale';
 import { WebpagePage } from '../pages/webpage/webpage';
-
+// FCM
+import { FCM } from '@ionic-native/fcm/ngx';
 
 var config = {
   apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",
@@ -101,6 +102,7 @@ var config = {
     LocationAccuracy,
     Diagnostic,
     SplashScreen,
+    FCM,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

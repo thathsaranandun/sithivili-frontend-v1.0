@@ -13,8 +13,8 @@ interface User {
 export class DataService {
   constructor(private http: HttpClient,private domSanitizer:DomSanitizer) {}
   // baseurl:string = "http://sithivili-sb-server.herokuapp.com/";
-  // baseurl:string = "http://localhost:8080/";
-  baseurl:string = "https://sithivili.azurewebsites.net/"
+  baseurl:string = "http://localhost:8080/";
+  // baseurl:string = "https://sithivili.azurewebsites.net/"
   bearer:string = 'Bearer sithivilisbbebt';
   headerKey:string = 'bearer';
 
@@ -86,5 +86,12 @@ export class DataService {
   //get quote
   getQuote(){
     return this.http.get(this.baseurl+'api/quotes/latest/quote/get');
+  }
+
+  updateFCM(userid:number,fcmtoken:string){
+    return this.http.post(this.baseurl+'api/users/user/fcm/update',{
+      'id':userid,
+      'fcmToken':fcmtoken
+    },{headers:new HttpHeaders().set(this.headerKey,this.bearer)})
   }
 }
