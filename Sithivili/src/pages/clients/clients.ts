@@ -89,10 +89,10 @@ export class ClientsPage {
     
     console.log(this.volID);
     this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe((data:Array<{clientID: number, dateTime: Date}>) =>{
+      console.log('no. of clients:'+data.length)
       data.sort((a, b) => a.dateTime <= b.dateTime ? -1 : 1)
-      console.log('Clients :'+data);
       for(let i=0;i<data.length;i++){
-        console.log(data[i].clientID);
+        console.log('Client '+i+ data[i].clientID);
         this.clientIDs.push(data[i].clientID);
       }
       // this.clients=Array.from(new Set(this.clientIDs))
@@ -115,8 +115,8 @@ export class ClientsPage {
             this.clientChats.push(
               {
                 clientDetails:{
-                  username:this.clientsDetails[j],
-                  clientID:this.clientsDetails[j]
+                  username:this.clientsDetails[j].username,
+                  clientID:this.clientsDetails[j].clientID
                 },
                 lastMsg:lastItems[0].message,
                 lastUser:lastItems[0].username

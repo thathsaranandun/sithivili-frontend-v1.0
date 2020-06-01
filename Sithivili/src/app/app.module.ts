@@ -30,7 +30,8 @@ import { Diagnostic } from '@ionic-native/diagnostic';
 import { ScalePage } from '../pages/scale/scale';
 import { WebpagePage } from '../pages/webpage/webpage';
 // FCM
-import { FCM } from '@ionic-native/fcm/ngx';
+import { FCM } from '@ionic-native/fcm';
+
 
 var config = {
   apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",

@@ -43,7 +43,6 @@ export class MenuPage {
       this.quote = data.quote;
       this.author = data.author;
     })
-    
     this.userID=Number(localStorage.getItem('userid'));
     console.log('Client ID(Chat history): '+this.userID);
     this.username=localStorage.getItem('username');

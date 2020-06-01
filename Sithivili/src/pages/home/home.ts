@@ -5,6 +5,7 @@ import {SignupPage} from '../signup/signup';
 //import { VolunteersPage } from '../volunteers/volunteers';
 import { ClientsPage } from '../clients/clients';
 import { TabsPage } from '../tabs/tabs';
+import { FCM } from '@ionic-native/fcm';
 
 
 @Component({
@@ -31,7 +32,7 @@ export class HomePage {
   result:any;
 
   enteredDataStatus:boolean=false;
-  constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService) {
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService,private fcm:FCM) {
     
 
   }
@@ -99,6 +100,15 @@ export class HomePage {
           console.log('UserType in storage:'+ localStorage.getItem('usertype'));
           this.verified =  this.result.user.verified;
           console.log('Verified?'+this.verified);
+          this.fcm.getToken().then(token => {
+            console.log(Number(localStorage.getItem('userid')));
+            console.log(token)
+            this.dataService.updateFCM(Number(localStorage.getItem('userid')),token).subscribe((data:any) => {
+              console.log(data);
+            })
+          }).catch((function(err){
+            alert(err)
+          }));
           if(this.user.usertype=='Client' && this.verified){
             this.userID=this.user.userid;
             this.clicked=false;

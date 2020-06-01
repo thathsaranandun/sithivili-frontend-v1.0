@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "574303747081",
+    "firebase_url": "https://sithivili-firebase.firebaseio.com",
+    "project_id": "sithivili-firebase",
+    "storage_bucket": "sithivili-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574303747081:android:1670c1f609148854260cd8",
+        "android_client_info": {
+          "package_name": "com.skepseis.sithivili"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574303747081-lmbn9eosdqn1f8bjvqeb31d0vdurknkb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKeU3udKDEehGmg7BhYJh4SQPrDpGiMKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574303747081-lmbn9eosdqn1f8bjvqeb31d0vdurknkb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,8 +13,8 @@ interface User {
 export class DataService {
   constructor(private http: HttpClient,private domSanitizer:DomSanitizer) {}
   // baseurl:string = "http://sithivili-sb-server.herokuapp.com/";
-  baseurl:string = "http://localhost:8080/";
-  // baseurl:string = "https://sithivili.azurewebsites.net/"
+  // baseurl:string = "http://localhost:8080/";
+  baseurl:string = "https://sithivili.azurewebsites.net/"
   bearer:string = 'Bearer sithivilisbbebt';
   headerKey:string = 'bearer';
 
@@ -80,6 +80,9 @@ export class DataService {
 
   //logout
   logout(id:number){
+    this.updateFCM(Number(localStorage.getItem('userid')),null).subscribe((data:any) => {
+      console.log(data);
+    })
     return this.http.get(this.baseurl+'api/users/user/logout/'+ id ,{headers:new HttpHeaders().set(this.headerKey,this.bearer)});
   }
 
@@ -92,6 +95,16 @@ export class DataService {
     return this.http.post(this.baseurl+'api/users/user/fcm/update',{
       'id':userid,
       'fcmToken':fcmtoken
-    },{headers:new HttpHeaders().set(this.headerKey,this.bearer)})
+    },{headers:new HttpHeaders().set(this.headerKey,this.bearer).set('authorization','Bearer '+  localStorage.getItem('authToken'))})
+  }
+
+  sendMessageNotification(clientId:number,volunteerId:number,from:string,toUser:number,message:string){
+    return this.http.post(this.baseurl+'api/users/user/chat/notify',{
+      'toUser':toUser,
+      'from':from,
+      'message':message,
+      'clientId':clientId,
+      'volunteerId':volunteerId
+    },{headers:new HttpHeaders().set(this.headerKey,this.bearer).set('authorization','Bearer '+  localStorage.getItem('authToken'))})
   }
 }

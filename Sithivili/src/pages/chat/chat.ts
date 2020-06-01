@@ -121,6 +121,16 @@ export class ChatPage {
       message:this.message,
       dateTime:dateTime
     })
+    var toUser:number;
+    if(Number(localStorage.getItem('userid')) == this.userID){
+      toUser = this.volID;
+    }else{
+      toUser = this.userID;
+    }
+    console.log('sending notification...')
+    this.dataService.sendMessageNotification(this.userID,this.volID,this.username,toUser,this.message).subscribe(data => {
+      console.log(data);
+    });;
 
     
 
