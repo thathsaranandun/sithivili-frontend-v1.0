@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, NavController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { from } from 'rxjs';
@@ -8,13 +8,14 @@ import { MapPage } from '../pages/map/map';
 import { ScalePage } from '../pages/scale/scale';
 import { FCM } from '@ionic-native/fcm';
 import { DataService } from './services/data.services';
+import { ChatPage } from '../pages/chat/chat';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage:any = MenuPage;
-
+  @ViewChild(Nav) nav: Nav;
   
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private fcm: FCM,private dataService:DataService) {
@@ -22,6 +23,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
+      
       // splashScreen.hide();
       if(platform.is('android')) {
         this.initializeApp();
@@ -47,11 +49,22 @@ export class MyApp {
     }));
 
     // ionic push notification example
+    var self=this
     this.fcm.onNotification().subscribe(data => {
       console.log(data);
+      console.log(data.clientID)
+      console.log(data.volunteerID)
       if (data.wasTapped) {
+        self.nav.push(ChatPage,{
+          username:'testing!!!',
+          userID:data.clientID,
+          voluID:data.volunteerID
+        });
         console.log('Received in background');
       } else {
+        alert('was not tapped tapped')
+        alert(data.clientID)
+        alert(data.volunteerID)
         console.log('Received in foreground');
       }
     });      

@@ -32,7 +32,6 @@ import { WebpagePage } from '../pages/webpage/webpage';
 // FCM
 import { FCM } from '@ionic-native/fcm';
 
-
 var config = {
   apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",
   authDomain: "sithivili-chat.firebaseapp.com",
@@ -65,7 +64,8 @@ var config = {
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    // IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{hardwareBackButton: false}),
     AngularFireModule.initializeApp(config),
     HttpClientModule,
     PasswordStrengthBarModule,

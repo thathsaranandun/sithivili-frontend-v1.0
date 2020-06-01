@@ -78,11 +78,13 @@ export class VolunteersPage {
   chat(voluID:number){
     localStorage.setItem('leaveToChat','true');
     console.log('voluID:'+voluID)
+    let dateTime:string = this.getDateTime();
+
     this.firebase.list('/clients/vol'+voluID).push({
       clientID:this.userId,
+      dateTime:dateTime
     })
 
-    let dateTime:string = this.getDateTime();
     this.firebase.list('/volunteers/client'+this.userId).push({
       volID:voluID,
       dateTime:dateTime

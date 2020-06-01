@@ -80,7 +80,7 @@ export class DataService {
 
   //logout
   logout(id:number){
-    this.updateFCM(Number(localStorage.getItem('userid')),null).subscribe((data:any) => {
+    this.updateFCM(Number(localStorage.getItem('userid')),'logged out').subscribe((data:any) => {
       console.log(data);
     })
     return this.http.get(this.baseurl+'api/users/user/logout/'+ id ,{headers:new HttpHeaders().set(this.headerKey,this.bearer)});
