@@ -86,51 +86,56 @@ export class ClientsPage {
     this.username=this.navParams.get('username');
     this.volID=Number(localStorage.getItem('userid'));
 
+    this.clientIDs=[];
+    this.clientsDetails=[];
+    this.clientChats=[];
+    this.clientDates=[];
     
     console.log(this.volID);
     this.firebase.list('/clients/vol'+this.volID).valueChanges().subscribe((data:Array<{clientID: number, dateTime: Date}>) =>{
-      for(let i = 0;i < data.length-1;i++){
-          if(data[i].clientID == data[i+1].clientID){
-            data.splice(i+1,1);
-          }
-      }
       console.log('no. of clients:'+data.length)
-
+      console.log('no. of clients:'+data.length)
       data.sort((a, b) => a.dateTime <= b.dateTime ? -1 : 1)
       for(let i=0;i<data.length;i++){
         console.log('Client '+i + ': '+ data[i].clientID);
         this.clientIDs.push(data[i].clientID);
       }
+      
+      this.clientIDs = this.clientIDs.filter(function(elem, index, self) {
+        return index === self.indexOf(elem);
+    })
       // this.clients=Array.from(new Set(this.clientIDs))
       console.log('Client IDS: '+this.clientIDs);
       for(let j=0;j<this.clientIDs.length;j++){
         this.dataService.getUserById(this.clientIDs[j]).subscribe((data:any) => {
           console.log('retrieved chat username for client id '+this.clientIDs[j] + ' as : ' +data.username)
           this.clientsDetails[j] = {username:data.username,clientID:data.userid}
-
-          console.log('client ids length :'+ this.clientIDs.length);
-          console.log('client detials length : '+this.clientsDetails.length);
-          for(let j = this.clientIDs.length -1 ;j>-1;j--){
-            console.log(this.clientIDs[j])
-            this.firebase.list('/'+this.volID+'w'+this.clientIDs[j], ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
-              console.log(lastItems);
-              if(lastItems[0]!=null && this.clientsDetails[j]!=null) {
-                this.clientChats.push(
-                  {
-                  clientDetails:this.clientsDetails[j],
-                  lastMsg:lastItems[0].message,
-                  lastUser:lastItems[0].username
-              
-                  }          
-               )
-              }
-          
-            });  
-          }
+          this.firebase.list('/'+this.volID+'w'+this.clientIDs[j], ref => ref.limitToLast(1)).valueChanges().subscribe((lastItems:any) =>{
+            console.log(lastItems);
+            if(lastItems[0]!=null && this.clientsDetails[j]!=null) {
+              this.clientChats.push(
+                {
+                clientDetails:this.clientsDetails[j],
+                lastMsg:lastItems[0].message,
+                lastUser:lastItems[0].username
+            
+                }          
+             )
+            }
+        
+          });  
         })
         
 
       }
+      console.log('client ids length :'+ this.clientIDs.length);
+          console.log('client detials length : '+this.clientsDetails.length);
+          for(let j = this.clientIDs.length -1 ;j>-1;j--){
+            console.log(this.clientIDs[j])
+            
+          }
+
+          
 
       
           
@@ -157,10 +162,19 @@ export class ClientsPage {
 
   }
 
+
   logout(){
     this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
     localStorage.clear();
     this.navCtrl.push(MenuPage);
   }
+
+  wait(ms){
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
 
 }
