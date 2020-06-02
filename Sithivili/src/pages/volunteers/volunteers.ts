@@ -23,6 +23,7 @@ import { EditProfilePage } from '../edit-profile/edit-profile';
 })
 export class VolunteersPage {
 
+  notChatClick:Boolean= true;
   profilepg=EditProfilePage;
   username:string;
   userId:number;
@@ -38,7 +39,19 @@ export class VolunteersPage {
     
   }
 
+  ionViewDidEnter(){
+    localStorage.setItem('leaveToChat','true');
+    this.notChatClick = true;
+  }
+
+  ionViewDidLeave(){
+    if(this.notChatClick){
+      localStorage.setItem('leaveToChat','false');
+    }
+  }
+
   ionViewDidLoad() {
+
     localStorage.setItem('leaveToChat','false');
   
     localStorage.setItem('isVol','false');
@@ -76,6 +89,8 @@ export class VolunteersPage {
   }
 
   chat(voluID:number){
+    this.notChatClick=false;
+
     localStorage.setItem('leaveToChat','true');
     console.log('voluID:'+voluID)
     let dateTime:string = this.getDateTime();

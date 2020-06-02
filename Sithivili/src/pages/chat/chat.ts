@@ -24,6 +24,7 @@ import { ClientsPage } from '../clients/clients';
 })
 export class ChatPage {
 
+  leavingWithBackButton:Boolean = true;
   username:string='';
   message:string='';
   s;
@@ -46,7 +47,7 @@ export class ChatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,private domSanitizer: DomSanitizer,public dataService:DataService) {
     this.username=this.navParams.get('username');
-      this.userID=navParams.get('userID');
+    this.userID=navParams.get('userID');
     this.volID=this.navParams.get('voluID');
     console.log('Volunteer ID(Chat): '+ this.volID)
     console.log('Client ID(Chat): '+ this.userID)
@@ -140,6 +141,7 @@ export class ChatPage {
 
   }
   ionViewDidLoad() {
+    this.leavingWithBackButton = true;
     this.userType=localStorage.getItem('usertype');
 
     console.log(this.userType);
@@ -156,6 +158,7 @@ export class ChatPage {
   }
 
   loadTabs(){
+    this.leavingWithBackButton = false;
     if(localStorage.getItem('usertype')=='Client'){
       this.navCtrl.push(TabsPage,{
         username:localStorage.getItem('username'),
@@ -171,6 +174,23 @@ export class ChatPage {
 
   callFunction(){
     this.content.scrollToBottom(0)
+  }
+
+  ionViewWillLeave(){
+    if(this.leavingWithBackButton){
+      if(localStorage.getItem('usertype')=='Client'){
+        this.navCtrl.push(TabsPage,{
+          username:localStorage.getItem('username'),
+          userID:localStorage.getItem('userid')
+        });
+      }else if(localStorage.getItem('usertype')=='Volunteer'){
+        this.navCtrl.push(ClientsPage,{
+          username:localStorage.getItem('username'),
+          volID:localStorage.getItem('userid')
+        });
+      }
+    }
+    
   }
 
 

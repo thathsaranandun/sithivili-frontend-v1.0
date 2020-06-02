@@ -30,7 +30,7 @@ interface clientDetails {
   templateUrl: 'clients.html',
 })
 export class ClientsPage {
-
+  notChatClick:Boolean= true;
   menuPage=MenuPage;
   volID:number;
   username:string;
@@ -43,6 +43,11 @@ export class ClientsPage {
     
   }
 
+  ionViewDidEnter(){
+    localStorage.setItem('leaveToChat','true');
+    this.notChatClick = true;
+  }
+
   ionViewCanLeave() {
     if(localStorage.getItem('leaveToChat')=='false'){
       console.log("ionViewEntered")
@@ -53,7 +58,14 @@ export class ClientsPage {
      return true;
   }
 
+  ionViewDidLeave(){
+    if(this.notChatClick){
+      localStorage.setItem('leaveToChat','false');
+    }
+  }
+
   chat(userID:number){
+    this.notChatClick=false;
     localStorage.setItem('leaveToChat','true');
 
     console.log('userID:'+userID)
@@ -82,7 +94,6 @@ export class ClientsPage {
 
     localStorage.setItem('isVol','true');
     localStorage.setItem('isClient','false');
-    //this.volID=this.navParams.get('volID');
     this.username=this.navParams.get('username');
     this.volID=Number(localStorage.getItem('userid'));
 
@@ -104,7 +115,6 @@ export class ClientsPage {
       this.clientIDs = this.clientIDs.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     })
-      // this.clients=Array.from(new Set(this.clientIDs))
       console.log('Client IDS: '+this.clientIDs);
       for(let j=0;j<this.clientIDs.length;j++){
         this.dataService.getUserById(this.clientIDs[j]).subscribe((data:any) => {

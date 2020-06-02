@@ -1,11 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, NavController, Nav } from 'ionic-angular';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { from } from 'rxjs';
 import { MenuPage } from '../pages/menu/menu';
-import { MapPage } from '../pages/map/map';
-import { ScalePage } from '../pages/scale/scale';
 import { FCM } from '@ionic-native/fcm';
 import { DataService } from './services/data.services';
 import { ChatPage } from '../pages/chat/chat';
@@ -55,16 +53,13 @@ export class MyApp {
       console.log(data.clientID)
       console.log(data.volunteerID)
       if (data.wasTapped) {
-        self.nav.push(ChatPage,{
-          username:'testing!!!',
-          userID:data.clientID,
-          voluID:data.volunteerID
-        });
+        // self.nav.push(ChatPage,{
+        //   username:'testing!!!',
+        //   userID:data.clientID,
+        //   voluID:data.volunteerID
+        // });
         console.log('Received in background');
       } else {
-        alert('was not tapped tapped')
-        alert(data.clientID)
-        alert(data.volunteerID)
         console.log('Received in foreground');
       }
     });      
