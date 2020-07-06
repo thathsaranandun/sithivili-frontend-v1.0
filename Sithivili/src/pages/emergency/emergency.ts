@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DataService } from '../../app/services/data.services';
 
 /**
  * Generated class for the EmergencyPage page.
@@ -15,11 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EmergencyPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  contacts;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams ,public dataService:DataService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EmergencyPage');
+    this.dataService.loadContacts().subscribe(data => {
+      console.log('Volunteer Data: ' + data);
+      this.contacts=data
+    });
   }
 
   callNumber(phoneNumber){

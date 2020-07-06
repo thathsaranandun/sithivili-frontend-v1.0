@@ -107,4 +107,8 @@ export class DataService {
       'volunteerId':volunteerId
     },{headers:new HttpHeaders().set(this.headerKey,this.bearer).set('authorization','Bearer '+  localStorage.getItem('authToken'))})
   }
+
+  loadContacts(){
+    return this.http.get(this.baseurl+'api/emergency/contacts/all');
+  }
 }

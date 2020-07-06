@@ -82,7 +82,8 @@
     
         <!--input field start-->
         <div>
-          <div class="margin-top-username">
+          <div style="text-align: left" class="margin-top-username">
+            
             <div class="input-username">
               <ion-input type="text" name="username" placeholder="Username" [(ngModel)]="userName"></ion-input>
             </div>
@@ -118,6 +119,9 @@
             [barLabel]="barLabel"
             [barColors]="myColors">
             </ng2-password-strength-bar>
+            <div style="font-style: italic;color: grey;font-size: 15px;margin-top: 10px;
+            margin-left: 13px;
+            margin-right: 10px;">* We advice you to not use your actual name as a username</div>
           </div>
         </div>
         <!--input field end-->
