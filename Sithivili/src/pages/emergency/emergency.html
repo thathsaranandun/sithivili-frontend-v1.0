@@ -84,11 +84,15 @@
   <div class="page-body">
     <div class="page-content" style="padding-top: 10px;">
 
-      <div>
-        <div class="emergency-card">
-          <div class="call-name">Police Emergency Contact</div>
-          <button class="btn" ion-button (click)="callNumber(118)">118 &nbsp;<ion-icon name="call"></ion-icon></button>
+      <div class="emergency-card">
+        <!-- <div class="call-no"></div> -->
+
+        <div style="display: flex;">
+          <div id="contactName" class="call-name">Police Emergency Contact (118)</div>
+          <button id="contactNo" class="btn" ion-button (click)="callNumber(118)"> &nbsp;<ion-icon name="call"></ion-icon></button>
         </div>
+        <div id="contactDes" class="call-des">Description</div>
+        <div id="contactTime" class="call-des call-time">Operational Hours</div>
       </div>
 
       <div class="margin-top-middle">
