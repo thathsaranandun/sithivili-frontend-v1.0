@@ -38,33 +38,50 @@ export class SignupPage {
     console.log('ionViewDidLoad SignupPage');
   }
 
+  validateEmail(mail) 
+  {
+  if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(this.userMobile))
+    {
+      return (true)
+    }
+      return (false)
+  }
+
   signup(){
     this.clicked=true;
     this.notclicked=false;
     /* this.dataService.getUser(this.username).subscribe((data:any) =>{
       this.dbuser=data.dbuser;
     }); */
+    
     if(this.userPassword==this.userPasswordCon){
-      this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
-        if(data.msg == 'Registration successful!'){
-          let alert = this.alertCtrl.create({
-            title: 'Email Verification',
-            subTitle: 'Verification Email has been sent to your mail. Please verify to continue',
-            buttons: [{
-              text: 'Continue to Login',
-              handler: () => {
-                  this.navCtrl.push(HomePage);
-              }
-            }]
-          });
-          alert.present();
-        }else{
-        this.alert('User Registration', data.msg);
-        }
+      if(!this.validateEmail){
+        this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+          if(data.msg == 'Registration successful!'){
+            let alert = this.alertCtrl.create({
+              title: 'Email Verification',
+              subTitle: 'Verification Email has been sent to your mail. Please verify to continue',
+              buttons: [{
+                text: 'Continue to Login',
+                handler: () => {
+                    this.navCtrl.push(HomePage);
+                }
+              }]
+            });
+            alert.present();
+          }else{
+          this.alert('User Registration', data.msg);
+          }
+          this.clicked=false;
+          this.notclicked=true;
+          
+        })
+      }else{
+        this.alert("Error","Invalid Email Address.");
         this.clicked=false;
         this.notclicked=true;
-        
-      })
+      }
+      
     }else{
       this.alert("Error","Password mismatch.");
       this.clicked=false;
@@ -107,6 +124,13 @@ export class SignupPage {
 
 setType() {
     this.type = this.isActive ? 'password' : 'text';
+}
+
+omit_special_char(event)
+{   
+   var k;  
+   k = event.charCode;  //         k = event.keyCode;  (Both can be used)
+   return((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || (k >= 48 && k <= 57)  && (k != 95)); 
 }
 
   

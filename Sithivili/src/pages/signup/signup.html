@@ -85,7 +85,7 @@
           <div style="text-align: left" class="margin-top-username">
             
             <div class="input-username">
-              <ion-input type="text" name="username" placeholder="Username" [(ngModel)]="userName"></ion-input>
+              <ion-input type="text" (keypress)="omit_special_char($event)" name="username" placeholder="Username" [(ngModel)]="userName"></ion-input>
             </div>
           </div>
           <div class="margin-top-middle">

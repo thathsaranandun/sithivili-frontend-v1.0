@@ -31,6 +31,7 @@ export class EditProfilePage {
   public barLabel: string = "Password strength:";
   public myColors = ['#DD2C00', '#FF6D00', '#FFD600', '#AEEA00', '#00C853'];
   userid:number = Number(localStorage.getItem('userid'));
+  confirmed:boolean = false;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController) {
@@ -83,32 +84,41 @@ export class EditProfilePage {
   }
 
   update(){
-    if(this.newpass == ''){
-      this.newpass = null;
-      if (this.username != ''){
-        this.dataService.updateUser(this.userid,this.username,this.newpass).subscribe((data:any) => {
-          this.alert("Success","User details updated.");          
-        });
-      }
-    }else{
-      if(this.username == ''){
-        this.username = null;
-      } 
       if(this.newpass==this.newpasscon){
-        console.log('sending update request...')
-        
-        this.dataService.updateUser(this.userid,this.username,this.newpass).subscribe((data:any) => {
-          this.alert("Success","User details updated.");          
+        let alert = this.alertCtrl.create({
+          title: 'Confirmation',
+          subTitle: 'Are you sure you want to change the password?',
+          buttons: [{
+            text: 'Yes',
+            handler: data => {
+              this.confirmed = true;
+              console.log('Sending request to server');
+              console.log('New Password:'+ this.newpass)
+              this.dataService.updateUser(this.userid,null,this.newpass).subscribe((data:any) => {
+              this.alert("Success","Your password has been updated.");          
+              this.password='';
+              this.newpass='';
+              this.newpasscon='';
+            });
+            }
+          },
+          {
+            text: 'No',
+            handler: data => {
+            }
+          }
+        ]
         });
-      }else{
-        this.alert("Error","Password mismatch.");
+        alert.present();
+        
+        
       }
+      else{
+        this.alert("Error","Password mismatch.");
+        this.password='';
+        this.newpass='';
+        this.newpasscon='';
     }
-    
-      
-    this.password='';
-    this.newpass='';
-    this.newpasscon='';
     
   }
 

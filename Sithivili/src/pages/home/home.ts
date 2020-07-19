@@ -194,7 +194,7 @@ export class HomePage {
               if(data == false){
                 this.alert('Invalid Email','Please enter a valid email address.');
               }else{
-                this.alert('Email Sent','Password reset email has been sent to your email address.');
+                this.alert('Email Sent','A password reset link has been sent to your email address.');
               }
             });
           }
@@ -202,6 +202,13 @@ export class HomePage {
       });
       alert.present();
     }
+
+  omit_special_char(event)
+  {   
+    var k;  
+    k = event.charCode;  //         k = event.keyCode;  (Both can be used)
+    return((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || (k >= 48 && k <= 57)  && (k != 95)); 
+  }
   
 
 }
