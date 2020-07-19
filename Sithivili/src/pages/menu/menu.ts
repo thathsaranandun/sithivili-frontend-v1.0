@@ -37,6 +37,7 @@ export class MenuPage {
   client = 'Client';
   quote:string = "It’s okay to not be okay, but never give up on yourself.";
   author:string = "Asad Meah";
+  disclaimerAgreed:boolean=false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private alertCtrl:AlertController) {
     this.dataService.getQuote().subscribe((data:any) => {
