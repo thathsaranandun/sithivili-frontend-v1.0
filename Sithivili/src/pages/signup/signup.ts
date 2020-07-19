@@ -88,8 +88,6 @@ export class SignupPage {
       this.notclicked=true;
     }
     
-    this.userMobile='';
-    this.userName='';
     this.userPassword='';
     this.userPasswordCon='';
     

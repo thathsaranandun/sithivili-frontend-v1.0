@@ -147,7 +147,6 @@ export class HomePage {
           this.clicked=false;
           this.notclicked=true;
           this.alert('Error','Invalid Login details. Please enter again.');
-          this.username='';
           this.password='';
           console.log('cant load chat page');
         }
