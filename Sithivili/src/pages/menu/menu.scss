@@ -223,3 +223,72 @@ page-menu {
     }
 
 }
+
+
+h1{
+    text-align: center;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    // margin: 35px 0 !important;
+    font-family: sans-serif !important;
+    font-size: 15px !important;
+    padding: 15px !important;
+    background: #299de0;
+    border-radius: 38px;
+    color: white;
+}
+
+.item{
+    max-width: 100%;
+    // margin: 30px auto;
+    height: 50px;
+    box-shadow: 0 2px 20px 0 rgba(0, 52, 255, 0.18);
+    background: #9ad0ff;
+    padding: 10px;
+    text-align: left;
+    padding-top: 15px;
+}
+
+.policies{
+    text-align: justify;
+}
+
+.policy-div{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.check{
+    margin-top: 50px;
+	text-align: justify;
+	max-width: 100% !important;
+    flex: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.label-accept{
+    font-size: 15px;
+
+}
+
+.accept-button {
+  background-color: #3ca9ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+.button-div{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100px;
+	padding: 15px;
+}
