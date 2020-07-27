@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header  *ngIf="disclaimerAgreed==true" no-border style="background: linear-gradient(100deg, #3fb0de, #b9ebff);">
+<ion-header  *ngIf="disclaimerAgreed" no-border style="background: linear-gradient(100deg, #3fb0de, #b9ebff);">
   <ion-navbar hideBackButton>
     <ion-title class="new-background">Home</ion-title>
   </ion-navbar>
@@ -33,7 +33,7 @@
 
 <ion-content style="background: rgb(223, 242, 253);" class="" padding>
 
-  <div *ngIf="disclaimerAgreed==false">
+  <div *ngIf="!disclaimerAgreed">
       <div>
         <div>
           <h1><strong>Terms &amp; Conditions and <br> Privacy Policy</strong></h1>
@@ -265,7 +265,7 @@
       </div>
       <div class="row button-div">
         <div>
-          <button class="accept-button">
+          <button (click)='disclaimer()' class="accept-button">
           Accept
         </button>
         </div>
@@ -397,13 +397,6 @@
       <p style="padding-top: 20px; display: none;">Want to support as a friend? <a href="https://project-sithivili.herokuapp.com/#join-us" target="_blank">Click Here</a></p>
       
     </div>
-  </div>
-
-  <div *ngIf="disclaimerAgreed==true">
-    <div class="loader_bg">
-      <div class="loader"></div>
-    </div>
-    
   </div>
        
 </ion-content>

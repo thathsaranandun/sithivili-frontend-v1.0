@@ -37,9 +37,10 @@ export class MenuPage {
   client = 'Client';
   quote:string = "It’s okay to not be okay, but never give up on yourself.";
   author:string = "Asad Meah";
-  disclaimerAgreed:boolean=false;
+  disclaimerAgreed:boolean=this.convertToBoolean(localStorage.getItem('disclaimerAgreed'));
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private alertCtrl:AlertController) {
+    console.log('disclaimerAgreed' + this.disclaimerAgreed)
     this.dataService.getQuote().subscribe((data:any) => {
       this.quote = data.quote;
       this.author = data.author;
@@ -81,6 +82,24 @@ export class MenuPage {
         });
     }
     console.log('ionViewDidLoad MenuPage');
+  }
+
+  convertToBoolean(input: string): boolean | undefined {
+    if(input==null){
+      return false;
+    }
+    try {
+        return JSON.parse(input);
+    }
+    catch (e) {
+        return undefined;
+    }
+  }
+
+  disclaimer(){
+    localStorage.setItem('disclaimerAgreed', 'true');
+    this.disclaimerAgreed=true;
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
   }
 
   login(){
