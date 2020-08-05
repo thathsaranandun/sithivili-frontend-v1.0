@@ -13,9 +13,9 @@ interface User {
 export class DataService {
   constructor(private http: HttpClient,private domSanitizer:DomSanitizer) {}
   // baseurl:string = "http://sithivili-sb-server.herokuapp.com/";
-  // baseurl:string = "http://localhost:8080/";
+  // baseurl:string = "https://localhost:8080/";
   // baseurl:string = "https://sithivili.azurewebsites.net/"
-  baseurl:string = "http://34.87.61.31:8080/"
+  baseurl:string = "https://www.sithivili.com:8080/"
   bearer:string = 'Bearer sithivilisbbebt';
   headerKey:string = 'bearer';
 

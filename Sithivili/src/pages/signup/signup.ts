@@ -40,10 +40,12 @@ export class SignupPage {
 
   validateEmail(mail) 
   {
-  if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(this.userMobile))
+  if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(mail))
     {
+      console.log('valid email')
       return (true)
     }
+      console.log('invalid email')
       return (false)
   }
 
@@ -55,7 +57,7 @@ export class SignupPage {
     }); */
     
     if(this.userPassword==this.userPasswordCon){
-      if(!this.validateEmail){
+      if(this.validateEmail(this.userMobile)){
         this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
           if(data.msg == 'Registration successful!'){
             let alert = this.alertCtrl.create({
