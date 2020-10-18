@@ -28,7 +28,7 @@ page-menu {
         // min-width: 164px;
         min-height: 110px;
         text-align: center;
-        border-radius: 3px !important;
+        border-radius: 9px !important;
         padding-top: 5px;
         margin: auto;
         margin-top: 15px;
@@ -109,29 +109,29 @@ page-menu {
     }
 
     .quote-card {
-        box-sizing: border-box;
-        background: white;
-        border-radius: 10px;
+        
         margin: auto;
         // height: 100px;
         width: 80%;
         text-align: center;
-        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         // text-align: center;
         // vertical-align: middle;
         // line-height: 100px;
         min-height: 100px;
+        color: white;
+        position: relative;
 
         p{
             text-align: center;
             // padding: 20px;
             padding-left: 10px;
             padding-right: 10px;
-            font-style: oblique;
-            font-family: auto;
+            
             // margin-top: 24px;
         }
     }
+
+ 
 
     .recent-card{
         box-sizing: border-box;
@@ -196,6 +196,7 @@ page-menu {
         width: 100%;
         text-align: center;
         margin-bottom: 5px;
+        
     }
 
     td{
@@ -208,5 +209,125 @@ page-menu {
                 right: 18px;
                 bottom: 28px;
     }
+
+    .menu-btn
+    {
+        color: white;
+        font-size: 25px;
+    }
+
+    .quote-txt
+    {
+       text-align: center;
+    }
+
+    .quote-body
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    .quote-img
+    {
+        opacity: 0.3;
+    }
+
+    .sm-icons
+    {
+        height: 20px;
+       
+    }
+
+    .sm-container
+    {
+        background-color: white;
+        padding: 20px 13px 10px 13px;
+        margin-right: 10px;
+        border-radius: 50%;
+        -webkit-box-shadow: -1px 3px 13px -2px rgba(117,117,117,1);
+        -moz-box-shadow: -1px 3px 13px -2px rgba(117,117,117,1);
+        box-shadow: -1px 3px 13px -2px rgba(117,117,117,1);
+
+    }
+
+    .menu-content
+    {
+        background-color: #3683f9;
+    }
+
+    .menu-list
+    {
+        background-color: #3683f9;
+        color:white;
+        position: relative;
+        font-size: 24px
+    }
+
+    #li-aboutus
+    {
+        color:white;
+        text-decoration: none;
+    }
+
+    .menu-logo
+    {
+        height: 60px;
+        margin: 20px;
+    }
+
+    .icon-img
+    {
+        position: absolute;
+        top: 23%;
+    }
+
+    .icon-txt
+    {
+        position: absolute;
+        left: 23%;
+    }
+    
+    .animated { 
+        animation-duration: 1s; 
+        animation-fill-mode: both; 
+    } 
+    
+    @keyframes fadeInUp { 
+        0% { 
+            opacity: 0; 
+            transform: translateY(20px); 
+        } 
+        100% { 
+            opacity: 1; 
+            transform: translateY(0); 
+        } 
+    } 
+    
+    .fadeInUp { 
+        animation-name: fadeInUp; 
+    }
+
+
+    .close-btn
+    {
+        background-color: #3683f9;
+        border: none;
+        box-shadow: none;
+    }
+
+    .quote-p
+    {
+        font-family: 'Abril Fatface', cursive;
+    }
+
+    .svg-background
+{
+  background: #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 }

@@ -9,7 +9,7 @@ import { DataService } from '../../app/services/data.services';
 import { ChatPage } from '../chat/chat';
 import { MapPage } from '../map/map';
 import { WebpagePage } from '../webpage/webpage';
-
+import { MenuController } from 'ionic-angular';
 /**
  * Generated class for the MenuPage page.
  *
@@ -37,13 +37,16 @@ export class MenuPage {
   client = 'Client';
   quote:string = "It’s okay to not be okay, but never give up on yourself.";
   author:string = "Asad Meah";
+  navigate : any;
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private alertCtrl:AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public firebase:AngularFireDatabase, public dataService:DataService,private alertCtrl:AlertController, public menu1: MenuController, private menu: MenuController) {
     this.dataService.getQuote().subscribe((data:any) => {
       this.quote = data.quote;
       this.author = data.author;
     })
-    
+
+
     this.userID=Number(localStorage.getItem('userid'));
     console.log('Client ID(Chat history): '+this.userID);
     this.username=localStorage.getItem('username');
@@ -135,6 +138,14 @@ export class MenuPage {
 
   webpage(){
     this.navCtrl.push(WebpagePage);  
+  }
+
+
+  
+ 
+
+  openMenu(){
+    this.menu.toggle();
   }
 
 }

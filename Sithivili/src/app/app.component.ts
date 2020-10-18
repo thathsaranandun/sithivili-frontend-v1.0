@@ -13,7 +13,7 @@ import { ScalePage } from '../pages/scale/scale';
 })
 export class MyApp {
   rootPage:any = MenuPage;
-
+  navigate : any;
   
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -27,7 +27,30 @@ export class MyApp {
       }
       
     });
+
+    // this.sideMenu();
   }
 
+  /* sideMenu()
+  {
+    this.navigate =
+    [
+      {
+        title : "Home",
+        url   : "/google.com",
+        icon  : "home"
+      },
+      {
+        title : "Chat",
+        url   : "/google.com",
+        icon  : "chatboxes"
+      },
+      {
+        title : "Contacts",
+        url   : "/google.com",
+        icon  : "contacts"
+      },
+    ]
+  } */
   
 }

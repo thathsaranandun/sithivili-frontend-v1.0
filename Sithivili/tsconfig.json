@@ -21,6 +21,7 @@
     "src/**/*.spec.ts",
     "src/**/__tests__/*.ts"
   ],
+  "baseUrl": "src",
   "compileOnSave": false,
   "atom": {
     "rewriteTsconfig": false
