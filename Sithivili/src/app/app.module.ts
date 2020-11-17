@@ -11,7 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {ChatPage} from '../pages/chat/chat';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { DataService } from './services/data.services';
 import { SignupPage } from '../pages/signup/signup';
 import { VolunteersPage } from '../pages/volunteers/volunteers';
@@ -31,6 +31,10 @@ import { ScalePage } from '../pages/scale/scale';
 import { WebpagePage } from '../pages/webpage/webpage';
 // FCM
 import { FCM } from '@ionic-native/fcm';
+//Localization
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {IonicStorageModule} from '@ionic/storage';
 
 var config = {
   apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",
@@ -41,6 +45,9 @@ var config = {
   messagingSenderId: "1065721164060"
 };
 
+export function createTranslateLoader(http:HttpClient){
+  return new TranslateHttpLoader(http, 'assets/i18n', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -73,7 +80,18 @@ var config = {
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfcSSCT15tcAIvt3ODVtghqbLO8GCYw-M',
       libraries: ['places']
+    }),
+    //Localization
+    HttpClientModule,
+    IonicStorageModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps:[HttpClient]
+      }
     })
+    //////
   ],
   bootstrap: [IonicApp],
   entryComponents: [
