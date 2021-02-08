@@ -31,10 +31,7 @@ import { ScalePage } from '../pages/scale/scale';
 import { WebpagePage } from '../pages/webpage/webpage';
 // FCM
 import { FCM } from '@ionic-native/fcm';
-//Localization
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {IonicStorageModule} from '@ionic/storage';
+
 
 var config = {
   apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",
@@ -45,9 +42,7 @@ var config = {
   messagingSenderId: "1065721164060"
 };
 
-export function createTranslateLoader(http:HttpClient){
-  return new TranslateHttpLoader(http, 'assets/i18n', '.json');
-}
+
 
 @NgModule({
   declarations: [
@@ -80,18 +75,7 @@ export function createTranslateLoader(http:HttpClient){
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfcSSCT15tcAIvt3ODVtghqbLO8GCYw-M',
       libraries: ['places']
-    }),
-    //Localization
-    HttpClientModule,
-    IonicStorageModule.forRoot(),
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps:[HttpClient]
-      }
     })
-    //////
   ],
   bootstrap: [IonicApp],
   entryComponents: [
