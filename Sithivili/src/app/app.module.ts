@@ -87,7 +87,7 @@ export function createTranslateLoader(http:HttpClient){
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: (HttpLoaderFactory),
+        useFactory: (createTranslateLoader),
         deps:[HttpClient]
       }
     })
@@ -126,8 +126,3 @@ export function createTranslateLoader(http:HttpClient){
   ]
 })
 export class AppModule {}
-
-// required for AOT compilation
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
