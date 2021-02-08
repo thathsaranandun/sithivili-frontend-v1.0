@@ -7,6 +7,7 @@ import { MenuPage } from '../pages/menu/menu';
 import { FCM } from '@ionic-native/fcm';
 import { DataService } from './services/data.services';
 import { ChatPage } from '../pages/chat/chat';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,9 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private fcm: FCM,private dataService:DataService) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private fcm: FCM,private dataService:DataService,private translate:TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('si');
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

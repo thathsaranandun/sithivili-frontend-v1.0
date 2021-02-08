@@ -31,7 +31,12 @@ import { ScalePage } from '../pages/scale/scale';
 import { WebpagePage } from '../pages/webpage/webpage';
 // FCM
 import { FCM } from '@ionic-native/fcm';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
+export function httpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
+   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
+}
 
 var config = {
   apiKey: "AIzaSyDSO2YGl5gWq8seyCpcF5ltKOkdIAMpXkM",
@@ -75,6 +80,13 @@ var config = {
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfcSSCT15tcAIvt3ODVtghqbLO8GCYw-M',
       libraries: ['places']
+    }),
+    TranslateModule.forRoot({
+       loader: {
+          provide: TranslateLoader,
+          useFactory: httpLoaderFactory,
+          deps: [HttpClient]
+       }
     })
   ],
   bootstrap: [IonicApp],
