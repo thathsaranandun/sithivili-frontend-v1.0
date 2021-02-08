@@ -76,6 +76,7 @@ export class VolunteersPage {
             handler: () => {
               this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
               localStorage.clear();
+              localStorage.setItem('disclaimerAgreed', 'true');
               this.navCtrl.push(HomePage);
               
             }
