@@ -39,7 +39,6 @@
     "@types/google-maps": "^3.2.1",
     "angular2-websocket": "^0.9.8",
     "angularfire2": "^5.2.3",
-    "cordova-android": "^8.1.0",
     "cordova-plugin-androidx": "^2.0.0",
     "cordova-plugin-androidx-adapter": "^1.1.1",
     "cordova-plugin-fcm-with-dependecy-updated": "^6.4.1",

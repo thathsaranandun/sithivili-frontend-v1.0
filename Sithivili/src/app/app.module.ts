@@ -33,6 +33,7 @@ import { WebpagePage } from '../pages/webpage/webpage';
 import { FCM } from '@ionic-native/fcm';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { LanguagePage } from '../pages/language/language';
 
 export function httpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
    return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -66,6 +67,7 @@ var config = {
     TabsPage,
     MapPage,
     EditProfilePage,
+    LanguagePage,
     WebpagePage,
     ScalePage
   ],
@@ -106,6 +108,7 @@ var config = {
     TabsPage,
     MapPage,
     EditProfilePage,
+    LanguagePage,
     WebpagePage,
     ScalePage
     ],

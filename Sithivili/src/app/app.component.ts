@@ -8,13 +8,14 @@ import { FCM } from '@ionic-native/fcm';
 import { DataService } from './services/data.services';
 import { ChatPage } from '../pages/chat/chat';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguagePage } from '../pages/language/language';
 
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
-  rootPage:any = MenuPage;
+  rootPage:any = LanguagePage;
   @ViewChild(Nav) nav: Nav;
   
 
