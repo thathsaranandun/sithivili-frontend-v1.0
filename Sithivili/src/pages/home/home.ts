@@ -13,11 +13,21 @@ import { FCM } from '@ionic-native/fcm';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-
-
+  // sign up
+  userMobile:string='';
+  userName:string='';
+  userPassword:string='';
+  userPasswordCon:string='';
   notclicked:boolean=true;
   clicked:boolean=false;
+  signUpType: string = "text";
+  signUpisActive: Boolean = true; 
+  public barLabel: string = "Password strength:";
+  public myColors = ['#DD2C00', '#FF6D00', '#FFD600', '#AEEA00', '#00C853'];
+
+  // login
+  loginNotClicked:boolean=true;
+  loginClicked:boolean=false;
   username:string='';
   password:string='';
   userID:number;
@@ -87,8 +97,8 @@ export class HomePage {
   
   loginUser(){
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
-      this.clicked=true;
-      this.notclicked=false;
+      this.loginClicked=true;
+      this.loginNotClicked=false;
       //Validate
       console.log("Validating...")
       this.dataService.login(this.username,this.password).subscribe((data)=> {
@@ -123,16 +133,16 @@ export class HomePage {
           }));
           if(this.user.usertype=='Client' && this.verified){
             this.userID=this.user.userid;
-            this.clicked=false;
-            this.notclicked=true;
+            this.loginClicked=false;
+            this.loginNotClicked=true;
             this.navCtrl.push(TabsPage,{
               username:this.username,
               userID:this.userID
             });
           }else if(this.user.usertype=='Volunteer'){
             this.userID=this.user.userid;
-            this.clicked=false;
-            this.notclicked=true;
+            this.loginClicked=false;
+            this.loginNotClicked=true;
             this.navCtrl.push(ClientsPage,{
               username:this.username,
               volID:this.userID
@@ -145,8 +155,8 @@ export class HomePage {
               buttons: [{
                 text: 'Continue',
                 handler: () => {
-                  this.clicked=false;
-                  this.notclicked=true;
+                  this.loginClicked=false;
+                  this.loginNotClicked=true;
                 }
               }]
             });
@@ -156,8 +166,8 @@ export class HomePage {
           
   
         }else{
-          this.clicked=false;
-          this.notclicked=true;
+          this.loginClicked=false;
+          this.loginNotClicked=true;
           this.alert('Error','Invalid Login details. Please enter again.');
           this.password='';
           console.log('cant load chat page');
@@ -179,12 +189,13 @@ export class HomePage {
   }
 
   getType() {
-        return this.isActive ? 'password' : 'text';
-    }
+    return this.isActive ? 'password' : 'text';
+  }
 
-    setType() {
-        this.type = this.isActive ? 'password' : 'text';
-    }
+  setType() {
+    this.type = this.isActive ? 'password' : 'text';
+  }
+
 
     passwordReset(){
       let alert = this.alertCtrl.create({
@@ -220,6 +231,106 @@ export class HomePage {
     k = event.charCode;  //         k = event.keyCode;  (Both can be used)
     return((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || (k >= 48 && k <= 57)  && (k != 95)); 
   }
+
+  // sign up
+  getSignupType() {
+    return this.signUpisActive ? 'password' : 'text';
+  }
   
+  setSignupType() {
+    this.signUpType = this.signUpisActive ? 'password' : 'text';
+  }
+
+  alertSignup(title:string,message:string){
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: message,
+      buttons: [{
+        text: 'OK',
+        // handler: () => {
+        //   if(message == 'Registration successful!'){
+        //     this.navCtrl.push(ScalePage);
+        //   }
+        // }
+      }]
+    });
+    alert.present();
+  }
+
+  validateEmail(mail) 
+  {
+  if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(mail))
+    {
+      console.log('valid email')
+      return (true)
+    }
+      console.log('invalid email')
+      return (false)
+  }
+  
+  signup(){
+    this.clicked=true;
+    this.notclicked=false;
+    /* this.dataService.getUser(this.username).subscribe((data:any) =>{
+      this.dbuser=data.dbuser;
+    }); */
+    if(this.userName=="" || this.userPassword=="" || this.userMobile=="" || this.userPasswordCon==""){
+      this.alertSignup("Error","Please enter all fields");
+      this.clicked=false;
+      this.notclicked=true;
+    }else{
+      if(this.userPassword==this.userPasswordCon){
+        if(this.validateEmail(this.userMobile)){
+          this.dataService.signUp(this.userMobile,this.userName,this.userPassword).subscribe((data:any) => {
+            if(data.msg == 'Registration successful!'){
+              let alert = this.alertCtrl.create({
+                title: 'Email Verification',
+                subTitle: 'Verification Email has been sent to your mail. Please verify to continue',
+                buttons: [{
+                  text: 'Continue to Login',
+                  handler: () => {
+                      this.navCtrl.push(HomePage);
+                  }
+                }]
+              });
+              alert.present();
+            }else{
+            this.alertSignup('User Registration', data.msg);
+            }
+            this.clicked=false;
+            this.notclicked=true;
+            
+          })
+        }else{
+          this.alertSignup("Error","Invalid Email Address.");
+          this.clicked=false;
+          this.notclicked=true;
+        }
+        
+      }else{
+        this.alertSignup("Error","Password mismatch.");
+        this.clicked=false;
+        this.notclicked=true;
+      }
+      
+      // this.userPassword='';
+      // this.userPasswordCon='';
+    }
+    
+  }
+
+  clearSignin(){
+    this.username='';
+    this.password='';
+    this.isActive=true;
+  }
+
+  clearSignup(){
+    this.userPassword='';
+    this.userPasswordCon='';
+    this.userMobile='';
+    this.userName='';
+    this.signUpisActive=true;
+  }
 
 }

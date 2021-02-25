@@ -5,7 +5,7 @@
 </ion-header> -->
 
 <ion-content class="">
-  <div *ngIf="notclicked">
+  <div *ngIf="loginNotClicked">
 
       <!-- <div class="page-body">
         <div class="body-content"> -->
@@ -57,15 +57,16 @@
       <div class="container">
         <div class="forms-container">
           <div class="signin-signup">
+            <!-- sign in form start-->
             <form class="sign-in-form">
               <h2 class="title">Sign in</h2>
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <ion-input type="text"  (keypress)="omit_special_char($event)" name="username" placeholder="Username" [(ngModel)]="username"></ion-input>
+                <ion-input type="text" style="margin-top: 2px;"  (keypress)="omit_special_char($event)" name="username" placeholder="Username" [(ngModel)]="username"></ion-input>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <ion-input id="pwd" [type]="getType()" class="" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                <ion-input style="padding-right: 50px; margin-top: 2px;" id="pwd" [type]="getType()" class="" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
                 <i><button style="font-size: 1.8rem; margin: 0.4rem 0.4rem 0.4rem 0.4rem;    position: absolute;
                   top: 5px; right: 0;" ion-button clear color="dark" type="button" item-right
                   (click)="isActive = !isActive;"
@@ -79,27 +80,47 @@
 
               <br><label (click)="passwordReset()">Forgot Password ? <u style="color: blue;">Click Here</u></label>
             </form>
+            <!-- sign in form end-->
 
+            <!-- sign up form start-->
             <form class="sign-up-form">
               <h2 class="title">Sign up</h2>
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <ion-input type="text" placeholder="Username"></ion-input>
+                <ion-input type="text" (keypress)="omit_special_char($event)" name="username" placeholder="Username" [(ngModel)]="userName"></ion-input>
               </div>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <ion-input type="email" placeholder="Email"></ion-input>
+                <ion-input type="text" [(ngModel)]="userMobile" name="moblie" placeholder="Email"></ion-input>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <ion-input type="password" placeholder="Password"></ion-input>
+                <ion-input style="padding-right: 50px;" [type]="getSignupType()" name="password" placeholder="Password" [(ngModel)]="userPassword"></ion-input>
+                <i><button style="font-size: 1.8rem;position: absolute;top: 5px;right: 0;" 
+                  ion-button clear color="dark" type="button" item-right
+                (click)="signUpisActive = !signUpisActive;"
+                signUpisActive=true>
+                <ion-icon
+                [name]="signUpisActive ? 'eye' : 'eye-off'">
+                </ion-icon>
+                </button></i>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <ion-input type="password" placeholder="Confirm Password"></ion-input>
+                <ion-input style="padding-right: 50px;" type="password" name="confirmpassword" [(ngModel)]="userPasswordCon" placeholder="Confirm Password"></ion-input>
               </div>
-              <ion-input type="submit" class="btn" value="Sign up"></ion-input>
+              <div style="font-size: 2rem;">
+                <ng2-password-strength-bar text-center
+                [passwordToCheck]="userPassword"
+                [barLabel]="barLabel"
+                [barColors]="myColors">
+                </ng2-password-strength-bar>
+              </div>
+
+              <button class="btn" type="button" (click)="signup()">Sign up</button>
             </form>
+            <!-- sign up form end-->
+
           </div>
         </div>
   
@@ -111,7 +132,7 @@
                 <span style="font-weight: 500;">Register now, it's free!</span><br><br>
                 This feature is available only for registered users. Please sign in or register to get full access to all our features.
               </p>
-              <button class="btn transparent" id="sign-up-btn">
+              <button (click)="clearSignin()" class="btn transparent" id="sign-up-btn">
                 Sign up
               </button>
             </div>
@@ -123,7 +144,7 @@
               <p>
                 Sign in and enjoy all our features now.
               </p>
-              <button class="btn transparent" id="sign-in-btn">
+              <button (click)="clearSignup()" class="btn transparent" id="sign-in-btn">
                 Sign in
               </button>
             </div>
@@ -132,22 +153,19 @@
         </div>
       </div>
 </div>
-
-<!--     
-  <div *ngIf="clicked" class="waiting">
-    <div class="waitmsg">
-        <p>Logging in...</p>
-    </div>
-    
-  </div> -->
-
       
-  <div *ngIf="clicked">
+<!-- Loading screen -->
+  <div *ngIf="loginClicked">
     <div class="loader_bg">
       <div class="loader"></div>
     </div>
-    
   </div>
+
+  <!-- <div *ngIf="signupClicked">
+    <div class="loader_bg">
+      <div class="loader" style="left: calc(55.5vw - 75px);"></div>
+    </div>
+  </div> -->
 
 
 </ion-content>  
