@@ -76,76 +76,65 @@
   <!-- new ui -->
 
   <div class="container">
-      <div class="card">
-        <div style="padding: 5px 0 0 15px;">
-          <ion-buttons left>
+    
+    <div class="forms-container">
+      
+      <div class="signin-signup">
+        <!-- sign in form start-->
+        <form class="sign-in-form">
+          <h2 class="title">Update Password</h2>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <ion-input style="padding-right: 50px; margin-top: 2px;" [type]="getType()" class="" name="newpass" placeholder="New Password" [(ngModel)]="newpass"></ion-input>
+            <i><button style="font-size: 1.8rem; margin: 0.4rem 0.4rem 0.4rem 0.4rem;    position: absolute;
+              top: 5px; right: 0;" ion-button clear color="dark" type="button" item-right
+              (click)="isActive = !isActive;"
+              isActive=true>
+              <ion-icon
+              [name]="isActive ? 'eye' : 'eye-off'">
+              </ion-icon>
+              </button></i>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <ion-input style="padding-right: 50px; margin-top: 2px;" type="password" [(ngModel)]="newpasscon" name="newpasscon" placeholder="Confirm New Password"></ion-input> 
+          </div>
+          <div style="font-size: 2rem; margin-bottom: 20px;">
+            <ng2-password-strength-bar text-center
+            [passwordToCheck]="newpass"
+            [barLabel]="barLabel"
+            [barColors]="myColors">
+            </ng2-password-strength-bar>
+          </div>
+            <button class="btn solid" type="button" (click)="update()">Update</button>
+            <button style="background-color: transparent; color: #5995fd; border-color: #5995fd; border: 3px solid;" 
+            class="btn solid" type="button" (click)="logout()">Sign out</button>
+          
+        </form>
+        <!-- sign in form end-->
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <ion-buttons left style="position: absolute;
+          left: 0;
+          top: 0;">
             <button style="background: transparent; box-shadow: none;" ion-button icon-only (click)="loadTabs()">
               <ion-icon style="color: #504e4e;" name='arrow-round-back'></ion-icon>
             </button>
           </ion-buttons>
+          <h3>
+            Hi {{username}} !
+          </h3>
+          <p>
+            <span style="font-weight: 500;">Thank you for being part of Sithivili.</span><br><br>
+            In this screen, you can update your password anytime !
+          </p>
         </div>
-          <div class="header">
-            
-              <!-- <div class="hamburger-menu">
-                  <div class="center"></div>
-              </div> -->
-              <div class="main">
-                  <div class="image">
-                      <img [src]="userImgURL" alt="">
-                      <div class="hover">
-                          <i class="fas fa-camera fa-2x"></i>
-                      </div>
-                  </div>
-                  <h3 class="name">{{username}}</h3>
-              </div>
-          </div>
-
-          <div class="content">
-              <div class="left">
-                  <div class="about-container">
-                      <h3 class="title">Edit Profile</h3>
-                      <p class="text">Update your password here</p>
-                  </div>
-                  <div class="icons-container">
-                      <div class="input-field">
-                          <i class="fas fa-lock"></i>
-                          <ion-input style="padding-right: 50px; margin-top: 3px;" placeholder="New Password" [type]="getType()"
-                                     [(ngModel)]="newpass"></ion-input>
-                          <i>
-                              <button style="font-size: 1.8rem; margin: 0.4rem 0.4rem 0.4rem 0.4rem; position: absolute;
-                    top: 5px; right: 0;" ion-button clear color="dark" type="button" item-right
-                                      (click)="isActive = !isActive;"
-                                      isActive=true>
-                                  <ion-icon
-                                          [name]="isActive ? 'eye' : 'eye-off'">
-                                  </ion-icon>
-                              </button>
-                          </i>
-                      </div>
-                      <div class="input-field">
-                          <i class="fas fa-lock"></i>
-                          <ion-input style="padding-right: 50px; margin-top: 3px;" placeholder="Confirm New Password" type="password"
-                                     [(ngModel)]="newpasscon"></ion-input>
-                      </div>
-                  </div>
-
-                  <div class="buttons-wrap">
-                      <div class="follow-wrap">
-                          <button class="follow" ion-button primary (click)="update()">
-                              Update
-                          </button>
-                      </div>
-                  </div>
-
-                  <div class="buttons-wrap">
-                    <div class="follow-wrap">
-                        <button class="transparent" ion-button primary (click)="logout()">
-                            Sign out
-                        </button>
-                    </div>
-                </div>
-              </div>
-          </div>
+        <img src="../../assets/imgs/profile.svg" class="image" alt="" />
       </div>
+    </div>
   </div>
 </ion-content>
