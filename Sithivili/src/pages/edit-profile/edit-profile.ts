@@ -32,7 +32,6 @@ export class EditProfilePage {
   public myColors = ['#DD2C00', '#FF6D00', '#FFD600', '#AEEA00', '#00C853'];
   userid:number = Number(localStorage.getItem('userid'));
   confirmed:boolean = false;
-  isActive: Boolean = true;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController) {
@@ -63,10 +62,6 @@ export class EditProfilePage {
       }
     }
     );
-  }
-
-  getType() {
-    return this.isActive ? 'password' : 'text';
   }
 
   ionViewDidLoad() {
