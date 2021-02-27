@@ -29,6 +29,14 @@
 
 <ion-content>
   <div class="container">
+    <ion-buttons left style="position: absolute;
+          left: 0;
+          top: 0;">
+      <button style="background: transparent; box-shadow: none;" icon-only [navPush]="menuPage">
+        <ion-icon style="color: #504e4e;" name='home'></ion-icon>
+      </button>
+    </ion-buttons>
+
     <div style="position: absolute; top: 80px; padding: 10px; color: white;">
       <h3>Welcome Name !</h3>
       <div>Choose a Companion to start Chatting</div>
@@ -37,7 +45,7 @@
     <div class="card">
         
         <div class="content">
-          <div class="volunteerList" style="margin-top: 23px; width: 100%; ">
+          <div class="volunteerList" style="width: 100%; ">
             <div class="volunteer" *ngFor="let volunteer of volunteers" (click)="chat(volunteer.userid)" >
               
               <div class="left">

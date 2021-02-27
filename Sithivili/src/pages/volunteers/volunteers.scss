@@ -7,6 +7,11 @@ page-volunteers {
         font-family: 'Poppins', sans-serif;
     }
     
+    .tabbar{
+        height: 58px;
+        background: #05bfff5c !important;
+    }
+
     body{
         background-color: #efefef;
     }
@@ -16,8 +21,13 @@ page-volunteers {
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+        min-height: 95vh;
+        // background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+        // background-image: linear-gradient(-66deg, #4481eb 46%, #04befe 70%);
+        // background-image: linear-gradient(-66deg, #4481eb 56%, #04befe 70%);
+        // background-image: linear-gradient(-66deg, #4481eb 68%, #04befe 70%);
+        background-image: linear-gradient(-66deg, #4481eb 70%, #04befe 70%);
+
         // background-image: linear-gradient(to top, #00f2fe, #4facfe);
     }
     
@@ -26,12 +36,13 @@ page-volunteers {
         height: 1000px;
         position: absolute;
         width: 100%;
-        top: 27%;
+        top: 32%;
         background-color: #fff;
-        border-top-right-radius: 70px;
-        border-top-left-radius: 70px;
+        border: none;
         box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
+        background-color: transparent;
+        height: 73%;
+        overflow: auto;
     }
     
     // .card:before{
@@ -244,10 +255,6 @@ page-volunteers {
         color: #4facfe;
     }
     
-    .buttons-wrap{
-        display: flex;
-        margin-top: 5px;
-    }
     
     .follow-wrap, .share-wrap{
         flex: 4;
@@ -357,10 +364,6 @@ page-volunteers {
             flex-direction: column;
         }
     
-        .card{
-          border-top-right-radius: 50px;
-          border-top-left-radius: 50px;
-        }
     
         .right{
             flex-direction: row;
