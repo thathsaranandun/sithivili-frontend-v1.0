@@ -64,6 +64,10 @@ export class EditProfilePage {
     );
   }
 
+  getType() {
+    return this.isActive ? 'password' : 'text';
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditProfilePage');
     localStorage.setItem('leaveToChat','false');

@@ -1,6 +1,5 @@
 page-edit-profile {
-
-<<<<<<< HEAD
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
   * {
     margin: 0;
     padding: 0;
@@ -399,22 +398,4 @@ page-edit-profile {
       left: 50%;
     }
   }
-=======
-    .user-img {
-        border-radius: 45px;
-        width: 100px;
-        height: 100px;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
-    }
-
-    .scroll-content{
-        margin-bottom: 80px;
-    }
-
-    .item{
-        background: #9ad0ff00;
-        box-shadow: 0 2px 20px 0 rgba(61, 61, 63, 0.18);
-        padding-top:0px;
-    }
->>>>>>> parent of af5e0e43 (Edit profile  ui v2.1)
 }
