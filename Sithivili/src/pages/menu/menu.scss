@@ -1,44 +1,158 @@
+ion-header::after {
+    background-image: none;
+    }
+
 page-menu {
-
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    ::-webkit-scrollbar {
-      display: none;
+    .lang{
+        width: 45%;
+        height: 25%;
     }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  
-  body,
-  ion-input {
-    font-family: "Poppins", sans-serif;
-  }
-  .recent-card{
-    box-sizing: border-box;
-    // background: #e4fbff;
-    border-radius: 10px;
-    margin: auto;
-    // height: 100px;
-    width: 100%;
-    position: absolute;
-    top: -50%;
+    .content
+    {
+        padding: 0px 50px 0px 50px;
+        
     }
 
-    .user-status{
-        position: absolute;
-        right: 18px;
-        bottom: 28px;
+    .parallel-card
+    {
+        // align-items: center;
+        // border-radius: 15px!important;
+        width: 80%;
+        height: 100%;
+        // height:60px;
+        // padding-top: 5px;
+        // margin: auto;
+        // margin-top: 15px;
+
+        // min-width: 164px;
+        min-height: 110px;
+        text-align: center;
+        border-radius: 3px !important;
+        padding-top: 5px;
+        margin: auto;
+        margin-top: 15px;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background: white;
+
+        p{
+            // margin: auto;
+            // font-weight: bold;
+            // width: 80%;
+            // text-align: center;
+            // padding-right: 50px;
+            padding-top: 10px;
+            font-size: 12px;
+            margin: auto;
+            font-weight: bold;
+            width: 80%;
+            text-align: center;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            font-size: large;
+        }
+
+        
+        .display-flex {
+            display: flex;
+            padding-left: 20px;
+        }
+
     }
+
+    .parallel-card:hover{
+        background: #f3f3f3;
+    }
+
+    .card
+    {
+        border-radius: 15px!important;
+        padding-top: 5px;
+        margin-top: 30px;
+        // box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+        margin: auto;
+        height: 130px;
+
+        .center-align {
+            text-align: center;
+        }
+
+        p{
+            margin: auto;
+            font-weight: bold;
+            text-align: center;
+            // font-size: large;
+            padding-top: 15px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            margin-top: 10px;
+            
+        }
+
+    }
+
+    .common-width {
+        width: 100%;
+    }
+
+    .row{
+        width: 100%;
+        // height: auto;
+    }
+
+    p{
+        text-align:center;
+    }
+
+    .quote-card {
+        box-sizing: border-box;
+        background: white;
+        border-radius: 10px;
+        margin: auto;
+        // height: 100px;
+        width: 80%;
+        text-align: center;
+        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        // text-align: center;
+        // vertical-align: middle;
+        // line-height: 100px;
+        min-height: 100px;
+
+        p{
+            text-align: center;
+            // padding: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-style: oblique;
+            font-family: auto;
+            // margin-top: 24px;
+        }
+    }
+
+    .recent-card{
+        box-sizing: border-box;
+        // background: #e4fbff;
+        border-radius: 10px;
+        margin: auto;
+        padding: 10px;
+        // height: 100px;
+        width: 100%;
+    }
+
     .recent-bar {
-      margin-right: 20px;
-      margin-left: 20px;
 
+        // border-bottom: 1px groove #1111113d;
+        // padding-bottom: 10px;
         ul {
             margin-left: -46px;
         }
@@ -46,17 +160,16 @@ page-menu {
         .vol {
             display: inline-table;
             text-align: center;
-            margin: 5px;
-        }
+            margin: 2px;
 
-        p{
-        margin: auto;
-        margin-left: 10px;
-        margin-top: 5px;
-        min-width: 80px;
-        max-width: 80px;
+            p{
+                margin: auto;
+                margin-left: 10px;
+                margin-top: 5px;
+                min-width: 80px;
+                max-width: 80px;
+            }
         }
-
 
         .avatar {
             vertical-align: middle;
@@ -64,30 +177,25 @@ page-menu {
             height: 50px;
             border-radius: 50%;
             border: 2px solid rgba(0, 0, 0, 0.19);
-            // box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0px 5px 8px 0 #04befe, 0px 3px 8px 0 #4481eb;
+            box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             margin-left: 11px;
             overflow-x: scroll;
         }
 
         .recent {
             padding-bottom: 10px;
-            text-align: left;
-            padding-top: 5px;
-            color: #2b5f9e;
             text-align: center;
+            padding-top: 5px;
         }
-
 
         .avatar-icon {
             overflow: auto;
             white-space: nowrap;
             line-height: 32px;
-            text-align: center;
         }
-
     }
 
+<<<<<<< HEAD
     .social{
         position: absolute;
         bottom: -100px;
@@ -471,145 +579,37 @@ page-menu {
   
     .image {
       display: none;
+=======
+    .display-flex-card {
+        display: flex;
+        padding-top: 20px;
+>>>>>>> parent of a0bd9446 (Menu UI V2)
     }
-    .panel .content {
-      padding: 0.5rem 1rem;
+    
+    .quote-heading {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
     }
-    .container {
-      padding: 1.5rem;
+
+    td{
+        min-width: 170px;
+        min-height: 170px;
     }
-  
-    .container:before {
-      bottom: 72%;
-      left: 50%;
+
+    .user-status{
+        position: absolute;
+                right: 18px;
+                bottom: 28px;
     }
-  
-    .container.sign-up-mode:before {
-      bottom: 28%;
-      left: 50%;
+
+    .menu-border{
+        background: linear-gradient(45deg, rgb(0, 159, 224), rgb(185, 235, 255), rgb(0, 159, 224), rgb(185, 235, 255),rgb(0, 159, 224),rgb(185, 235, 255));
+        height: 100px;
     }
-  }
-
-  // menu items
-.menu-lbl{
-  padding-bottom: 10px;
-  text-align: left;
-  padding-top: 5px;
-  color: #2b5f9e;
-  text-align: center;
-}
-
-.menu{
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.menu-scroll{
-    overflow: auto;
-    white-space: nowrap;
-    text-align: center;
-}
-
-.menu-items{
-    position: relative;
-    top: 50%;
-    width: 100%;
-}
-
-.menu-card{
-    // background-color: #04befe;
-    background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
-    width: 140px;
-    height: 160px;
-    display: inline-table;
-    margin: 2%;
-    border-radius: 10%;
-    margin-bottom: 15px;
-
-    p{
-        color: white;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-}
-
-.card-img{
-    width: 80%;
-    margin: auto;
-    padding-top: 10px;
-}
 
 }
 
-
-h1{
-    text-align: center;
-    margin-top: 10px !important;
-    margin-bottom: 20px !important;
-    // margin: 35px 0 !important;
-    font-family: sans-serif !important;
-    font-size: 15px !important;
-    padding: 15px !important;
-    background: #299de0;
-    border-radius: 38px;
-    color: white;
-}
-
-.item{
-    max-width: 100%;
-    // margin: 30px auto;
-    height: 50px;
-    box-shadow: 0 2px 20px 0 rgba(0, 52, 255, 0.18);
-    background: #9ad0ff;
-    padding: 10px;
-    text-align: left;
-    padding-top: 15px;
-}
-
-.policies{
-    text-align: justify;
-}
-
-.policy-div{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.check{
-    margin-top: 50px;
-	text-align: justify;
-	max-width: 100% !important;
-    flex: 100% !important;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.label-accept{
-    font-size: 15px;
-
-}
-
-.accept-button {
-  background-color: #3ca9ff;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  margin-top: 30px;
-  border-radius: 15px;
-}
-
-.button-div{
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	height: 100px;
-	padding: 15px;
-}
 
 h1{
     text-align: center;
