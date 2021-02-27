@@ -4,40 +4,17 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header  *ngIf="disclaimerAgreed" no-border style="background: linear-gradient(100deg, #3fb0de, #b9ebff);">
-  <ion-navbar hideBackButton>
-    <ion-title class="new-background">{{'HOME.title' | translate}}</ion-title>
-  </ion-navbar>
-  
-  <!-- <div>
-    <div class="nav-radius">
-      
-    </div>
-    <div class="nav-curve">
-    </div>
-  </div> -->
-  <div class="menu-border"
-  >
-  </div>
-  
-  <div class="row" style="position: absolute;
-  top: 80px;
-  text-align: center;
-  width: 100%;">  
-    <div class="quote-card">
-      <div class="quote-heading" style="padding-top: 10px;"><strong>Quote of the Day...</strong></div>
-      <p><i style="font-style: initial; font-size: 15px;">"{{quote}}"</i><br><i>-{{author}}-</i></p>
-    </div>
-  </div>
-</ion-header>
 
-<ion-content style="background: rgb(223, 242, 253);" class="" padding>
+    <!-- <ion-title class="new-background">{{'HOME.title' | translate}}</ion-title> -->
+  
+
+<ion-content style="background: rgb(223, 242, 253);">
 
   <div *ngIf="!disclaimerAgreed">
       <div>
         <div>
           <h1><strong>Terms &amp; Conditions and <br> Privacy Policy</strong></h1>
-        </div>  
+        </div>
       </div>
 
       <div >
@@ -273,129 +250,84 @@
   </div>
 
  
-  <div class="page-body" *ngIf="disclaimerAgreed">
-    <div class="body-content">
-      <!-- recent chat start -->
-      <div style="display: block;">
-        <div *ngIf="userType == client && volsDetails[0] != null" class="recent-card">
-          <div class="recent-bar">
-            <div *ngIf="userType == client && volsDetails[0] != null" class="recent"><strong>Recent Chats</strong></div>
-            <div *ngIf="userType == client" class="avatar-icon">
-              <div class="vol" style="position: relative;" *ngFor="let volDetails of volsDetails">
-                <div (click)="chat(volDetails.volID)">
-                  <img class="avatar" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">
-                <p>{{volDetails.username}}</p>
+  <div *ngIf="disclaimerAgreed">
+    <!-- new ui -->
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          
+          <!-- sign in form start-->
+          <form class="sign-in-form">
+            <div>
+              <div  class="recent-card">
+                <div class="recent-bar" *ngIf="userType == client && volsDetails[0] != null">
+                  <div *ngIf="userType == client && volsDetails[0] != null" class="recent"><strong>Recent Chats</strong></div>
+                  <div *ngIf="userType == client" class="avatar-icon">
+                    <div class="vol" style="position: relative;" *ngFor="let volDetails of volsDetails">
+                      <div (click)="chat(volDetails.volID)">
+                        <img class="avatar" [src]="volDetails.image != null  ? volDetails.image : defaultImage" alt="">
+                      <p>{{volDetails.username}}</p>
+                      </div>
+                      
+                      <div class="user-status" *ngIf="volDetails.loginFlag == true">
+                        <img style="height: 12px; width: 12px;" src="../../assets/imgs/online-icon.png"/>
+                      </div>
+                    </div>
+                  </div> 
                 </div>
-                
-                <div class="user-status" *ngIf="volDetails.loginFlag == true">
-                  <img style="height: 12px; width: 12px;" src="../../assets/imgs/online-icon.png"/>
-                </div>
-                <!-- <div class="user-status">
-                  <img style="height: 12px; width: 12px;" src="../../assets/imgs/offline-icon.png"/>
-                </div> -->
-                
-              </div>
-            </div> 
-          </div>
-        </div>
-        <!-- recent chat end -->
-  
-        <!-- quote card start -->
-        <!-- <div class="row">
-          <div class="quote-heading"><strong>Quote of the Day...</strong></div>
-          <div class="quote-card">
-            <p><i style="font-style: initial; font-size: 15px;">"{{quote}}"</i><br><i>-{{author}}-</i></p>
-          </div>
-        </div> -->
-        <!-- quote card end -->
 
-        <div>
-
-          <div style="display: flex; padding-top: 20px;">
-            <!-- chat card start -->
-          <div class="row"> 
-            <!-- <div class="parallel-card" style="background: #0cb0efb8;"> -->
-            <div class="parallel-card">
-              <div (click)="login()">
+                <!-- menu -->
                 <div>
-                  <img src="../../assets/imgs/chat.png">
-                </div>
-                <p>SPEAK TO A FRIEND</p>
-              </div>
-            </div>
-          </div> 
-          <!-- chat card end -->
-
-            <!-- emergency card start -->
-          <div class="row">
-            <!-- <div class="card" style="background: #efdd0cc4;"> -->
-              <div class="parallel-card">
-              <div class="" [navPush]="emergencypg">
-                <div class="center-align">
-                  <img src="../../assets/imgs/warning.png">
-                </div>
-                <p>EMERGENCY <br> CONTACTS</p>
-              </div>
-            </div>
-          </div> 
-          <!-- emergency card end -->
-          </div>
-          
-
-          
-          <div style="display: flex; padding-top: 30px;">
-            <!-- professional card start -->
-            <div class="row">
-              <!-- <div class="card" style="background: violet;"> -->
-                <div class="parallel-card">
-                <div class="" (click)="future()">
-                  <div class="center-align">
-                    <img src="../../assets/imgs/therapist.png">
+                  <div class="menu">
+                    <div class="menu-lbl"><strong>Menu</strong></div>
+                    <div class="menu-scroll">
+                      <div class="menu-card" (click)="login()">
+                        <div class="card-img">
+                          <img src="../../assets/imgs/chatV2.svg">
+                        </div>
+                        <p>Speak to a <br>Companion</p>
+                      </div>
+                      <div class="menu-card" [navPush]="emergencypg">
+                        <div class="card-img" style="width: 105%;">
+                          <img src="../../assets/imgs/contact.svg">
+                        </div>
+                        <p>Emergency <br>Contacts</p>
+                      </div>
+                      <div class="menu-card" [navPush]="mappg">
+                        <div class="card-img" style="width: 99%;">
+                          <img src="../../assets/imgs/map.svg">
+                        </div>
+                        <p>Help <br>around You</p>
+                      </div>
+                    </div>
                   </div>
-                  <p>PROFESSIONAL <br> CONTACT</p>
+                
                 </div>
-              </div>
-            </div> 
-            <!-- professinal card end -->
-
-            <!-- institute card start -->
-          <div class="row" >
-            <!-- <div class="card" style="background: #8ff5ff;"> -->
-              <div class="parallel-card">
-              <div class="" [navPush]="mappg">
-                <div class="center-align">
-                  <img src="../../assets/imgs/institute.png">
+                <div class="social">
+                  <p style="margin: 0; font-size: 12px;">Our Social Media</p>
+                  <div>
+                    <ion-icon style="padding: 8px;" name="logo-facebook"></ion-icon>
+                    <ion-icon style="padding: 8px;" name="logo-instagram"></ion-icon>
+                  </div>
                 </div>
-                <p>INSTITUTES</p>
               </div>
             </div>
-          </div> 
-          <!-- institute card end -->
-          </div>
-          
-
-          
-
-           <!-- awareness card start -->
-            <!-- <div class="common-width"> -->
-              <!-- <div class="card" style="background: #4bff4b;"> -->
-                <!-- <div class="parallel-card" style="background: white;">
-                <div class=""  (click)="future()">
-                  <div class="center-align">
-                    <img src="../../assets/imgs/awareness.png">
-                  </div>
-                  <p>AWARENESS</p>
-                </div>
-              </div> -->
-            <!-- </div>  -->
-            <!-- awareness card end -->
-
+          </form>
         </div>
-   
-          
       </div>
-      <p style="padding-top: 20px; display: none;">Want to support as a friend? <a href="https://project-sithivili.herokuapp.com/#join-us" target="_blank">Click Here</a></p>
-      
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Welcome to <h2>Sithivili !</h2></h3>
+            <p>
+              <span style="font-weight: 500;">Register now, it's free !</span><br><br>
+              This feature is available only for registered users. Please sign in or register to get full access to all our features.
+            </p>
+          </div>
+          <img src="../../assets/imgs/group.svg" class="image" alt="" />
+        </div>
+        
+      </div>
     </div>
   </div>
        

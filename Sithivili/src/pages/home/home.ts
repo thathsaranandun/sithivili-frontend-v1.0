@@ -72,16 +72,16 @@ export class HomePage {
       
     }
 
-    const sign_in_btn = document.querySelector("#sign-in-btn");
-    const sign_up_btn = document.querySelector("#sign-up-btn");
-    const container = document.querySelector(".container");
+    const sign_in_btn = document.querySelector("#sign-in-btn-home");
+    const sign_up_btn = document.querySelector("#sign-up-btn-home");
+    const container = document.querySelector(".container-home");
     
     sign_up_btn.addEventListener("click", () => {
-      container.classList.add("sign-up-mode");
+      container.classList.add("sign-up-mode-home");
     });
     
     sign_in_btn.addEventListener("click", () => {
-      container.classList.remove("sign-up-mode");
+      container.classList.remove("sign-up-mode-home");
     });
   }
 
