@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<!-- <ion-header no-border>
+<ion-header no-border>
   <ion-navbar>
     <ion-title class="new-background">Choose Your Friend</ion-title>
     <ion-buttons right>
@@ -25,51 +25,42 @@
     <div class="nav-curve">
     </div>
   </div>
-</ion-header> -->
+</ion-header>
 
-<ion-content>
-  <div class="container">
-    <div style="position: absolute; top: 80px; padding: 10px; color: white;">
-      <h3>Welcome Name !</h3>
-      <div>Choose a Companion to start Chatting</div>
-    </div>
+<ion-content class="bgimg" padding>
 
-    <div class="card">
-        
-        <div class="content">
-          <div class="volunteerList" style="margin-top: 23px; width: 100%; ">
-            <div class="volunteer" *ngFor="let volunteer of volunteers" (click)="chat(volunteer.userid)" >
-              
-              <div class="left">
-                <div>
-                  <img class="user-img" style="margin-top: 10px;" [src]="volunteer.image != null  ? volunteer.image : defaultImage" alt="">
-        
-                  
-                  
-                    <div class="msg-detail">
-        
-                        <div class="username">{{volunteer.username}}</div>
-                        <div class="message">Sinhala</div>
-                        <!-- <div class="message">Gender: {{volunteer.gender}}</div> -->
-                        <div *ngIf="volunteer.loginFlag == true">
-                          <img class="status-img" style="height: 11px; width: 11px;" src="../../assets/imgs/online-icon.png"/>
-                        </div>
-                        <div *ngIf="volunteer.loginFlag == false">
-                          <img class="status-img" style="height: 11px; width: 11px;" src="../../assets/imgs/offline-icon.png"/>
-                        </div>
-                        <div class="fa fa-circle"></div>
-                    </div>
-                        
+  <!-- <ion-scroll scrollY="true" style="width: 100%; height: 100%;"> -->
+  <div class="volunteerList" style="margin-top: 23px; ">
+    <div class="volunteer" *ngFor="let volunteer of volunteers" (click)="chat(volunteer.userid)" >
+      
+      <div class="left">
+        <div>
+          <img class="user-img" style="margin-top: 10px;" [src]="volunteer.image != null  ? volunteer.image : defaultImage" alt="">
+
+          
+          
+            <div class="msg-detail">
+
+                <div class="username">{{volunteer.username}}</div>
+                <div class="message">Gender: {{volunteer.gender}}</div>
+                <div *ngIf="volunteer.loginFlag == true">
+                  <img style="height: 11px; width: 11px;" src="../../assets/imgs/online-icon.png"/> Available
                 </div>
-                
-              </div>  
-              <div class="right-icon">
-                <div class ="elem" style="margin-top: 10px;"><img class="wave" src = "../../assets/imgs/hand_wave.png"/></div>
-              </div>
+                <div *ngIf="volunteer.loginFlag == false">
+                  <img style="height: 11px; width: 11px;" src="../../assets/imgs/offline-icon.png"/> Not Available
+                </div>
+                <div class="fa fa-circle"></div>
             </div>
-            
-          </div>
+                
         </div>
+        
+      </div>  
+      <div class="right">
+        <div class ="elem" style="margin-top: 10px;"><img class="wave" src = "../../assets/imgs/hand_wave.png"/></div>
+      </div>
+      
     </div>
+    
   </div>
+<!-- </ion-scroll> -->
 </ion-content>
