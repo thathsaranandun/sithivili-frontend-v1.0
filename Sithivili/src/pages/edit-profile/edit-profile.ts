@@ -78,7 +78,7 @@ export class EditProfilePage {
 
   }
 
-  getType() {
+  getPassType() {
     return this.isActive ? 'password' : 'text';
   }
 
