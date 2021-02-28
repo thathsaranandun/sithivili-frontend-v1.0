@@ -1,4 +1,65 @@
 page-emergency {
+
+    .page-body{
+        height: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-image: linear-gradient(-45deg, #4481eb 20%, #04befe 50%);
+    }
+
+    .header{
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        background-image: linear-gradient(-45deg, #4481eb 20%, #04befe 50%);
+
+        .sos-content{
+            display: inline-flex;
+        }
+
+        .outer-circle{
+            background-color: #ff000029;
+            width: 110px;
+            height: 110px;
+            padding: 5px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 8px 0 #ff000029, 0px 0px 8px 0 #ff000029;
+        }
+
+        .sos-button{
+            width: 100px;
+            background-color: #f42e5bed;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 25%;
+
+            h3{
+                margin: 0;
+            }
+
+            .sos-des{
+                color: white;
+                font-weight: 500;
+                font-size: 15px
+            }
+        }
+
+        .sos-head-txt{
+            font-size: 20px;
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+    .page-content{
+        overflow-y: auto;
+        height: 470px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     #emergency{
         background-color: rgba(216, 216, 216, 0.726);
         padding: 10px;
@@ -39,8 +100,8 @@ page-emergency {
         // border-radius: 20px;
         // background-color: rgb(216, 216, 216);
         // color: rgb(168, 154, 154);
-        position: absolute;
-        right: 25px;
+        position: relative;
+        right: -10px;
         // padding-top: 2px;
         margin-top: 20px;
         margin-right: 10px;
@@ -90,8 +151,8 @@ page-emergency {
 
         
         .call-des {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            // margin-top: 10px;
+            // margin-bottom: 10px;
             margin-left: 12px;
             // font-size: larger;
             // width: 60%;

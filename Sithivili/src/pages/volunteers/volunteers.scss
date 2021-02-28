@@ -23,10 +23,11 @@ page-volunteers {
         align-items: center;
         min-height: 95vh;
         // background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
-        background-image: linear-gradient(-66deg, #4481eb 46%, #04befe 70%);
+        // background-image: linear-gradient(-66deg, #4481eb 46%, #04befe 70%);
         // background-image: linear-gradient(-66deg, #4481eb 56%, #04befe 70%);
         // background-image: linear-gradient(-66deg, #4481eb 68%, #04befe 70%);
         // background-image: linear-gradient(-66deg, #4481eb 70%, #04befe 70%);
+        background-image: linear-gradient(-50deg, #4481eb 33%, #04befe 70%);
 
         // background-image: linear-gradient(to top, #00f2fe, #4facfe);
     }
@@ -39,7 +40,8 @@ page-volunteers {
         top: 32%;
         background-color: #fff;
         border: none;
-        box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+        // box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px 1px white;
         background-color: transparent;
         height: 73%;
         overflow: auto;

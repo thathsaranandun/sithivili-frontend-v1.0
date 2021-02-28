@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header no-border>
+<!-- <ion-header no-border>
   <ion-navbar>
     <ion-title class="new-background" style="padding-right: 60px">Emergency Contacts</ion-title>
   </ion-navbar>
@@ -15,9 +15,9 @@
     <div class="nav-curve">
     </div>
   </div>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
+<ion-content>
     <!-- <table>
     <tr>
       <div id="emergency">
@@ -82,7 +82,34 @@
   </table> -->
 
   <div class="page-body">
-    <div class="page-content" style="padding-top: 10px;">
+
+    <div class="header">
+      <ion-buttons style="position: absolute;
+    left: -3px;
+    top: 12px;">
+      <button style="background: transparent; box-shadow: none;" icon-only [navPush]="menuPage">
+        <ion-icon style="color: #504e4e;" name='arrow-round-back'></ion-icon>
+      </button>
+    </ion-buttons>
+      <div class="header-content">
+        <div class="sos-content">
+          <div class="outer-circle" style="position: absolute; left: 15%;" (click)="callNumber(119)">
+            <div class="sos-button">
+              <h3 class="sos-head-txt">119</h3>
+              <span class="sos-des">Police</span>
+            </div>
+          </div>
+          <div class="outer-circle" style="position: absolute; right: 15%;" (click)="callNumber(1333)">
+            <div class="sos-button">
+              <h3 class="sos-head-txt">1333</h3>
+              <span class="sos-des">CCC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
 
       <div class="emergency-card" *ngFor="let contact of contacts">
         <div >
