@@ -6,6 +6,7 @@ import { TabsPage } from '../tabs/tabs';
 import { ClientsPage } from '../clients/clients';
 import { HomePage } from '../home/home';
 import 'rxjs/add/operator/map';
+import { LanguagePage } from '../language/language';
 
 /**
  * Generated class for the EditProfilePage page.
@@ -76,6 +77,10 @@ export class EditProfilePage {
         });
     }
 
+  }
+
+   menu(){
+    this.navCtrl.push(LanguagePage);
   }
 
   getPassType() {
