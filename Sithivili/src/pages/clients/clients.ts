@@ -154,7 +154,7 @@ export class ClientsPage {
       if(error.status == 401){
         let alert = this.alertCtrl.create({
           title: 'Session Time Out',
-          subTitle: 'Your session has timed out. Please login again to continue.',
+          subTitle: 'Your session has expired. Please login again to continue.',
           buttons: [{
             text: 'Login',
             handler: () => {

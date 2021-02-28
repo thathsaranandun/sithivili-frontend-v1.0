@@ -54,7 +54,7 @@
 
 
       <!-- new ui -->
-      <div class="container-home">
+      <div [class]="containerClass">
         <div class="forms-container">
           <div class="signin-signup">
             <!-- sign in form start-->
@@ -130,7 +130,7 @@
               <ion-buttons left style="position: absolute;
           left: 0;
           top: 0;">
-            <button style="background: transparent; box-shadow: none;" ion-button icon-only (click)="loadTabs()">
+            <button style="background: transparent; box-shadow: none;" ion-button icon-only (click)="back()">
               <ion-icon style="color: #504e4e;" name='arrow-round-back'></ion-icon>
             </button>
           </ion-buttons>

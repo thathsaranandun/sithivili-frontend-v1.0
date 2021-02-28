@@ -13,6 +13,8 @@ import { FCM } from '@ionic-native/fcm';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  containerClass = "container-home";
+
   // sign up
   userMobile:string='';
   userName:string='';
@@ -72,18 +74,19 @@ export class HomePage {
       
     }
 
-    const sign_in_btn = document.querySelector("#sign-in-btn-home");
-    const sign_up_btn = document.querySelector("#sign-up-btn-home");
-    const container = document.querySelector(".container-home");
+    // const sign_in_btn = document.querySelector("#sign-in-btn-home");
+    // const sign_up_btn = document.querySelector("#sign-up-btn-home");
+    // const container = document.querySelector(".container-home");
     
-    sign_up_btn.addEventListener("click", () => {
-      container.classList.add("sign-up-mode-home");
-    });
+    // sign_up_btn.addEventListener("click", () => {
+    //   container.classList.add("sign-up-mode-home");
+    // });
     
-    sign_in_btn.addEventListener("click", () => {
-      container.classList.remove("sign-up-mode-home");
-    });
+    // sign_in_btn.addEventListener("click", () => {
+    //   container.classList.remove("sign-up-mode-home");
+    // });
   }
+
 
   alert(title:string,message:string){
     let alert = this.alertCtrl.create({
@@ -320,17 +323,23 @@ export class HomePage {
   }
 
   clearSignin(){
+    this.containerClass = "container-home sign-up-mode-home"; 
     this.username='';
     this.password='';
     this.isActive=true;
   }
 
   clearSignup(){
+    this.containerClass = "container-home";
     this.userPassword='';
     this.userPasswordCon='';
     this.userMobile='';
     this.userName='';
     this.signUpisActive=true;
+  }
+
+  back(){
+    this.navCtrl.pop();
   }
 
 }
