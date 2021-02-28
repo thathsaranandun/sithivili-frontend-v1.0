@@ -28,9 +28,9 @@
 </ion-header> -->
 
 <ion-content>
-  <div class="container">
+  <div class="header">
     <ion-buttons style="position: absolute;
-    left: 10px;
+    left: 0px;
     top: 12px;">
       <button style="background: transparent; box-shadow: none;" icon-only [navPush]="menuPage">
         <ion-icon style="color: #504e4e;" name='arrow-round-back'></ion-icon>
@@ -41,51 +41,54 @@
     top: 0px;
     right: 0;">
       <button style="background: transparent; box-shadow: none;" ion-button icon-only (click)='profile()'>
-        <ion-icon name='person'></ion-icon>
+        <ion-icon style="color: #504e4e;" name='person'></ion-icon>
       </button>
     </ion-buttons>
 
-    <div style="position: absolute; top: 80px; padding: 10px; color: white;">
-      <h3>Welcome Name !</h3>
-      <div>Choose a Companion to start Chatting</div>
-    </div>
-
-    <div class="card">
-        
-        <div class="content">
-          <div class="volunteerList" style="width: 100%; ">
-            <div class="volunteer" *ngFor="let volunteer of volunteers" (click)="chat(volunteer.userid)" >
-              
-              <div class="left">
-                <div>
-                  <img class="user-img" style="margin-top: 10px;" [src]="volunteer.image != null  ? volunteer.image : defaultImage" alt="">
-        
-                  
-                  
-                    <div class="msg-detail">
-        
-                        <div class="username">{{volunteer.username}}</div>
-                        <div class="message">Sinhala</div>
-                        <!-- <div class="message">Gender: {{volunteer.gender}}</div> -->
-                        <div *ngIf="volunteer.loginFlag == true">
-                          <img class="status-img" style="height: 11px; width: 11px;" src="../../assets/imgs/online-icon.png"/>
-                        </div>
-                        <div *ngIf="volunteer.loginFlag == false">
-                          <img class="status-img" style="height: 11px; width: 11px;" src="../../assets/imgs/offline-icon.png"/>
-                        </div>
-                        <div class="fa fa-circle"></div>
-                    </div>
-                        
-                </div>
-                
-              </div>  
-              <div class="right-icon">
-                <div class ="elem" style="margin-top: 10px;"><img class="wave" src = "../../assets/imgs/hand_wave.png"/></div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
+    <div class="header-content">
+      <div style="position: absolute; top: 80px; padding: 10px; color: white;">
+        <h3>Welcome Name !</h3>
+        <div>Choose a Companion to start Chatting</div>
+      </div>
     </div>
   </div>
+
+
+  <div class="page-content">
+
+    <div class="volunteerList" style="width: 100%; ">
+      <div class="volunteer" *ngFor="let volunteer of volunteers" (click)="chat(volunteer.userid)" >
+        
+        <div class="left">
+          <div>
+            <img class="user-img" style="margin-top: 10px;" [src]="volunteer.image != null  ? volunteer.image : defaultImage" alt="">
+  
+            
+            
+              <div class="msg-detail">
+  
+                  <div class="username">{{volunteer.username}}</div>
+                  <div class="message">Sinhala</div>
+                  <!-- <div class="message">Gender: {{volunteer.gender}}</div> -->
+                  <div *ngIf="volunteer.loginFlag == true">
+                    <img class="status-img" style="height: 11px; width: 11px;" src="../../assets/imgs/online-icon.png"/>
+                  </div>
+                  <div *ngIf="volunteer.loginFlag == false">
+                    <img class="status-img" style="height: 11px; width: 11px;" src="../../assets/imgs/offline-icon.png"/>
+                  </div>
+                  <div class="fa fa-circle"></div>
+              </div>
+                  
+          </div>
+          
+        </div>  
+        <div class="right-icon">
+          <div class ="elem" style="margin-top: 10px;"><img class="wave" src = "../../assets/imgs/hand_wave.png"/></div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+
 </ion-content>
