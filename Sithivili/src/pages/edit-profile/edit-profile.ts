@@ -79,7 +79,7 @@ export class EditProfilePage {
 
   }
 
-   menu(){
+  menu(){
     this.navCtrl.push(LanguagePage);
   }
 

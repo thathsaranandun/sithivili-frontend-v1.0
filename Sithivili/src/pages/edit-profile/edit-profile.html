@@ -20,7 +20,7 @@
           <h2 class="title">Update Password</h2>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <ion-input style="padding-right: 50px; margin-top: 2px;" [type]="getType()" class="" name="newpass" placeholder="New Password" [(ngModel)]="newpass"></ion-input>
+            <ion-input style="padding-right: 50px; margin-top: 2px;" [type]="getPassType()" class="" name="newpass" placeholder="New Password" [(ngModel)]="newpass"></ion-input>
             <i><button style="font-size: 1.8rem; margin: 0.4rem 0.4rem 0.4rem 0.4rem;    position: absolute;
               top: 5px; right: 0;" ion-button clear color="dark" type="button" item-right
               (click)="isActive = !isActive;"
@@ -41,7 +41,10 @@
             [barColors]="myColors">
             </ng2-password-strength-bar>
           </div>
-            <button class="btn solid" type="button" (click)="update()">Update</button>
+          <!-- <div style="display: flex;"> -->
+            <button class="btn solid" type="button" (click)="update()">Update Password</button>
+            <button class="btn solid" type="button" (click)='menu()'>Change Language</button>
+          <!-- </div> -->
             <button style="background-color: transparent; color: #5995fd; border-color: #5995fd; border: 3px solid;" 
             class="btn solid" type="button" (click)="logout()">Sign out</button>
           
@@ -65,7 +68,7 @@
           </h3>
           <p>
             <span style="font-weight: 500;">Thank you for being part of Sithivili.</span><br><br>
-            In this screen, you can update your password anytime !
+            Update your Password or Change the Language here.
           </p>
         </div>
         <img src="../../assets/imgs/profile.svg" class="image" alt="" />
