@@ -1,4 +1,63 @@
 page-clients {
+  .page-body{
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: linear-gradient(-45deg, #4481eb 20%, #04befe 50%);
+}
+
+.header{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    background-image: linear-gradient(-45deg, #4481eb 20%, #04befe 50%);
+
+    .sos-content{
+        display: inline-flex;
+    }
+    .outer-circle{
+        background-color: #ff000029;
+        width: 110px;
+        height: 110px;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 8px 0 #ff000029, 0px 0px 8px 0 #ff000029;
+    }
+    .sos-button{
+        width: 100px;
+        background-color: #f42e5bed;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 25%;
+
+        h3{
+            margin: 0;
+        }
+
+        .sos-des{
+            color: white;
+            font-weight: 500;
+            font-size: 15px
+        }
+    }
+
+    .sos-head-txt{
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.page-content{
+    overflow-y: auto;
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
     .client{
         // box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.6);
         // padding: 5px 10px;
@@ -94,6 +153,7 @@ page-clients {
   }
     .scroll-content{
         margin-bottom: 58px;
+        overflow-y: hidden;
       }
 
       .wave{
