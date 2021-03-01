@@ -32,7 +32,7 @@
   </ion-footer>
 </ion-content> -->
 
-<ion-header no-border>
+<!-- <ion-header no-border>
   <ion-toolbar>
     <ion-title style="padding-right: 20px;" class="new-background">
       Chat
@@ -52,8 +52,16 @@
     <div style="background:transparent;"></div>
 
   </div>
-</ion-header>
+</ion-header> -->
 <ion-content padding class="bgimg">
+  <ion-buttons style="position: absolute;
+    left: 0;
+    top: 0;">
+      <button ion-button style="background: transparent; box-shadow: none;" icon-only (click)="loadTabs()">
+        <ion-icon style="color: #504e4e;" name='arrow-round-back'></ion-icon>
+      </button>
+    </ion-buttons>
+
   <div class="container" style="margin-top: 28px;">
     <div *ngFor="let stackmsg of messages;let last = last" >
       <!-- for volunteer -->
