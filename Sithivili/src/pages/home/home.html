@@ -125,15 +125,16 @@
         </div>
   
         <div class="panels-container">
-          <div class="panel left-panel">
-            <div class="content">
-              <ion-buttons left style="position: absolute;
+          <ion-buttons left style="position: absolute;
           left: 0;
           top: 0;">
             <button style="background: transparent; box-shadow: none;" ion-button icon-only (click)="back()">
               <ion-icon style="color: #504e4e;" name='arrow-round-back'></ion-icon>
             </button>
           </ion-buttons>
+          <div class="panel left-panel">
+            <div class="content">
+              
               <h3>New here ?</h3>
               <p>
                 <span style="font-weight: 500;">Register now, it's free!</span><br><br>
@@ -162,17 +163,17 @@
 </div>
       
 <!-- Loading screen -->
-  <div *ngIf="loginClicked">
+  <!-- <div *ngIf="loginClicked">
     <div class="loader_bg">
       <div class="loader"></div>
     </div>
-  </div>
+  </div> -->
 
-  <!-- <div *ngIf="signupClicked">
+  <div *ngIf="loginClicked">
     <div class="loader_bg">
       <div class="loader" style="left: calc(55.5vw - 75px);"></div>
     </div>
-  </div> -->
+  </div>
 
 
 </ion-content>  

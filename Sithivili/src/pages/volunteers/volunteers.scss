@@ -16,7 +16,6 @@ page-volunteers {
         .sos-content{
             display: inline-flex;
         }
-
         .outer-circle{
             background-color: #ff000029;
             width: 110px;
@@ -25,7 +24,6 @@ page-volunteers {
             border-radius: 50%;
             box-shadow: 0px 0px 8px 0 #ff000029, 0px 0px 8px 0 #ff000029;
         }
-
         .sos-button{
             width: 100px;
             background-color: #f42e5bed;
@@ -54,14 +52,11 @@ page-volunteers {
 
     .page-content{
         overflow-y: auto;
-        height: 380px;
+        height: 100%;
         padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
     }
-
-
-    // volunteer list
 
     .volunteer{
         // box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.6);
@@ -88,58 +83,31 @@ page-volunteers {
         flex-grow: 1;
 
     }
-
     .wave{
         width: 36px;
         height: 36px;
         margin-top: 2px;
         margin-left: 30px;
     }
-    
+
     .input-wrap {
         padding: 5px;
         display: flex;
         
     }
-/*     .left{
-        grid-column: 1;
-    }
-
-    .right{
-        grid-column: 2;
-
-    } */
 
     .user-img {
         position: relative;
         border-radius: 45px;
         width: 45px;
         height: 45px;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
-        // margin-top: 4px;
     }
     .msg-detail {
-        // width: 100%;
         padding-left: 15px;
         display: inline-block;
         margin-top: 8px;
-        p {
-          margin: 0;
-        }
-        .msg-info {
-          p {
-            font-size: 1.1em;
-            color: rgb(128, 128, 128);
-            font-weight: bold;
-          }
-        }
-
-        .username{
-            font-weight: bold;
-        }
+        
     }
-
-    
     .scroll-content{
         margin-bottom: 58px;
         overflow-y: hidden;
@@ -150,5 +118,4 @@ page-volunteers {
         left: -30px;
         top: -2px;
     }
-
 }
