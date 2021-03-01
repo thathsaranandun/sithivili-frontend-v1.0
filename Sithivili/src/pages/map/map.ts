@@ -7,6 +7,7 @@ import {LocationAccuracy} from "@ionic-native/location-accuracy";
 import {Diagnostic} from "@ionic-native/diagnostic";
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
+import { MenuPage } from '../menu/menu';
 /**
  * Generated class for the MapPage page.
  *
@@ -158,6 +159,10 @@ export class MapPage {
 
     });
     alert.present();
+  }
+
+  menu(){
+    this.navCtrl.push(MenuPage);
   }
    
 

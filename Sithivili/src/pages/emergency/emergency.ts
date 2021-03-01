@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataService } from '../../app/services/data.services';
+import { MenuPage } from '../menu/menu';
 
 /**
  * Generated class for the EmergencyPage page.
@@ -27,6 +28,9 @@ export class EmergencyPage {
       console.log('Volunteer Data: ' + data);
       this.contacts=data
     });
+  }
+  menu(){
+    this.navCtrl.push(MenuPage);
   }
 
   callNumber(phoneNumber){
