@@ -1,5 +1,64 @@
 {
-    "HOME": {
-        "title": "Home"
+    "MENU": {
+        "title": "Menu",
+		"recent": "Recent Chats",
+        "chat1": "Speak to a",
+        "chat2": "Companion",
+        "helplines": "Helplines",
+        "institute1": "Help",
+        "institute2": "around You",
+        "welcome1": "Welcome to",
+        "welcome2": "Sithivili !",
+        "welcomedes" : "The ultimate platform for Emotional and Mental Wellbeing in Sri Lanka",
+        "follow":"Follow us on"
+    },
+
+    "SIGNIN":{
+        "title":"Sign in",
+        "username":"Username",
+        "password":"Password",
+        "forgot":"Forgot Password ? ",
+        "clickhere":"Click Here",
+        "newhere":"New here ? ",
+        "register":"Register now, it's free !",
+        "description": "This feature is available only for registered users. Please sign in or register to get full access to all our features",
+        "login":"Login"
+    },
+
+    "SIGNUP":{
+        "title":"Sign up",
+        "email":"Email",
+        "confirm": "Confirm Password",
+        "registered":"Already registered ? ",
+        "description":"Sign in and enjoy all our features now",
+        "strength": "Password strength"
+    },
+
+    "VOLUNTEERS":{
+        "welcome":"Welcome",
+        "description":"Choose a Companion to start Chatting"
+    },
+
+    "TABS":{
+        "title1":"Companions",
+        "title2":"Chats"
+    },
+
+    "HISTORY":{
+        "hi":"Hi",
+        "description":"Continue your Chat from where you stopped"
+    },
+
+    "PROFILE":{
+        "title":"Update Password",
+        "hi":"Hi",
+        "msg":"Thank you for being part of Sithivili",
+        "description":"Update your Password or Change the Language here",
+        "password":"New Password",
+        "confirmpassword":"Confirm New Password",
+        "signout":"Sign out",
+        "language":"Change Language"
     }
+
+
 }

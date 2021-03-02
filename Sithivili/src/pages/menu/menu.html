@@ -261,7 +261,7 @@
             <div>
               <div  class="recent-card">
                 <div class="recent-bar" *ngIf="userType == client && volsDetails[0] != null">
-                  <div *ngIf="userType == client && volsDetails[0] != null" class="recent"><strong>Recent Chats</strong></div>
+                  <div *ngIf="userType == client && volsDetails[0] != null" class="recent"><strong>{{'MENU.recent' | translate}}</strong></div>
                   <div *ngIf="userType == client" class="avatar-icon">
                     <div class="vol" style="position: relative;" *ngFor="let volDetails of volsDetails">
                       <div (click)="chat(volDetails.volID)">
@@ -279,32 +279,32 @@
                 <!-- menu -->
                 <div>
                   <div class="menu">
-                    <div class="menu-lbl"><strong>Menu</strong></div>
+                    <div class="menu-lbl"><strong>{{'MENU.title' | translate}}</strong></div>
                     <div class="menu-scroll">
                       <div class="menu-card" (click)="login()">
                         <div class="card-img">
                           <img src="../../assets/imgs/chatV2.svg">
                         </div>
-                        <p>Speak to a <br>Companion</p>
+                        <p>{{'MENU.chat1' | translate}}<br> {{'MENU.chat2' | translate}}</p>
                       </div>
                       <div class="menu-card" [navPush]="emergencypg">
                         <div class="card-img" style="width: 105%;">
                           <img src="../../assets/imgs/contact.svg">
                         </div>
-                        <p style="padding-top: 10px;">Helplines</p>
+                        <p style="padding-top: 10px;">{{'MENU.helplines' | translate}}</p>
                       </div>
                       <div class="menu-card" [navPush]="mappg">
                         <div class="card-img" style="width: 99%;">
                           <img src="../../assets/imgs/map.svg">
                         </div>
-                        <p>Help <br>around You</p>
+                        <p>{{'MENU.institute1' | translate}} <br>{{'MENU.institute2' | translate}}</p>
                       </div>
                     </div>
                   </div>
                 
                 </div>
                 <div class="social">
-                  <p style="margin: 0; font-size: 12px;">Follow us on</p>
+                  <p style="margin: 0; font-size: 12px;">{{'MENU.follow' | translate}}</p>
                   <div>
                     <a style="color: #636b74;" href="https://www.facebook.com/projectsithivili"><ion-icon style="padding: 8px;" name="logo-facebook"></ion-icon></a>
                     <a style="color: #636b74;" href="https://www.instagram.com/project_sithivili/"><ion-icon style="padding: 8px;" name="logo-instagram"></ion-icon></a>
@@ -318,9 +318,9 @@
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
-            <h3>Welcome to <h2>Sithivili !</h2></h3>
+            <h3>{{'MENU.welcome1' | translate}}<h2>{{'MENU.welcome2' | translate}}</h2></h3>
             <p>
-              The ultimate platform for Emotional and Mental Wellbeing in Sri Lanka
+              {{'MENU.welcomedes' | translate}}
             </p>
           </div>
           <img src="../../assets/imgs/group.svg" class="image" alt="" />

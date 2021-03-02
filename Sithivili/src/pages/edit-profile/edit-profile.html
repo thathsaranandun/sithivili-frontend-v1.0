@@ -17,7 +17,7 @@
       <div class="signin-signup">
         <!-- sign in form start-->
         <form class="sign-in-form">
-          <h2 class="title">Update Password</h2>
+          <h2 class="title">{{'PROFILE.title' | translate}}</h2>
           <div class="input-field">
             <i class="fas fa-lock"></i>
             <ion-input style="padding-right: 50px; margin-top: 2px;" [type]="getPassType()" class="" name="newpass" placeholder="New Password" [(ngModel)]="newpass"></ion-input>
@@ -42,11 +42,11 @@
             </ng2-password-strength-bar>
           </div>
           <!-- <div style="display: flex;"> -->
-            <button class="btn solid" type="button" (click)="update()">Update Password</button>
-            <button style="display: none;" class="btn solid" type="button" (click)='menu()'>Change Language</button>
+            <button class="btn solid" type="button" (click)="update()">{{'PROFILE.title' | translate}}</button>
+            <button style="display: none;" class="btn solid" type="button" (click)='menu()'>{{'PROFILE.language' | translate}}</button>
           <!-- </div> -->
             <button style="background-color: transparent; color: #5995fd; border-color: #5995fd; border: 3px solid;" 
-            class="btn solid" type="button" (click)="logout()">Sign out</button>
+            class="btn solid" type="button" (click)="logout()">{{'PROFILE.signout' | translate}}</button>
           
         </form>
         <!-- sign in form end-->
@@ -64,11 +64,11 @@
             </button>
           </ion-buttons>
           <h3>
-            Hi {{username}} !
+            {{'PROFILE.hi' | translate}} {{username}} !
           </h3>
           <p>
-            <span style="font-weight: 500;">Thank you for being part of Sithivili.</span><br><br>
-            Update your Password or Change the Language here.
+            <span style="font-weight: 500;">{{'PROFILE.msg' | translate}}</span><br><br>
+            {{'PROFILE.description' | translate}}
           </p>
         </div>
         <img src="../../assets/imgs/profile.svg" class="image" alt="" />
