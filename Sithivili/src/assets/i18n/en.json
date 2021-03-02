@@ -58,6 +58,15 @@
         "confirmpassword":"Confirm New Password",
         "signout":"Sign out",
         "language":"Change Language"
+    },
+
+    "Conditions":{
+        "title":"Terms & Conditions"
+    },
+
+    "POLICY":{
+        "title":"Privacy Policy"
+
     }
 
 
