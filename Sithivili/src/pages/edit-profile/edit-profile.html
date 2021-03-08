@@ -22,7 +22,7 @@
             <i class="fas fa-lock"></i>
             <ion-input style="padding-right: 50px; margin-top: 2px;" [type]="getPassType()" class="" name="newpass" placeholder="New Password" [(ngModel)]="newpass"></ion-input>
             <i><button style="font-size: 1.8rem; margin: 0.4rem 0.4rem 0.4rem 0.4rem;    position: absolute;
-              top: 5px; right: 0;" ion-button clear color="dark" type="button" item-right
+              top: -1px; right: 0;" ion-button clear color="dark" type="button" item-right
               (click)="isActive = !isActive;"
               isActive=true>
               <ion-icon
@@ -43,7 +43,7 @@
           </div>
           <!-- <div style="display: flex;"> -->
             <button class="btn solid" type="button" (click)="update()">{{'PROFILE.title' | translate}}</button>
-            <button style="display: none;" class="btn solid" type="button" (click)='menu()'>{{'PROFILE.language' | translate}}</button>
+            <button class="btn solid" type="button" (click)='menu()'>{{'PROFILE.language' | translate}}</button>
           <!-- </div> -->
             <button style="background-color: transparent; color: #5995fd; border-color: #5995fd; border: 3px solid;" 
             class="btn solid" type="button" (click)="logout()">{{'PROFILE.signout' | translate}}</button>

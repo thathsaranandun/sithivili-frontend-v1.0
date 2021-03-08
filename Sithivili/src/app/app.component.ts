@@ -15,13 +15,13 @@ import { LanguagePage } from '../pages/language/language';
 })
 
 export class MyApp {
-  rootPage:any = MenuPage;
+  rootPage:any = LanguagePage;
   @ViewChild(Nav) nav: Nav;
   
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private fcm: FCM,private dataService:DataService,private translate:TranslateService) {
     this.translate.setDefaultLang('en');
-    this.translate.use('si');
+    this.translate.use('en');
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

@@ -305,7 +305,7 @@ export class HomePage {
             
           })
         }else{
-          this.alertSignup("Error","Invalid Email Address.");
+          this.alertSignup("Error","Invalid Email Address. Make sure that there are no spaces.");
           this.clicked=false;
           this.notclicked=true;
         }
