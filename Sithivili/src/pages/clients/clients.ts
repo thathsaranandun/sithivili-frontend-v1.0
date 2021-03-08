@@ -5,6 +5,8 @@ import { ChatPage } from '../chat/chat';
 import { DataService } from '../../app/services/data.services';
 import { MenuPage } from '../menu/menu';
 import { HomePage } from '../home/home';
+import { TranslateService } from '@ngx-translate/core';
+
 
 /**
  * Generated class for the ClientsPage page.
@@ -39,8 +41,27 @@ export class ClientsPage {
   clientsDetails:clientDetails[]=[];
   clientChats:clientChat[]=[];
   clientDates:Date[]=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService, public alertCtrl:AlertController) {
-    
+
+  sessionTitle;
+  sessionMsg;
+  login;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public firebase:AngularFireDatabase,public dataService:DataService, public alertCtrl:AlertController,  public translateService:TranslateService) {
+    translateService.get('SESSION.title').subscribe(
+      value =>{
+        this.sessionTitle = value;
+      }
+    )
+    translateService.get('SESSION.msg').subscribe(
+      value =>{
+        this.sessionMsg = value;
+      }
+    )
+    translateService.get('SIGNIN.login').subscribe(
+      value =>{
+        this.login = value;
+      }
+    )
   }
 
   ionViewDidEnter(){
@@ -153,16 +174,15 @@ export class ClientsPage {
       console.log(error.status)
       if(error.status == 401){
         let alert = this.alertCtrl.create({
-          title: 'Session Time Out',
-          subTitle: 'Your session has expired. Please login again to continue.',
+          title: this.sessionTitle,
+          subTitle: this.sessionMsg,
           buttons: [{
-            text: 'Login',
+            text: this.login,
             handler: () => {
               this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
               localStorage.clear();
               localStorage.setItem('disclaimerAgreed', 'true');
               this.navCtrl.push(HomePage);
-              
             }
           }]
         });

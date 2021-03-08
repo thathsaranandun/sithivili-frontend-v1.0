@@ -8,6 +8,7 @@ import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TabsPage } from '../tabs/tabs';
 import { EditProfilePage } from '../edit-profile/edit-profile';
+import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Generated class for the VolunteersPage page.
@@ -32,11 +33,27 @@ export class VolunteersPage {
   menuPage=MenuPage;
   user;
   defaultImage= this.dataService.defaultImage;
+  sessionTitle;
+  sessionMsg;
+  login;
 
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase,private domSanitizer: DomSanitizer, public alertCtrl:AlertController) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataService, public firebase:AngularFireDatabase,private domSanitizer: DomSanitizer, public alertCtrl:AlertController, public translateService:TranslateService) {
+    translateService.get('SESSION.title').subscribe(
+      value =>{
+        this.sessionTitle = value;
+      }
+    )
+    translateService.get('SESSION.msg').subscribe(
+      value =>{
+        this.sessionMsg = value;
+      }
+    )
+    translateService.get('SIGNIN.login').subscribe(
+      value =>{
+        this.login = value;
+      }
+    )
   }
 
   ionViewDidEnter(){
@@ -69,10 +86,10 @@ export class VolunteersPage {
       console.log(error.status)
       if(error.status == 401){
         let alert = this.alertCtrl.create({
-          title: 'Session Time Out',
-          subTitle: 'Your session has expired. Please login again to continue.',
+          title: this.sessionTitle,
+          subTitle: this.sessionMsg,
           buttons: [{
-            text: 'Login',
+            text: this.login,
             handler: () => {
               this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
               localStorage.clear();

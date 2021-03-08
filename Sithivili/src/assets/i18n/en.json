@@ -84,7 +84,18 @@
         "verify":"Please verify your email and continue to login",
         "continue":"Continue",
         "invalidlogin":"Invalid Login details. Please enter again.",
-        "invalidusername":"Invalid Username"
+        "invalidusername":"Invalid Username",
+        "updateconfirmtitle":"Confirmation",
+        "confirmation":"Are you sure you want to change the password?",
+        "yes":"Yes",
+        "no":"No",
+        "updatesuccess":"Success",
+        "updatemsg":"Your password has been updated."
+    },
+
+    "SESSION":{
+        "title":"Session Time Out",
+        "msg":"Your session has expired. Please login again to continue."
     },
 
     "SIGNUPERRORALERT":{

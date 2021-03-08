@@ -39,6 +39,17 @@ export class EditProfilePage {
 
   newPassword;
   confirmNewPass;
+  confirmationTitle;
+  confirmation;
+  yes;
+  no;
+  error;
+  pwMismatch;
+  updateSuccess;
+  updateMsg;
+  sessionTitle;
+  sessionMsg;
+  login;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController, public translateService:TranslateService) {
@@ -52,10 +63,10 @@ export class EditProfilePage {
       console.log(error.status)
       if(error.status == 401){
         let alert = this.alertCtrl.create({
-          title: 'Session Time Out',
-          subTitle: 'Your session has expired. Please login again to continue.',
+          title: this.sessionTitle,
+          subTitle: this.sessionMsg,
           buttons: [{
-            text: 'Login',
+            text: this.login,
             handler: () => {
               this.dataService.logout(Number(localStorage.getItem('userid'))).subscribe(data => {console.log(data)});
               localStorage.clear();
@@ -86,6 +97,63 @@ export class EditProfilePage {
       value =>{
         this.barLabel = value;
 
+      }
+    )
+
+    //alert
+    translateService.get('ALERT.updateconfirmtitle').subscribe(
+      value =>{
+        this.confirmationTitle = value;
+      }
+    )
+    translateService.get('ALERT.confirmation').subscribe(
+      value =>{
+        this.confirmation = value;
+      }
+    )
+    translateService.get('ALERT.yes').subscribe(
+      value =>{
+        this.yes = value;
+      }
+    )
+    translateService.get('ALERT.no').subscribe(
+      value =>{
+        this.no = value;
+      }
+    )
+    translateService.get('ALERT.error').subscribe(
+      value =>{
+        this.error = value;
+      }
+    )
+    translateService.get('ALERT.pwmismatch').subscribe(
+      value =>{
+        this.pwMismatch = value;
+      }
+    )
+    translateService.get('ALERT.updatesuccess').subscribe(
+      value =>{
+        this.updateSuccess = value;
+      }
+    )
+    translateService.get('ALERT.updatemsg').subscribe(
+      value =>{
+        this.updateMsg = value;
+      }
+    )
+    translateService.get('SESSION.title').subscribe(
+      value =>{
+        this.sessionTitle = value;
+      }
+    )
+    translateService.get('SESSION.msg').subscribe(
+      value =>{
+        this.sessionMsg = value;
+      }
+    )
+    translateService.get('SIGNIN.login').subscribe(
+      value =>{
+        this.login = value;
       }
     )
   }
@@ -122,16 +190,16 @@ export class EditProfilePage {
   update(){
       if(this.newpass==this.newpasscon && this.newPassword !=''){
         let alert = this.alertCtrl.create({
-          title: 'Confirmation',
-          subTitle: 'Are you sure you want to change the password?',
+          title: this.confirmationTitle,
+          subTitle: this.confirmation,
           buttons: [{
-            text: 'Yes',
+            text: this.yes,
             handler: data => {
               this.confirmed = true;
               console.log('Sending request to server');
               console.log('New Password:'+ this.newpass)
               this.dataService.updateUser(this.userid,null,this.newpass).subscribe((data:any) => {
-              this.alert("Success","Your password has been updated.");          
+              this.alert(this.updateSuccess,this.updateMsg);
               this.password='';
               this.newpass='';
               this.newpasscon='';
@@ -139,7 +207,7 @@ export class EditProfilePage {
             }
           },
           {
-            text: 'No',
+            text: this.no,
             handler: data => {
             }
           }
@@ -150,7 +218,7 @@ export class EditProfilePage {
         
       }
       else{
-        this.alert("Error","Password mismatch.");
+        this.alert(this.error,this.pwMismatch);
         this.password='';
         this.newpass='';
         this.newpasscon='';
