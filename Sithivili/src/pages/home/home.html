@@ -62,11 +62,11 @@
               <h2 class="title">{{'SIGNIN.title' | translate}}</h2>
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <ion-input type="text" style="margin-top: 2px;"  (keypress)="omit_special_char($event)" name="username" placeholder="Username" [(ngModel)]="username"></ion-input>
+                <ion-input type="text" style="margin-top: 2px;"  (keypress)="omit_special_char($event)" name="username" placeholder={{unplaceholder}} [(ngModel)]="username"></ion-input>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <ion-input style="padding-right: 50px; margin-top: 2px;" id="pwd" [type]="getType()" class="" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                <ion-input style="padding-right: 50px; margin-top: 2px;" id="pwd" [type]="getType()" class="" name="password" placeholder={{pwplaceholder}} [(ngModel)]="password"></ion-input>
                 <i><button style="font-size: 1.8rem; margin: 0.4rem 0.4rem 0.4rem 0.4rem;    position: absolute;
                   top: 5px; right: 0;" ion-button clear color="dark" type="button" item-right
                   (click)="isActive = !isActive;"
@@ -87,15 +87,15 @@
               <h2 class="title">{{'SIGNUP.title' | translate}}</h2>
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <ion-input type="text" (keypress)="omit_special_char($event)" name="username" placeholder="Username" [(ngModel)]="userName"></ion-input>
+                <ion-input type="text" (keypress)="omit_special_char($event)" name="username" placeholder={{unplaceholder}} [(ngModel)]="userName"></ion-input>
               </div>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <ion-input type="text" [(ngModel)]="userMobile" name="moblie" placeholder="Email"></ion-input>
+                <ion-input type="text" [(ngModel)]="userMobile" name="moblie" placeholder={{emailplaceholder}}></ion-input>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <ion-input style="padding-right: 50px;" [type]="getSignupType()" name="password" placeholder="Password" [(ngModel)]="userPassword"></ion-input>
+                <ion-input style="padding-right: 50px;" [type]="getSignupType()" name="password" placeholder={{pwplaceholder}} [(ngModel)]="userPassword"></ion-input>
                 <i><button style="font-size: 1.8rem;position: absolute;top: 5px;right: 0;" 
                   ion-button clear color="dark" type="button" item-right
                 (click)="signUpisActive = !signUpisActive;"
@@ -107,7 +107,7 @@
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <ion-input style="padding-right: 50px;" type="password" name="confirmpassword" [(ngModel)]="userPasswordCon" placeholder="Confirm Password"></ion-input>
+                <ion-input style="padding-right: 50px;" type="password" name="confirmpassword" [(ngModel)]="userPasswordCon" placeholder={{cpwplaceholder}}></ion-input>
               </div>
               <div style="font-size: 2rem;">
                 <ng2-password-strength-bar text-center

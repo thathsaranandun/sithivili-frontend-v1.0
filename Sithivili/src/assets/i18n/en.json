@@ -65,6 +65,35 @@
         "description":"Start Chatting from here"
     },
 
+    "ALERT":{
+        "forgot":"Forgot Password?",
+        "email":"Please enter your email address",
+        "reset":"Reset password",
+        "invalid":"Invalid Email",
+        "invaliddes":"Please enter a valid email address.",
+        "sent":"Email Sent",
+        "sentdes":"A password reset link has been sent to your email address.",
+        "error":"Error",
+        "allfields":"Please enter all fields",
+        "regsuccess":"Email Verification",
+        "regdes":"Verification Email has been sent to your mail. Please verify to continue",
+        "regbtn":"Continue to Login",
+        "pwmismatch":"Password mismatch.",
+        "invalidemail":"Invalid Email Address. Make sure that there are no spaces.",
+        "ok":"OK",
+        "verify":"Please verify your email and continue to login",
+        "continue":"Continue",
+        "invalidlogin":"Invalid Login details. Please enter again.",
+        "invalidusername":"Invalid Username"
+    },
+
+    "SIGNUPERRORALERT":{
+        "title":"User Registration",
+        "failed":"Sign Up Failed. Please enter all details.",
+        "emailexist":"Email already registered. Please sign up using a different email address",
+        "usernameexist":"Username already in use. Please use a different username"
+    },
+
     "conditions":{
         "title":"Terms & Conditions",
         "introduction":"By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Skepseis (Private) Limited.",

@@ -17,12 +17,12 @@
       <div class="signin-signup">
         <!-- sign in form start-->
         <form class="sign-in-form">
-          <h2 class="title">{{'PROFILE.title' | translate}}</h2>
+          <h2 class="title"  style="text-align: center;">{{'PROFILE.title' | translate}}</h2>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <ion-input style="padding-right: 50px; margin-top: 2px;" [type]="getPassType()" class="" name="newpass" placeholder="New Password" [(ngModel)]="newpass"></ion-input>
+            <ion-input style="padding-right: 50px; margin-top: 2px;" [type]="getPassType()" class="" name="newpass" placeholder={{newPassword}} [(ngModel)]="newpass"></ion-input>
             <i><button style="font-size: 1.8rem; margin: 0.4rem 0.4rem 0.4rem 0.4rem;    position: absolute;
-              top: -1px; right: 0;" ion-button clear color="dark" type="button" item-right
+              top: 4px; right: 0;" ion-button clear color="dark" type="button" item-right
               (click)="isActive = !isActive;"
               isActive=true>
               <ion-icon
@@ -32,7 +32,7 @@
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <ion-input style="padding-right: 50px; margin-top: 2px;" type="password" [(ngModel)]="newpasscon" name="newpasscon" placeholder="Confirm New Password"></ion-input> 
+            <ion-input style="padding-right: 50px; margin-top: 2px;" type="password" [(ngModel)]="newpasscon" name="newpasscon" placeholder={{confirmNewPass}}></ion-input> 
           </div>
           <div style="font-size: 2rem; margin-bottom: 20px;">
             <ng2-password-strength-bar text-center

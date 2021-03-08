@@ -7,6 +7,8 @@ import { ClientsPage } from '../clients/clients';
 import { HomePage } from '../home/home';
 import 'rxjs/add/operator/map';
 import { LanguagePage } from '../language/language';
+import { TranslateService } from '@ngx-translate/core';
+
 
 /**
  * Generated class for the EditProfilePage page.
@@ -35,8 +37,11 @@ export class EditProfilePage {
   confirmed:boolean = false;
   isActive: Boolean = true;
 
+  newPassword;
+  confirmNewPass;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public dataService:DataService, public alertCtrl:AlertController, public translateService:TranslateService) {
     this.client = dataService.getUserById(this.userid).subscribe((data:any) => {
       console.log(data);
       if(data != null){
@@ -64,6 +69,18 @@ export class EditProfilePage {
       }
     }
     );
+
+    //placeholder translations
+    translateService.get('PROFILE.password').subscribe(
+      value =>{
+        this.newPassword = value;
+      }
+    )
+    translateService.get('PROFILE.confirmpassword').subscribe(
+      value =>{
+        this.confirmNewPass = value;
+      }
+    )
   }
 
   ionViewDidLoad() {

@@ -65,6 +65,37 @@
         "description":"මෙතැන් සිට කතාබස් කිරීම ආරම්භ කරන්න"
     },
 
+    "ALERT":{
+        "forgot":"මුරපදය අමතක වුණා ද?",
+        "email":"කරුණාකර ඔබේ විද්‍යුත් තැපැල් ලිපිනය ඇතුළත් කරන්න",
+        "reset":"මුරපදය යළි සකසන්න",
+        "invalid":"වැරදි විද්‍යුත් තැපෑල",
+        "invaliddes":"කරණාකර වලංගු ඊතැපැල් ලිපිනයක් ඇතුළු කරන්න.",
+        "sent":"විද්‍යුත් තැපෑල යවන ලදි",
+        "sentdes":"මුරපද යළි පිහිටුවීමේ සබැඳියක් ඔබගේ විද්‍යුත් තැපැල් ලිපිනයට යවා ඇත.",
+        "error":"දෝෂයකි",
+        "allfields":"කරුණාකර සියලු විස්තර ඇතුළත් කරන්න",
+        "regsuccess":"විද්‍යුත් සත්‍යාපනය",
+        "regdes":"සත්‍යාපන විද්‍යුත් තැපෑල ඔබගේ තැපෑලට යවා ඇත. ඉදිරියට යාමට කරුණාකර සත්‍යාපනය කරන්න",
+        "regbtn":"පුරනය වන්න",
+        "pwmismatch":"මුරපද නොගැලපේ",
+        "invalidemail":"අවලංගු ඊමේල් ලිපිනයක්. වචන අතර කිසිදු ඉඩක් නොමැති බවට වග බලා ගන්න.",
+        "ok":"හරි",
+        "verify":"කරුණාකර ඔබගේ විද්‍යුත් තැපැල් ලිපිනය සත්‍යාපනය කර පුරනය වන්න",
+        "continue":"ඉදිරියට යන්න",
+        "invalidlogin":"පුරනය වීමේ තොරතුරු වලංගු නොවේ. කරුණාකර නැවත ඇතුල් කරන්න",
+        "invalidusername":"පරිශීලක නාමය වලංගු නැත"
+
+    },
+
+    "SIGNUPERRORALERT":{
+        "title":"ලියාපදිංචි කිරීම",
+        "failed":"ලියාපදිංචි වීම අසාර්ථක විය. කරුණාකර සියලු විස්තර ඇතුළත් කරන්න.",
+        "emailexist":"විද්‍යුත් තැපෑල දැනටමත් ලියාපදිංචි කර ඇත. කරුණාකර වෙනත් විද්‍යුත් තැපැල් ලිපිනයක් භාවිතා කර ලියාපදිංචි වන්න.",
+        "usernameexist":"පරිශීලක නාමය දැනටමත් භාවිතයේ පවතී. කරුණාකර වෙනත් පරිශීලක නාමයක් භාවිතා කරන්න"
+    },
+
+
     "conditions":{
         "title":"Terms & Conditions",
         "introduction":"By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Skepseis (Private) Limited.",

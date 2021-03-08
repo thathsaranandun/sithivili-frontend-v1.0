@@ -65,6 +65,35 @@
         "description":"இங்கிருந்து உரையாடலைத் தொடங்குங்கள்"
     },
 
+    "ALERT":{
+        "forgot":"கடவுச்சொல் மறந்துவிட்டதா?",
+        "email":"தயவுசெய்து உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்",
+        "reset":"கடவுச்சொல்லை மீட்டமைக்க",
+        "invalid":"தவறான மின்னஞ்சல்",
+        "invaliddes":"செல்லுபடியாகும் மின்னஞ்சல் முகவரியை உள்ளிடவும்.",
+        "sent":"மின்னஞ்சல் அனுப்பப்பட்டது",
+        "sentdes":"கடவுச்சொல் மீட்டமைப்பு இணைப்பு உங்கள் மின்னஞ்சல் முகவரிக்கு அனுப்பப்பட்டுள்ளது.",
+        "error":" பிழை",
+        "allfields":"எல்லா புலங்களையும் உள்ளிடவும்",
+        "regsuccess":"மின்னஞ்சல் சரிபார்ப்பு",
+        "regdes":"சரிபார்ப்பு மின்னஞ்சல் உங்கள் அஞ்சலுக்கு அனுப்பப்பட்டது. தொடர சரிபார்க்கவும்",
+        "regbtn":"உள்நுழைவதைத் தொடரவும்",
+        "pwmismatch":"கடவுச்சொல் பொருந்தவில்லை.",
+        "invalidemail":"தவறான மின்னஞ்சல் முகவரி. சொற்களுக்கு இடையில் இடைவெளி இல்லை என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்.",
+        "ok":"சரி",
+        "verify":"உங்கள் மின்னஞ்சலை சரிபார்த்து உள்நுழைக",
+        "continue":"தொடரவும்",
+        "invalidlogin":"தவறான உள்நுழைவு விவரங்கள். மீண்டும் உள்ளிடவும்.",
+        "invalidusername":"தவறான பயனர்பெயர்"
+    },
+
+    "SIGNUPERRORALERT":{
+        "title":"உபயோகிப்போர் பதிவு",
+        "failed":"பதிவு தோல்வியுற்றது. அனைத்து விவரங்களையும் உள்ளிடவும்.",
+        "emailexist":"இந்த மின்னஞ்சல் முகவரி முன்னதாகவே பதிக்கப்பட்டது. வேறு மின்னஞ்சல் முகவரியைப் பயன்படுத்தி பதிவுபெறுக",
+        "usernameexist":"பயனர் பெயர் முன்னரே உபயோகத்தில் உள்ளது. வேறு பயனர்பெயரைப் பயன்படுத்தவும்"
+    },
+
     "conditions":{
         "title":"Terms & Conditions",
         "introduction":"By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Skepseis (Private) Limited.",
