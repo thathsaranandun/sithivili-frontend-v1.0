@@ -74,6 +74,7 @@ export class HomePage {
   result:any;
 
   enteredDataStatus:boolean=false;
+
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public dataService:DataService,private fcm:FCM, public translateService:TranslateService) {
     translateService.get('SIGNIN.username').subscribe(
       value =>{
@@ -216,9 +217,15 @@ export class HomePage {
     translateService.get('SIGNUPERRORALERT.usernameexist').subscribe(
       value =>{
         this.usernameexist = value;
+
       }
     )
+    translateService.get('SIGNUP.strength').subscribe(
+      value =>{
+        this.barLabel = value;
 
+      }
+    )
   }
 
   ionViewDidLoad() {

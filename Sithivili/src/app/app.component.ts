@@ -15,7 +15,7 @@ import { LanguagePage } from '../pages/language/language';
 })
 
 export class MyApp {
-  rootPage:any = LanguagePage;
+  rootPage:any = MenuPage;
   @ViewChild(Nav) nav: Nav;
   
 

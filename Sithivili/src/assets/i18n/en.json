@@ -31,7 +31,7 @@
         "confirm": "Confirm Password",
         "registered":"Already registered ? ",
         "description":"Sign in and enjoy all our features now",
-        "strength": "Password strength"
+        "strength": "Password strength:"
     },
 
     "VOLUNTEERS":{

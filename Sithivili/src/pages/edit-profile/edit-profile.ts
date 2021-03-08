@@ -81,6 +81,13 @@ export class EditProfilePage {
         this.confirmNewPass = value;
       }
     )
+
+    translateService.get('SIGNUP.strength').subscribe(
+      value =>{
+        this.barLabel = value;
+
+      }
+    )
   }
 
   ionViewDidLoad() {
@@ -113,7 +120,7 @@ export class EditProfilePage {
   }
 
   update(){
-      if(this.newpass==this.newpasscon){
+      if(this.newpass==this.newpasscon && this.newPassword !=''){
         let alert = this.alertCtrl.create({
           title: 'Confirmation',
           subTitle: 'Are you sure you want to change the password?',
