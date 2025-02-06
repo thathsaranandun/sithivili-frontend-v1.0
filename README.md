@@ -10,7 +10,7 @@ A secure platform developed in cooperation with **WHO** and **UNDP** to help use
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/Sithivili.git
+   git clone https://github.com/thathsaranandun/sithivili-frontend-v1.0.git
    cd Sithivili
    ```
 2. Install dependencies:
