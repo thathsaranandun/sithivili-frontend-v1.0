@@ -28,7 +28,6 @@ A secure platform developed in cooperation with **WHO** and **UNDP** to help use
 
 ## Technologies Used
 - **Ionic Framework** (Frontend)
-- **Node.js** (Backend)
 
 ---
 
